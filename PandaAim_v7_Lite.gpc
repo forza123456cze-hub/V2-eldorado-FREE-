@@ -1,0 +1,6112 @@
+data(0x44,0x72,0x61,0x76,0x65,0x63,0x20,0x30,0x78,0x32,0x44,0x00,0x4A,0x61,0x67,0x65,0x72,0x20,0x30,0x78,0x32,0x44,0x00,0x4D,0x31,0x35,0x20,0x4D,0x6F,0x64,0x20,0x30,0x78,0x30,0x00,0x4D,0x58,0x52,0x2D,0x31,0x37,0x00,0x52,0x79,0x64,0x65,0x6E,0x20,0x34,0x35,0x4B,0x00,0x41,0x69,0x6D,0x20,0x41,0x73,0x73,0x69,0x73,0x74,0x00,0x53,0x68,0x61,0x70,0x65,0x00,0x52,0x61,0x64,0x69,0x75,0x73,0x00,0x53,0x70,0x65,0x65,0x64,0x00,0x42,0x6F,0x6F,0x73,0x74,0x20,0x52,0x61,0x64,0x69,0x75,0x73,0x00,0x42,0x6F,0x6F,0x73,0x74,0x20,0x53,0x70,0x65,0x65,0x64,0x00,0x48,0x69,0x70,0x20,0x41,0x73,0x73,0x69,0x73,0x74,0x00,0x48,0x69,0x70,0x20,0x52,0x61,0x64,0x69,0x75,0x73,0x00,0x48,0x69,0x70,0x20,0x53,0x70,0x65,0x65,0x64,0x00,0x53,0x74,0x72,0x61,0x66,0x65,0x20,0x41,0x73,0x73,0x69,0x73,0x74,0x00,0x53,0x74,0x72,0x61,0x66,0x65,0x20,0x52,0x61,0x64,0x69,0x75,0x73,0x00,0x53,0x74,0x72,0x61,0x66,0x65,0x20,0x54,0x69,0x6D,0x65,0x00,0x41,0x6E,0x74,0x69,0x2D,0x64,0x72,0x69,0x66,0x74,0x00,0x43,0x61,0x6C,0x69,0x62,0x72,0x61,0x74,0x69,0x6F,
+0x6E,0x00,0x44,0x72,0x69,0x66,0x74,0x20,0x54,0x65,0x73,0x74,0x00,0x44,0x72,0x69,0x66,0x74,0x20,0x52,0x65,0x73,0x65,0x74,0x00,0x44,0x72,0x69,0x66,0x74,0x20,0x56,0x61,0x6C,0x75,0x65,0x73,0x00,0x4C,0x3A,0x00,0x52,0x3A,0x00,0x55,0x3A,0x00,0x44,0x3A,0x00,0x4F,0x66,0x66,0x00,0x42,0x61,0x73,0x69,0x63,0x00,0x41,0x64,0x76,0x61,0x6E,0x63,0x65,0x64,0x00,0x45,0x78,0x70,0x65,0x72,0x74,0x00,0x57,0x65,0x61,0x70,0x6F,0x6E,0x00,0x41,0x75,0x74,0x6F,0x6D,0x61,0x74,0x69,0x63,0x00,0x41,0x6E,0x74,0x69,0x2D,0x72,0x65,0x63,0x6F,0x69,0x6C,0x00,0x53,0x74,0x72,0x65,0x6E,0x67,0x74,0x68,0x00,0x4B,0x69,0x63,0x6B,0x20,0x53,0x74,0x72,0x65,0x6E,0x67,0x74,0x68,0x00,0x4B,0x69,0x63,0x6B,0x20,0x54,0x69,0x6D,0x65,0x00,0x56,0x65,0x72,0x74,0x69,0x63,0x61,0x6C,0x20,0x53,0x74,0x61,0x72,0x74,0x00,0x56,0x65,0x72,0x74,0x69,0x63,0x61,0x6C,0x20,0x4D,0x69,0x64,0x00,0x56,0x65,0x72,0x74,0x69,0x63,0x61,0x6C,0x20,0x45,0x6E,0x64,0x00,0x56,0x20,0x53,0x74,0x61,0x72,0x74,0x20,0x54,0x69,0x6D,0x65,0x00,0x56,0x20,0x4D,0x69,0x64,0x20,0x54,0x69,
+0x6D,0x65,0x00,0x48,0x6F,0x72,0x69,0x7A,0x6F,0x6E,0x74,0x61,0x6C,0x20,0x53,0x74,0x61,0x72,0x74,0x00,0x48,0x6F,0x72,0x69,0x7A,0x6F,0x6E,0x74,0x61,0x6C,0x20,0x4D,0x69,0x64,0x00,0x48,0x6F,0x72,0x69,0x7A,0x6F,0x6E,0x74,0x61,0x6C,0x20,0x45,0x6E,0x64,0x00,0x48,0x20,0x53,0x74,0x61,0x72,0x74,0x20,0x54,0x69,0x6D,0x65,0x00,0x48,0x20,0x4D,0x69,0x64,0x20,0x54,0x69,0x6D,0x65,0x00,0x57,0x65,0x61,0x70,0x6F,0x6E,0x00,0x56,0x65,0x72,0x74,0x69,0x63,0x61,0x6C,0x20,0x56,0x61,0x6C,0x75,0x65,0x00,0x48,0x6F,0x72,0x69,0x7A,0x6F,0x6E,0x74,0x61,0x6C,0x20,0x56,0x61,0x6C,0x75,0x65,0x00,0x4F,0x66,0x66,0x00,0x41,0x44,0x53,0x20,0x6F,0x6E,0x20,0x46,0x69,0x72,0x65,0x00,0x46,0x69,0x72,0x65,0x20,0x6F,0x6E,0x20,0x41,0x44,0x53,0x00,0x44,0x65,0x66,0x61,0x75,0x6C,0x74,0x00,0x54,0x61,0x63,0x74,0x69,0x63,0x61,0x6C,0x00,0x4C,0x65,0x66,0x74,0x79,0x00,0x4E,0x6F,0x6D,0x61,0x64,0x2F,0x43,0x68,0x61,0x72,0x6C,0x69,0x65,0x00,0x4E,0x6F,0x6D,0x61,0x64,0x2F,0x43,0x68,0x61,0x72,0x6C,0x69,0x65,0x20,0x54,0x61,0x63,0x74,0x00,0x4E,0x6F,0x6D,
+0x61,0x64,0x2F,0x43,0x68,0x61,0x72,0x6C,0x69,0x65,0x20,0x4C,0x65,0x66,0x74,0x00,0x42,0x75,0x6D,0x70,0x65,0x72,0x20,0x4A,0x75,0x6D,0x70,0x65,0x72,0x00,0x42,0x75,0x6D,0x70,0x65,0x72,0x20,0x4A,0x75,0x6D,0x70,0x65,0x72,0x20,0x54,0x61,0x63,0x74,0x00,0x30,0x78,0x31,0x2D,0x68,0x61,0x6E,0x64,0x20,0x47,0x75,0x6E,0x73,0x6C,0x69,0x6E,0x67,0x65,0x72,0x00,0x53,0x74,0x69,0x63,0x6B,0x20,0x61,0x6E,0x64,0x20,0x4D,0x6F,0x76,0x65,0x00,0x42,0x72,0x61,0x77,0x6C,0x65,0x72,0x00,0x42,0x65,0x61,0x73,0x74,0x00,0x43,0x75,0x73,0x74,0x6F,0x6D,0x00,0x50,0x53,0x00,0x53,0x68,0x61,0x72,0x65,0x00,0x4F,0x70,0x74,0x69,0x6F,0x6E,0x73,0x00,0x52,0x31,0x00,0x52,0x32,0x00,0x52,0x33,0x00,0x4C,0x31,0x00,0x4C,0x32,0x00,0x4C,0x33,0x00,0x00,0x00,0x00,0x00,0x55,0x70,0x00,0x44,0x6F,0x77,0x6E,0x00,0x4C,0x65,0x66,0x74,0x00,0x52,0x69,0x67,0x68,0x74,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x54,0x6F,0x75,0x63,0x68,0x00,0x00,0x00,0x46,0x69,0x6E,0x67,0x65,0x72,0x31,0x00,0x00,0x00,0x46,0x69,0x6E,0x67,0x65,0x72,0x32,0x00,0x00,
+0x00,0x00,0x00,0x58,0x62,0x6F,0x78,0x00,0x56,0x69,0x65,0x77,0x00,0x4D,0x65,0x6E,0x75,0x00,0x52,0x42,0x00,0x52,0x54,0x00,0x52,0x53,0x00,0x4C,0x42,0x00,0x4C,0x54,0x00,0x4C,0x53,0x00,0x00,0x00,0x00,0x00,0x55,0x70,0x00,0x44,0x6F,0x77,0x6E,0x00,0x4C,0x65,0x66,0x74,0x00,0x52,0x69,0x67,0x68,0x74,0x00,0x59,0x00,0x42,0x00,0x41,0x00,0x58,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x53,0x79,0x6E,0x63,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x50,0x52,0x31,0x00,0x50,0x52,0x32,0x00,0x50,0x4C,0x31,0x00,0x50,0x4C,0x32,0x00,0x41,0x44,0x53,0x00,0x4C,0x65,0x74,0x68,0x61,0x6C,0x00,0x50,0x69,0x6E,0x67,0x00,0x53,0x70,0x72,0x69,0x6E,0x74,0x00,0x46,0x69,0x72,0x65,0x00,0x57,0x65,0x61,0x70,0x6F,0x6E,0x00,0x53,0x6C,0x69,0x64,0x65,0x00,0x4A,0x75,0x6D,0x70,0x00,0x4D,0x65,0x6C,0x65,0x65,0x00,0x52,0x65,0x6C,0x6F,0x61,0x64,0x00,0x54,0x61,0x63,0x74,0x69,0x63,0x61,0x6C,0x00,0x4C,0x65,0x66,0x74,0x00,0x52,0x69,0x67,0x68,0x74,0x00,0x55,0x70,0x00,0x44,0x6F,0x77,0x6E,0x00,0x42,0x75,0x74,0x74,0x6F,0x6E,0x20,0x4C,0x61,0x79,0x6F,0x75,0x74,
+0x00,0x42,0x75,0x6D,0x70,0x65,0x72,0x20,0x50,0x69,0x6E,0x67,0x00,0x44,0x65,0x61,0x64,0x7A,0x6F,0x6E,0x65,0x20,0x4C,0x65,0x66,0x74,0x00,0x44,0x65,0x61,0x64,0x7A,0x6F,0x6E,0x65,0x20,0x52,0x69,0x67,0x68,0x74,0x00,0x46,0x6C,0x69,0x70,0x70,0x65,0x64,0x00,0x48,0x61,0x69,0x72,0x20,0x54,0x72,0x69,0x67,0x67,0x65,0x72,0x73,0x00,0x49,0x6E,0x76,0x65,0x72,0x74,0x65,0x64,0x00,0x2F,0x2A,0x22,0x52,0x65,0x73,0x70,0x6F,0x6E,0x73,0x65,0x20,0x43,0x75,0x72,0x76,0x65,0x00,0x2A,0x2F,0x20,0x22,0x53,0x6C,0x69,0x64,0x65,0x2F,0x44,0x69,0x76,0x65,0x00,0x53,0x74,0x69,0x63,0x6B,0x20,0x4C,0x61,0x79,0x6F,0x75,0x74,0x00,0x54,0x69,0x6C,0x74,0x20,0x42,0x61,0x63,0x6B,0x00,0x54,0x69,0x6C,0x74,0x20,0x46,0x6F,0x72,0x77,0x61,0x72,0x64,0x00,0x54,0x69,0x6C,0x74,0x20,0x4C,0x65,0x66,0x74,0x00,0x54,0x69,0x6C,0x74,0x20,0x52,0x69,0x67,0x68,0x74,0x00,0x4F,0x66,0x66,0x00,0x44,0x72,0x6F,0x70,0x20,0x53,0x68,0x6F,0x74,0x00,0x4A,0x75,0x6D,0x70,0x20,0x53,0x68,0x6F,0x74,0x00,0x53,0x6C,0x69,0x64,0x65,0x00,0x41,0x6B,0x69,0x6D,0x62,0x6F,0x00,
+0x41,0x75,0x74,0x6F,0x20,0x41,0x44,0x53,0x2F,0x46,0x69,0x72,0x65,0x00,0x41,0x75,0x74,0x6F,0x20,0x46,0x6F,0x63,0x75,0x73,0x00,0x41,0x75,0x74,0x6F,0x20,0x50,0x69,0x6E,0x67,0x00,0x42,0x75,0x6E,0x6E,0x79,0x20,0x48,0x6F,0x70,0x00,0x44,0x69,0x76,0x65,0x20,0x43,0x61,0x6E,0x63,0x65,0x6C,0x00,0x45,0x61,0x73,0x79,0x20,0x44,0x72,0x6F,0x70,0x20,0x53,0x68,0x6F,0x74,0x00,0x45,0x61,0x73,0x79,0x20,0x4D,0x65,0x6C,0x65,0x65,0x20,0x53,0x77,0x61,0x70,0x00,0x46,0x61,0x73,0x74,0x20,0x4D,0x65,0x6C,0x65,0x65,0x00,0x52,0x61,0x70,0x69,0x64,0x20,0x46,0x69,0x72,0x65,0x00,0x53,0x68,0x6F,0x74,0x20,0x4D,0x6F,0x64,0x00,0x53,0x6C,0x69,0x64,0x65,0x20,0x43,0x61,0x6E,0x63,0x65,0x6C,0x00,0x53,0x6E,0x61,0x6B,0x65,0x00,0x59,0x59,0x00,0x52,0x65,0x73,0x79,0x6E,0x63,0x20,0x42,0x75,0x74,0x74,0x6F,0x6E,0x00,0x50,0x72,0x6F,0x66,0x69,0x6C,0x65,0x20,0x53,0x77,0x61,0x70,0x00,0x55,0x6E,0x69,0x76,0x65,0x72,0x73,0x61,0x6C,0x20,0x50,0x72,0x6F,0x66,0x69,0x6C,0x65,0x00,0x56,0x65,0x68,0x69,0x63,0x6C,0x65,0x20,0x4D,0x6F,0x64,0x65,0x00,0x50,
+0x72,0x69,0x6D,0x61,0x72,0x79,0x00,0x53,0x65,0x63,0x6F,0x6E,0x64,0x61,0x72,0x79,0x00,0x55,0x6E,0x69,0x76,0x65,0x72,0x73,0x61,0x6C,0x00,0x53,0x74,0x61,0x6E,0x64,0x61,0x72,0x64,0x00,0x44,0x79,0x6E,0x61,0x6D,0x69,0x63,0x00,0x4C,0x69,0x6E,0x65,0x61,0x72,0x00,0x41,0x69,0x6D,0x20,0x41,0x73,0x73,0x69,0x73,0x74,0x00,0x41,0x6E,0x74,0x69,0x20,0x44,0x72,0x69,0x66,0x74,0x00,0x41,0x6E,0x74,0x69,0x20,0x52,0x65,0x63,0x6F,0x69,0x6C,0x00,0x43,0x6F,0x6E,0x74,0x72,0x6F,0x6C,0x6C,0x65,0x72,0x00,0x47,0x72,0x79,0x6F,0x73,0x63,0x6F,0x70,0x65,0x00,0x4F,0x70,0x74,0x69,0x6F,0x6E,0x73,0x00,0x50,0x72,0x6F,0x66,0x69,0x6C,0x65,0x73,0x00,0x53,0x65,0x74,0x74,0x69,0x6E,0x67,0x73,0x00,0x54,0x6F,0x67,0x67,0x6C,0x65,0x73,0x00,0x42,0x6C,0x6F,0x63,0x6B,0x20,0x56,0x69,0x62,0x72,0x61,0x74,0x69,0x6F,0x6E,0x00,0x44,0x65,0x76,0x69,0x63,0x65,0x20,0x56,0x4D,0x20,0x53,0x70,0x65,0x65,0x64,0x00,0x43,0x69,0x72,0x63,0x6C,0x65,0x00,0x45,0x6C,0x6C,0x69,0x70,0x73,0x65,0x00,0x4F,0x76,0x61,0x6C,0x00,0x4C,0x65,0x6D,0x6E,0x69,0x73,0x63,0x61,
+0x74,0x65,0x00,0x4F,0x72,0x62,0x69,0x74,0x00,0x52,0x6F,0x73,0x65,0x00,0x4F,0x66,0x66,0x00,0x43,0x72,0x6F,0x75,0x63,0x68,0x00,0x4A,0x75,0x6D,0x70,0x00,0x50,0x72,0x6F,0x6E,0x65,0x00,0x54,0x61,0x70,0x20,0x74,0x6F,0x20,0x53,0x6C,0x69,0x64,0x65,0x00,0x54,0x61,0x70,0x20,0x74,0x6F,0x20,0x44,0x69,0x76,0x65,0x00,0x53,0x6C,0x69,0x64,0x65,0x20,0x4F,0x6E,0x6C,0x79,0x00,0x44,0x69,0x76,0x65,0x20,0x4F,0x6E,0x6C,0x79,0x00,0x48,0x79,0x62,0x72,0x69,0x64,0x00,0x44,0x65,0x66,0x61,0x75,0x6C,0x74,0x00,0x53,0x6F,0x75,0x74,0x68,0x70,0x61,0x77,0x00,0x4C,0x65,0x67,0x61,0x63,0x79,0x00,0x4C,0x65,0x67,0x61,0x63,0x79,0x20,0x53,0x6F,0x75,0x74,0x68,0x70,0x61,0x77,0x00,0x53,0x6F,0x75,0x74,0x68,0x70,0x61,0x77,0x20,0x4E,0x6F,0x43,0x6C,0x6B,0x53,0x77,0x61,0x70,0x00,0x4C,0x65,0x67,0x53,0x74,0x68,0x50,0x77,0x20,0x4E,0x6F,0x43,0x6C,0x6B,0x53,0x77,0x61,0x70,0x00,0x41,0x6B,0x69,0x6D,0x62,0x6F,0x00,0x41,0x75,0x74,0x6F,0x20,0x46,0x6F,0x63,0x75,0x73,0x00,0x41,0x75,0x74,0x6F,0x20,0x50,0x69,0x6E,0x67,0x00,0x41,0x75,0x74,0x6F,0x20,
+0x52,0x61,0x70,0x69,0x64,0x20,0x46,0x69,0x72,0x65,0x00,0x46,0x61,0x73,0x74,0x20,0x4D,0x65,0x6C,0x65,0x65,0x00,0x52,0x61,0x70,0x69,0x64,0x20,0x46,0x69,0x72,0x65,0x00,0x53,0x68,0x6F,0x74,0x20,0x4D,0x6F,0x64,0x00,0x41,0x52,0x00,0x53,0x4D,0x47,0x00,0x4C,0x4D,0x47,0x00,0x50,0x69,0x73,0x74,0x6F,0x6C,0x00,0x48,0x65,0x61,0x76,0x79,0x00,0x52,0x61,0x70,0x69,0x64,0x20,0x46,0x69,0x72,0x65,0x00,0x41,0x75,0x74,0x6F,0x6D,0x61,0x74,0x69,0x63,0x00,0x42,0x75,0x74,0x74,0x6F,0x6E,0x00,0x43,0x68,0x61,0x6E,0x67,0x65,0x20,0x50,0x72,0x6F,0x66,0x69,0x6C,0x65,0x73,0x00,0x43,0x68,0x61,0x6E,0x67,0x65,0x20,0x53,0x74,0x69,0x63,0x6B,0x00,0x44,0x6F,0x75,0x62,0x6C,0x65,0x20,0x54,0x61,0x70,0x00,0x44,0x50,0x61,0x64,0x20,0x46,0x6F,0x72,0x20,0x44,0x69,0x72,0x65,0x63,0x74,0x69,0x6F,0x6E,0x00,0x46,0x6F,0x72,0x20,0x4F,0x6E,0x65,0x20,0x53,0x65,0x63,0x6F,0x6E,0x64,0x00,0x48,0x6F,0x6C,0x64,0x20,0x42,0x75,0x74,0x74,0x6F,0x6E,0x20,0x74,0x6F,0x20,0x53,0x65,0x74,0x00,0x48,0x6F,0x6C,0x64,0x00,0x4C,0x41,0x55,0x4E,0x43,0x48,0x45,0x52,0x00,0x4D,0x65,0x6E,0x75,0x3A,0x20,0x00,0x4D,0x6F,0x76,0x65,0x20,0x53,0x74,0x69,0x63,0x6B,0x73,0x00,0x4E,0x6F,0x20,0x43,0x68,0x61,0x6E,0x67,0x65,0x00,0x4F,0x66,0x66,0x00,0x4F,0x6E,0x00,0x4F,0x6E,0x6C,0x79,0x00,0x50,0x6C,0x61,0x79,0x53,0x74,0x61,0x74,0x69,0x6F,0x6E,0x00,0x50,0x72,0x65,0x73,0x73,0x00,0x50,0x75,0x73,0x68,0x00,0x50,0x75,0x73,0x68,0x65,0x64,0x20,0x54,0x6F,0x6F,0x20,0x46,0x61,0x72,0x00,0x4C,0x69,0x74,0x65,0x20,0x56,0x65,0x72,0x73,0x69,0x6F,0x6E,0x00,0x4C,0x65,0x74,0x68,0x61,0x6C,0x20,0x50,0x61,0x6E,0x64,0x61,0x00,0x50,0x61,0x6E,0x64,0x61,0x41,0x69,0x6D,0x00,0x56,0x65,0x72,0x73,0x69,0x6F,0x6E,0x20,0x30,0x78,0x37,0x00,0x20,0x53,0x65,0x74,0x73,0x20,0x44,0x65,0x66,0x61,0x75,0x6C,0x74,0x00,0x53,0x4E,0x49,0x50,0x45,0x52,0x00,0x53,0x6C,0x6F,0x77,0x6C,0x79,0x20,0x52,0x65,0x6C,0x65,0x61,0x73,0x65,0x00,0x53,0x74,0x69,0x63,0x6B,0x00,0x54,0x68,0x65,0x6E,0x00,0x20,0x74,0x6F,0x20,0x41,0x64,0x6A,0x75,0x73,0x74,0x00,0x20,0x74,0x6F,0x20,0x43,0x61,0x6C,0x69,0x62,0x72,0x61,0x74,0x65,0x00,0x20,0x74,0x6F,0x20,0x43,0x79,0x63,0x6C,0x65,0x00,0x20,0x74,0x6F,0x20,0x45,0x64,0x69,0x74,0x20,0x43,0x75,0x73,0x74,0x6F,0x6D,0x00,0x20,0x74,0x6F,0x20,0x45,0x6E,0x74,0x65,0x72,0x20,0x4D,0x65,0x6E,0x75,0x00,0x20,0x74,0x6F,0x20,0x47,0x6F,0x20,0x42,0x61,0x63,0x6B,0x00,0x20,0x74,0x6F,0x20,0x52,0x65,0x73,0x65,0x74,0x00,0x20,0x74,0x6F,0x20,0x53,0x61,0x76,0x65,0x20,0x26,0x20,0x45,0x78,0x69,0x74,0x00,0x20,0x74,0x6F,0x20,0x53,0x65,0x6C,0x65,0x63,0x74,0x00,0x55,0x6E,0x61,0x76,0x61,0x69,0x6C,0x61,0x62,0x6C,0x65,0x00,0x41,0x6C,0x6C,0x20,0x56,0x61,0x6C,0x75,0x65,0x73,0x20,0x52,0x65,0x73,0x65,0x74,0x00,0x56,0x65,0x68,0x69,0x63,0x6C,0x65,0x00);
+function V_0968(arg) {
+    switch (arg) {
+        case 0: {
+           return 0;
+        }
+        case 1: {
+           return 12;
+        }
+        case 2: {
+           return 23;
+        }
+        case 3: {
+           return 35;
+        }
+        case 4: {
+           return 42;
+        }
+    }
+    return -1;
+}
+function V_01502(arg) {
+    switch (arg) {
+        case 0: {
+           return 52;
+        }
+        case 1: {
+           return 63;
+        }
+        case 2: {
+           return 69;
+        }
+        case 3: {
+           return 76;
+        }
+        case 4: {
+           return 82;
+        }
+        case 5: {
+           return 95;
+        }
+        case 6: {
+           return 107;
+        }
+        case 7: {
+           return 118;
+        }
+        case 8: {
+           return 129;
+        }
+        case 9: {
+           return 139;
+        }
+        case 10: {
+           return 153;
+        }
+        case 11: {
+           return 167;
+        }
+    }
+    return -1;
+}
+function V_01503(arg) {
+    switch (arg) {
+        case 0: {
+           return 179;
+        }
+        case 1: {
+           return 190;
+        }
+        case 2: {
+           return 202;
+        }
+        case 3: {
+           return 213;
+        }
+        case 4: {
+           return 225;
+        }
+    }
+    return -1;
+}
+function V_01504(arg) {
+    switch (arg) {
+        case 0: {
+           return 238;
+        }
+        case 1: {
+           return 241;
+        }
+        case 2: {
+           return 244;
+        }
+        case 3: {
+           return 247;
+        }
+    }
+    return -1;
+}
+function V_01505(arg) {
+    switch (arg) {
+        case 0: {
+           return 250;
+        }
+        case 1: {
+           return 254;
+        }
+        case 2: {
+           return 260;
+        }
+        case 3: {
+           return 269;
+        }
+        case 4: {
+           return 276;
+        }
+        case 5: {
+           return 283;
+        }
+    }
+    return -1;
+}
+function V_01506(arg) {
+    switch (arg) {
+        case 0: {
+           return 293;
+        }
+        case 1: {
+           return 305;
+        }
+        case 2: {
+           return 314;
+        }
+        case 3: {
+           return 328;
+        }
+        case 4: {
+           return 338;
+        }
+        case 5: {
+           return 353;
+        }
+        case 6: {
+           return 366;
+        }
+        case 7: {
+           return 379;
+        }
+        case 8: {
+           return 392;
+        }
+        case 9: {
+           return 403;
+        }
+        case 10: {
+           return 420;
+        }
+        case 11: {
+           return 435;
+        }
+        case 12: {
+           return 450;
+        }
+        case 13: {
+           return 463;
+        }
+        case 14: {
+           return 474;
+        }
+        case 15: {
+           return 481;
+        }
+        case 16: {
+           return 496;
+        }
+    }
+    return -1;
+}
+function V_01507(arg) {
+    switch (arg) {
+        case 0: {
+           return 513;
+        }
+        case 1: {
+           return 517;
+        }
+        case 2: {
+           return 529;
+        }
+    }
+    return -1;
+}
+function V_01508(arg) {
+    switch (arg) {
+        case 0: {
+           return 541;
+        }
+        case 1: {
+           return 549;
+        }
+        case 2: {
+           return 558;
+        }
+        case 3: {
+           return 564;
+        }
+        case 4: {
+           return 578;
+        }
+        case 5: {
+           return 597;
+        }
+        case 6: {
+           return 616;
+        }
+        case 7: {
+           return 630;
+        }
+        case 8: {
+           return 649;
+        }
+        case 9: {
+           return 669;
+        }
+        case 10: {
+           return 684;
+        }
+        case 11: {
+           return 692;
+        }
+        case 12: {
+           return 698;
+        }
+    }
+    return -1;
+}
+function V_01142(arg) {
+    switch (arg) {
+        case 0: {
+           return 705;
+        }
+        case 1: {
+           return 708;
+        }
+        case 2: {
+           return 714;
+        }
+        case 3: {
+           return 722;
+        }
+        case 4: {
+           return 725;
+        }
+        case 5: {
+           return 728;
+        }
+        case 6: {
+           return 731;
+        }
+        case 7: {
+           return 734;
+        }
+        case 8: {
+           return 737;
+        }
+        case 9: {
+           return 740;
+        }
+        case 10: {
+           return 741;
+        }
+        case 11: {
+           return 742;
+        }
+        case 12: {
+           return 743;
+        }
+        case 13: {
+           return 744;
+        }
+        case 14: {
+           return 747;
+        }
+        case 15: {
+           return 752;
+        }
+        case 16: {
+           return 757;
+        }
+        case 17: {
+           return 763;
+        }
+        case 18: {
+           return 764;
+        }
+        case 19: {
+           return 765;
+        }
+        case 20: {
+           return 766;
+        }
+        case 21: {
+           return 767;
+        }
+        case 22: {
+           return 768;
+        }
+        case 23: {
+           return 769;
+        }
+        case 24: {
+           return 770;
+        }
+        case 25: {
+           return 771;
+        }
+        case 26: {
+           return 772;
+        }
+        case 27: {
+           return 773;
+        }
+        case 28: {
+           return 779;
+        }
+        case 29: {
+           return 780;
+        }
+        case 30: {
+           return 781;
+        }
+        case 31: {
+           return 789;
+        }
+        case 32: {
+           return 790;
+        }
+        case 33: {
+           return 791;
+        }
+        case 34: {
+           return 799;
+        }
+        case 35: {
+           return 800;
+        }
+        case 36: {
+           return 801;
+        }
+        case 37: {
+           return 802;
+        }
+    }
+    return -1;
+}
+function V_01141(arg) {
+    switch (arg) {
+        case 0: {
+           return 803;
+        }
+        case 1: {
+           return 808;
+        }
+        case 2: {
+           return 813;
+        }
+        case 3: {
+           return 818;
+        }
+        case 4: {
+           return 821;
+        }
+        case 5: {
+           return 824;
+        }
+        case 6: {
+           return 827;
+        }
+        case 7: {
+           return 830;
+        }
+        case 8: {
+           return 833;
+        }
+        case 9: {
+           return 836;
+        }
+        case 10: {
+           return 837;
+        }
+        case 11: {
+           return 838;
+        }
+        case 12: {
+           return 839;
+        }
+        case 13: {
+           return 840;
+        }
+        case 14: {
+           return 843;
+        }
+        case 15: {
+           return 848;
+        }
+        case 16: {
+           return 853;
+        }
+        case 17: {
+           return 859;
+        }
+        case 18: {
+           return 861;
+        }
+        case 19: {
+           return 863;
+        }
+        case 20: {
+           return 865;
+        }
+        case 21: {
+           return 867;
+        }
+        case 22: {
+           return 868;
+        }
+        case 23: {
+           return 869;
+        }
+        case 24: {
+           return 870;
+        }
+        case 25: {
+           return 871;
+        }
+        case 26: {
+           return 872;
+        }
+        case 27: {
+           return 873;
+        }
+        case 28: {
+           return 878;
+        }
+        case 29: {
+           return 879;
+        }
+        case 30: {
+           return 880;
+        }
+        case 31: {
+           return 881;
+        }
+        case 32: {
+           return 882;
+        }
+        case 33: {
+           return 883;
+        }
+        case 34: {
+           return 884;
+        }
+        case 35: {
+           return 888;
+        }
+        case 36: {
+           return 892;
+        }
+        case 37: {
+           return 896;
+        }
+    }
+    return -1;
+}
+function V_01512(arg) {
+    switch (arg) {
+        case 0: {
+           return 900;
+        }
+        case 1: {
+           return 904;
+        }
+        case 2: {
+           return 911;
+        }
+        case 3: {
+           return 916;
+        }
+        case 4: {
+           return 923;
+        }
+        case 5: {
+           return 928;
+        }
+        case 6: {
+           return 935;
+        }
+        case 7: {
+           return 941;
+        }
+        case 8: {
+           return 946;
+        }
+        case 9: {
+           return 952;
+        }
+        case 10: {
+           return 959;
+        }
+    }
+    return -1;
+}
+function V_01513(arg) {
+    switch (arg) {
+        case 0: {
+           return 968;
+        }
+        case 1: {
+           return 973;
+        }
+        case 2: {
+           return 979;
+        }
+        case 3: {
+           return 982;
+        }
+    }
+    return -1;
+}
+function V_01514(arg) {
+    switch (arg) {
+        case 0: {
+           return 987;
+        }
+        case 1: {
+           return 1001;
+        }
+        case 2: {
+           return 1013;
+        }
+        case 3: {
+           return 1027;
+        }
+        case 4: {
+           return 1042;
+        }
+        case 5: {
+           return 1050;
+        }
+        case 6: {
+           return 1064;
+        }
+        case 7: {
+           return 1073;
+        }
+        case 8: {
+           return 1091;
+        }
+        case 9: {
+           return 1106;
+        }
+    }
+    return -1;
+}
+function V_01515(arg) {
+    switch (arg) {
+        case 0: {
+           return 1119;
+        }
+        case 1: {
+           return 1129;
+        }
+        case 2: {
+           return 1142;
+        }
+        case 3: {
+           return 1152;
+        }
+    }
+    return -1;
+}
+function V_01516(arg) {
+    switch (arg) {
+        case 0: {
+           return 1163;
+        }
+        case 1: {
+           return 1167;
+        }
+        case 2: {
+           return 1177;
+        }
+        case 3: {
+           return 1187;
+        }
+    }
+    return -1;
+}
+function V_01517(arg) {
+    switch (arg) {
+        case 0: {
+           return 1193;
+        }
+        case 1: {
+           return 1200;
+        }
+        case 2: {
+           return 1214;
+        }
+        case 3: {
+           return 1225;
+        }
+        case 4: {
+           return 1235;
+        }
+        case 5: {
+           return 1245;
+        }
+        case 6: {
+           return 1257;
+        }
+        case 7: {
+           return 1272;
+        }
+        case 8: {
+           return 1288;
+        }
+        case 9: {
+           return 1299;
+        }
+        case 10: {
+           return 1310;
+        }
+        case 11: {
+           return 1319;
+        }
+        case 12: {
+           return 1332;
+        }
+        case 13: {
+           return 1338;
+        }
+    }
+    return -1;
+}
+function V_01518(arg) {
+    switch (arg) {
+        case 0: {
+           return 1341;
+        }
+        case 1: {
+           return 1355;
+        }
+        case 2: {
+           return 1368;
+        }
+        case 3: {
+           return 1386;
+        }
+    }
+    return -1;
+}
+function V_01232(arg) {
+    switch (arg) {
+        case 0: {
+           return 1399;
+        }
+        case 1: {
+           return 1407;
+        }
+        case 2: {
+           return 1417;
+        }
+    }
+    return -1;
+}
+function V_01520(arg) {
+    switch (arg) {
+        case 0: {
+           return 1427;
+        }
+        case 1: {
+           return 1436;
+        }
+        case 2: {
+           return 1444;
+        }
+    }
+    return -1;
+}
+function V_01341(arg) {
+    switch (arg) {
+        case 0: {
+           return 1451;
+        }
+        case 1: {
+           return 1462;
+        }
+        case 2: {
+           return 1473;
+        }
+        case 3: {
+           return 1485;
+        }
+        case 4: {
+           return 1496;
+        }
+        case 5: {
+           return 1506;
+        }
+        case 6: {
+           return 1514;
+        }
+        case 7: {
+           return 1523;
+        }
+        case 8: {
+           return 1532;
+        }
+    }
+    return -1;
+}
+function V_01522(arg) {
+    switch (arg) {
+        case 0: {
+           return 1540;
+        }
+        case 1: {
+           return 1556;
+        }
+    }
+    return -1;
+}
+function V_01523(arg) {
+    switch (arg) {
+        case 0: {
+           return 1572;
+        }
+        case 1: {
+           return 1579;
+        }
+        case 2: {
+           return 1587;
+        }
+        case 3: {
+           return 1592;
+        }
+        case 4: {
+           return 1603;
+        }
+        case 5: {
+           return 1609;
+        }
+    }
+    return -1;
+}
+function V_0840(arg) {
+    switch (arg) {
+        case 0: {
+           return 1614;
+        }
+        case 1: {
+           return 1618;
+        }
+        case 2: {
+           return 1625;
+        }
+        case 3: {
+           return 1630;
+        }
+    }
+    return -1;
+}
+function V_01525(arg) {
+    switch (arg) {
+        case 0: {
+           return 1636;
+        }
+        case 1: {
+           return 1649;
+        }
+        case 2: {
+           return 1661;
+        }
+        case 3: {
+           return 1672;
+        }
+        case 4: {
+           return 1682;
+        }
+    }
+    return -1;
+}
+function V_01526(arg) {
+    switch (arg) {
+        case 0: {
+           return 1689;
+        }
+        case 1: {
+           return 1697;
+        }
+        case 2: {
+           return 1706;
+        }
+        case 3: {
+           return 1713;
+        }
+        case 4: {
+           return 1729;
+        }
+        case 5: {
+           return 1748;
+        }
+    }
+    return -1;
+}
+function V_0839(arg) {
+    switch (arg) {
+        case 0: {
+           return 1767;
+        }
+        case 1: {
+           return 1774;
+        }
+        case 2: {
+           return 1785;
+        }
+        case 3: {
+           return 1795;
+        }
+        case 4: {
+           return 1811;
+        }
+        case 5: {
+           return 1822;
+        }
+        case 6: {
+           return 1833;
+        }
+    }
+    return -1;
+}
+function V_0970(arg) {
+    switch (arg) {
+        case 0: {
+           return 1842;
+        }
+        case 1: {
+           return 1845;
+        }
+        case 2: {
+           return 1849;
+        }
+        case 3: {
+           return 1853;
+        }
+        case 4: {
+           return 1860;
+        }
+        case 5: {
+           return 1866;
+        }
+    }
+    return -1;
+}
+
+function V_01535(arg) {
+    return 1877;
+}
+
+function V_01536(arg) {
+    return 1887;
+}
+
+function V_01537(arg) {
+    return 1894;
+}
+
+function V_01538(arg) {
+    return 1910;
+}
+
+function V_01539(arg) {
+    return 1923;
+}
+
+function V_01540(arg) {
+    return 1934;
+}
+
+function V_01541(arg) {
+    return 1953;
+}
+
+function V_01542(arg) {
+    return 1968;
+}
+
+function V_01543(arg) {
+    return 1987;
+}
+
+function V_01544(arg) {
+    return 1992;
+}
+
+function V_01545(arg) {
+    return 2001;
+}
+
+function V_01546(arg) {
+    return 2008;
+}
+
+function V_01547(arg) {
+    return 2020;
+}
+
+function V_01548(arg) {
+    return 2030;
+}
+
+function V_01549(arg) {
+    return 2034;
+}
+
+function V_01550(arg) {
+    return 2037;
+}
+
+function V_01551(arg) {
+    return 2042;
+}
+
+function V_01552(arg) {
+    return 2054;
+}
+
+function V_01553(arg) {
+    return 2060;
+}
+
+function V_01554(arg) {
+    return 2065;
+}
+
+function V_01556(arg) {
+    return 2080;
+}
+
+function V_01557(arg) {
+    return 2093;
+}
+
+function V_01558(arg) {
+    return 2106;
+}
+
+function V_01559(arg) {
+    return 2115;
+}
+
+function V_01560(arg) {
+    return 2127;
+}
+
+function V_01561(arg) {
+    return 2141;
+}
+
+function V_01562(arg) {
+    return 2148;
+}
+
+function V_01563(arg) {
+    return 2163;
+}
+
+function V_01564(arg) {
+    return 2169;
+}
+
+function V_01565(arg) {
+    return 2174;
+}
+
+function V_01566(arg) {
+    return 2185;
+}
+
+function V_01567(arg) {
+    return 2199;
+}
+
+function V_01568(arg) {
+    return 2209;
+}
+
+function V_01569(arg) {
+    return 2225;
+}
+
+function V_01570(arg) {
+    return 2240;
+}
+
+function V_01571(arg) {
+    return 2252;
+}
+
+function V_01572(arg) {
+    return 2262;
+}
+
+function V_01573(arg) {
+    return 2278;
+}
+
+function V_01574(arg) {
+    return 2289;
+}
+
+function V_01575(arg) {
+    return 2301;
+}
+
+function V_01576(arg) {
+    return 2318;
+}
+define V_0290 = FALSE;
+
+const ps5adt _weaponData[] = {
+	{ 0x26, 0xF0, 0x03, 0x00, 0x20, 0x49, 0x12, 0x00, 0x00, 0x0B, 0x00 },	
+	{ 0x26, 0xF0, 0x03, 0x00, 0xB0, 0x6D, 0x1B, 0x00, 0x00, 0x0A, 0x00 },	
+	{ 0x26, 0xF0, 0x03, 0x00, 0xB0, 0x6D, 0x1B, 0x00, 0x00, 0x0C, 0x00 },	
+	{ 0x26, 0xF0, 0x03, 0x00, 0xB0, 0x6D, 0x1B, 0x00, 0x00, 0x08, 0x00 },	
+	{ 0x26, 0xF0, 0x03, 0x00, 0x20, 0x49, 0x12, 0x00, 0x00, 0x0F, 0x00 }	
+};
+
+const uint8 V_01485[] = {
+	0x2, 	
+	0x1, 	
+	0x2, 	
+	0x2,	
+	0x2	
+};
+
+enum {
+	V_0291 = 0x0, V_0292, V_0293, V_0294, V_0295
+}
+
+const string V_0968[] = {
+	"Dravec 0x2D", "Jager 0x2D", "M15 Mod 0x0", "MXR-17", "Ryden 45K"
+};
+
+const int16 V_01192[] = {
+
+	0x0, 0x0, 0x0,
+
+	0x58, 0x24, 0x1,
+	0x19, 0x19, 0x18, 0x18, 0x18, 
+	0x18, 0x18, 0x18, 0x17, 0x17,
+	0x17, 0x17, 0x17, 0x16, 0x16,
+	0x16, 0x16, 0x16, 0x16, 0x16,
+	0x16, 0x16, 0x16, 0x16, 0x16,
+	0x16, 0x16, 0x16, 0x16, 0x16,
+	0x16, 0x16, 0x16, 0x16, 0x16,
+	0x19,
+	0x0, 0x0, 0x0, 0x0, 0x0, 
+	-1, -1, -2, -2, -2,
+	-3, -3, -4, -4, -4,
+	-5, -5, -5, -5, -5,
+	-5, -5, -5, -5, -5,
+	-3, -3, -3, -3, -3,
+	-5, -5, -5, -5, -5,
+	-5,
+
+	0x50, 0xA, 0x0,
+	0x0, 0x2, 0x4, 0x6, 0x8,
+	0xA, 0xA, 0xA, 0xA, 0xA,
+
+	0x58, 0x3C, 0x1,
+	0x19, 0x19, 0x19, 0x19, 0x19, 
+	0x18, 0x18, 0x18, 0x18, 0x18,
+	0x17, 0x17, 0x17, 0x17, 0x17,
+	0x16, 0x16, 0x16, 0x16, 0x16,
+	0x15, 0x15, 0x15, 0x15, 0x15,
+	0x14, 0x14, 0x14, 0x14, 0x14,
+	0x13, 0x13, 0x13, 0x13, 0x13,
+	0x12, 0x12, 0x12, 0x12, 0x12,
+	0x12, 0x12, 0x12, 0x12, 0x12,
+	0x11, 0x11, 0x11, 0x11, 0x11,
+	0x11, 0x11, 0x11, 0x11, 0x11,
+	0x10, 0x10, 0x10, 0x10, 0x10,
+	-4, -3, -2, -2, -2, 
+	-1, -1, 0x0, 0x0, 0x0,
+	0x5, 0x6, 0x7, 0x8, 0x9,
+	0x9, 0x9, 0x9, 0x9, 0x9,
+	0xA, 0xA, 0xA, 0xA, 0xA,
+	0x9, 0x9, 0x9, 0x9, 0x9,
+	0x9, 0x9, 0x9, 0x9, 0x9,
+	0x9, 0x9, 0x9, 0x9, 0x9,
+	0x9, 0x9, 0x9, 0x9, 0x9,
+	0x9, 0x9, 0x9, 0x9, 0x9,
+	0x9, 0x9, 0x9, 0x9, 0x9,
+	0x9, 0x9, 0x9, 0x9, 0x9,
+
+	0x70, 0x19, 0x1,
+	0x19, 0x19, 0x19, 0x19, 0x19, 
+	0x19, 0x19, 0x19, 0x19, 0x19,
+	0x18, 0x18, 0x18, 0x18, 0x18,
+	0x17, 0x17, 0x18, 0x19, 0x19,
+	0x1A, 0x1A, 0x1A, 0x1A, 0x1A,
+	-2, -2, -2, -2, -2, 
+	-3, -3, -3, -3, -3,
+	-4, -4, -4, -4, -5,
+	-5, -5, -6, -6, -6,
+	-7, -7, -8, -9, -10,
+
+	0x40, 0x1E, 0x1,
+	0x23, 0x24, 0x25, 0x26, 0x27, 
+	0x28, 0x29, 0x29, 0x26, 0x24, 
+	0x24, 0x23, 0x22, 0x21, 0x20, 
+	0x20, 0x20, 0x20, 0x20, 0x20, 
+	0x21, 0x21, 0x21, 0x21, 0x21, 
+	0x22, 0x22, 0x22, 0x22, 0x22, 
+	0x0, -2, -4, -3, -2, 
+	0x2, 0x4, 0x6, 0x9, 0xA,
+	0xC, 0xA, 0x8, 0x6, 0x4,
+	0x2, -2, -4, -5, -7,
+	-9, -11, -13, -14, -13,
+	-13, -13, -13, -13, -13
+};
+
+const uint16 V_01488[] = {
+	0x3,		
+	0x4E,		
+	0x5B,		
+	0xD6,	
+	0x10B		
+};
+
+const uint8 V_01489[][] = {
+
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X,	XB1_LB }, 	
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_A, XB1_B, XB1_X,	XB1_LB }, 	
+	{ XB1_RT, XB1_LB, XB1_UP, XB1_RS, XB1_LT, XB1_Y, XB1_B, XB1_A, XB1_LS, XB1_X,	XB1_RB }, 	
+	{ XB1_RB, XB1_LT, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X,	XB1_LB }, 	
+	{ XB1_RB, XB1_LT, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_A, XB1_B, XB1_X,	XB1_LB }, 	
+	{ XB1_LB, XB1_RT, XB1_UP, XB1_RS, XB1_LT, XB1_Y, XB1_B, XB1_A, XB1_LS, XB1_X,	XB1_RB }, 	
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_LB, XB1_RS, XB1_X,	XB1_A }, 	
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_LB, XB1_B, XB1_X,	XB1_A }, 	
+	{ XB1_LT, XB1_RT, XB1_UP, XB1_LS, XB1_LB, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X,	XB1_RB }, 	
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_RS, XB1_A, XB1_X,	XB1_LB }, 	
+	{ XB1_LT, XB1_RS, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RB, XB1_X,	XB1_LB }, 	
+	{ XB1_LT, XB1_RS, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_LB, XB1_RB, XB1_X,	XB1_A } 	
+};
+
+const uint16 V_01380[][] = {
+	{ 0x78, 0x64, 0x64 }, 		
+	{ 0x12C, 0x64, 0x4B }, 		
+	{ 0x23, 0x64, 0x64 }, 		
+	{ 0xF0, 0x64, 0x5D }, 		
+	{ 0x15E, 0x64, 0x64 }, 		
+	{ 0x0, 0x64, 0x64 }, 		
+	{ 0x0, 0x64, 0x4B }, 		
+	{ 0x78, 0x64, 0x4B }, 		
+	{ 0x131, 0x64, 0x32 },		
+	{ 0x14, 0x32, 0x64 }, 		
+	{ 0xA, 0x64, 0x4B } 		
+}
+
+const uint8 V_0821[] = {
+	0x2,						
+	0x3, 						
+	0x4,						
+	0x5,						
+	0x2,						
+	0x4,						
+	0x3,						
+	0x3,						
+	0x4,						
+	0x3,						
+	0x5						
+};
+
+const uint8 V_01492[] = { OLED_FONT_SMALL_HEIGHT, OLED_FONT_MEDIUM_HEIGHT, OLED_FONT_LARGE_HEIGHT };
+const uint8 V_01493[] = { OLED_FONT_SMALL_WIDTH, OLED_FONT_MEDIUM_WIDTH, OLED_FONT_LARGE_WIDTH };
+
+const uint8 V_01320[][] = {
+    {0x27, 0x1F}, {0x29, 0x1F}, {0x2B, 0x1F}, {0x2D, 0x1F}, {0x2F, 0x1F},
+    {0x28, 0x20}, {0x2A, 0x20}, {0x2C, 0x20}, {0x2E, 0x20}, {0x30, 0x20},
+    {0x27, 0x21}, {0x29, 0x21}, {0x2B, 0x21}, {0x2D, 0x21}, {0x2F, 0x21},
+    {0x28, 0x22}, {0x2A, 0x22}, {0x2C, 0x22}, {0x2E, 0x22}, {0x30, 0x22},
+    {0x27, 0x23}, {0x29, 0x23}, {0x2B, 0x23}, {0x2D, 0x23}, {0x2F, 0x23},
+    {0x28, 0x24}, {0x2A, 0x24}, {0x2C, 0x24}, {0x2E, 0x24}, {0x30, 0x24},
+    {0x27, 0x25}, {0x29, 0x25}, {0x2B, 0x25}, {0x2D, 0x25}, {0x2F, 0x25},
+    {0x28, 0x26}, {0x2A, 0x26}, {0x2C, 0x26}, {0x2E, 0x26}, {0x30, 0x26},
+    {0x27, 0x27}, {0x29, 0x27}, {0x2B, 0x27}, {0x2D, 0x27}, {0x2F, 0x27},
+    {0x28, 0x28}, {0x2A, 0x28}, {0x2C, 0x28}, {0x2E, 0x28}, {0x30, 0x28},
+    {0x27, 0x29}, {0x29, 0x29}, {0x2B, 0x29}, {0x2D, 0x29}, {0x2F, 0x29},
+    {0x28, 0x2A}, {0x2A, 0x2A}, {0x2C, 0x2A}, {0x2E, 0x2A}, {0x30, 0x2A}
+}
+
+const uint8 V_0797[][] = {
+	{ 0x0, 0xB, V_0296 },		
+	{ 0x0, 0x4, V_0297 },		
+	{ 0x0, 0x11, V_0298 },		
+	{ 0x0, 0x8, V_0299 },		
+	{ 0x0, 0x3, V_0300 },			
+	{ 0x0, 0xD, V_0301 },			
+	{ 0x0, 0x3, V_0302 },		
+	{ 0x0, 0x1, V_0303 },	
+	{ 0x0, 0x6, 0x0 }					
+}
+
+const uint8 V_01496[][] = {
+
+	{ POLAR_LY, POLAR_LX, POLAR_RY, POLAR_RX }, 
+	{ POLAR_RY, POLAR_RX, POLAR_LY, POLAR_LX }, 
+	{ POLAR_LY, POLAR_RX, POLAR_RY, POLAR_LX }, 
+	{ POLAR_RY, POLAR_LX, POLAR_LY, POLAR_RX }, 
+	{ POLAR_RY, POLAR_RX, POLAR_LY, POLAR_LX }, 
+	{ POLAR_RY, POLAR_LX, POLAR_LY, POLAR_RX }  
+}
+
+const uint8 V_01497[] = { OLED_LEFT, OLED_RIGHT, OLED_UP, OLED_DOWN };
+
+const uint8 V_01498[][] = {
+	{ XB1_LX, XB1_LX, XB1_LY, XB1_LY },
+	{ XB1_RX, XB1_RX, XB1_RY, XB1_RY }
+};
+
+const uint8 V_01499[][] = {
+	{ POLAR_LX, POLAR_LX, POLAR_LY, POLAR_LY },
+	{ POLAR_RX, POLAR_RX, POLAR_RY, POLAR_RY }
+};
+
+const uint8 V_01304[] = { 0xA, 0x8, 0x4, 0x2 };
+
+const uint8 V_01501[] = { XB1_XBOX, XB1_VIEW, XB1_MENU, XB1_SYNC, XB1_RB, XB1_RT, XB1_RS, XB1_LB, XB1_LT, XB1_LS, XB1_UP, XB1_DOWN, XB1_LEFT, XB1_RIGHT, XB1_Y, XB1_B, XB1_A, XB1_X };
+
+const string V_01502[] = { "Aim Assist", "Shape", "Radius", "Speed", "Boost Radius", "Boost Speed", "Hip Assist", "Hip Radius", "Hip Speed", "Strafe Assist", "Strafe Radius", "Strafe Time" };
+
+const string V_01503[] = { "Anti-drift", "Calibration", "Drift Test", "Drift Reset", "Drift Values" };
+
+const string V_01504[] = { "L:", "R:", "U:", "D:" };
+
+const string V_01505[] = { "Off", "Basic", "Advanced", "Expert", "Weapon", "Automatic" };
+
+const string V_01506[] = { "Anti-recoil", "Strength", "Kick Strength", "Kick Time", "Vertical Start", "Vertical Mid", "Vertical End", "V Start Time", "V Mid Time", "Horizontal Start", "Horizontal Mid", "Horizontal End", "H Start Time", "H Mid Time", "Weapon", "Vertical Value", "Horizontal Value" };
+
+const string V_01507[] = { "Off", "ADS on Fire", "Fire on ADS" };
+
+const string V_01508[] = { "Default", "Tactical", "Lefty", "Nomad/Charlie", "Nomad/Charlie Tact", "Nomad/Charlie Left", "Bumper Jumper", "Bumper Jumper Tact", "0x1-hand Gunslinger", "Stick and Move", "Brawler", "Beast", "Custom" };
+
+const string V_01142[] = { "PS", "Share", "Options", "R1", "R2", "R3", "L1", "L2", "L3", "", "", "", "", "Up", "Down", "Left", "Right", "", "", "", "", "", "", "", "", "", "", "Touch", "", "", "Finger1", "", "", "Finger2", "", "", "", "" };
+
+const string V_01141[] = { "Xbox", "View", "Menu", "RB", "RT", "RS", "LB", "LT", "LS", "", "", "", "", "Up", "Down", "Left", "Right", "Y", "B", "A", "X", "", "", "", "", "", "", "Sync", "", "", "", "", "", "", "PR1", "PR2", "PL1", "PL2" };
+
+const string V_01511 = "";
+
+const string V_01512[] = { "ADS", "Lethal", "Ping", "Sprint", "Fire", "Weapon", "Slide", "Jump", "Melee", "Reload", "Tactical" };
+
+const string V_01513[] = { "Left", "Right", "Up", "Down" };
+
+const string V_01514[] = { "Button Layout", "Bumper Ping", "Deadzone Left", "Deadzone Right", "Flipped", "Hair Triggers", "Inverted",  "Slide/Dive", "Stick Layout" };
+
+const string V_01515[] = { "Tilt Back", "Tilt Forward", "Tilt Left", "Tilt Right" };
+
+const string V_01516[] = { "Off", "Drop Shot", "Jump Shot", "Slide" };
+
+const string V_01517[] = { "Akimbo", "Auto ADS/Fire", "Auto Focus", "Auto Ping", "Bunny Hop", "Dive Cancel", "Easy Drop Shot", "Easy Melee Swap", "Fast Melee", "Rapid Fire", "Shot Mod", "Slide Cancel", "Snake", "YY" };
+
+const string V_01518[] = { "Resync Button", "Profile Swap", "Universal Profile", "Vehicle Mode" };
+
+const string V_01232[] = { "Primary", "Secondary", "Universal" };
+
+const string V_01520[] = { "Standard", "Dynamic", "Linear" };
+
+const string V_01341[] = { "Aim Assist", "Anti Drift", "Anti Recoil", "Controller", "Gryoscope", "Options", "Profiles", "Settings", "Toggles" };
+
+const string V_01522[] = { "Block Vibration", "Device VM Speed" };
+
+const string V_01523[] = { "Circle", "Ellipse", "Oval", "Lemniscate", "Orbit", "Rose" };
+
+const string V_0840[] = { "Off", "Crouch", "Jump", "Prone" };
+
+const string V_01525[] = { "Tap to Slide", "Tap to Dive", "Slide Only", "Dive Only", "Hybrid" };
+
+const string V_01526[] = { "Default", "Southpaw", "Legacy", "Legacy Southpaw", "Southpaw NoClkSwap", "LegSthPw NoClkSwap" };
+
+const string V_0839[] = { "Akimbo", "Auto Focus", "Auto Ping", "Auto Rapid Fire", "Fast Melee", "Rapid Fire", "Shot Mod" };
+
+const string V_0970[] = { "AR", "SMG", "LMG", "Pistol", "Heavy", "Rapid Fire" };
+
+const int8 V_01241[][] = {
+	{ FALSE, TRUE, V_0304 | V_0519 },				
+	{ V_0305, V_0306, V_0307 | V_0519 },				
+	{ 0x1, 0x64, V_0308 | V_0519 },					
+	{ 0x1, 0x64, V_0308 | V_0519 },					
+	{ -100, 0x64, V_0308 | V_0519 },				
+	{ -100, 0x64, V_0308 | V_0519 },				
+	{ FALSE, TRUE, V_0304 | V_0519 },				
+	{ 0x1, 0x64, V_0308 | V_0519 },					
+	{ 0x1, 0x64, V_0308 | V_0519 },					
+	{ FALSE, TRUE, V_0304 | V_0519 },				
+	{ 0x1, 0x64, V_0308 | V_0519 },					
+	{ 0x1, 0x32, V_0317 | V_0519 }						
+};
+
+const uint16 V_01251[][] = {
+	{ FALSE, TRUE, V_0304 },								
+	{ 0x0, 0x0, V_0319 },									
+	{ 0x0, 0x0, V_0320 },									
+	{ 0x0, 0x0, V_0321 },									
+	{ 0x0, 0x0, V_0322 }											
+};
+
+const int16 V_01259[][] = { 
+	{ V_0323, V_0324, V_0307 | V_0519 },			
+	{ 0x0, 0x64, V_0308 | V_0519 },					
+	{ 0x0, 0x64, V_0308 | V_0519 },					
+	{ 0x0, 0xFA, V_0317 | V_0519 },					
+	{ 0x0, 0x64, V_0308 | V_0519 },					
+	{ 0x0, 0x64, V_0308 | V_0519 },					
+	{ 0x0, 0x64, V_0308 | V_0519 },					
+	{ 0x0, 0xFA, V_0317 | V_0519 },					
+	{ 0x0, 0xFA, V_0317 | V_0519 },					
+	{ -100, 0x64, V_0308 | V_0519 },				
+	{ -100, 0x64, V_0308 | V_0519 },				
+	{ -100, 0x64, V_0308 | V_0519 },				
+	{ 0x0, 0xFA, V_0317 | V_0519 },					
+	{ 0x0, 0xFA, V_0317 | V_0519 },					
+	{ V_0291, V_0295, V_0307 | V_0519 },			
+	{ -100, 0xC8, V_0342 | V_0519 },				
+	{ -100, 0xC8, V_0342 | V_0519 }				
+};
+
+const uint8 V_01260[][] = {
+	{ V_0344, V_0345, V_0307 },							
+	{ FALSE, TRUE, V_0304 },								
+	{ 0x0, 0xF, V_0308 },										
+	{ 0x0, 0xF, V_0308 },										
+	{ FALSE, TRUE, V_0304 },								
+	{ FALSE, TRUE, V_0304 },								
+	{ FALSE, TRUE, V_0304 },								
+
+	{ V_0353, V_0354, V_0307 }, 	
+	{ V_0344, V_0357, V_0307 }			
+};
+
+const int8 V_01284[][] = {
+	{ -1, 0xC, V_0359 | V_0519 },						
+	{ V_0323, V_0361, V_0307 | V_0519 },	
+	{ FALSE, TRUE, V_0304 },								
+	{ FALSE, TRUE, V_0304 | V_0519 },				
+	{ FALSE, TRUE, V_0304 },								
+	{ FALSE, TRUE, V_0304 },								
+	{ FALSE, TRUE, V_0304 },								
+	{ FALSE, TRUE, V_0304 },								
+	{ FALSE, TRUE, V_0304 },								
+	{ -1, 0xC, V_0359  | V_0519},						
+	{ V_0323, V_0372, V_0307 },						
+	{ 0x0, 0x3C, V_0317 },										
+	{ FALSE, TRUE, V_0304 },								
+	{ FALSE, TRUE, V_0304 }									
+};
+
+const uint8 V_01302[][] = {
+	{ FALSE, TRUE, V_0304 },								
+	{ 0x0, 0x4, V_0378 }											
+};
+
+unmap ALL_REMAPS;
+
+const string V_01555 = "Release"
+
+define V_0379 = 0xFA0; 
+define V_0380 = 0x1F40; 
+define V_0381 = 0x0; 
+define V_0382 = 0x8; 
+
+enum {
+
+	LowerBound = 0x0, V_0383, V_0384, V_0385,
+	V_0386, V_0387, V_0388, V_0389, V_0390, V_0391, V_0392,
+	V_0393, V_0394, V_0395, V_0396, V_0397, V_0398, V_0399, V_0400,
+
+	None = -1, V_0401 = 0x0, V_0402, V_0403, V_0404,
+	V_0405 = 0x0, V_0406, V_0407, V_0408, V_0409, V_0410,
+
+	V_01049 = 0x2, V_0411, V_0412, V_0413, V_0414, V_0415,
+	V_0416, V_0417, V_0418, V_0419, V_0420, V_0421, V_0422, V_0423, V_0424 = V_0423 + 0x3,
+
+	ADS = 0x0, V_0425, V_0426, V_0427, V_0428, V_0429, V_0430, V_0431, V_0432, V_0433, V_0434, V_0435, V_0436,
+
+	V_0344 = 0x0, V_0437, V_0438, V_0439, V_0440, V_0441, V_0442, V_0443, V_0444, V_0445, V_0446, V_0447, V_0345,
+
+	Hue = 0x0, V_0449, V_0450,
+	V_0451 = 0x0, V_0452, V_0453, V_0454, V_0455, V_0456,
+	V_0457, V_0458, V_0459, V_0460, V_0461,
+
+	Console = 0x0, V_0462, V_0463, V_0464, V_0465,
+
+    LedUpdate = 0x0, V_0466, V_0467, V_0468, V_0469, V_0470,
+
+    V_0998 = -3, V_0471 = -2, V_0472 = -1, V_0473 = 0x2, V_0474 = 0x5,
+
+   	BaseSetting = 0x0, V_0475, V_0476, V_0477, V_0478, V_0479, V_0480, V_0481, V_0482, V_0483,
+
+   	AimAssistMenu = 0x0, V_0484, V_0485, V_0486, V_0487, V_0488, V_0489, V_0490, V_0491,
+   	V_0492,
+
+   	V_01048 = 0x0, V_0493, V_0494, V_0495, V_0496, V_0497, V_0498, V_0499,
+
+	AtdMode = 0x0, V_0500, V_0501, V_0502, V_0503, V_0504 = V_0503 + 0x3, V_0505 = V_0504 + 0x3,
+
+	GroupNone = -1, V_0506, V_0507, V_0508, V_0509, V_0510, V_0511, V_0512, V_0513,
+
+	RumbleCounter = 0x2,
+
+   	HomeScreen = -3, V_0514, V_0515,
+   	V_0516 = 0x1, V_0308 = 0x2, V_0317 = 0x4, V_0519 = 0x8, V_0359 = 0x10, V_0304 = 0x20, V_0307 = 0x40, V_0378 = 0x80, V_0319 = 0x100, V_0322 = 0x200, V_0342 = 0x400,
+   	V_0320 = 0x800, V_0321 = 0x1000,
+
+   	V_0299 = 0x0, V_0529, V_0530, V_0531, V_0532, V_0533, V_0534,  SlideDive, V_0535, 
+   	V_0296, V_0536 = V_0296 + 0x3, V_0537 = V_0536 + 0x3, V_0538 = V_0537 + 0x3, V_0539 = V_0538 + 0x3, V_0540 = V_0539 + 0x3,
+   	V_0541 = V_0540 + 0x3, V_0542 = V_0541 + 0x3, V_0543 = V_0542 + 0x3,
+   	V_0544 = V_0543 + 0x3, V_0545 = V_0544 + 0x3, V_0546 = V_0545 + 0x3,
+   	V_0297 = V_0546 + 0x3,
+   	V_0298,
+   	V_0549 = V_0298 + 0x3, 
+   	KickStrength = V_0549 + 0x3, V_0550 = KickStrength + 0x3, 
+   	V_01052 = V_0550 + 0x3, V_0551 = V_01052 + 0x3, V_0552 = V_0551 + 0x3, V_0553 = V_0552 + 0x3, V_0554 = V_0553 + 0x3,
+   	V_0555 = V_0554 + 0x3, V_0556 = V_0555 + 0x3, V_0557 = V_0556 + 0x3, V_0558 = V_0557 + 0x3, V_0559 = V_0558 + 0x3, 
+   	Weapon = V_0559 + 0x3, 
+   	VerticalValue = Weapon + 0x3, V_0560 = VerticalValue + 0x3, 
+   	V_0300 = V_0560 + 0x3, V_0561, V_0562, V_0563,
+   	V_0301, V_0565 = V_0301 + 0x3, V_0566 = V_0565 + 0x3, V_0567, V_0568 = V_0567 + 0x3, V_0569, V_0570, V_0571, V_0572, V_0573, V_0574 = V_0573 + 0x3, V_0575, V_0576, V_0577,
+   	V_0302, V_0579, V_0580, V_0581,
+   	V_0303, V_0583,
+   	V_0584, V_0585, V_0586, V_0587, V_0588, V_0589, V_0590, V_0591, V_0592, V_0593, V_0594,
+   	V_0595, V_0596 = V_0595 + 0x3, V_0597 = V_0596 + 0x3,
+   	V_0598, V_0599 = V_0598 + 0x2, V_0600 = V_0599 + 0x2, V_0601 = V_0600 + 0x2, V_0602 = V_0601 + 0x2, V_0603 = V_0602 + 0x2, V_0604 = V_0603 + 0x2,
+
+   	Basic = 0x1, V_0605, V_0606, V_0607, V_0324,
+   	V_0609 = V_0296, V_0610, V_0611, V_0612, V_0613, V_0614, V_0615, V_0616, V_0617, V_0618, V_0619, V_0620,
+   	V_0621 = V_0298, V_0622, V_0623, V_0624,
+   	V_0625, V_0626, V_0627, V_0628, V_0629,
+   	V_0630, V_0631, V_0632, V_0633, V_0634,
+   	V_0635, V_0636, V_0637,
+   	V_0638 = V_0301, V_0639, V_0640, V_0641, V_0642, V_0643, V_0644, V_0645, V_0646, V_0647, V_0648, V_0649, V_0650, V_0651,
+   	V_0323 = 0x0, V_0653, V_0654, V_0655,
+   	V_0656 = 0x1, V_0361,
+   	V_0658 = 0x1, V_0659, V_0372,
+   	V_0353 = 0x0, V_0662, V_0663, V_0664, V_0354,
+   	V_0666 = 0x0,
+   	V_0667 = 0x0, V_0668, V_0669,
+   	V_0305 = 0x0, V_0671, V_0672, V_0673, V_0674, V_0306,
+
+	V_0676 = 0x0, V_0677, V_0678, V_0679, V_0680,
+   	V_0681 = 0x0, V_0682,
+   	V_0683, V_0684,
+	V_0685, V_0686, V_0687, V_0688, V_0689,
+	V_0690, V_0691, V_0692, V_0693, V_0694,
+	V_0695, V_0696, V_0697,
+
+	Bit = 0x0, V_0698, V_0699, V_0700, V_0701,
+
+    ActionBlock = 0x0, V_0702, V_0703, V_0704, V_0705, V_0706, V_0707, V_0708, V_0709, V_0710, V_0711, V_0712, V_0713, V_0714,
+    V_0715, V_0716, V_0717, V_0718, V_0719, V_0720, V_0721,
+
+  	Move = 0x0, V_0722, V_0723, V_0724, V_0725,
+
+    Southpaw = 0x1, V_0726, V_0727, V_0728, V_0357
+
+}
+
+int V_0730;
+int V_0731[0x13]; 
+int V_0732[0x13]; 
+int V_029[0xD]; 
+int V_0734[0x5]; 
+int V_0735[0xF]; 
+int V_0736, V_0737; 
+int V_0738[0x3]; 
+int V_0739[0xA1]; 
+int V_0740[0xA]; 
+int V_0741[0x8]; 
+int V_0742[0xD]; 
+int V_0743[0x5]; 
+int V_0744[0x15]; 
+int V_024[0x5]; 
+int V_0746;
+
+init {
+	V_0246(V_0454);
+	V_0732[V_0423] = inv(0x1);		
+	V_0732[V_0423 + 0x1] = inv(0x1);	
+	V_0732[V_0423 + 0x2] = inv(0x1);	
+	V_0735[V_0467] = 0x1; 				
+	V_0735[LedUpdate] = TRUE;			
+	V_0740[V_0475] = inv(0x1);				
+	V_0744[ActionBlock] = inv(0x1);			
+	V_025(HomeScreen);			
+	V_0251();						
+}
+
+main {
+	V_0155();					
+	V_0170();				
+	V_0171();				
+	V_0173();				
+}
+
+function V_00(V_01, V_02, V_03, V_04) {
+	V_0740[V_01] = V_0174(V_02 == 0x1, V_03, V_04);
+}
+
+function V_05(V_06, V_07, V_08, V_02, V_010) {
+
+	if(V_02 > 0x0) {
+
+		if(V_06 + V_02 <= V_08) {
+			V_0186(V_0458);
+			return V_06 + V_02;
+		} else if(V_010) {
+			V_0186(V_0458);
+			return V_07;
+		}
+	} else {
+
+		if(V_06 + V_02 >= V_07) {
+			V_0186(V_0458);
+			return V_06 + V_02;
+		} else if(V_010) {
+			V_0186(V_0458);
+			return V_08;
+		}
+	}
+
+	if(!V_0174(V_0174(V_02 > 0x0, V_06 == V_08, V_06 == V_07), FALSE, TRUE)) {
+		V_0186(V_0457);
+	}
+
+	return V_0174(V_02 > 0x0, V_08, V_07);
+}
+
+function V_011(V_012) {
+	return V_0174(V_0740[V_0476] >= V_012, 0x0, V_0740[V_0476] + 0xA);
+}
+
+function V_013() {
+
+	V_0731[V_0389] = get_ival(V_01499[V_0731[V_0387]][V_0731[V_0386]]);
+
+	if(abs(V_0731[V_0389]) > abs(V_0731[V_0393 + (V_0731[V_0387] << 0x2) + V_0731[V_0386]])) {
+
+		V_0731[V_0393 + (V_0731[V_0387] << 0x2) + V_0731[V_0386]] = V_0731[V_0389];
+
+		combo_run(Combo_LedAlertAntiDrift);
+	}
+
+	V_0731[V_0386]++;
+
+	if(V_0731[V_0386] > V_0404) {
+		V_0731[V_0387]++; 
+		V_0731[V_0386] = V_0401;
+	}
+
+	V_0731[V_0389] = 0x0;
+	V_0731[V_0392] = FALSE;
+	V_0731[V_0388] = FALSE;
+	V_0731[V_0390] = FALSE;
+	V_0731[V_0391] = 0x0;
+
+	if(V_0731[V_0387] > V_0402) {
+		V_025(V_0484); 
+		V_0744[V_0703] = 0x4; 
+		V_0744[V_0704] = 0x0; 
+		V_0740[V_0480] = V_0678; 
+	}
+}
+
+function V_014(V_015, V_016) {
+    return (V_015 * V_016) / 0x64;
+}
+
+function V_017(V_01, V_019) {
+
+	if((V_019 >= V_0732[V_0421])) {
+		return 0x0;
+	}
+
+	return ((V_01192[V_01 + V_019 + 0x1] - V_01192[V_01 + V_019]) * 0x147) / (V_0732[V_0422] / get_rtime());
+}
+
+function V_020() {
+	V_0732[V_0411] = V_0174(V_0732[V_0416], V_017(V_0732[V_0419] + V_0732[V_0421], V_0732[V_0417]), 0x0);
+	V_0732[V_0412] = V_017(V_0732[V_0419], V_0732[V_0417]);
+}
+
+function V_021(V_022) {
+
+	if(V_0731[V_0386] != V_022) {
+		V_0237(FALSE); 
+		V_0731[V_0386] = V_022; 
+		V_0186(V_0458); 
+	}
+}
+
+function V_023(V_024) {
+
+	if(V_0731[V_0387] != V_024) {
+		V_0237(FALSE); 
+		V_0731[V_0387] = V_024; 
+		V_0186(V_0458); 
+	}
+}
+
+function V_025(V_026) {
+
+	if(V_0744[V_0713] == HomeScreen) {
+		vm_tctrl(0x0);													
+	} else if(((V_0744[V_0713] == V_0514) && (V_026 != HomeScreen)) || V_0740[V_0483]) {
+		V_0740[BaseSetting] = V_0797[V_026][0x2];				
+		V_0740[V_0480] = 0x0;											
+		V_0287();										
+	}
+
+	combo_stop_all();													
+	V_0740[V_0475] = inv(0x1);												
+	V_0735[LedUpdate] = TRUE;											
+	V_0735[V_0466] = TRUE;												
+	V_0744[V_0703] = 0x0;													
+	V_0744[V_0704] = 0x0;												
+	V_0744[V_0713] = V_026;												
+	V_0744[V_0714] = 0x0;												
+}
+
+function V_027() {
+
+	V_0731[V_0389] = get_ival(V_01498[V_0731[V_0387]][V_0731[V_0386]]);
+
+	if((V_0731[V_0389] != get_lval(V_01498[V_0731[V_0387]][V_0731[V_0386]]))) {
+
+		if(((V_0731[V_0386] == V_0402) || (V_0731[V_0386] == V_0404)) && (V_0731[V_0389] < 0x0)) {
+			return;
+		} else if(((V_0731[V_0386] == V_0401) || (V_0731[V_0386] == V_0403)) && (V_0731[V_0389] > 0x0)) {
+			return;
+		}
+
+		V_0239();
+	}
+
+	if(V_0731[V_0388]) {
+		if(V_0731[V_0391] < 0x3E8) {
+			V_0731[V_0391] += get_rtime();
+		} else {
+
+			rect_oled(0x3, 0x3, 0x7A, 0x18, TRUE, OLED_BLACK);
+
+			V_0183(addr(V_01555));
+			V_0179(ASCII_SPACE);
+			V_0183(V_01563(0));
+			V_0149(V_0998, V_0474, OLED_FONT_SMALL, OLED_WHITE);
+
+			V_0183(V_01564(0));
+			V_0179(ASCII_SPACE);
+			V_0183(V_01552(0));
+			V_0179(ASCII_SPACE);
+
+			if(V_0734[V_0462] == PIO_XB1) {
+				V_0183(V_0160(XB1_A));
+			} else {
+				V_0179(OLED_CROSS);
+			}
+
+			V_0149(V_0998, 0x12, OLED_FONT_SMALL, OLED_WHITE);
+
+			V_0731[V_0392] = TRUE; 
+			V_0246(V_0458); 
+		}
+	} else {
+		V_0731[V_0391] = 0x0;
+	}
+
+	V_0731[V_0389] = abs(V_0731[V_0389]);
+
+	V_0280((V_0731[V_0389] >= 0x19) && (V_0731[V_0389] <= 0x23));
+}
+
+function V_028(V_029, V_030) {
+
+	if(get_ival(V_029)) {
+
+		if(V_0740[V_0475] == inv(0x1))  {
+			V_0740[V_0475] = V_029;
+		}
+
+		if(V_0740[V_0475] == V_029) {
+
+			if(event_press(V_029)) {
+				return TRUE;
+			}
+
+			if(V_030) {
+
+                if (get_ptime(V_029) >= 0xC8) {
+
+                    if (get_ptime(V_029) > 0xFA0)  {
+
+                        V_0740[V_0476] = V_011(0xA);
+                    } else if (get_ptime(V_029) > 0xBB8) {
+
+                        V_0740[V_0476] = V_011(0x1E);
+                    } else if (get_ptime(V_029) > 0x7D0) {
+
+                        V_0740[V_0476] = V_011(0x32);
+                    } else if (get_ptime(V_029) > 0x3E8) {
+
+                        V_0740[V_0476] = V_011(0x46);
+                    } else {
+
+                        V_0740[V_0476] = V_011(0x5A);
+                    }
+
+                } else {
+                	return FALSE;
+                }
+			} else {
+
+				V_0740[V_0476] = V_0174(V_0740[V_0476] >= 0xC8, 0x0, V_0740[V_0476] + 0xA);
+			}
+
+			return !V_0740[V_0476];
+		}
+	}
+	else if(event_release(V_0740[V_0475])) {
+		V_0740[V_0475] = inv(0x1);			
+		V_0740[V_0476] = 0x0;		
+		V_0239();					
+	}
+
+	return FALSE;
+}
+
+function V_031(V_032) {
+	return event_release(V_032) && (get_ptime(V_032) < 0x3E8);
+}
+
+function V_033(V_07, V_08, V_036) {
+
+	V_0287();
+
+	if(V_028(XB1_UP, V_0174(V_036 || (V_0744[V_0713] == V_0485), TRUE, FALSE))) {
+
+		V_0739[V_0740[V_0477]] = V_05(
+			V_0739[V_0740[V_0477]],
+			V_07,
+			V_08,
+			0x1,
+			!V_036
+		);
+
+		return TRUE; 	
+
+	} else if(V_028(XB1_DOWN, V_0174(V_036 || (V_0744[V_0713] == V_0485), TRUE, FALSE))) {
+
+		V_0739[V_0740[V_0477]] = V_05(
+			V_0739[V_0740[V_0477]],
+			V_07,
+			V_08,
+			inv(0x1),
+			!V_036
+		);
+
+		return TRUE; 	
+	}
+
+	return FALSE;		
+}
+
+function V_037() {
+	if((V_0744[V_0713] != V_0489) && (V_0744[V_0713] != V_0491)) {
+
+		if(V_028(XB1_RIGHT, FALSE)) {
+			return V_065(
+				V_0480,
+				V_0797[V_0744[V_0713]][0x0],
+				V_0797[V_0744[V_0713]][0x1],
+				0x1
+			);
+
+		} else if(V_028(XB1_LEFT, FALSE)) {
+			return V_065(
+				V_0480,
+				V_0797[V_0744[V_0713]][0x0],
+				V_0797[V_0744[V_0713]][0x1],
+				inv(0x1)
+			);
+
+		} else if(V_0744[V_0713] == V_0485) {
+			if(event_press(XB1_Y)) {
+				V_063(V_0709);										
+
+				V_0287();										
+			}
+		} else if(V_0744[V_0713] == V_0488) {
+			if((V_01284[V_0740[V_0480]][0x2] & V_0519) && event_press(XB1_Y)) {
+				V_063(V_0709); 
+			}
+		} else if(V_0744[V_0713] == AimAssistMenu) {
+			if((V_01241[V_0740[V_0480]][0x2] & V_0519) && event_press(XB1_Y)) {
+				V_063(V_0709); 
+			}
+		}
+	} else if(V_031(XB1_RIGHT)) {
+		return V_065(
+			V_0480,
+			V_0797[V_0744[V_0713]][0x0],
+			V_0797[V_0744[V_0713]][0x1],
+			0x1
+		);
+	} else if(V_031(XB1_LEFT)) {
+		return V_065(
+			V_0480,
+			V_0797[V_0744[V_0713]][0x0],
+			V_0797[V_0744[V_0713]][0x1],
+			inv(0x1)
+		);
+	}
+
+	return FALSE;
+}
+
+function V_038(V_039, V_040, V_041) {
+	if((V_0740[V_0479] == V_039) && (V_0739[V_040 + V_0174(V_039 == V_0648, 0x0, V_0744[V_0709])] == V_0739[V_0740[V_0477]])) {
+		V_0179(V_041);
+	}
+}
+
+function V_042() {
+
+	if(event_release(XB1_B)) {
+
+		if(V_0740[V_0483]) {
+			V_0740[V_0483] = FALSE; 
+			V_025(HomeScreen);
+			return TRUE;
+		}
+
+		if(((V_0744[V_0713] == V_0489) || (V_0744[V_0713] == V_0491)) && (get_ptime(XB1_B) < 0x3E8)) {
+			V_025(V_0514);
+			return TRUE;	
+		}
+
+		if((V_0744[V_0713] != V_0489) && (V_0744[V_0713] != V_0491)) {
+			V_025(V_0514);
+			return TRUE; 	
+		}
+	}
+
+	return FALSE;			
+}
+
+function V_043(V_044) {
+
+	if(V_0744[V_0712]) {
+		return TRUE;
+	}
+
+	if(!combo_running(Combo_ProfileDisplay) && ((get_ptime(V_029[V_0428]) < 0x3E8) || (V_0744[V_0718] && (get_ptime(V_029[V_0425]) < 0x3E8)))) {
+		V_0285(V_044);
+		V_0732[V_0423 + V_0744[V_0702]] = V_044;
+		V_0742[V_0503 + V_0744[V_0702]] = V_044;
+		V_0178();
+		V_091(V_044); 
+	}
+
+	return FALSE;
+}
+
+function V_045(V_046, V_047) {
+	return (V_0739[V_046] != inv(0x1)) && (V_0739[V_047] != inv(0x1)) && (V_0739[V_046] == V_0739[V_047]);
+}
+
+function V_048(V_044) {
+
+	if((V_0732[V_0423 + V_0744[V_0702]] != V_044) && adt_cmp(V_029[V_0435], addr(_weaponData[V_044][0x0]))) {
+		V_0742[V_0503 + V_0744[V_0702]] = V_044;
+		V_0732[V_0423 + V_0744[V_0702]] = V_044;
+		V_0178();
+		V_091(V_044);
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+function V_050(V_044) {
+
+	if(adt_cmp(V_029[V_0435], addr(_weaponData[V_044][0x0]))) {
+
+		if(V_0732[V_0423 + V_0744[V_0702]] != V_044) {
+			V_0732[V_0423 + V_0744[V_0702]] = V_044;
+			V_091(V_044); 
+		}
+
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+function V_052() {
+
+	V_0744[V_0704] += get_rtime();
+
+	if(V_0744[V_0704] >= V_0379) {
+		V_0744[V_0703] = (V_0744[V_0703] + 0x1) % V_0174(V_0744[V_0713] == V_0492 || ((V_0744[V_0713] == V_0488) && (V_0740[V_0480] == 0x0 || V_0740[V_0480] == 0x9 || V_0740[V_0480] == 0xA)), 0x4, V_0174(V_0744[V_0713] == HomeScreen, 0x2, V_0821[V_0744[V_0713] + 0x2]));
+		V_0744[V_0704] = 0x0;			
+		V_0735[V_0466] = TRUE;			
+	}
+
+	if((V_0744[V_0713] != HomeScreen) || V_0744[V_0716]) {
+		return FALSE;
+	}
+
+	if(V_0744[V_0714] >= V_0380) {
+		return TRUE;
+	}
+
+	V_0744[V_0714] += get_rtime();
+
+	if(V_0744[V_0714] >= V_0380) {
+		cls_oled(OLED_BLACK);
+		return TRUE;
+	}
+
+	return FALSE; 
+}
+
+function V_053(V_01, V_055, V_056) {
+	return (V_0739[V_0598 + (V_01 * 0x2) + V_055] == V_0739[V_056]) && (V_0739[V_056] != inv(0x1));
+}
+
+function V_057() {
+
+	if(V_0744[V_0708]) {
+
+		if(event_press(V_0739[V_0581]) && (get_brtime(V_0739[V_0581]) <= 0xFA)) {
+			V_0744[V_0715] = FALSE;						
+			V_0744[V_0716] = !V_0744[V_0716];		
+			V_0735[LedUpdate] = TRUE;						
+			V_0239();									
+			return TRUE;
+		}
+
+	} else if(V_0744[V_0716] && (event_press(XB1_X) || event_press(XB1_B))) {
+		V_0744[V_0716] = FALSE;							
+		V_0735[LedUpdate] = TRUE;							
+		V_0239();										
+		return TRUE;
+	}
+
+	for(V_0737 = 0x0; V_0737 < 0x7; V_0737++) {
+
+		if(get_ival(V_0739[V_0598 + (V_0737 * 0x2)]) && event_press(V_0739[V_0598 + (V_0737 * 0x2) + 0x1]) && (get_brtime(V_0739[V_0598 + (V_0737 * 0x2) + 0x1]) <= 0xFA)) {
+
+			switch(V_0737) {
+				case 0x0 { 
+					if(!V_0739[V_0301 + V_0744[V_0702]]) {
+
+						V_0739[V_0301 + V_0744[V_0702]] = V_0739[V_0595 + V_0744[V_0702]];
+					} else {
+						V_0739[V_0301 + V_0744[V_0702]] = 0x0; 
+					}
+
+					V_0101((V_0839(0x0)), V_0301);
+
+					break;
+				}
+				case 0x1 { 
+					V_0739[V_0566 + V_0744[V_0702]] = !V_0739[V_0566 + V_0744[V_0702]];
+					V_0104((V_0839(0x1)), V_0739[V_0566 + V_0744[V_0702]]);
+					break;
+				}
+				case 0x2 { 
+					V_0739[V_0567 + V_0744[V_0702]] = !V_0739[V_0567 + V_0744[V_0702]];
+					V_0104((V_0839(0x2)), V_0739[V_0567 + V_0744[V_0702]]);
+					break;
+				}
+				case 0x3 { 
+					if(V_0739[V_0573 + V_0744[V_0702]] != inv(0x1)) {
+						V_0739[V_0573 + V_0744[V_0702]] = inv(0x1); 
+					} else {
+						V_0739[V_0573 + V_0744[V_0702]] = 0x0; 
+					}
+					V_0104((V_0839(0x3)), V_0739[V_0573 + V_0744[V_0702]] == inv(0x1));
+					break;
+				}
+				case 0x4 { 
+					V_0739[V_0572 + V_0744[V_0702]] = !V_0739[V_0572 + V_0744[V_0702]];
+					V_0104((V_0839(0x4)), V_0739[V_0572 + V_0744[V_0702]]);
+					break;
+				}
+				case 0x5 { 
+					if(V_0739[V_0573 + V_0744[V_0702]] <= 0x0) {
+						V_0739[V_0573 + V_0744[V_0702]] = V_0739[V_0596 + V_0744[V_0702]];
+					} else {
+						V_0739[V_0573 + V_0744[V_0702]] = 0x0; 
+					}
+
+					V_0101((V_0839(0x5)), V_0573);
+					break;
+				}
+				case 0x6 { 
+					if(V_0739[V_0574] <= 0x0) {
+						V_0739[V_0574] = V_0739[V_0597];
+					} else {
+						V_0739[V_0574] = 0x0; 
+					}
+
+					V_0744[V_0714] = V_0380; 
+
+					cls_oled(OLED_BLACK);
+
+					V_0204(V_0998, 0xF, OLED_FONT_MEDIUM, OLED_WHITE, V_0839(0x6));
+					V_0204(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE,  V_0840(V_0739[V_0574]));
+
+					combo_restart(Combo_ToggleDisplay);
+					break;
+				}
+			}
+
+			set_val(V_0739[V_0598 + (V_0737 * 0x2) + 0x1], 0x0);
+
+			return TRUE;
+		}
+	}
+
+	return FALSE;
+}
+
+function V_058(V_059, V_060, V_061, V_024) {
+
+	V_0731[LowerBound] = V_059 - (V_061 * 0x147);
+	V_0731[V_0383] = V_060 + (V_061 * 0x147);
+	V_0731[V_0384] = get_ival(V_024);
+
+	if((V_0731[V_0384] >= V_0731[LowerBound]) && (V_0731[V_0384] <= V_0731[V_0383])) {
+		set_val(V_024, 0x0);
+		return;
+	}
+
+	V_0731[V_0385] = (V_0731[V_0384] / 0x147);
+
+	if(V_0731[V_0384] < V_0731[LowerBound]) {
+		V_0731[V_0384] = (V_0731[V_0384] - V_0731[LowerBound]) - ((V_0731[V_0385] * V_0731[LowerBound]) / 0x64);
+		set_val(V_024, clamp(V_0731[V_0384], inv(0x8000), 0x7FFF));
+		return;
+	}
+
+	if(V_0731[V_0384] > V_0731[V_0383]) {
+		V_0731[V_0384] = (V_0731[V_0384] - V_0731[V_0383]) + ((V_0731[V_0385] * V_0731[V_0383]) / 0x64);
+		set_val(V_024, clamp(V_0731[V_0384], inv(0x8000), 0x7FFF));
+		return;
+	}
+}
+
+function V_063(V_064) {
+
+	if(!V_0744[V_0715] || (get_ival(V_0739[V_0302]) && (event_press(V_0739[V_0579]) || event_press(V_0739[V_0580])))) {
+		if(V_0744[V_064] == 0x2) {
+			V_0744[V_064] = 0x0; 
+		} else {
+			V_0744[V_064] = (V_0744[V_064] + 0x1) % V_0174(V_064 == V_0709, 0x3, 0x2);		
+		}
+	}
+
+	V_091(V_0732[V_0423 + V_0744[V_0702]]);
+
+	V_0744[V_0721] = V_0739[V_0546 + V_0744[V_0702]] * get_rtime();
+}
+
+function V_065(V_01, V_07, V_08, V_02) {
+
+	if((V_0744[V_0713] == V_0488) && (V_0740[V_0480] == 0x0 || V_0740[V_0480] == 0xA) && (V_0744[V_0703] == 0x1)) {
+		V_0744[V_0703] = 0x0;
+	}
+
+	if(V_0744[V_0713] == V_0485) {
+
+		switch(V_0740[V_01]) {
+			case V_0681 {
+				switch(V_0739[V_0740[V_0477]]) {
+					case V_0323 {
+
+						V_0186(V_0457);
+						return TRUE;
+					} case Basic {
+
+						V_0740[V_01] = V_0682;
+						break;
+					} case V_0605 {
+
+						V_00(V_01, V_02, V_0682, V_0684);
+						break;
+					} case V_0606 {
+
+						V_00(V_01, V_02, V_0685, V_0694);
+						break;
+					} case V_0324 {
+
+						V_00(V_01, V_02, V_0696, V_0174(get_console() == PIO_XB1, V_0696, V_0697));
+						break;
+					} case V_0607 {
+
+						V_00(V_01, V_02, V_0695, V_0697);
+						break;
+					}
+				}
+				break;
+			} case V_0683 {
+
+				V_00(V_01, V_02, V_0684, V_0682);
+				break;
+			} case V_0684 {
+
+				V_00(V_01, V_02, V_0681, V_0683);
+				break;
+			} case V_0682 {
+
+				if(V_02 == 0x1 && (V_0739[V_0298 + V_0744[V_0709]] == V_0605)) {
+					V_0740[V_01] = V_0683;
+				} else {
+					V_0740[V_01] = V_0681;
+				}
+				break;
+			} case V_0685 {
+
+				V_00(V_01, V_02, V_0686, V_0681);
+				break;
+			} case V_0686 {
+
+				V_00(V_01, V_02, V_0687, V_0685);
+				break;
+			} case V_0687 {
+
+				V_00(V_01, V_02, V_0688, V_0686);
+				break;
+			} case V_0688 {
+
+				V_00(V_01, V_02, V_0689, V_0687);
+				break;
+			} case V_0689 {
+
+				V_00(V_01, V_02, V_0690, V_0688);
+				break;
+			} case V_0690 {
+
+				V_00(V_01, V_02, V_0691, V_0689);
+				break;
+			} case V_0691 {
+
+				V_00(V_01, V_02, V_0692, V_0690);
+				break;
+			} case V_0692 {
+
+				V_00(V_01, V_02, V_0693, V_0691);
+				break;
+			} case V_0693 {
+
+				V_00(V_01, V_02, V_0694, V_0692);
+				break;
+			} case V_0694 {
+
+				V_00(V_01, V_02, V_0681, V_0693);
+				break;
+			} case V_0695 {
+
+				V_00(V_01, V_02, V_0696, V_0681);
+				break;
+			} case V_0696 {
+
+				if(V_02 == 0x1 && V_0739[V_0298 + V_0744[V_0709]] >= V_0607) {
+					V_0740[V_01] = V_0174(get_console() == PIO_XB1, V_0174(V_0739[V_0298 + V_0744[V_0709]] == V_0607, V_0697, V_0681), V_0697);
+				} else if(V_0739[V_0298 + V_0744[V_0709]] == V_0607) {
+					V_0740[V_01] = V_0695;
+				} else {
+					V_0740[V_01] = V_0681;
+				}
+				break;
+			} case V_0697 {
+
+				V_00(V_01, V_02, V_0681, V_0696);
+				break;
+			}
+		}
+
+		V_0186(V_0458);
+	} else {
+		V_0740[V_01] = V_05(V_0740[V_01], V_07, V_08, V_02, TRUE);	
+	}
+
+	V_0287();
+
+	if(V_0744[V_0713] == V_0484) {
+		switch(V_0740[V_0480]) {
+			case V_0677 {
+				V_0744[V_0703] = 0x3;
+				break;
+			}
+			case V_0678 {
+				V_0744[V_0703] = 0x4;
+				break;
+			}
+			case V_0679 {
+				V_0744[V_0703] = 0x3;
+				break;
+			}
+		}
+		V_0744[V_0704] = 0x0;	
+	}
+
+	return TRUE; 
+}
+
+function V_070() {
+
+	if(V_0739[V_0541 + V_0744[V_0702]] && !V_0744[V_0707] && !V_0744[V_0708] && !V_0744[V_0718]) {
+		V_0140();
+		return;
+	}
+
+	if(!V_0739[V_0296 + V_0744[V_0702]] || (!V_0744[V_0707] && !V_0744[V_0708] && !V_0744[V_0718])) {
+
+		V_0741[V_0494] = 0x0;
+		return;
+	}
+
+	if(V_0734[Console] == PIO_PS5) {
+
+		if(V_0744[V_0708] && (V_0742[AtdMode] == PS5_ADT_OFF) && !V_0738[RUMBLE_A] && !V_0738[RUMBLE_B]) {
+
+			V_0741[V_0494] = 0x0;
+			return;
+		}
+	}
+
+	V_0741[V_0496] = V_0739[V_0537 + V_0744[V_0702]];
+	V_0741[V_0498] = V_0739[V_0538 + V_0744[V_0702]];
+
+	if(V_0744[V_0707] && (V_0744[V_0708] || V_0744[V_0718]) && (V_0738[RUMBLE_A] || V_0738[RUMBLE_B])) {
+		V_0741[V_0496] = clamp(V_0741[V_0496] + V_0739[V_0539 + V_0744[V_0702]], 0x0, 0x64);
+		V_0741[V_0498] = clamp(V_0741[V_0498] + V_0739[V_0540 + V_0744[V_0702]], 0x1, 0xC8);
+	}
+
+	V_0192();
+}
+
+function V_071(V_072, V_073) {
+
+	if(V_0739[V_0297]) {
+
+		V_058(V_0731[V_0395], V_0731[V_0396], V_072, POLAR_LY);
+		V_058(V_0731[V_0393], V_0731[V_0394], V_072, POLAR_LX);
+
+		V_058(V_0731[V_0399], V_0731[V_0400], V_073, POLAR_RY);
+		V_058(V_0731[V_0397], V_0731[V_0398], V_073, POLAR_RX);
+
+	} else {
+
+		if(V_072) {
+			V_058(0x0, 0x0, V_072, POLAR_LY);
+			V_058(0x0, 0x0, V_072, POLAR_LX);
+		}
+
+		if(V_073) {
+			V_058(0x0, 0x0, V_073, POLAR_RY);
+			V_058(0x0, 0x0, V_073, POLAR_RX);
+		}
+	}
+}
+
+function V_074() {
+
+	V_0186(V_0457);
+}
+
+function V_075(V_076, V_077, V_024, V_079) {
+
+	V_071(0x0, 0x0);
+
+	V_0179(V_024);
+	V_0179(ASCII_UPPER_S);
+	V_0179(ASCII_COLON);
+	V_0179(ASCII_SPACE);
+	V_0181(get_val(V_076));
+	V_0179(ASCII_COMMA);
+	V_0181(get_val(V_077));
+	V_0149(V_0473, V_079, OLED_FONT_SMALL, OLED_WHITE);	
+}
+
+function V_080(V_081) {
+
+	for(V_0737 = 0x0; V_0737 < 0x4; V_0737++) {
+		V_0183(V_01504(V_0737));
+		V_0181(V_0731[V_081 + V_0737]);
+		V_0149(V_0174(V_081 == V_0393, V_0473, 0x43), 0x12 + (OLED_FONT_SMALL_HEIGHT * V_0737 + (V_0737 << 0x1)), OLED_FONT_SMALL, OLED_WHITE);
+	}
+}
+
+function V_082(V_083, V_084) {
+
+	if(V_084 == inv(0x1)) {
+		return;
+	}
+
+	if(V_0734[V_0462] == PIO_XB1) {
+		V_0183(V_0160(V_084));
+	} else {
+		switch(V_084) {
+			case XB1_A { V_0179(OLED_CROSS); break; }
+			case XB1_B { V_0179(OLED_CIRCLE); break; }
+			case XB1_X { V_0179(OLED_SQUARE); break; }
+			case XB1_Y { V_0179(OLED_TRIANGLE); break; }
+			default { V_0183(V_0160(V_084)); }
+		}
+	}
+
+	V_0149(V_0472, (V_083 * (OLED_FONT_SMALL_HEIGHT + 0x5)) + 0x5, OLED_FONT_SMALL, V_0174(V_0740[V_0482] == V_083, OLED_BLACK, OLED_WHITE));
+}
+
+function V_085(V_083, V_087) {
+
+	V_0183(V_01512(V_087));
+	V_0179(ASCII_COLON);
+	V_0179(ASCII_SPACE);
+	V_0149(V_0473, (V_083 * (OLED_FONT_SMALL_HEIGHT + 0x5)) + 0x5, OLED_FONT_SMALL, V_0174(V_0740[V_0482] == V_083, OLED_BLACK, OLED_WHITE));
+
+	V_082(V_083, V_0739[V_0584 + V_087]);
+}
+
+function V_088(V_089) {
+	V_0183(V_089);
+	V_0179(ASCII_SPACE);
+
+	if(V_0734[V_0462] == PIO_XB1) {
+		V_0183(V_0160(XB1_A));
+	} else {
+		V_0179(OLED_CROSS);
+	}
+}
+
+function V_090() {
+
+	if(V_0744[V_0713] != V_0492) {
+		V_0204(V_0998, V_0474, OLED_FONT_SMALL, OLED_WHITE, V_0159());	
+	}
+}
+
+function V_091(V_044) {
+
+	V_0735[LedUpdate] = TRUE;
+
+	if(V_0744[V_0713] != HomeScreen) {
+
+		V_0735[V_0466] = TRUE;
+		return;
+	}
+
+	cls_oled(OLED_BLACK);
+
+	if((V_0734[Console] == PIO_PS5) && (V_0739[V_0298 + V_0744[V_0702]] >= V_0607)) {
+
+		if((V_0742[AtdMode] == PS5_ADT_OFF) && (V_0739[V_0298 + V_0744[V_0702]] == V_0324)) {
+			if(get_ival(V_0739[V_0302]) && (event_press(V_0739[V_0579]) || event_press(V_0739[V_0580]))) {
+				V_0202(V_0998);
+			} else {
+				V_0204(V_0998, 0xF, OLED_FONT_MEDIUM, OLED_WHITE, V_01535(0));
+				V_0204(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE, V_01574(0));
+			}
+		} else {
+
+			V_0202(0xF);
+
+			if(V_0742[V_0504 + V_0744[V_0702]] == 0x4) {
+				V_0204(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE, V_01561(0));
+
+			} else {
+				V_0204(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE, V_0968(V_044));
+			}
+		}
+
+	} else if(V_0734[Console] != PIO_PS5) {
+		if(V_0739[V_0298 + V_0744[V_0702]] == V_0607) {
+
+			V_0202(0xF);
+
+			if(V_0744[V_0712]) {
+				V_0204(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE, V_0970(V_0732[V_0424]));
+			} else {
+				V_0204(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE, V_0968[V_0739[Weapon + V_0744[V_0702]]]);
+			}
+		} else if(V_0739[V_0298 + V_0744[V_0702]] == V_0324) {
+			if(V_0732[V_0424] != None) {
+
+				V_0202(0xF);
+				V_0204(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE, V_0970(V_0732[V_0424]));
+			} else {
+
+				V_0202(V_0998);
+			}
+		} else {
+				V_0202(V_0998);
+		}
+	} else {
+
+		V_0202(V_0998);
+	}
+
+	combo_restart(Combo_ProfileDisplay);
+}
+
+function V_093(V_094) {
+
+	if(V_094) {
+		line_oled(0x0, 0x10, OLED_WIDTH - 0x1, 0x10, 0x1, OLED_WHITE);
+	}
+
+	line_oled(0x0, OLED_HEIGHT - 0x10, OLED_WIDTH - 0x1, OLED_HEIGHT - 0x10, 0x1, OLED_WHITE);
+}
+
+function V_095(V_096) {
+
+	switch(V_096 & ~V_0519) {
+		case V_0516 {
+
+			if((V_0740[V_0477] == V_0581) && (V_0739[V_0581] != inv(0x1))) {
+
+				V_0183(V_01543(0));
+				V_0179(ASCII_SPACE);
+				V_0183(V_0160(V_029[V_0428]));
+				V_0149(V_0998, OLED_FONT_SMALL_HEIGHT + 0xC, OLED_FONT_SMALL, OLED_WHITE);
+
+				V_0183(V_01539(0));
+				V_0179(ASCII_SPACE);
+				V_0183(V_0160(V_0739[V_0740[V_0477]]));
+				V_0149(V_0998, OLED_FONT_SMALL_HEIGHT + 0x18, OLED_FONT_SMALL, OLED_WHITE);
+				return;	
+			} else {
+				if(V_0734[V_0462] == PIO_XB1) {
+					V_0183(V_0160(V_0739[V_0740[V_0477]]));
+				} else {
+					switch(V_0739[V_0740[V_0477]]) {
+						case XB1_A { V_0179(OLED_CROSS); break; }
+						case XB1_B { V_0179(OLED_CIRCLE); break; }
+						case XB1_X { V_0179(OLED_SQUARE); break; }
+						case XB1_Y { V_0179(OLED_TRIANGLE); break; }
+						default { V_0183(V_0160(V_0739[V_0740[V_0477]])); }
+					}
+				}
+			}
+			break;
+		}
+		case V_0308 {
+			V_0181(V_0739[V_0740[V_0477]]);
+			break;
+		}
+		case V_0342 {
+			if(!V_0739[V_0740[V_0477]]) {
+				V_0183(V_01547(0));
+				break;
+			}
+
+			if(V_0739[V_0740[V_0477]] > 0x0) {
+				V_0179(ASCII_PLUS);
+			}
+			V_0181(V_0739[V_0740[V_0477]]);
+			V_0179(ASCII_PERCENT);
+			break;
+		}
+		case V_0307 {
+
+			V_038(V_0648, V_0597, ASCII_LEFT_BRACKET);
+
+			V_0183(V_0165());
+
+			V_038(V_0648, V_0597, ASCII_RIGHT_BRACKET);
+
+			break;
+		}
+		case V_0304 {
+			V_0183(V_0167());
+			break;
+		}
+		case V_0317 {
+
+			if(!V_0739[V_0740[V_0477]]) {
+				V_0183(V_01548(0));
+
+			} else {
+				V_0181(V_0739[V_0740[V_0477]] * (0xA + V_0734[V_0464]));
+				V_0179(ASCII_LOWER_M);
+				V_0179(ASCII_LOWER_S);
+			}
+			break;
+		}
+		case V_0359 {
+
+			V_038(V_0638, V_0595, ASCII_LEFT_BRACKET);
+			V_038(V_0647, V_0596, ASCII_LEFT_BRACKET);
+
+			if(V_0739[V_0740[V_0477]] < 0x0) {
+				V_0183(V_01535(0));
+
+			} else if(!V_0739[V_0740[V_0477]]) {
+				V_0183(V_01548(0));
+
+			} else {
+				V_0181(V_0739[V_0740[V_0477]]);
+				V_0179(ASCII_SPACE);
+				V_0179(ASCII_UPPER_R);
+				V_0179(ASCII_UPPER_P);
+				V_0179(ASCII_UPPER_S);
+			}
+
+			V_038(V_0638, V_0595, ASCII_RIGHT_BRACKET);
+			V_038(V_0647, V_0596, ASCII_RIGHT_BRACKET);
+
+			break;
+		}
+		case V_0378 {
+
+			if(V_0739[V_0740[V_0477]] == 0x0) {
+				V_0183(V_01535(0));
+			} else {
+				V_0181(V_01304[V_0739[V_0740[V_0477]] - 0x1]);
+				V_0179(ASCII_LOWER_M);
+				V_0179(ASCII_LOWER_S);
+			}
+
+			break;
+		}
+		case V_0319 {
+
+			V_088(V_01552(0));
+			break;
+		}
+		case V_0320 {
+
+			V_075(POLAR_LX, POLAR_LY, ASCII_UPPER_L, 0x15);
+			V_075(POLAR_RX, POLAR_RY, ASCII_UPPER_R, 0x21);
+			return;
+		}
+		case V_0321 {
+
+			V_088(V_01543(0));
+			break;
+		}
+	}
+
+	V_0149(V_0998, V_0998, V_0174(V_0744[V_0713] == AimAssistMenu || V_096 == V_0308 || V_096 == V_0516 || V_096 == V_0378 || V_0744[V_0713] == V_0484 || ((V_0744[V_0713] == V_0485) && (V_0740[V_0480] != V_0695)) || V_0744[V_0713] == V_0488 || V_0744[V_0713] == V_0487, OLED_FONT_MEDIUM, OLED_FONT_SMALL), OLED_WHITE);
+
+	if(V_096 & V_0519) {
+		V_0196(V_0472, V_0474, OLED_FONT_SMALL, OLED_WHITE, V_0744[V_0709] + 0x1);
+	}
+}
+
+function V_097() {
+	switch(V_0744[V_0713]) {
+		case AimAssistMenu {
+			switch(V_0744[V_0703]) {
+				case 0x0 { 
+					V_0179(OLED_UP);
+					V_0179(ASCII_SLASH);
+					V_0179(OLED_DOWN);
+					V_0183(V_01565(0));
+					return;
+				}
+				case 0x1 { 
+					V_0179(OLED_LEFT);
+					V_0179(ASCII_SLASH);
+					V_0179(OLED_RIGHT);
+					V_0183(V_01567(0));
+					return;
+				}
+				case 0x2 { 
+					V_0179(V_0162(ASCII_UPPER_Y));
+					V_0179(ASCII_SPACE);
+					V_0183(V_01537(0));
+					return;
+				}
+				case 0x3 { 
+					V_0179(V_0162(ASCII_UPPER_B));
+					V_0183(V_01570(0));
+					return;
+				}
+			}
+			break;
+		}
+		case V_0515 {
+			switch(V_0744[V_0703]) {
+				case 0x0 {
+
+					V_0183(V_0160(XB1_LB));
+					V_0179(ASCII_SLASH);
+					V_0183(V_0160(XB1_RB));
+					V_0179(ASCII_SPACE);
+					V_0183(V_01538(0));
+					return;
+				}
+				case 0x1 {
+
+					V_0183(V_01540(0));
+					return;
+				}
+				case 0x2 {
+
+					V_0179(V_0162(ASCII_UPPER_B));
+					V_0183(V_01570(0));
+					return;
+				}
+			}
+			break;
+		}
+		case V_0484 {
+
+			if((V_0740[V_0480] == V_0678) && (V_0744[V_0703] == 0x0)) {
+				V_0744[V_0703] = 0x1;
+			}
+			switch(V_0744[V_0703]) {
+				case 0x0 { 
+					if((V_0740[V_0480] != V_0677) && (V_0740[V_0480] != V_0679)) {
+						V_0179(OLED_UP);
+						V_0179(ASCII_SLASH);
+						V_0179(OLED_DOWN);
+						V_0183(V_01565(0));
+					} else {
+						V_0744[V_0703] = 0x1;
+						V_097();
+					}
+					return;
+				}
+				case 0x1 { 
+					V_0179(OLED_LEFT);
+					V_0179(ASCII_SLASH);
+					V_0179(OLED_RIGHT);
+					V_0183(V_01567(0));
+					return;
+				}
+				case 0x2 { 
+					V_0179(V_0162(ASCII_UPPER_B));
+					V_0183(V_01570(0));
+					return;
+				}
+				case 0x3 { 
+					if(V_0740[V_0480] == V_0677) {
+						V_0179(V_0162(ASCII_UPPER_A));
+						V_0183(V_01566(0));
+					} else if(V_0740[V_0480] == V_0678) {
+						V_0744[V_0703] = 0x4;
+						V_097();
+					} else if(V_0740[V_0480] == V_0679) {
+						V_0183(V_01543(0));
+						V_0179(ASCII_SPACE);
+						V_0179(V_0162(ASCII_UPPER_A));
+						V_0183(V_01571(0));
+					} else {
+						V_0744[V_0703] = 0x0;
+						V_097();
+					}
+					return;
+				}
+				case 0x4 { 
+					if(V_0740[V_0480] == V_0678) {
+						V_0183(V_01546(0));
+					} else {
+						V_0744[V_0703] = 0x0;
+						V_097();
+					}
+					return;
+				}
+			}
+			break;
+		}
+		case V_0486 {
+
+			switch(V_0744[V_0703]) {
+				case 0x0 { 
+					V_0179(OLED_UP);
+					V_0179(ASCII_SLASH);
+					V_0179(OLED_DOWN);
+					V_0183(V_01565(0));
+					return;
+				}
+				case 0x1 { 
+					V_0179(OLED_LEFT);
+					V_0179(ASCII_SLASH);
+					V_0179(OLED_RIGHT);
+					V_0183(V_01567(0));
+					return;
+				}
+				case 0x2 { 
+					V_0179(V_0162(ASCII_UPPER_B));
+					V_0183(V_01570(0));
+					return;
+				}
+				case 0x3 { 
+					if((V_0740[V_0477] == V_0299) && (V_0739[V_0299] == V_0345)) {
+						V_0179(V_0162(ASCII_UPPER_A));
+						V_0183(V_01568(0));
+					} else {
+						V_0744[V_0703] = 0x0;
+						V_097();
+					}
+					return;
+				}
+			}
+			return;
+		}
+		case V_0492 {
+
+			switch(V_0744[V_0703]) {
+				case 0x0 { 
+					V_0183(V_01542(0));
+					return;
+				}
+				case 0x1 { 
+					V_0183(V_0160(XB1_VIEW));
+					V_0179(ASCII_SPACE);
+					V_0179(ASCII_LOWER_X);
+					V_0179(ASCII_SPACE);
+					V_0181(0x2);
+					V_0183(V_01571(0));
+					return;
+				}
+				case 0x2 { 
+					V_0179(OLED_UP);
+					V_0179(ASCII_SLASH);
+					V_0179(OLED_DOWN);
+					V_0183(V_01573(0));
+					return;
+				}
+				case 0x3 { 
+					V_0179(V_0162(ASCII_UPPER_B));
+					V_0183(V_01570(0));
+					return;
+				}
+			}
+			return;
+		}
+		case V_0489 {
+
+			switch(V_0744[V_0703]) {
+				case 0x0 { 
+					V_0183(V_01542(0));
+					return;
+				}
+				case 0x1 { 
+					V_0183(V_0160(XB1_VIEW));
+					V_0179(ASCII_SPACE);
+					V_0179(ASCII_LOWER_X);
+					V_0179(ASCII_SPACE);
+					V_0181(0x2);
+					V_0183(V_01571(0));
+					return;
+				}
+				case 0x2 { 
+					V_0179(OLED_LEFT);
+					V_0179(ASCII_SLASH);
+					V_0179(OLED_RIGHT);
+					V_0183(V_01567(0));
+					return;
+				}
+				case 0x3 { 
+					V_0179(V_0162(ASCII_UPPER_B));
+					V_0183(V_01570(0));
+					return;
+				}
+			}
+			return;
+		}
+		case V_0491 {
+
+			switch(V_0744[V_0703]) {
+				case 0x0 { 
+					V_0183(V_01542(0));
+					return;
+				}
+				case 0x1 { 
+					V_0183(V_0160(XB1_VIEW));
+					V_0179(ASCII_SPACE);
+					V_0179(ASCII_LOWER_X);
+					V_0179(ASCII_SPACE);
+					V_0181(0x2);
+					V_0183(V_01571(0));
+					return;
+				}
+				case 0x2 { 
+					V_0179(OLED_UP);
+					V_0179(ASCII_SLASH);
+					V_0179(OLED_DOWN);
+					V_0183(V_01573(0));
+					return;
+				}
+				case 0x3 { 
+					V_0179(OLED_LEFT);
+					V_0179(ASCII_SLASH);
+					V_0179(OLED_RIGHT);
+					V_0183(V_01567(0));
+					return;
+				}
+				case 0x4 { 
+					V_0179(V_0162(ASCII_UPPER_B));
+					V_0183(V_01570(0));
+					return;
+				}
+			}
+			return;
+		}
+		default {
+
+			switch(V_0744[V_0703]) {
+				case 0x0 { 
+					V_0179(OLED_UP);
+					V_0179(ASCII_SLASH);
+					V_0179(OLED_DOWN);
+					V_0183(V_01565(0));
+					return;
+				}
+				case 0x1 { 
+					if((V_0744[V_0713] == V_0488) && (V_0740[V_0480] == 0x0 || V_0740[V_0480] == 0x9 || V_0740[V_0480] == 0xA)) {
+
+						V_0183(V_0160(XB1_VIEW));
+						V_0183(V_01560(0));
+					} else {
+
+						V_0179(OLED_LEFT);
+						V_0179(ASCII_SLASH);
+						V_0179(OLED_RIGHT);
+						V_0183(V_01567(0));
+					}
+					return;
+				}
+				case 0x2 { 
+					if((V_0744[V_0713] == V_0488) && (V_0740[V_0480] == 0x0 || V_0740[V_0480] == 0x9 || V_0740[V_0480] == 0xA)) {
+
+						V_0179(OLED_LEFT);
+						V_0179(ASCII_SLASH);
+						V_0179(OLED_RIGHT);
+						V_0183(V_01567(0));
+					} else {
+
+						V_0179(V_0162(ASCII_UPPER_B));
+						V_0183(V_01570(0));
+					}
+					return;
+				}
+				case 0x3 {
+
+					V_0179(V_0162(ASCII_UPPER_B));
+					V_0183(V_01570(0));
+				}
+			}
+		}
+	}
+}
+
+function V_098(V_083, V_0100) {
+
+	if(V_0100 == inv(0x1)) {
+		return;
+	}
+
+	if(V_0734[V_0462] == PIO_XB1) {
+		V_0183(V_0160(V_0100));
+	} else {
+		switch(V_0100) {
+			case XB1_A { V_0179(OLED_CROSS); break; }
+			case XB1_B { V_0179(OLED_CIRCLE); break; }
+			case XB1_X { V_0179(OLED_SQUARE); break; }
+			case XB1_Y { V_0179(OLED_TRIANGLE); break; }
+			default { V_0183(V_0160(V_0100)); }
+		}
+	}
+
+	V_0149(V_0472, (V_083 * (OLED_FONT_SMALL_HEIGHT + 0x5)) + 0x15, OLED_FONT_SMALL, V_0174(V_0740[V_0482] == V_083, OLED_BLACK, OLED_WHITE));
+}
+
+function V_0101(V_0102, V_039) {
+
+	V_0744[V_0714] = V_0380; 
+
+	cls_oled(OLED_BLACK);
+
+	V_0204(V_0998, 0xF, OLED_FONT_MEDIUM, OLED_WHITE, V_0102);
+
+	if(!V_0739[V_039 + V_0744[V_0702]]) {
+		V_0204(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE,  V_01548(0));
+	} else if(V_0739[V_039 + V_0744[V_0702]] < 0x0) {
+		V_0204(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE,  V_01535(0));
+	} else {
+		V_0181(V_0739[V_039 + V_0744[V_0702]]);
+		V_0179(ASCII_SPACE);
+		V_0179(ASCII_UPPER_R);
+		V_0179(ASCII_UPPER_P);
+		V_0179(ASCII_UPPER_S);
+		V_0149(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE);
+	}
+
+	combo_restart(Combo_ToggleDisplay);
+}
+
+function V_0104(V_0105, V_0106) {
+
+	cls_oled(OLED_BLACK);
+
+	V_0204(V_0998, 0xF, OLED_FONT_MEDIUM, OLED_WHITE, V_0105);
+	V_0204(V_0998, 0x23, OLED_FONT_MEDIUM, OLED_WHITE, V_0174(V_0106, V_01549(0), V_01548(0)));
+
+	combo_restart(Combo_ToggleDisplay);
+}
+
+function V_0107() {
+
+	if(V_0739[V_0298 + V_0744[V_0702]] >= V_0607) {
+		V_091(0x0);
+	}
+}
+
+function V_0108() {
+
+	V_025(V_0515);
+
+	V_0237(TRUE);
+}
+
+function V_0109() {
+
+	if(V_0739[V_0301 + V_0744[V_0702]] != 0x0) {
+
+		if(V_0744[V_0707] || V_0744[V_0708]) {
+			if(V_0739[V_0301 + V_0744[V_0702]] == inv(0x1)) {
+				set_val(V_029[ADS], 0x64);
+				set_val(V_029[V_0428], 0x64);
+			} else {
+				combo_run(Combo_Akimbo);	
+			}
+			return TRUE;					
+		} else {
+			combo_stop(Combo_Akimbo);		
+		}
+	}
+
+	return FALSE;							
+}
+
+function V_0110() {
+
+	if(event_press(V_029[V_0428]) || (V_0744[V_0718] && event_press(V_029[V_0425]))) {
+
+		if((V_0734[Console] != PIO_PS5) && (V_0739[V_0298 + V_0744[V_0702]] >= V_0607)) {
+			V_0732[V_0423 + V_0744[V_0702]] = V_0739[Weapon + V_0744[V_0702]];
+			V_0178();
+		}
+
+		V_091(V_0732[V_0423 + V_0744[V_0702]]); 
+	}
+
+	if(V_0734[Console] == PIO_PS5) {
+
+		if(!V_0744[V_0708] && !V_0744[V_0718]) {
+			return;
+		}
+		if(V_0742[AtdMode] == PS5_ADT_OFF) {
+			if(!V_0738[RUMBLE_A] && !V_0738[RUMBLE_B]) {
+				return;
+			}
+		}
+	} else if(!V_0744[V_0708] && !V_0744[V_0718]) {
+		return;
+	} else if(!V_0738[RUMBLE_A] && !V_0738[RUMBLE_B]) {
+		return;
+	}
+
+	switch(V_0739[V_0298 + V_0744[V_0702]]) {
+		case V_0323 { return; }
+		case Basic { V_0114(); break; }
+		case V_0605 { V_0115(); break; }
+		case V_0606 { V_0116(); break; }
+		case V_0324 { V_0111(); break; }
+		case V_0607 { V_0126(); break; }
+	}
+
+	if(V_0739[V_0298 + V_0744[V_0702]] <= V_0606) {
+		V_0193(V_0732[V_01048] * 0x147, V_0732[V_0493] * 0x147);
+	} else {
+		V_0193(V_0732[V_01048], V_0732[V_0493]);
+	}
+}
+
+function V_0111() {
+
+	if(V_0734[Console] == PIO_PS5) {
+		V_0112();
+	} else if(V_0734[Console] == PIO_XB1) {
+		V_0113();
+	}
+}
+
+function V_0112() {
+
+	V_0126();
+}
+
+function V_0113() {
+	return;
+}
+
+function V_0114() {
+
+	V_0732[V_0493] = V_0739[V_0549 + V_0744[V_0702]];
+
+	V_0732[V_01048] = 0x0;
+}
+
+function V_0115() {
+
+	if(get_ptime(V_029[V_0428]) <= (V_0739[V_0550 + V_0744[V_0702]] * get_rtime())) {
+
+		V_0732[V_0493] = V_0739[KickStrength + V_0744[V_0702]];
+	} else {
+
+		V_0732[V_0493] = V_0739[V_0549 + V_0744[V_0702]];
+	}
+
+	V_0732[V_01048] = 0x0;
+}
+
+function V_0116() {
+	V_0117(V_0558, V_0559, V_0555, V_0556, V_0557, V_01048, V_01049, V_0413);
+	V_0117(V_0553, V_0554, V_01052, V_0551, V_0552, V_0493, V_0414, V_0415);
+}
+
+function V_0117(V_0118, V_0119, V_0120, V_0121, V_0122, V_0123, V_0124, V_0125) {
+
+	if(event_press(V_029[V_0428])) {
+
+		V_0732[V_0124] = V_0739[V_0118 + V_0744[V_0702]] * get_rtime();
+		V_0732[V_0125] = V_0732[V_0124] + (V_0739[V_0119 + V_0744[V_0702]] * get_rtime());
+	}
+
+	if(get_ptime(V_029[V_0428]) <= V_0732[V_0124]) {
+
+		V_0732[V_0123] = V_0739[V_0120 + V_0744[V_0702]];
+	} else if(get_ptime(V_029[V_0428]) <= V_0732[V_0125]) {
+
+		V_0732[V_0123] = V_0739[V_0121 + V_0744[V_0702]];
+	} else {
+
+		V_0732[V_0123] = V_0739[V_0122 + V_0744[V_0702]];
+	}
+}
+
+function V_0126() {
+
+	if((!V_0732[V_0421] || (V_0732[V_0417] >= (V_0732[V_0421] - 0x1)))) {
+		V_0732[V_01048] = 0x0; 
+		V_0732[V_0493] = 0x0; 
+		V_0744[V_0712] = 0x0; 
+		return;
+	}
+
+	if(V_0732[V_0418] < V_0732[V_0422]) {
+		V_0732[V_01048] += V_0732[V_0411];
+		V_0732[V_0493] += V_0732[V_0412];
+		V_0732[V_0418] += get_rtime();
+	} else {
+		V_0732[V_0417]++; 
+		V_0732[V_0418] = 0x0; 
+		V_020(); 
+	}
+
+	set_val(TRACE_6, V_0732[V_0417]);
+}
+
+function V_0127() {
+
+	if(V_0739[V_0565 + V_0744[V_0702]] == V_0656) {
+		if(V_0744[V_0708]) {
+			set_val(V_029[ADS], 0x64); 
+		} else {
+			V_0744[V_0712] = 0x0; 
+			combo_stop(Combo_RapidFire); 
+		}
+	} else if(V_0739[V_0565 + V_0744[V_0702]] == V_0361) {
+		if(V_0744[V_0707]) {
+			set_val(V_029[V_0428], 0x64); 
+			V_0744[V_0708] = 0x64;
+		} else if(!V_0744[V_0708]) {
+			V_0744[V_0712] = 0x0; 
+			combo_stop(Combo_RapidFire); 
+		}
+	}
+}
+
+function V_0128() {
+
+	if(V_0739[V_0566]) {
+		if(V_0744[V_0707]) {
+			combo_run(Combo_AutoFocus);
+		} else {
+			combo_stop(Combo_AutoFocus);	
+		}
+	}
+}
+
+function V_0129() {
+
+	if(V_0739[V_0567 + V_0744[V_0702]]) {
+
+		if(
+			(V_0744[V_0707] && event_press(V_029[V_0428]))
+			|| (V_0739[V_0301 + V_0744[V_0702]] && (event_press(V_029[ADS]) || event_press(V_029[V_0428])))
+			|| ((V_0739[V_0565 + V_0744[V_0702]] == V_0361) && event_press(V_029[ADS]))
+			|| (V_0739[V_0572] && event_press(V_029[V_0432]))
+		) {
+			combo_run(Combo_AutoPing);		
+		}
+	}
+}
+
+function V_0130() {
+
+	if(V_0744[V_0712]) {
+		combo_run(Combo_RapidFire); 
+	} else {
+
+		switch(V_0732[V_0423 + V_0744[V_0702]]) {
+
+			case V_0292 {
+
+				V_0744[V_0712] = 0x7;
+				return;
+			}
+			default {
+				V_0744[V_0712] = 0x0;
+			}
+		}
+	}
+}
+
+function V_0131() {
+
+	if(V_0744[V_0712]) {
+		combo_run(Combo_RapidFire); 
+
+	} else if((V_0744[V_0708] || V_0744[V_0718]) && (V_0732[V_0424] == V_0408)) {
+		V_0744[V_0712] = 0x6; 
+		V_0732[V_0424] = V_0410; 
+		V_0107(); 
+	}
+}
+
+function V_0132() {
+
+	if(V_0739[V_0568]) {
+
+		if(get_ival(V_029[V_0431])) {
+			combo_run(Combo_BunnyHop);
+
+		}
+	}
+}
+
+function V_0133() {
+
+	if(V_0739[V_0570]) {
+
+		if(((V_0744[V_0707] && V_0744[V_0708])
+			|| (V_0744[V_0301] && (V_0744[V_0707] || V_0744[V_0708]))
+			|| ((V_0739[V_0565 + V_0744[V_0702]] == V_0361) && V_0744[V_0707])
+			) && event_press(V_029[V_0430])) {
+			combo_run(Combo_Prone);
+		}
+	}
+}
+
+function V_0134() {
+
+	if(V_0739[V_0571]) {
+
+		if(V_0744[V_0707] && get_ival(V_029[V_0432]) && (get_ptime(V_029[V_0432]) == 0x1E0) && (V_0739[V_0565 + V_0744[V_0702]] != V_0361)) {
+			combo_run(Combo_EasyMeleeSwap);
+			V_0744[ActionBlock] = V_029[ADS];
+		} else if(event_release(V_0744[ActionBlock])) {
+			V_0744[ActionBlock] = inv(0x1);
+		} else if(V_0744[ActionBlock] == V_029[ADS]) {
+			set_val(V_029[ADS], 0x0);
+		}
+	}
+}
+
+function V_0135() {
+
+	if(V_0739[V_0572]) {
+
+		if(!V_0744[V_0707] && !V_0744[V_0708] && get_ival(V_029[V_0432])) {
+			combo_run(Combo_FastMelee);
+			return;
+		}
+
+		combo_stop(Combo_FastMelee);
+	}
+}
+
+function V_0136() {
+
+	V_0129();
+	V_0133();
+
+	if(!V_0109()) {
+		V_0127();
+		V_0128();
+		V_0134();
+		V_0135();
+		V_0143();
+		V_0144();
+	}
+
+	V_070();
+	V_0110();
+	V_0147();
+}
+
+function V_0137(V_096) {
+	switch(V_0739[V_096]) {
+		case V_0653 {
+
+			if(!V_0744[V_0708] && !V_0744[V_0705] && !combo_running(Combo_GyroscopicSlideCancel)) {
+				return;	
+			}
+
+			combo_run(Combo_Prone);
+			break;
+		}
+		case V_0655 {
+
+			if((V_0744[V_0711] < 0x25E4) && (!V_0744[V_0707]) && (!V_0744[V_0708])) {
+				return;
+			}
+
+			combo_run(Combo_GyroscopicSlideCancel);
+
+			if((V_096 == V_0563) || (V_096 == V_0562)) {
+				combo_run(Combo_GyroscopicSlideStrafe);
+			}
+
+			break;
+		}
+		case V_0654 {
+
+			if(!V_0744[V_0708] && !combo_running(Combo_Prone) && !combo_running(Combo_GyroscopicSlideCancel)) {
+				return;	
+			}
+
+			combo_run(Combo_BunnyHop);
+			V_0744[V_0705] = TRUE;
+
+			break;
+		}
+	}
+}
+
+function V_0139() {
+
+	if((V_0734[V_0462] == PIO_XB1) || V_0744[V_0718]) {
+		return;	
+	}
+
+	if((abs(get_ival(PS5_GYROZ)) < 0xA) && (abs(get_ival(PS5_ACCZ)) >= 0xA)) {
+
+		if(get_ival(PS5_GYROX) <= inv(0x14)) {
+			V_0744[V_0706] = 0x0;
+			V_0137(V_0300);
+
+		} else if(get_ival(PS5_GYROX) >= 0xF) {
+			V_0744[V_0706] = 0x0;
+			V_0137(V_0561);
+		}
+	} else if((abs(get_ival(PS5_GYROX)) < 0xA) && (abs(get_ival(PS5_ACCX)) >= 0xA)) {
+
+		if(get_ival(PS5_GYROZ) >= 0xC) {
+			V_0744[V_0706] = 0x7FFF;
+			V_0137(V_0563);
+
+		} else if(get_ival(PS5_GYROZ) <= inv(0xC)) {
+			V_0744[V_0706] = inv(0x8000);
+			V_0137(V_0562);
+		}
+	}
+
+	if(V_0744[V_0705] && V_0744[V_0708]) {
+		combo_run(Combo_BunnyHop);			
+	} else if(!combo_running(Combo_BunnyHop)) {
+		combo_stop(Combo_BunnyHop);			
+		V_0744[V_0705] = FALSE;			
+	}
+}
+
+function V_0140() {
+
+	if(get_ival(V_029[V_0425]) || get_ival(V_029[V_0434])) {
+		return;
+	}
+
+	V_0741[V_0496] = V_0739[V_0542 + V_0744[V_0702]];
+	V_0741[V_0498] = V_0739[V_0543 + V_0744[V_0702]];
+
+	V_0192();
+}
+
+function V_0141() {
+
+	V_0166();
+
+	V_0132();
+	V_0146();
+	V_0148();
+
+	if(V_0744[V_0711] >= 0x25E4) {
+		V_0145(); 
+	}
+}
+
+function V_0142() {
+
+	if(get_ival(V_0739[V_0302])) {
+		if(event_press(V_0739[V_0579])) {
+			V_063(V_0702);									
+		} else if(event_press(V_0739[V_0580])) {
+			V_0744[V_0702] = V_0174(V_0744[V_0702] == 0x2, 0x0, 0x2);	
+			V_091(V_0732[V_0423 + V_0744[V_0702]]);
+		}
+	} else if(event_release(V_0739[V_0579]) && (get_ptime(V_0739[V_0579]) <= 0xF0) && (V_0744[V_0702] != 0x2)) {
+			V_063(V_0702);									
+	}
+}
+
+function V_0143() {
+
+	if((!V_0744[V_0708] && !V_0744[V_0718]) || (V_0738[RumbleCounter] >= 0x1F4)) {
+		V_0744[V_0712] = 0x0; 
+		combo_stop(Combo_RapidFire); 
+		return;
+	}
+
+	switch(V_0739[V_0573 + V_0744[V_0702]]) {
+		case -1 {
+
+			switch(V_0734[Console]) {
+				case PIO_PS5 {
+					V_0130();
+					return;
+				}
+				case PIO_XB1 {
+					V_0131();
+					return;
+				}
+				default {
+					V_0744[V_0712] = 0x0;
+				}
+			}
+			break;	
+		}
+		case 0x0 {
+
+			return;
+		}
+		default {
+
+			if(((V_0744[V_0707] && V_0744[V_0708]) || V_0744[V_0718])
+				|| ((V_0739[V_0565 + V_0744[V_0702]] == V_0656) && V_0744[V_0708])
+				|| ((V_0739[V_0565 + V_0744[V_0702]] == V_0361) && V_0744[V_0707])
+			) {
+				V_0744[V_0712] = V_0739[V_0573 + V_0744[V_0702]];	
+				combo_run(Combo_RapidFire);												
+			} else {
+				combo_stop(Combo_RapidFire);											
+			}
+		}
+	}
+}
+
+function V_0144() {
+
+	if(V_0739[V_0574]) {
+		if((V_0744[V_0718] || V_0744[V_0707] || ((V_0739[V_0565 + V_0744[V_0702]] == V_0656) && V_0744[V_0708] && !get_ival(V_029[V_0432])))) 
+		{
+			if(get_ival(V_029[V_0425])) {
+
+				if(event_press(V_029[V_0425])) {
+					V_0744[V_0718] = TRUE;
+
+					if(V_0739[V_0298 + V_0744[V_0702]] >= V_0607) {
+						V_0178(); 
+						V_091(V_0732[V_0423 + V_0744[V_0702]]); 
+					}
+				}
+
+				switch(V_0739[V_0574]) {
+					case V_0658 {
+
+						if(event_press(V_029[V_0425])) {
+							combo_run(Combo_Crouch);	
+						}
+						break;
+					}
+					case V_0659 {
+						combo_run(Combo_BunnyHop);		
+						break;
+					}
+					case V_0372 {
+
+						if(event_press(V_029[V_0425])) {
+							combo_run(Combo_Prone);		
+						}
+						break;
+					}
+				}
+
+				set_val(V_029[V_0425], 0x0);				
+				set_val(V_029[V_0428], 0x64);				
+
+			} else if(event_release(V_029[V_0425]) && (V_0739[V_0574] == V_0658)) {
+				combo_run(Combo_Crouch);	
+			}
+
+			if(event_release(V_029[V_0425])) {
+				combo_stop(Combo_RapidFire);
+				V_0744[V_0712] = 0x0; 
+				V_0744[V_0718] = FALSE; 
+			}
+		}
+	}
+}
+
+function V_0145() {
+
+	switch(V_0739[SlideDive]) {
+		case V_0353 {
+
+			if(V_0734[Console] == PIO_PS5) {
+
+				if(V_0739[V_0575] && !V_0744[V_0707] && !V_0744[V_0708] && (get_brtime(V_029[V_0430]) <= 0x190) && (V_0738[RUMBLE_A] >= 0x17) && (V_0738[RUMBLE_B] >= 0x17)) {
+					combo_run(Combo_SlideCancel);
+				} else if(V_0739[V_0569] && (get_ival(V_029[V_0430]) && (get_ptime(V_029[V_0430]) >= 0xB0))) {
+					combo_run(Combo_DiveCancel);
+				}
+			} else if(V_0739[V_0575] && (event_release(V_029[V_0430]) && (get_ptime(V_029[V_0430]) < 0xB0))) {
+				combo_run(Combo_SlideCancel);
+			} else if(V_0739[V_0569] && (get_ival(V_029[V_0430]) && (get_ptime(V_029[V_0430]) >= 0xB0))) {
+				combo_run(Combo_DiveCancel);
+			}
+			return;
+		}
+		case V_0662 {
+
+			if(V_0739[V_0575] && (event_release(V_029[V_0430]) && (get_ptime(V_029[V_0430]) >= 0xB0))) {
+
+				combo_run(Combo_SlideCancel);
+
+			} else if(V_0739[V_0569] && (get_ival(V_029[V_0430]) && (get_ptime(V_029[V_0430]) < 0xB0))) {
+
+				combo_run(Combo_DiveCancel);
+			}
+			return;
+		}
+		case V_0663 {
+
+			if(V_0739[V_0575]) {
+
+				if(V_0734[Console] == PIO_PS5) {
+
+					if(!V_0744[V_0707] && !V_0744[V_0708] && (get_brtime(V_029[V_0430]) <= 0x190) && (V_0738[RUMBLE_A] >= 0x17) && (V_0738[RUMBLE_B] >= 0x17)) {
+
+						combo_run(Combo_SlideCancel);
+					}
+				}
+
+				else if(event_press(V_029[V_0430])) {
+
+					combo_run(Combo_SlideCancel);
+				}
+			}
+			return;
+		}
+		case V_0664 {
+
+			if(V_0739[V_0569] && event_press(V_029[V_0430])) {
+
+				combo_run(Combo_DiveCancel);
+			}
+			return;
+		}
+		case V_0354 {
+
+			if(V_0734[Console] == PIO_PS5) {
+
+				if(!get_ival(V_024[V_0725])) {
+
+					if(V_0739[V_0575] && !V_0744[V_0707] && !V_0744[V_0708] && (get_brtime(V_029[V_0430]) <= 0x190) && (V_0738[RUMBLE_A] >= 0x17) && (V_0738[RUMBLE_B] >= 0x17)) {
+
+						combo_run(Combo_SlideCancel);
+					}
+
+				} else if(V_0739[V_0569] && get_ival(V_024[V_0725]) && event_press(V_029[V_0430])) {
+
+					combo_run(Combo_DiveCancel);
+				}
+			}
+
+			else if(V_0739[V_0569] && get_ival(V_024[V_0725]) && event_press(V_029[V_0430])) {
+
+				combo_run(Combo_DiveCancel);
+
+			} else if(V_0739[V_0575] && event_release(V_029[V_0430]) && (get_ptime(V_029[V_0430]) <= 0x128)) {
+
+				combo_run(Combo_SlideCancel);
+			}
+			return;
+		}
+	}
+}
+
+function V_0146() {
+
+	if(!V_0739[V_0576]) {
+		return;
+	}
+	else if(V_0744[V_0718]) {
+		V_0744[V_0719] = FALSE;
+	}
+
+	if(V_0744[V_0719]) {
+
+		if(event_press(V_029[V_0430]) || event_press(V_029[V_0431]) || V_0744[V_0715]) {
+			combo_stop(Combo_Snake);
+			V_0744[V_0719] = FALSE;
+		}
+
+		combo_run(Combo_Snake);
+
+	} else if(V_0744[V_0707] && event_press(V_029[V_0430]) && (get_brtime(V_029[V_0430]) <= 0xFA)) {
+		combo_run(Combo_Snake);
+		V_0744[V_0719] = TRUE;
+	}
+
+	return;
+}
+
+function V_0147() {
+
+	if(!V_0739[V_0544 + V_0744[V_0702]]) {
+		return;
+	}
+
+	if((!V_0744[V_0708] && !V_0744[V_0718]) || (!V_0738[RUMBLE_A] && !V_0738[RUMBLE_B])) {
+		combo_stop(Combo_StrafeAssist);
+		return;
+	}
+
+	if(V_0744[V_0708] || V_0744[V_0718]) {
+		V_0744[V_0720] = V_014(V_0739[V_0545 + V_0744[V_0702]], (V_0174(get_ptime(V_029[V_0428]) >= 0xC8, 0xC8, get_ptime(V_029[V_0428])) * 0x64) / 0xC8) * 0x148;
+	}
+
+	combo_run(Combo_StrafeAssist);
+}
+
+function V_0148() {
+
+	if(V_0739[V_0577] && !V_0744[V_0707] && !V_0744[V_0708] && !V_0744[V_0718] && get_ival(V_024[V_0725])) {
+		combo_run(Combo_YY);
+	}
+}
+
+function V_0149(V_076, V_077, V_0152, V_0153) {
+
+	V_0735[V_0467]--;
+
+	if(V_076 == V_0472) {
+		V_076 = OLED_WIDTH - (V_0735[V_0467] * V_01493[V_0152]) - 0x3; 
+	} else if(V_076 == V_0998) {
+		V_076 = (OLED_WIDTH >> 0x1) - ((V_0735[V_0467] * V_01493[V_0152]) >> 0x1);
+	}
+
+	if(V_077 == V_0471) {
+		V_077 = OLED_HEIGHT - V_01492[V_0152] - 0x2; 
+	} else if(V_077 == V_0998) {
+		V_077 = (OLED_HEIGHT >> 0x1) - (V_01492[V_0152] >> 0x1);
+	}
+
+	puts_oled(clamp(V_076, 0x2, 0x7F), clamp(V_077, 0x2, 0x3F), V_0152, V_0735[V_0467], V_0153);
+
+	V_0735[V_0467] = 0x1;	
+}
+
+function V_0154() {
+	V_0149(V_0998, V_0471, OLED_FONT_SMALL, OLED_WHITE);
+}
+
+function V_0155() {
+
+	if(V_0734[Console] != get_console()) {
+		V_0742[AtdMode] = 0x0; 
+		V_0742[V_0500] = 0x0; 
+		V_0742[V_0501] = 0x0; 
+		V_0742[V_0502] = 0x0; 
+		V_0742[V_0503] = inv(0x1); 
+		V_0742[V_0503 + 0x1] = inv(0x1); 
+		V_0742[V_0503 + 0x2] = inv(0x1); 
+		V_0742[V_0504] = 0x0; 
+		V_0742[V_0504 + 0x1] = 0x0; 
+		V_0742[V_0504 + 0x2] = 0x0; 
+		V_0742[V_0505] = GroupNone; 
+		V_0742[V_0505 + 0x1] = GroupNone; 
+		V_0742[V_0505 + 0x2] = GroupNone; 
+		V_0732[V_0424] = None; 
+		V_0734[Console] = get_console(); 
+		V_0239(); 
+	}
+
+	if(V_0734[V_0462] != get_controller()) {
+		V_0734[V_0462] = get_controller(); 
+		V_0239(); 
+
+		if(V_0744[V_0713] == HomeScreen) {
+			if(V_0739[V_0583] == V_0666) {
+
+				V_0249(V_0174(V_0734[V_0462] == PIO_XB1, inv(0x2), V_0174(V_0734[V_0465] == 0x3, inv(0x8), inv(0x6))));
+			} else {
+
+				V_0249(V_01304[V_0739[V_0583] - 0x1] - 0xA);
+			}
+		} else if(V_0739[V_0583] == V_0666) {
+
+			V_0734[V_0464] = V_0174(V_0734[V_0462] == PIO_XB1, inv(0x2), V_0174(V_0734[V_0465] == 0x3, inv(0x8), inv(0x6)));
+		}
+
+		if(V_0734[V_0462] == PIO_XB1 && V_0734[Console] != PIO_XB1 && !V_0734[V_0463]) {
+			V_0279();
+		} else if(V_0734[V_0462] != PIO_XB1 && V_0734[Console] != PIO_XB1 && V_0734[V_0463]) {
+			V_0279();
+		}
+	}
+
+	if((V_0734[V_0465] != get_info(ZENLINK_STATUS)) && (V_0734[Console] == PIO_PS5)) {
+
+		V_0734[V_0465] = get_info(ZENLINK_STATUS);
+
+		if(V_0744[V_0713] == HomeScreen) {
+			if(V_0739[V_0583] == V_0666) {
+
+				V_0249(V_0174(V_0734[V_0465] == 0x3, V_0174(V_0734[V_0462] == PIO_XB1, inv(0x2), inv(0x8)), V_0174(V_0734[V_0462] == PIO_XB1, inv(0x2), inv(0x6))));
+			} else {
+
+				V_0249(V_01304[V_0739[V_0583] - 0x1] - 0xA);
+			}
+		} else if(V_0739[V_0583] == V_0666) {
+			V_0734[V_0464] = V_0174(V_0734[V_0465] == 0x3, V_0174(V_0734[V_0462] == PIO_XB1, inv(0x2), inv(0x8)), V_0174(V_0734[V_0462] == PIO_XB1, inv(0x2), inv(0x6)));
+		}
+	}
+
+	V_0744[V_0707] = get_ival(V_0174(V_029[ADS] == inv(0x1), XB1_LT, V_029[ADS]));
+	V_0744[V_0708] = get_ival(V_029[V_0428]);
+
+	V_0738[RUMBLE_A] = get_rumble(RUMBLE_A);
+	V_0738[RUMBLE_B] = get_rumble(RUMBLE_B);
+
+	if((V_0744[V_0708] || V_0744[V_0718]) && !V_0738[RUMBLE_A] && !V_0738[RUMBLE_B]) {
+		V_0738[RumbleCounter] += get_rtime();
+	} else {
+		V_0738[RumbleCounter] = 0x0;
+	}
+
+	if(V_0744[V_0713] == HomeScreen) {
+
+		switch(V_0734[Console]) {
+			case PIO_PS5 {
+				V_0156();
+				break;	
+			}
+			case PIO_XB1 {
+				V_0157();
+				break;
+			}
+		}
+	}
+}
+
+function V_0156() {
+
+	V_0742[AtdMode] = get_adt(V_029[V_0435], PS5_ADT_MODE);
+	V_0742[V_0500] = get_adt(V_029[V_0435], PS5_ADT_START);
+	V_0742[V_0501] = get_adt(V_029[V_0435], PS5_ADT_FORCE1);
+	V_0742[V_0502] = get_adt(V_029[V_0435], PS5_ADT_FORCE2);
+
+	if(V_0744[V_0716]) {
+		return;
+	}
+
+	if(V_0739[V_0298 + V_0744[V_0702]] >= V_0607 && event_release(V_029[V_0428])) {
+		V_0744[V_0712] = 0x0; 
+
+		if(V_0739[V_0298 + V_0744[V_0702]] == V_0607) {
+			V_0732[V_0423 + V_0744[V_0702]] = V_0739[Weapon + V_0744[V_0702]];
+			V_0178(); 
+		}
+	}
+
+	switch(V_0742[AtdMode]) {
+		case PS5_ADT_OFF {
+
+			if(!V_0744[V_0708] && !V_0744[V_0718] && !V_0744[V_0715] && !V_0738[RUMBLE_A] && !V_0738[RUMBLE_B]) {
+				V_0744[V_0715] = TRUE;
+				V_0735[LedUpdate] = TRUE;
+			}
+			break;	
+		}
+		case PS5_ADT_NO_RES2 {
+
+			if(V_0744[V_0715]) {
+				V_0744[V_0715] = FALSE;
+				V_0735[LedUpdate] = TRUE;
+			}
+
+			if(V_0742[V_0502]) {
+				V_0742[V_0504 + V_0744[V_0702]] = V_0742[V_0502];
+
+			}
+
+			if(V_0739[V_0298 + V_0744[V_0702]] >= V_0607) {
+
+				if(V_0738[RumbleCounter] >= 0x208) {
+					V_0744[V_0712] = 0x0; 
+					V_0732[V_0417] = 0x0;
+					V_0732[V_0418] = 0x0;
+				}
+			}
+
+			V_0742[V_0503 + V_0744[V_0702]] = inv(0x1);
+
+			break;
+		}
+		case PS5_ADT_HAS_RES2 {
+
+			switch(V_0739[V_0298 + V_0744[V_0702]]) {
+				case V_0607 {
+
+					if(V_0742[V_0503 + V_0744[V_0702]] == inv(0x1)) {
+						if(V_0742[V_0504 + V_0744[V_0702]] == 0x01) {
+
+							if(V_0739[V_0573 + V_0744[V_0702]] == inv(0x1)) {
+								if(V_048(V_0292)) return; 
+							}
+						}
+
+						V_0746 = V_0739[Weapon + V_0744[V_0702]];
+
+						if((V_0732[V_0423 + V_0744[V_0702]] != V_0746) || !V_0732[V_0422]) {
+							V_0744[V_0712] = 0x0; 
+							V_0742[V_0503 + V_0744[V_0702]] = V_0746; 
+							V_0732[V_0423 + V_0744[V_0702]] = V_0746; 
+							V_0178(); 
+							V_091(V_0746); 
+							return;
+						}
+					}
+
+					break;	
+				}
+				case V_0324 {
+
+					if(V_0742[V_0503 + V_0744[V_0702]] != inv(0x1)) {
+						return;
+					}
+
+					for(V_0736 = 0x0; V_0736 < sizeof(_weaponData) / sizeof(ps5adt); V_0736++) {
+
+						if(V_01485[V_0736] != V_0742[V_0504 + V_0744[V_0702]]) {
+							continue;
+						}
+
+						if(!adt_cmp(V_029[V_0435], addr(_weaponData[V_0736][0x0]))) {
+							continue;
+						}
+
+						if(V_0742[V_0504 + V_0744[V_0702]] == 0x01) {
+
+							if(V_0739[V_0573 + V_0744[V_0702]] == inv(0x1)) {
+								if(V_048(V_0292)) return; 
+							}
+						}
+
+						if(V_0168(V_0736) != V_0168(V_0732[V_0423 + V_0744[V_0702]]) || (V_0742[V_0503 + V_0744[V_0702]] == inv(0x1))) {
+							V_0285(V_0736); 
+							V_0742[V_0503 + V_0744[V_0702]] = V_0736; 
+
+							if(V_0168(V_0732[V_0423 + V_0744[V_0702]]) == inv(0x2)) {
+								V_0732[V_0423 + V_0744[V_0702]] = V_0736; 
+							}
+							else if(V_0168(V_0736) != V_0168(V_0732[V_0423 + V_0744[V_0702]])) {
+								V_0732[V_0423 + V_0744[V_0702]] = V_0736; 
+							}
+
+							set_val(TRACE_3, V_0736);
+
+							V_0178(); 
+							V_091(V_0732[V_0423 + V_0744[V_0702]]); 
+							return;
+						}
+					}
+					break;
+				}
+				default {
+
+					if(V_0742[V_0504 + V_0744[V_0702]] == 0x01) {
+
+						if(V_0739[V_0573 + V_0744[V_0702]] == inv(0x1)) {
+							if(V_050(V_0292)) return; 
+						}
+					}
+
+					V_0744[V_0712] = 0x0;
+					V_0742[V_0503 + V_0744[V_0702]] = inv(0x1);
+					V_0732[V_0423 + V_0744[V_0702]] = inv(0x1);
+				}
+			}
+			break;
+		}
+	}
+}
+
+function V_0157() {
+
+	if((!V_0744[V_0708] && !V_0744[V_0718]) || (!V_0738[RUMBLE_A] && !V_0738[RUMBLE_B])) {
+		V_0732[V_0424] = None;
+		return;
+	}
+
+	if(V_0732[V_0424] == None) {
+
+		if(V_0738[RUMBLE_A] == 0x13 && V_0738[RUMBLE_B] <= 0x3) {
+			V_0283(V_0408); 
+		}
+
+		else if(V_0738[RUMBLE_A] == 0xE && V_0738[RUMBLE_B] == 0xE) {
+			V_0283(V_0406); 
+		}
+
+		else if(V_0738[RUMBLE_A] == 0x1E) {
+
+			if(V_0738[RUMBLE_B] == 0x1E) {
+				V_0283(V_0405); 
+			} else if(V_0738[RUMBLE_B] == 0xB) {
+				V_0283(V_0407); 
+			} else if(V_0738[RUMBLE_B] <= 0x5) {
+				V_0283(V_0409); 
+			}
+		}
+	}
+}
+
+function V_0158() {
+
+	if(V_0740[V_0475] == inv(0x1)) {
+
+		if(event_press(XB1_VIEW) && (get_brtime(XB1_VIEW) <= 0xFA) && (V_0739[V_0740[V_0479]] != inv(0x1))) {
+			V_0739[V_0740[V_0479]] = inv(0x1);					
+			V_0186(V_0458);
+			return TRUE;
+		}
+
+		for(V_0737 = 0x0; V_0737 < (sizeof(V_01501) / sizeof(V_01501[0x0])); V_0737++) {
+
+			if(get_ival(V_01501[V_0737]) && (get_ptime(V_01501[V_0737]) >= 0x3E8)) {
+
+				V_0740[V_0475] = V_01501[V_0737];
+
+				if(V_0739[V_0740[V_0479]] == V_01501[V_0737]) {
+					return FALSE;
+				}
+
+				V_0739[V_0740[V_0479]] = V_01501[V_0737];
+
+				return TRUE;
+			}
+		}
+
+	} else if(event_release(V_0740[V_0475])) {
+
+		V_0740[V_0475] = inv(0x1);
+		V_0172();
+	}
+
+	return FALSE;													
+}
+
+function V_0159() {
+	switch(V_0744[V_0713]) {
+		case AimAssistMenu { return V_01502(V_0740[V_0480]); }
+		case V_0484 { return V_01503(V_0740[V_0480]); }
+		case V_0485 { return V_01506(V_0740[V_0480]); }
+		case V_0486 { return V_01514(V_0740[V_0480]); }
+		case V_0487 { return V_01515(V_0740[V_0480]); }
+		case V_0488 { return V_01517(V_0740[V_0480]); }
+		case V_0489 { return V_01518(V_0740[V_0480]); }
+		case V_0490 { return V_01522(V_0740[V_0480]); }
+		case V_0491 { return V_0839(V_0740[V_0480]); }
+	}
+
+	return 0x0;
+}
+
+function V_0160(V_029) {
+	return V_0174(V_029 == inv(0x1), addr(V_01511), V_0174(V_0734[V_0462] == PIO_XB1, V_01141(V_029), V_01142(V_029)));
+}
+
+function V_0162(V_0163) {
+
+	if(V_0734[V_0462] == PIO_XB1) {
+		return V_0163;
+	}
+
+	switch(V_0163) {
+		case ASCII_UPPER_A { return OLED_CROSS; }
+		case ASCII_UPPER_B { return OLED_CIRCLE; }
+		case ASCII_UPPER_X { return OLED_SQUARE; }
+		case ASCII_UPPER_Y { return OLED_TRIANGLE; }
+	}
+
+	return V_0163;
+}
+
+function V_0164() {
+
+	if(V_0744[V_0713] == AimAssistMenu) {
+		switch(V_0740[V_0479]) {
+			case V_0609 { return V_0744[V_0709]; }
+			case V_0610 { return 0x2 + V_0744[V_0709]; }
+			case V_0611 { return 0x4 + V_0744[V_0709]; }
+			case V_0612 { return 0x6 + V_0744[V_0709]; }
+			case V_0613 { return 0x8 + V_0744[V_0709]; }
+			case V_0614 { return 0xA + V_0744[V_0709]; }
+			case V_0615 { return 0xC + V_0744[V_0709]; }
+			case V_0616 { return 0xE + V_0744[V_0709]; }
+			case V_0617 { return 0x10 + V_0744[V_0709]; }
+			case V_0618 { return 0x12 + V_0744[V_0709]; }
+			case V_0619 { return 0x14 + V_0744[V_0709]; }
+			case V_0620 { return 0x16 + V_0744[V_0709]; }
+		}
+	} else if(V_0744[V_0713] == V_0485) {
+		switch(V_0740[V_0479]) {
+			case V_0621 { return V_0744[V_0709]; }
+			case V_0622 { return 0x2 + V_0744[V_0709]; }
+			case V_0623 { return 0x4 + V_0744[V_0709]; }
+			case V_0624 { return 0x6 + V_0744[V_0709]; }
+			case V_0625 { return 0x8 + V_0744[V_0709]; }
+			case V_0626 { return 0xA + V_0744[V_0709]; }
+			case V_0627 { return 0xC + V_0744[V_0709]; }
+			case V_0628 { return 0xE + V_0744[V_0709]; }
+			case V_0629 { return 0x10 + V_0744[V_0709]; }
+			case V_0630 { return 0x12 + V_0744[V_0709]; }
+			case V_0631 { return 0x14 + V_0744[V_0709]; }
+			case V_0632 { return 0x16 + V_0744[V_0709]; }
+			case V_0633 { return 0x18 + V_0744[V_0709]; }
+			case V_0634 { return 0x1A + V_0744[V_0709]; }
+			case V_0635 { return 0x1C + V_0744[V_0709]; }
+			case V_0636 { return 0x1E + V_0744[V_0709]; }
+			case V_0637 { return 0x20 + V_0744[V_0709]; }
+		}
+	} else if(V_0744[V_0713] == V_0488) {
+		switch(V_0740[V_0479]) {
+			case V_0638 { return V_0744[V_0709]; }
+			case V_0639 { return 0x2 + V_0744[V_0709]; }
+			case V_0640 { return 0x4; }
+			case V_0641 { return 0x4 + V_0744[V_0709]; }
+			case V_0642 { return 0x6; }
+			case V_0643 { return 0x6; }
+			case V_0644 { return 0x6; }
+			case V_0645 { return 0x6 ; }
+			case V_0646 { return 0x6; }
+			case V_0647 { return 0x6 + V_0744[V_0709]; }
+			case V_0648 { return 0x8; }
+			case V_0649 { return 0x8 ; }
+			case V_0650 { return 0x8; }
+			case V_0651 { return 0x8; }
+		}
+	}
+
+	return 0x0;
+}
+
+function V_0165() {
+
+	switch(V_0744[V_0713]) {
+		case AimAssistMenu {
+			if(V_0740[V_0479] == V_0610) {
+				return V_01523[V_0739[V_0740[V_0477]]];
+			}
+			break;
+		}
+		case V_0485 {
+			switch(V_0740[V_0480]) {
+				case V_0681 { return V_01505[V_0739[V_0740[V_0477]]]; }
+				case V_0695 { return V_0968[V_0739[V_0740[V_0477]]]; }
+			}
+			break;
+		}
+		case V_0486 {
+			switch(V_0740[V_0479]) {
+				case V_0299 { return V_01508(V_0739[V_0299]); }
+
+				case SlideDive { return V_01525(V_0739[SlideDive]); }
+				case V_0535 { return V_01526(V_0739[V_0535]); }
+			}
+			break;
+		}
+		case V_0487 {
+			return V_01516[V_0739[V_0740[V_0479]]];
+		}
+		case V_0488 {
+			switch(V_0740[V_0479]) {
+				case V_0639 { return V_01507[V_0739[V_0740[V_0477]]]; }
+				case V_0648 { return V_0840[V_0739[V_0740[V_0477]]]; }
+			}
+			break;
+		}
+	}
+
+	return 0x0;
+}
+
+function V_0166() {
+
+	switch(V_0739[V_0535]) {
+		case V_0344 {
+			V_024[V_0725] = XB1_LS;
+			break;
+		} case Southpaw {
+			V_024[V_0725] = XB1_RS;
+			break;
+		} case V_0726 {
+			V_024[V_0725] = V_0174(abs(get_val(POLAR_RY)) > abs(get_val(POLAR_LX)), XB1_LS, XB1_RS);
+			break;
+		} case V_0727 {
+			V_024[V_0725] = V_0174(abs(get_val(POLAR_LY)) > abs(get_val(POLAR_RX)), XB1_RS, XB1_LS);
+			break;
+		} case V_0728 {
+			V_024[V_0725] = XB1_RS;
+			break;
+		} case V_0357 {
+			V_024[V_0725] = V_0174(abs(get_val(POLAR_LY)) > abs(get_val(POLAR_RX)), XB1_RS, XB1_LS);
+			break;
+		}
+	}
+
+	V_0744[V_0711] = get_polar(V_0174(V_024[V_0725] == XB1_LS, POLAR_LS, POLAR_RS), POLAR_RADIUS);
+}
+
+function V_0167() {
+	return V_0174(V_0739[V_0740[V_0477]], V_01549(0), V_01548(0));
+}
+
+function V_0168(V_0169) {
+
+	switch(V_0169) {
+
+		case V_0292 { return inv(0x3); }
+
+	}
+
+	return inv(0x2);
+}
+
+function V_0170() {
+
+	if(V_0735[LedUpdate]) {
+		V_0172();
+	}
+
+	if(V_052() || !V_0735[V_0466]) {
+		return;
+	}
+
+	cls_oled(OLED_BLACK);
+	rect_oled(0x0, 0x0, OLED_WIDTH, OLED_HEIGHT, 0x0, OLED_WHITE);
+
+	switch(V_0744[V_0713]) {
+		case HomeScreen { V_0231(); break; }
+		case V_0514 { V_0234(); break; }
+		case V_0515 { V_0225(); break; }
+		default {
+
+			switch(V_0744[V_0713]) {
+				case AimAssistMenu { V_0223(); break; }
+				case V_0484 { V_0226(); break; }
+				case V_0485 { V_0227(); break; }
+				case V_0486 { V_0228(); break; }
+				case V_0492 { V_0229(); break; }
+				case V_0487 { V_0230(); break; }
+				case V_0488 { V_0232(); break; }
+				case V_0489 { V_0233(); break; }
+				case V_0490 { V_0235(); break; }
+				case V_0491 { V_0236(); break; }
+			}
+
+			V_090();			
+
+			if(V_0185()) {
+
+				if((V_0744[V_0713] == V_0484) && (V_0740[V_0480] == V_0680)) {
+
+					line_oled(0x0, 0x10, OLED_WIDTH - 0x1, 0x10, 0x1, OLED_WHITE);
+				} else {
+					V_093(TRUE);
+					V_097(); 
+				}
+			} else if(V_0744[V_0713] == V_0492) {
+				V_093(FALSE);	
+				V_097();	
+			}
+		}
+	}
+
+	V_0154();					
+	V_0735[V_0466] = FALSE;		
+}
+
+function V_0171() {
+
+	switch(V_0744[V_0713]) {
+		case HomeScreen { V_0217(); return; }
+		case V_0514 { V_0218(); return; }
+		case V_0515 { V_0211(); return; }
+		default {
+
+			if(V_0185()) {
+
+				if(!V_042() && !V_037()) {
+					switch(V_0744[V_0713]) {
+						case AimAssistMenu { V_0210(); return; }
+						case V_0484 { V_0212(); return; }
+						case V_0485 { V_0213(); return; }
+						case V_0486 { V_0214(); return; }
+						case V_0487 { V_0216(); return; }
+						case V_0488 { V_0219(); return; }
+						case V_0489 { V_0220(); return; }
+						case V_0490 { V_0221(); return; }
+						case V_0491 { V_0222(); return; }
+					}
+				}
+				return;
+			} else {
+
+				switch(V_0744[V_0713]) {
+					case V_0492 { V_0215(); return; }
+				}
+			}
+		}
+	}
+}
+
+function V_0172() {
+	if(V_0740[V_0475] == inv(0x1) && !combo_running(Combo_LedAlert)) {
+
+		if(V_0744[V_0713] == V_0488) {
+
+			V_0246(V_0174(V_01284[V_0740[V_0480]][0x2] & V_0519, V_0744[V_0709], V_0454));
+		} else if(V_0744[V_0713] == AimAssistMenu) {
+			V_0246(V_0174(V_01241[V_0740[V_0480]][0x2] & V_0519, V_0744[V_0709], V_0454));
+		} else if(V_0744[V_0713] == V_0485) {
+			V_0246(V_0744[V_0709]);
+		} else {
+
+			if(V_0744[V_0713] != HomeScreen) {
+				V_0246(V_0454);
+			} else if(V_0744[V_0716]) {
+				V_0246(V_0460);
+			} else if(V_0744[V_0715]) {
+				V_0246(V_0461);
+			} else {
+				V_0246(V_0744[V_0702]);
+			}
+		}
+	}
+
+	V_0735[LedUpdate] = FALSE;	
+}
+
+function V_0173() {
+
+	if(V_0744[V_0713] != HomeScreen) {
+		block_all_inputs();
+		return;
+	}
+
+	if(V_0744[V_0707]) {
+		set_val(XB1_VIEW, 0x0);
+		set_val(XB1_MENU, 0x0);
+	}
+
+	if(get_ival(V_0739[V_0302])) {
+		set_val(V_0739[V_0579], 0x0);
+		set_val(V_0739[V_0580], 0x0);
+	}
+
+	if(V_0739[V_0303]) {
+		block_rumble();
+	}
+}
+
+function V_0174(V_0175, V_0176, V_0177) {
+
+	if(V_0175) {
+		return V_0176; 
+	}
+
+	return V_0177;
+}
+
+function V_0178() {
+
+	V_0732[V_0417] = 0x0; 
+	V_0732[V_0418] = 0x0; 
+	V_0732[V_0420] = V_01488[V_0732[V_0423 + V_0744[V_0702]]];
+	V_0732[V_0422] = V_01192[V_0732[V_0420]];
+	V_0732[V_0421] = V_01192[V_0732[V_0420] + 0x1];
+	V_0732[V_0416] = V_01192[V_0732[V_0420] + 0x2];
+	V_0732[V_0419] = V_0732[V_0420] + 0x3;
+
+	if(V_0732[V_0420]) {
+		V_0732[V_01048] = V_0174(V_0732[V_0416], V_01192[V_0732[V_0419] + V_0732[V_0421]] * 0x147, 0x0);
+		V_0732[V_0493] = V_01192[V_0732[V_0419]] * 0x147;
+	} else {
+		V_0732[V_01048] = 0x0;
+		V_0732[V_0493] = 0x0;
+	}
+
+	set_val(TRACE_1, V_0732[V_0421]);
+	set_val(TRACE_2, V_0732[V_0422]);
+
+	V_020();
+}
+
+function V_0179(V_06) {
+	putc_oled(V_0735[V_0467], V_06); 
+	V_0735[V_0467]++; 
+}
+
+function V_0181(V_06) {
+
+	if(V_06 < 0x0) {
+		V_0179(ASCII_MINUS);	
+		V_06 = abs(V_06);
+	}
+
+	V_0735[V_0468] = V_06;
+	V_0735[V_0469] = 0x0;
+
+    do {
+        V_0735[V_0468] /= 0xA;
+        V_0735[V_0469]++;
+    } while(V_0735[V_0468]);
+
+    for(V_0736 = 0x0; V_0736 < V_0735[V_0469]; V_0736++) {
+        V_0735[V_0470 + V_0736] = (V_06 % 0xA) + 0x30;
+        V_06 /= 0xA;
+    }
+
+    for(V_0736 = V_0735[V_0469] - 0x1; V_0736 >= 0x0; V_0736--) {
+        V_0179(V_0735[V_0470 + V_0736]);
+    }
+}
+
+function V_0183(V_0184) {
+	do {
+		V_0179(dint8(V_0184)); 	
+		V_0184++; 							
+	} while(dint8(V_0184));
+}
+
+function V_0185() {
+	return (V_0744[V_0713] >= V_0381 && V_0744[V_0713] <= V_0382);
+}
+
+function V_0186(V_0153) {
+	V_0239();
+	V_0246(V_0153);
+	combo_restart(Combo_LedAlert);
+}
+
+function V_0188() {
+
+	V_0731[V_0395] = 0x0;
+	V_0731[V_0396] = 0x0;
+	V_0731[V_0393] = 0x0;
+	V_0731[V_0394] = 0x0;
+	V_0731[V_0399] = 0x0;
+	V_0731[V_0400] = 0x0;
+	V_0731[V_0397] = 0x0;
+	V_0731[V_0398] = 0x0;
+
+	rect_oled(0x3, 0x14, 0x78, 0x1C, TRUE, OLED_BLACK);
+	rect_oled(0x3, 0x32, 0x78, OLED_FONT_SMALL_HEIGHT, TRUE, OLED_BLACK);
+
+	V_0204(V_0998, V_0998, OLED_FONT_SMALL, OLED_WHITE, V_01575(0));
+
+	V_0183(addr(V_01555));
+	V_0179(ASCII_SPACE);
+
+	if(V_0734[V_0462] == PIO_XB1) {
+		V_0183(V_0160(XB1_A));
+	} else {
+		V_0179(OLED_CROSS);
+	}
+
+	V_0149(V_0998, V_0471, OLED_FONT_SMALL, OLED_WHITE);
+
+	V_0246(V_0458);
+	combo_run(Combo_LedAlertEx);
+}
+
+function V_0189(V_024, V_06) {
+	set_val(V_024, clamp(V_06 * (0x7FFF - abs(get_val(V_024))) / 0x7FFF + get_val(V_024), inv(0x8000), 0x7FFF));
+}
+
+function V_0192() {
+
+	if(V_0744[V_0707] || V_0744[V_0708] || V_0744[V_0718]) {
+		switch(V_0739[V_0536 + V_0744[V_0702]]) {
+			case V_0671 {
+				V_0741[V_01048] = V_01578[V_0741[V_0494]] * V_0741[V_0496]
+				V_0741[V_0493] = (V_01577[V_0741[V_0494]] * V_0741[V_0496]) >> 0x1;
+				break;	
+			}
+			case V_0672 {
+				V_0741[V_01048] = (V_01578[V_0741[V_0494]] * V_0741[V_0496]) >> 0x1;
+				V_0741[V_0493] = V_01577[V_0741[V_0494]] * V_0741[V_0496];
+				break;
+			}
+			case V_0673 {
+				V_0741[V_01048] = V_01579[V_0741[V_0494]] * V_0741[V_0496];
+				V_0741[V_0493] = V_01580[V_0741[V_0494]] * V_0741[V_0496];
+				break;
+			}
+			case V_0674 {
+				V_0741[V_01048] = V_01579[V_0741[V_0494]] * V_0741[V_0496];
+				V_0741[V_0493] = V_01580[V_0741[V_0494]] * V_0741[V_0496];
+				break;
+			}
+			case V_0306 {
+				V_0741[V_01048] = V_01583[V_0741[V_0494]] * V_0741[V_0496];
+				V_0741[V_0493] = V_01584[V_0741[V_0494]] * V_0741[V_0496];
+				break;
+			}
+			default {
+				V_0741[V_01048] = V_01578[V_0741[V_0494]] * V_0741[V_0496];
+				V_0741[V_0493] = V_01577[V_0741[V_0494]] * V_0741[V_0496];
+			}
+		}
+	} else {
+		V_0741[V_01048] = V_01578[V_0741[V_0494]] * V_0741[V_0496]
+		V_0741[V_0493] = V_01577[V_0741[V_0494]] * V_0741[V_0496];
+	}
+
+	V_0741[V_0494] = (V_0741[V_0494] + V_0741[V_0498]) % 0x168;
+
+	V_0189(V_024[V_0724], V_0741[V_01048]);
+	V_0189(V_024[V_0723], V_0741[V_0493]);
+}
+
+function V_0193(V_076, V_077) {
+
+	if(!V_0744[V_0707]) {
+		V_076 = V_014(V_076, 0x46);
+		V_077 = V_014(V_077, 0x46);
+	}
+
+	if(V_0739[V_0298 + V_0744[V_0702]] >= V_0607) {
+		V_076 = V_014(V_076, 0x64 + V_0739[V_0560 + V_0744[V_0702]]);
+		V_077 = V_014(V_077, 0x64 + V_0739[VerticalValue + V_0744[V_0702]]);
+	}
+
+	V_0189(V_024[V_0724], V_076);
+	V_0189(V_024[V_0723], V_077 * V_0174(V_0739[V_0534], inv(0x1), 0x1));
+}
+
+function V_0196(V_076, V_077, V_0152, V_0153, V_06) {
+	V_0181(V_06);
+	V_0149(V_076, V_077, V_0152, V_0153);
+}
+
+function V_0202(V_077) {
+	V_0204(V_0998, V_077, OLED_FONT_MEDIUM, OLED_WHITE, V_01232(V_0744[V_0702]));
+}
+
+function V_0204(V_076, V_077, V_0152, V_0153, V_0209) {
+	V_0183(V_0209);
+	V_0149(V_076, V_077, V_0152, V_0153);
+}
+
+function V_0210() {
+
+	V_033(V_01241[V_0740[V_0480]][0x0], V_01241[V_0740[V_0480]][0x1], !(V_01241[V_0740[V_0480]][0x2] & V_0307));
+}
+
+function V_0211() {
+
+	if(event_release(XB1_B)) {
+		V_025(V_0484);
+		return;
+	}
+
+	if(event_press(XB1_A)) {
+
+		if(V_0731[V_0392]) {
+			V_013();
+		} else {
+			V_0246(V_0457);
+			combo_restart(Combo_LedAlertEx);
+		}
+
+		return;
+	}
+
+	if(event_press(XB1_RB)) {
+		V_023(V_0402);
+	} else if(event_press(XB1_LB)) {
+		V_023(V_0401);
+
+	} else if(event_press(XB1_UP)) {
+		V_021(V_0403);
+	} else if(event_press(XB1_DOWN)) {
+		V_021(V_0404);
+	} else if(event_press(XB1_LEFT)) {
+		V_021(V_0401);
+	} else if(event_press(XB1_RIGHT)) {
+		V_021(V_0402);
+	}
+
+	V_027();
+}
+
+function V_0212() {
+
+	V_033(V_01251[V_0740[V_0480]][0x0], V_01251[V_0740[V_0480]][0x1], !(V_01251[V_0740[V_0480]][0x2] & V_0307));
+
+	switch(V_0740[V_0480]) {
+		case V_0677 {
+
+			if(event_press(XB1_A)) {
+				V_0108();
+			}
+			break;
+		}
+		case V_0678 {
+
+			if((get_ival(XB1_LX) != get_lval(XB1_LX)) || (get_ival(XB1_LY) != get_lval(XB1_LY)) || (get_ival(XB1_RX) != get_lval(XB1_RX)) || (get_ival(XB1_RY) != get_lval(XB1_RY))) {
+				V_0239();
+			}
+			break;	
+		}
+		case V_0679 {
+
+			if(get_ival(XB1_A)) {
+				if(get_ptime(XB1_A) == 0x3E8) {
+					V_0188();
+				} else {
+
+					V_0744[V_0704] = 0x0;
+				}
+			} else if(event_release(XB1_A) && (get_ptime(XB1_A) >= 0x3E8)) {
+				V_0239();
+			}
+
+			break;
+		}
+		case V_0680 {
+
+			V_080(V_0393);
+			V_080(V_0397);
+
+			line_oled((OLED_WIDTH >> 0x1) - 0x1, 0x10, (OLED_WIDTH >> 0x1) - 0x1, OLED_HEIGHT - 0x1, 0x1, OLED_WHITE);
+
+			break;
+		}
+		default {
+			if(V_0744[V_0703] == 0x4) {
+				V_0744[V_0703] = 0x0;
+				V_0744[V_0704] = 0x0;
+			}
+		}
+	}
+}
+
+function V_0213() {
+
+	if(((V_0734[Console] == PIO_PS4) || (V_0734[Console] == PIO_XB1)) && (V_0740[V_0480] == 0x0)) {
+		V_033(V_01259[V_0740[V_0480]][0x0], V_0607, !(V_01259[V_0740[V_0480]][0x2] & V_0307));
+	} else {
+
+		V_033(V_01259[V_0740[V_0480]][0x0], V_01259[V_0740[V_0480]][0x1], !(V_01259[V_0740[V_0480]][0x2] & V_0307));
+	}
+}
+
+function V_0214() {
+
+	if(V_033(V_01260[V_0740[V_0480]][0x0], V_01260[V_0740[V_0480]][0x1], !(V_01260[V_0740[V_0480]][0x2] & V_0307))) {
+
+		if((V_0740[V_0477] == V_0299) && (V_0739[V_0299] == V_0345)) {
+			V_0744[V_0703] = 0x3;					
+			V_0744[V_0704] = 0x0;				
+		}
+	} else if(event_press(XB1_A) && (V_0740[V_0480] == V_0299) && (V_0739[V_0299] == V_0345)) {
+		V_025(V_0492);	
+		V_0186(V_0458);					
+		V_0740[V_0481] = 0x0;					
+		V_0740[V_0482] = 0x0;					
+	}
+}
+
+function V_0215() {
+
+	V_0740[V_0479] = V_0584 + V_0740[V_0481];
+
+	if(V_031(XB1_B)) {
+		V_0740[V_0479] = V_0299;		
+		V_025(V_0486);			
+		V_0744[V_0703] = 0x3;						
+	} else if(V_031(XB1_DOWN)) {
+		V_0740[V_0482] = V_05(V_0740[V_0482], 0x0, 0x2, 0x1, FALSE);
+		V_0740[V_0481] = V_05(V_0740[V_0481], 0x0, 0xA, 0x1, FALSE);
+	} else if(V_031(XB1_UP)) {
+		V_0740[V_0482] = V_05(V_0740[V_0482], 0x0, 0x2, inv(0x1), FALSE);
+		V_0740[V_0481] = V_05(V_0740[V_0481], 0x0, 0xA, inv(0x1), FALSE);
+	} else if(V_0158()) {
+
+		for(V_0737 = ADS; V_0737 <= V_0434; V_0737++) {
+
+			if(V_0737 != V_0740[V_0481]) {
+
+				if(V_0739[V_0584 + V_0737] == V_0739[V_0740[V_0479]]) {
+					V_0739[V_0740[V_0479]] = inv(0x1); 
+					V_0186(V_0457); 
+					return;
+				}
+			}
+		}
+
+		V_0186(V_0458);
+	}
+}
+
+function V_0216() {
+
+	if(V_0734[V_0462] != PIO_XB1) {
+		V_033(V_0323, V_0655, FALSE);
+	}
+}
+
+function V_0217() {
+
+	if(V_0744[V_0707]) {
+
+		if(event_press(XB1_MENU)) {
+			V_025(V_0514);
+			V_0744[V_0709] = V_0744[V_0702];
+			V_0744[V_0715] = FALSE;
+			return;
+
+		} else if(V_0739[V_0298 + V_0744[V_0702]] >= V_0607) {
+
+			if(get_ival(XB1_VIEW) && (get_ptime(XB1_VIEW) >= 0x1F4)) {
+				V_0744[V_0709] = V_0744[V_0702]; 
+				V_0744[V_0715] = FALSE;
+				V_025(V_0485); 
+
+				V_0740[BaseSetting] = V_0298; 
+				V_0740[V_0480] = V_0696; 
+				V_0740[V_0483] = TRUE; 
+				V_0287(); 
+
+			} else if(event_release(XB1_VIEW)) {
+
+				if((V_0734[Console] == PIO_PS5) && (V_0739[V_0298 + V_0744[V_0702]] == V_0324)) {
+					V_074(); 
+				} else if(V_0739[V_0298 + V_0744[V_0702]] == V_0607) {
+				V_0744[V_0715] = FALSE;
+					V_0744[V_0709] = V_0744[V_0702]; 
+					V_025(V_0485); 
+					V_0740[V_0483] = TRUE; 
+					V_0740[V_0480] = V_0695; 
+					V_0740[BaseSetting] = V_0298; 
+					V_0287(); 
+				}
+			}
+		} else if(event_press(XB1_VIEW)) {
+			V_0744[V_0715] = FALSE;
+			V_0744[V_0709] = V_0744[V_0702]; 
+			V_025(V_0485); 
+
+			V_0740[BaseSetting] = V_0298; 
+			V_0740[V_0483] = TRUE; 
+
+			switch(V_0739[V_0298 + V_0744[V_0702]]) {
+				case Basic {
+
+					V_0740[V_0480] = V_0682;
+					break;	
+				}
+				case V_0605 {
+
+					V_0740[V_0480] = V_0682;
+					break;
+				}
+				case V_0606 {
+
+					V_0740[V_0480] = V_0685;
+					break;
+				}
+			}
+
+			V_0287(); 
+
+		}
+	}
+
+	if(V_057()) {
+		return;
+	}
+
+	V_071(V_0739[V_0530], V_0739[V_0531]);
+
+	if(V_0744[V_0716]) {
+		return;
+	}
+
+	V_0245(); 
+	V_0136(); 
+	V_0139(); 
+	V_0141(); 
+	V_0142(); 
+}
+
+function V_0218() {
+
+	if(event_press(XB1_A)) {
+		V_025(V_0740[V_0478]); 
+		V_0287(); 
+		return;
+	}
+
+	if(event_release(XB1_B)) {
+		V_0734[V_0462] = PIO_NONE; 
+		V_0252(); 
+		V_025(HomeScreen); 
+		return;
+	}
+
+	if(V_028(XB1_DOWN, FALSE)) {
+		V_0740[V_0480] = 0x0;												
+		V_065(V_0478, V_0381, V_0382, 0x1);
+		return;
+	}
+
+	if(V_028(XB1_UP, FALSE)) {
+		V_0740[V_0480] = 0x0;												
+		V_065(V_0478, V_0381, V_0382, inv(0x1));
+		return;
+	}
+}
+
+function V_0219() {
+
+	if((V_0734[Console] == PIO_PS4) && (V_0740[V_0479] == V_0647)) {
+		V_033(0x0, V_01284[V_0740[V_0480]][0x1], !(V_01284[V_0740[V_0480]][0x2] & V_0307));
+	} else {
+		V_033(V_01284[V_0740[V_0480]][0x0], V_01284[V_0740[V_0480]][0x1], !(V_01284[V_0740[V_0480]][0x2] & V_0307));
+	}
+
+	if(event_press(XB1_VIEW)) {
+
+		if(V_0740[V_0479] == V_0638) {
+			V_0739[V_0595 + V_0744[V_0709]] = V_0739[V_0740[V_0477]];
+			V_0186(V_0458); 
+		} else if(V_0740[V_0479] == V_0647) {
+			V_0739[V_0596 + V_0744[V_0709]] = V_0739[V_0740[V_0477]];
+			V_0186(V_0458); 
+		} else if(V_0740[V_0479] == V_0648) {
+			V_0739[V_0597] = V_0739[V_0740[V_0477]];
+			V_0186(V_0458); 
+		}
+	}
+}
+
+function V_0220() {
+
+	if(V_0158()) {
+
+		if(V_045(V_0302, V_0579) || V_045(V_0302, V_0580) || V_045(V_0579, V_0580)) {
+			V_0240(); 
+			return;
+		}
+
+		for(V_0737 = 0x0; V_0737 < 0xE; V_0737++) {
+
+			if(V_053(V_0737, 0x0, V_0302) && (V_053(V_0737, 0x1, V_0579) || V_053(V_0737, 0x1, V_0580))) {
+				V_0240(); 
+				return;
+			}
+
+			if((V_0739[V_0598 + (V_0737 * 0x2)] == V_029[V_0428]) && V_053(V_0737, 0x1, V_0581)) {
+				V_0240(); 
+				return;
+			}
+		}
+
+		if(V_0739[V_0302] == V_029[ADS] && (V_0739[V_0740[V_0479]] == XB1_MENU)) {
+			V_0240(); 
+			return;
+		}
+
+	    V_0186(V_0458); 
+	}
+}
+
+function V_0221() {
+	V_033(V_01302[V_0740[V_0480]][0x0], V_01302[V_0740[V_0480]][0x1], !(V_01302[V_0740[V_0480]][0x2] & V_0307));
+
+	if(V_0740[V_0477] == V_0583) {
+		if(V_0739[V_0583] != 0x0) {
+			V_0734[V_0464] = V_0174(V_0739[V_0583], V_01304[V_0739[V_0583] - 0x1] - 0xA, 0x0); 
+		} else {
+			V_0734[V_0464] = V_0174(V_0734[V_0465] == 0x3, V_0174(V_0734[V_0462] == PIO_XB1, inv(0x2), inv(0x8)), V_0174(V_0734[V_0462] == PIO_XB1, inv(0x2), inv(0x6)));
+		}
+
+	}
+}
+
+function V_0222() {
+
+	if(V_031(XB1_DOWN)) {
+
+		V_0740[V_0482] = V_05(V_0740[V_0482], 0x0, 0x1, 0x1, FALSE);
+		return;
+	}
+
+	if(V_031(XB1_UP)) {
+		V_0740[V_0482] = V_05(V_0740[V_0482], 0x0, 0x1, inv(0x1), FALSE);
+		return;
+	}
+
+	V_0740[V_0479] = V_0598 + (V_0740[V_0480] * 0x2) + V_0740[V_0482];
+
+	if(V_0158()) {
+
+		for(V_0737 = 0x0; V_0737 < 0x7; V_0737++) {
+
+			if(V_0737 != V_0740[V_0480]) {
+
+				if(V_053(V_0737, 0x0, V_0598 + (V_0740[V_0480] * 0x2)) && V_053(V_0737, 0x1, V_0598 + (V_0740[V_0480] * 0x2) + 0x1)) {
+					V_0240(); 
+					return;
+				}
+			}
+
+			if(V_053(V_0737, 0x0, V_0598 + (V_0740[V_0480] * 0x2) + 0x1)) {
+				V_0240(); 
+				return;
+			}
+
+			if(V_053(V_0737, 0x0, V_0302) && (V_053(V_0737, 0x1, V_0579) || V_053(V_0737, 0x1, V_0580))) {
+				V_0240(); 
+				return;
+			}
+
+			if(V_0739[V_0598 + (V_0737 * 0x2)] == V_029[ADS] && (V_0739[V_0740[V_0479]] == XB1_MENU)) {
+				V_0240(); 
+				return;
+			}
+		}
+
+		V_0186(V_0458);
+	}
+}
+
+function V_0223() {
+	V_095(V_01241[V_0740[V_0480]][0x2]);
+}
+
+function V_0224() {
+
+	rect_oled(0xE, 0x1F, 0x64, 0xC, TRUE, OLED_BLACK);
+
+	rect_oled(0xE, 0x1F, 0x64, 0xC, FALSE, OLED_WHITE);
+
+	for(V_0736 = 0x0; V_0736 < sizeof(V_01320) / sizeof(V_01320[0x0]); V_0736++) {
+		pixel_oled(V_01320[V_0736][0x0], V_01320[V_0736][0x1], OLED_WHITE);
+	}
+
+	rect_oled(0xE, 0x1F, V_0731[V_0389], 0xC, TRUE, OLED_WHITE);
+}
+
+function V_0225() {
+
+	V_093(FALSE);
+
+	if(V_0731[V_0389] < 0x19) {
+		if(V_0731[V_0392]) {
+
+			V_0183(addr(V_01555));
+			V_0179(ASCII_SPACE);
+			V_0183(V_01563(0));
+			V_0149(V_0998, V_0474, OLED_FONT_SMALL, OLED_WHITE);
+
+			V_0183(V_01564(0));
+			V_0179(ASCII_SPACE);
+			V_0183(V_01552(0));
+			V_0179(ASCII_SPACE);
+
+			if(V_0734[V_0462] == PIO_XB1) {
+				V_0183(V_0160(XB1_A));
+			} else {
+				V_0179(OLED_CROSS);
+			}
+
+		} else {
+
+			V_0183(V_01553(0));
+			V_0179(ASCII_SPACE);
+			V_0183(V_01513(V_0731[V_0387]));
+			V_0179(ASCII_SPACE);
+			V_0183(V_01563(0));
+			V_0149(V_0998, V_0474, OLED_FONT_SMALL, OLED_WHITE);
+
+			V_0183(V_01513(V_0731[V_0386]));
+			V_0179(ASCII_SPACE);
+			V_0179(V_01497[V_0731[V_0386]]);
+
+		}
+
+		V_0149(V_0998, 0x12, OLED_FONT_SMALL, OLED_WHITE);
+
+		V_0246(V_0454);
+
+	} else if(V_0731[V_0389] > 0x23) {
+
+		V_0204(V_0998, V_0474, OLED_FONT_SMALL, OLED_WHITE, V_01554(0));
+		V_0204(V_0998, 0x12, OLED_FONT_SMALL, OLED_WHITE, V_01562(0));
+
+		V_0731[V_0392] = FALSE;
+
+		V_0246(V_0457);
+
+	} else {
+
+		V_0183(V_01543(0));
+		V_0179(ASCII_SPACE);
+		V_0183(V_01513(V_0731[V_0387]));
+		V_0179(ASCII_SPACE);
+		V_0183(V_01563(0));
+		V_0149(V_0998, V_0474, OLED_FONT_SMALL, OLED_WHITE);
+
+		V_0204(V_0998, 0x12, OLED_FONT_SMALL, OLED_WHITE, V_01541(0));
+
+		V_0246(V_0453);
+	}
+
+	V_0224();
+
+	V_097();
+}
+
+function V_0226() {
+	V_095(V_01251[V_0740[V_0480]][0x2]);
+}
+
+function V_0227() {
+	V_095(V_01259[V_0740[V_0480]][0x2]);
+}
+
+function V_0228() {
+
+	V_095(V_01260[V_0740[V_0480]][0x2]);
+}
+
+function V_0229() {
+
+	rect_oled(0x2, (V_0740[V_0482] * (OLED_FONT_SMALL_HEIGHT + 0x5)) + 0x2, OLED_WIDTH - 0x4, OLED_FONT_SMALL_HEIGHT + 0x5, 0x1, OLED_WHITE);
+
+	V_085(0x0, V_0740[V_0481] - V_0740[V_0482] + 0x0);
+	V_085(0x1, V_0740[V_0481] - V_0740[V_0482] + 0x1);
+	V_085(0x2, V_0740[V_0481] - V_0740[V_0482] + 0x2);
+}
+
+function V_0230() {
+
+	if(V_0734[V_0462] == PIO_XB1) {
+		V_0204(V_0998, 0x16, OLED_FONT_SMALL, OLED_WHITE, V_01551(0));
+		V_0204(V_0998, 0x23, OLED_FONT_SMALL, OLED_WHITE, V_01550(0));
+	} else {
+
+		V_095(V_0307);
+	}
+}
+
+function V_0231() {
+
+	if(V_0744[V_0716]) {
+		V_0204(V_0998, V_0998, OLED_FONT_MEDIUM, OLED_WHITE, V_01576(0));
+		return;
+	}
+
+	V_0204(V_0998, V_0474, OLED_FONT_MEDIUM, OLED_WHITE, V_01558(0));
+	V_0204(V_0998, 0x1A, OLED_FONT_SMALL, OLED_WHITE, V_01556(0));
+	V_0204(V_0998, 0x27, OLED_FONT_SMALL, OLED_WHITE, V_01557(0));
+
+	switch(V_0744[V_0703]) {
+		case 0x0 {
+
+			V_0183(V_01559(0));
+			break;
+		}
+		case 0x1 {
+
+			V_0183(V_01545(0));
+			V_0183(V_0160(V_0174(V_029[ADS] == inv(0x1), XB1_LT, V_029[ADS])));
+			V_0179(ASCII_SPACE);
+			V_0179(ASCII_AMPERSAND);
+			V_0179(ASCII_SPACE);
+			V_0183(V_0160(XB1_MENU));
+			break;
+		}
+	}
+}
+
+function V_0232() {
+	V_095(V_01284[V_0740[V_0480]][0x2]);													
+}
+
+function V_0233() {
+	V_095(V_0516);
+}
+
+function V_0234() {
+
+	V_093(FALSE);
+
+	V_0204(V_0998, V_0474, OLED_FONT_SMALL, OLED_WHITE, V_01341[V_0174(V_0740[V_0478] - 0x1 < V_0381, V_0382, V_0740[V_0478] - 0x1)]);
+	V_0204(V_0998, V_0474 + V_01492[OLED_FONT_SMALL] + 0x1, OLED_FONT_MEDIUM, OLED_WHITE, V_01341(V_0740[V_0478]));
+	V_0204(V_0998, V_0474 + V_01492[OLED_FONT_SMALL] + V_01492[OLED_FONT_MEDIUM] + 0x2, OLED_FONT_SMALL, OLED_WHITE, V_01341[V_0174(V_0740[V_0478] + 0x1 > V_0382, V_0381, V_0740[V_0478] + 0x1)]);
+
+	switch(V_0744[V_0703]) {
+		case 0x0 {
+			V_0179(OLED_UP);
+			V_0179(ASCII_SLASH);
+			V_0179(OLED_DOWN);
+			V_0183(V_01573(0));
+			break;	
+		}
+		case 0x1 {
+			V_0179(V_0162(ASCII_UPPER_A));
+			V_0183(V_01569(0));
+			break;
+		}
+		case 0x2 {
+			V_0179(V_0162(ASCII_UPPER_B));
+			V_0183(V_01572(0));
+			break;
+		}
+	}
+}
+
+function V_0235() {
+
+	V_095(V_01302[V_0740[V_0480]][0x2]);
+}
+
+function V_0236() {
+
+	rect_oled(0x2, (V_0740[V_0482] * (OLED_FONT_SMALL_HEIGHT + 0x5)) + 0x12, OLED_WIDTH - 0x4, OLED_FONT_SMALL_HEIGHT + 0x4, TRUE, OLED_WHITE);
+
+	for(V_0737 = 0x0; V_0737 < 0x2; V_0737++) {
+		V_0183(V_01536(0));
+		V_0179(ASCII_SPACE);
+		V_0181(V_0737 + 0x1);
+		V_0179(ASCII_COLON);
+		V_0179(ASCII_SPACE);
+		V_0149(V_0473, 0x15 + (0xF * V_0737), OLED_FONT_SMALL, V_0174(V_0740[V_0482] == V_0737, OLED_BLACK, OLED_WHITE));
+	}
+
+	V_098(0x0, V_0739[V_0598 + (V_0740[V_0480] * 0x2)]);
+	V_098(0x1, V_0739[V_0598 + (V_0740[V_0480] * 0x2) + 0x1]);
+}
+
+function V_0237(V_0238) {
+
+	V_0731[V_0389] = 0x0;
+	V_0731[V_0392] = FALSE;
+	V_0731[V_0388] = FALSE;
+	V_0731[V_0390] = FALSE;
+	V_0731[V_0391] = 0x0;
+
+	if(V_0238) {
+		V_0731[V_0387] = V_0401;
+		V_0731[V_0386] = V_0401;
+	}
+}
+
+function V_0239() {
+	V_0735[V_0466] = TRUE;				
+	V_0744[V_0714] = 0x0;				
+}
+
+function V_0240() {
+	V_0739[V_0740[V_0479]] = inv(0x1); 
+	V_0186(V_0457); 
+}
+
+function V_0241() {
+
+	if(!V_0739[V_0529] || (V_0739[V_0299] == V_0345)) {
+		return;
+	}
+
+	V_029[V_0426] = XB1_LB;
+
+	switch(V_0739[V_0299]) {
+		case V_0344 {
+			V_029[V_0434] = inv(0x1);
+			break;
+		}
+		case V_0437 {
+			V_029[V_0434] = inv(0x1);
+			break;
+		}
+		case V_0438 {
+			V_029[V_0425] = XB1_RB;
+			V_029[V_0434] = inv(0x1);
+			V_029[V_0426] = inv(0x1);
+			break;
+		}
+		case V_0439 {
+			V_029[V_0434] = inv(0x1);
+			break;
+		}
+		case V_0440 {
+			V_029[V_0434] = inv(0x1);
+			break;
+		}
+		case V_0441 {
+			V_029[V_0426] = XB1_RB;
+			break;
+		}
+		case V_0442 {
+			V_029[V_0426] = XB1_A;
+			break;
+		}
+		case V_0443 {
+			V_029[V_0426] = XB1_A;
+			break;
+		}
+		case V_0444 {
+			V_029[V_0426] = XB1_RB;
+			break;
+		}
+		case V_0445 {
+			V_029[V_0434] = inv(0x1);
+			break;
+		}
+		case V_0446 {
+			V_029[V_0434] = inv(0x1);
+			break;
+		}
+		case V_0447 {
+			V_029[V_0426] = XB1_A;
+			V_029[V_0431] = XB1_LB;
+			break;
+		}
+	}
+}
+
+function V_0242() {
+
+	if(V_0739[V_0299] != V_0345) {
+
+		for(V_0736 = ADS; V_0736 <= V_0434; V_0736++) {
+			V_029[V_0736] = V_01489[V_0739[V_0299]][V_0736];
+		}
+
+		V_029[V_0435] = V_01489[V_0739[V_0299]][V_0428];
+
+		if(V_0739[V_0532]) {
+
+			V_0243(ADS);
+			V_0243(V_0425);
+			V_0243(V_0434);
+			V_0243(V_0428);
+			V_0243(V_0431);
+			V_0243(V_0432);
+		}
+
+		if(V_029[V_0436] && !V_0739[V_0532]) {
+
+			set_remapper(XB1_LB, XB1_LB);
+			set_remapper(XB1_LT, XB1_LT);
+			set_remapper(XB1_RB, XB1_RB)
+			set_remapper(XB1_RT, XB1_RT);
+
+			V_029[V_0436] = FALSE;
+		}
+
+	} else {
+
+		V_029[ADS] = V_0174(V_0739[V_0584] == inv(0x1), XB1_LT, V_0739[V_0584]);
+
+		V_029[V_0425] = V_0739[V_0585];
+		V_029[V_0426] = V_0739[V_0586];
+		V_029[V_0427] = V_0739[V_0587];
+		V_029[V_0428] = V_0739[V_0588];
+		V_029[V_0429] = V_0739[V_0589];
+		V_029[V_0430] = V_0739[V_0590];
+		V_029[V_0431] = V_0739[V_0591];
+		V_029[V_0432] = V_0739[V_0592];
+		V_029[V_0433] = V_0739[V_0593];
+		V_029[V_0434] = V_0739[V_0594];
+
+		V_029[V_0435] = V_0174(V_029[V_0428] == XB1_RB || V_029[V_0428] == XB1_RT, XB1_RT, XB1_LT);
+	}
+
+	if(!V_029[V_0436] && V_0739[V_0532]) {
+
+		set_remapper(XB1_LB, XB1_LT);
+		set_remapper(XB1_RB, XB1_RT);
+
+		V_029[V_0436] = TRUE;
+	}
+}
+
+function V_0243(V_0244) {
+	switch(V_029[V_0244]) {
+		case XB1_LB { V_029[V_0244] = XB1_LT; break; }
+		case XB1_LT { V_029[V_0244] = XB1_LB; break; }
+		case XB1_RB { V_029[V_0244] = XB1_RT; break; }
+		case XB1_RT { V_029[V_0244] = XB1_RB; break; }
+	}
+}
+
+function V_0245() {
+	if(V_0739[V_0533]) {
+		set_val(V_029[ADS], V_0174(V_0744[V_0707], 0x64, 0x0));
+		set_val(V_029[V_0428], V_0174(V_0744[V_0708], 0x64, 0x0));
+	}
+}
+
+function V_0246(V_0153) {
+	set_hsb(V_01380[V_0153][Hue], V_01380[V_0153][V_0449], V_01380[V_0153][V_0450]);
+}
+
+function V_0248() {
+
+	V_024[Move] = V_01496[V_0739[V_0535]][Move];
+	V_024[V_0722] = V_01496[V_0739[V_0535]][V_0722];
+	V_024[V_0723] = V_01496[V_0739[V_0535]][V_0723];
+	V_024[V_0724] = V_01496[V_0739[V_0535]][V_0724];
+
+	if((V_0739[V_0535] == Southpaw) || (V_0739[V_0535] == V_0727)) {
+		switch(V_0739[V_0299]) {
+			case V_0344 {
+				V_029[V_0432] = XB1_RS;
+				V_029[V_0427] = XB1_LS;
+				return;
+			} case V_0437 {
+				V_029[V_0430] = XB1_LS;
+				V_029[V_0427] = XB1_RS;
+				return;
+			} case V_0438 {
+				V_029[V_0427] = XB1_LS;
+				V_029[V_0432] = XB1_RS;
+				return;
+			} case V_0439 {
+				V_029[V_0432] = XB1_LS;
+				V_029[V_0427] = XB1_RS;
+				return;
+			} case V_0440 {
+				V_029[V_0430] = XB1_LS;
+				V_029[V_0427] = XB1_RS;
+				return;
+			} case V_0441 {
+				V_029[V_0427] = XB1_LS;
+				V_029[V_0432] = XB1_RS;
+				return;
+			} case V_0442 {
+				V_029[V_0432] = XB1_LS;
+				V_029[V_0427] = XB1_RS;
+				return;
+			} case V_0443 {
+				V_029[V_0430] = XB1_LS;
+				V_029[V_0427] = XB1_RS;
+				return;
+			} case V_0444 {
+				V_029[V_0432] = XB1_LS;
+				V_029[V_0427] = XB1_RS;
+				return;
+			} case V_0445 {
+				V_029[V_0431] = XB1_LS;
+				V_029[V_0427] = XB1_RS;
+				return;
+			} case V_0446 {
+				V_029[V_0427] = XB1_RS;
+				return;
+			} case V_0447 {
+				V_029[V_0427] = XB1_RS;
+				return;
+			}
+		}
+	}
+}
+
+function V_0249(V_0250) {
+	V_0734[V_0464] = V_0250;					
+	vm_tctrl(V_0734[V_0464]);				
+}
+
+function V_0251() {
+
+	V_0270();
+
+	if(V_0278(0x0, 0x1)) {
+
+		V_0739[V_0299] = V_0278(V_0344, V_0345);
+		V_0739[V_0529] = V_0278(FALSE, TRUE);
+		V_0739[V_0530] = V_0278(0x0, 0xF);
+		V_0739[V_0531] = V_0278(0x0, 0xF);
+		V_0739[V_0532] = V_0278(FALSE, TRUE);
+		V_0739[V_0533] = V_0278(FALSE, TRUE);
+		V_0739[V_0534] = V_0278(FALSE, TRUE);
+		V_0739[SlideDive] = V_0278(V_0353, V_0354);
+		V_0739[V_0535] = V_0278(V_0344, V_0357);
+
+		for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+			V_0739[V_0296 + V_0736] = V_0278(FALSE, TRUE);
+			V_0739[V_0536 + V_0736] = V_0278(V_0305, V_0306);
+			V_0739[V_0537 + V_0736] = V_0278(0x1, 0x64);
+			V_0739[V_0538 + V_0736] = V_0278(0x1, 0x64);
+			V_0739[V_0539 + V_0736] = V_0278(inv(0x64), 0x64);
+			V_0739[V_0540 + V_0736] = V_0278(inv(0x64), 0x64);
+			V_0739[V_0541 + V_0736] = V_0278(FALSE, TRUE);
+			V_0739[V_0542 + V_0736] = V_0278(0x1, 0x64);
+			V_0739[V_0543 + V_0736] = V_0278(0x1, 0x64);
+			V_0739[V_0544 + V_0736] = V_0278(FALSE, TRUE);
+			V_0739[V_0545 + V_0736] = V_0278(0x1, 0x64);
+			V_0739[V_0546 + V_0736] = V_0278(0x1, 0x32);
+		}
+
+		V_0739[V_0297] = V_0278(FALSE, TRUE);
+		for(V_0736 = 0x0; V_0736 < 0x8; V_0736++) {
+			V_0731[V_0393 + V_0736] = V_0278(inv(0x2000), 0x2000);
+		}
+
+		for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+			V_0739[V_0298 + V_0736] = V_0278(V_0323, V_0324);
+			V_0739[V_0549 + V_0736] = V_0278(0x0, 0x64);
+			V_0739[KickStrength + V_0736] = V_0278(0x0, 0x64);
+			V_0739[V_0550 + V_0736] = V_0278(0x0, 0xFA);
+			V_0739[V_01052 + V_0736] = V_0278(0x0, 0x64);
+			V_0739[V_0551 + V_0736] = V_0278(0x0, 0x64);
+			V_0739[V_0552 + V_0736] = V_0278(0x0, 0x64);
+			V_0739[V_0553 + V_0736] = V_0278(0x0, 0xFA);
+			V_0739[V_0554 + V_0736] = V_0278(0x0, 0xFA);
+			V_0739[V_0555 + V_0736] = V_0278(inv(0x64), 0x64);
+			V_0739[V_0556 + V_0736] = V_0278(inv(0x64), 0x64);
+			V_0739[V_0557 + V_0736] = V_0278(inv(0x64), 0x64);
+			V_0739[V_0558 + V_0736] = V_0278(0x0, 0xFA);
+			V_0739[V_0559 + V_0736] = V_0278(0x0, 0xFA);
+			V_0739[Weapon + V_0736] = V_0278(V_0291, V_0295);
+			V_0739[VerticalValue + V_0736] = V_0278(inv(0x64), 0xC8);
+			V_0739[V_0560 + V_0736] = V_0278(inv(0x64), 0xC8);
+		}
+
+		V_0739[V_0300] = V_0278(V_0323, V_0655);
+		V_0739[V_0561] = V_0278(V_0323, V_0655);
+		V_0739[V_0562] = V_0278(V_0323, V_0655);
+		V_0739[V_0563] = V_0278(V_0323, V_0655);
+
+		for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+			V_0739[V_0301 + V_0736] = V_0278(inv(0x1), 0xC);
+			V_0739[V_0565 + V_0736] = V_0278(V_0323, V_0361);
+			V_0739[V_0567 + V_0736] = V_0278(FALSE, TRUE);
+			V_0739[V_0573 + V_0736] = V_0278(inv(0x1), 0xC);
+		}
+		V_0739[V_0566] = V_0278(FALSE, TRUE);
+		V_0739[V_0568] = V_0278(FALSE, TRUE);
+		V_0739[V_0569] = V_0278(FALSE, TRUE);
+		V_0739[V_0570] = V_0278(FALSE, TRUE);
+		V_0739[V_0571] = V_0278(FALSE, TRUE);
+		V_0739[V_0572] = V_0278(FALSE, TRUE);
+		V_0739[V_0574] = V_0278(V_0323, V_0372);
+		V_0739[V_0575] = V_0278(0x0, 0x3C);
+		V_0739[V_0576] = V_0278(FALSE, TRUE);
+		V_0739[V_0577] = V_0278(FALSE, TRUE);
+
+		V_0739[V_0302] = V_0278(inv(0x1), XB1_X);
+		V_0739[V_0579] = V_0278(inv(0x1), XB1_X);
+		V_0739[V_0580] = V_0278(inv(0x1), XB1_X);
+		V_0739[V_0581] = V_0278(inv(0x1), XB1_X);
+
+		V_0739[V_0303] = V_0278(FALSE, TRUE);
+		V_0739[V_0583] = V_0278(0x0, 0x4);
+
+		for(V_0736 = 0x0; V_0736 < 0x2; V_0736++) {
+			V_0739[V_0598 + V_0736] = V_0278(inv(0x1), XB1_X);
+			V_0739[V_0599 + V_0736] = V_0278(inv(0x1), XB1_X);
+			V_0739[V_0600 + V_0736] = V_0278(inv(0x1), XB1_X);
+			V_0739[V_0601 + V_0736] = V_0278(inv(0x1), XB1_X);
+			V_0739[V_0602 + V_0736] = V_0278(inv(0x1), XB1_X);
+			V_0739[V_0603 + V_0736] = V_0278(inv(0x1), XB1_X);
+			V_0739[V_0604 + V_0736] = V_0278(inv(0x1), XB1_X);
+		}
+
+		for(V_0736 = 0x0; V_0736 < 0xB; V_0736++) {
+			V_0739[V_0584 + V_0736] = V_0278(inv(0x1), XB1_X);
+		}
+
+		for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+			V_0739[V_0595 + V_0736] = V_0278(inv(0x1), 0xC);
+			V_0739[V_0596 + V_0736] = V_0278(inv(0x1), 0xC);
+		}
+		V_0739[V_0597] = V_0278(V_0323, V_0372);
+
+	} else {
+
+		for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+			V_0739[V_0537 + V_0736] = 0x9;
+			V_0739[V_0538 + V_0736] = 0x13;
+			V_0739[V_0539 + V_0736] = 0xB;
+			V_0739[V_0540 + V_0736] = 0x4;
+			V_0739[V_0542 + V_0736] = 0x4;
+			V_0739[V_0543 + V_0736] = 0x12;
+			V_0739[V_0545 + V_0736] = 0x1E;
+			V_0739[V_0546 + V_0736] = V_0174(get_controller() == PIO_XB1, 0x4, 0x7);
+		}
+
+		V_0739[V_0297] = V_0278(FALSE, TRUE);
+		for(V_0736 = 0x0; V_0736 < 0x8; V_0736++) {
+			V_0731[V_0393 + V_0736] = V_0278(inv(0x2000), 0x2000);
+		}
+
+		for(V_0736 = ADS; V_0736 <= V_0434; V_0736++) {
+			V_0739[V_0584 + V_0736] = inv(0x1);
+		}
+
+		for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+			V_0739[V_0302 + V_0736] = inv(0x1);
+		}
+		V_0739[V_0581] = XB1_RIGHT;
+
+		for(V_0736 = 0x0; V_0736 < 0xE; V_0736++) {
+			V_0739[V_0598 + V_0736] = inv(0x1);
+		}
+
+		if(V_0290) {
+			V_0739[V_0297] = TRUE;
+			V_0731[V_0393] = inv(0x959);
+			V_0731[V_0394] = 0x473;
+			V_0731[V_0395] = inv(0x574);
+			V_0731[V_0396] = 0x745;
+			V_0731[V_0397] = inv(0x4C4);
+			V_0731[V_0398] = 0x4AB;
+			V_0731[V_0399] = inv(0x591);
+			V_0731[V_0400] = 0x941;
+
+			V_0739[V_0530] = 0x2;
+			V_0739[V_0531] = 0x2;
+
+			V_0739[V_0534] = TRUE;
+			V_0739[V_0573] = inv(0x1);
+			V_0739[V_0303] = TRUE;
+
+			for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+
+			}
+
+			V_0739[V_0298] = V_0324;
+			V_0739[V_0298 + 0x1] = V_0324;
+			V_0739[V_0298 + 0x2] = V_0324;
+
+			V_0739[V_0568] = TRUE;
+			V_0739[V_0569] = TRUE;
+			V_0739[V_0570] = TRUE;
+			V_0739[V_0572] = TRUE;
+			V_0739[V_0574] = V_0658;
+			V_0739[V_0574 + 0x1] = V_0658;
+			V_0739[V_0574 + 0x2] = V_0658;
+			V_0739[V_0575] = V_0174(get_controller() == PIO_XB1, 0xB, 0x16);
+
+			V_0739[Weapon] = V_0293;
+			V_0739[Weapon + 0x1] = V_0292;
+
+		}
+	}
+
+	for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+		if(V_0739[V_0298 + V_0736] == V_0607) {
+			V_0732[V_0423 + V_0736] = V_0739[Weapon + V_0736];
+		} else if(V_0739[V_0298 + V_0736] == V_0324) {
+			V_0732[V_0423 + V_0736] = inv(0x1);
+			V_0742[V_0503 + V_0736] = inv(0x1);
+		}
+	}
+
+	V_0282();
+}
+
+function V_0252() {
+
+	V_0270();
+
+	V_0276(0x1, 0x0, 0x1);
+
+    V_0276(V_0739[V_0299], V_0344, V_0345);
+    V_0276(V_0739[V_0529], FALSE, TRUE);
+    V_0276(V_0739[V_0530], 0x0, 0xF);
+    V_0276(V_0739[V_0531], 0x0, 0xF);
+    V_0276(V_0739[V_0532], FALSE, TRUE);
+    V_0276(V_0739[V_0533], FALSE, TRUE);
+    V_0276(V_0739[V_0534], FALSE, TRUE);
+    V_0276(V_0739[SlideDive], V_0353, V_0354);
+    V_0276(V_0739[V_0535], V_0344, V_0357);
+
+    for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+        V_0276(V_0739[V_0296 + V_0736], FALSE, TRUE);
+        V_0276(V_0739[V_0536 + V_0736], V_0305, V_0306);
+        V_0276(V_0739[V_0537 + V_0736], 0x1, 0x64);
+        V_0276(V_0739[V_0538 + V_0736], 0x1, 0x64);
+        V_0276(V_0739[V_0539 + V_0736], inv(0x64), 0x64);
+        V_0276(V_0739[V_0540 + V_0736], inv(0x64), 0x64);
+        V_0276(V_0739[V_0541 + V_0736], FALSE, TRUE);
+        V_0276(V_0739[V_0542 + V_0736], 0x1, 0x64);
+        V_0276(V_0739[V_0543 + V_0736], 0x1, 0x64);
+        V_0276(V_0739[V_0544 + V_0736], FALSE, TRUE);
+        V_0276(V_0739[V_0545 + V_0736], 0x1, 0x64);
+        V_0276(V_0739[V_0546 + V_0736], 0x1, 0x32);
+    }
+
+    V_0276(V_0739[V_0297], FALSE, TRUE);
+    for(V_0736 = 0x0; V_0736 < 0x8; V_0736++) {
+        V_0276(V_0731[V_0393 + V_0736], inv(0x2000), 0x2000);
+    }
+
+    for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+        V_0276(V_0739[V_0298 + V_0736], V_0323, V_0324);
+        V_0276(V_0739[V_0549 + V_0736], 0x0, 0x64);
+        V_0276(V_0739[KickStrength + V_0736], 0x0, 0x64);
+        V_0276(V_0739[V_0550 + V_0736], 0x0, 0xFA);
+        V_0276(V_0739[V_01052 + V_0736], 0x0, 0x64);
+        V_0276(V_0739[V_0551 + V_0736], 0x0, 0x64);
+        V_0276(V_0739[V_0552 + V_0736], 0x0, 0x64);
+        V_0276(V_0739[V_0553 + V_0736], 0x0, 0xFA);
+        V_0276(V_0739[V_0554 + V_0736], 0x0, 0xFA);
+        V_0276(V_0739[V_0555 + V_0736], inv(0x64), 0x64);
+        V_0276(V_0739[V_0556 + V_0736], inv(0x64), 0x64);
+        V_0276(V_0739[V_0557 + V_0736], inv(0x64), 0x64);
+        V_0276(V_0739[V_0558 + V_0736], 0x0, 0xFA);
+        V_0276(V_0739[V_0559 + V_0736], 0x0, 0xFA);
+        V_0276(V_0739[Weapon + V_0736], V_0291, V_0295);
+        V_0276(V_0739[VerticalValue + V_0736], inv(0x64), 0xC8);
+        V_0276(V_0739[V_0560 + V_0736], inv(0x64), 0xC8);
+    }
+
+    V_0276(V_0739[V_0300], V_0323, V_0655);
+    V_0276(V_0739[V_0561], V_0323, V_0655);
+    V_0276(V_0739[V_0562], V_0323, V_0655);
+    V_0276(V_0739[V_0563], V_0323, V_0655);
+
+    for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+        V_0276(V_0739[V_0301 + V_0736], inv(0x1), 0xC);
+        V_0276(V_0739[V_0565 + V_0736], V_0323, V_0361);
+        V_0276(V_0739[V_0567 + V_0736], FALSE, TRUE);
+        V_0276(V_0739[V_0573 + V_0736], inv(0x1), 0xC);
+    }
+    V_0276(V_0739[V_0566], FALSE, TRUE);
+    V_0276(V_0739[V_0568], FALSE, TRUE);
+    V_0276(V_0739[V_0569], FALSE, TRUE);
+    V_0276(V_0739[V_0570], FALSE, TRUE);
+    V_0276(V_0739[V_0571], FALSE, TRUE);
+    V_0276(V_0739[V_0572], FALSE, TRUE);
+    V_0276(V_0739[V_0574], V_0323, V_0372);
+    V_0276(V_0739[V_0575], 0x0, 0x3C);
+    V_0276(V_0739[V_0576], FALSE, TRUE);
+    V_0276(V_0739[V_0577], FALSE, TRUE);
+
+    V_0276(V_0739[V_0302], inv(0x1), XB1_X);
+    V_0276(V_0739[V_0579], inv(0x1), XB1_X);
+    V_0276(V_0739[V_0580], inv(0x1), XB1_X);
+    V_0276(V_0739[V_0581], inv(0x1), XB1_X);
+
+    V_0276(V_0739[V_0303], FALSE, TRUE);
+    V_0276(V_0739[V_0583], 0x0, 0x4);
+
+    for(V_0736 = 0x0; V_0736 < 0x2; V_0736++) {
+        V_0276(V_0739[V_0598 + V_0736], inv(0x1), XB1_X);
+        V_0276(V_0739[V_0599 + V_0736], inv(0x1), XB1_X);
+        V_0276(V_0739[V_0600 + V_0736], inv(0x1), XB1_X);
+        V_0276(V_0739[V_0601 + V_0736], inv(0x1), XB1_X);
+        V_0276(V_0739[V_0602 + V_0736], inv(0x1), XB1_X);
+        V_0276(V_0739[V_0603 + V_0736], inv(0x1), XB1_X);
+        V_0276(V_0739[V_0604 + V_0736], inv(0x1), XB1_X);
+    }
+
+    for(V_0736 = 0x0; V_0736 < 0xB; V_0736++) {
+        V_0276(V_0739[V_0584 + V_0736], inv(0x1), XB1_X);
+    }
+
+    for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+        V_0276(V_0739[V_0595 + V_0736], inv(0x1), 0xC);
+        V_0276(V_0739[V_0596 + V_0736], inv(0x1), 0xC);
+    }
+    V_0276(V_0739[V_0597], V_0323, V_0372);
+
+	V_0282();
+
+	for(V_0736 = 0x0; V_0736 < 0x3; V_0736++) {
+
+		if(V_0739[V_0298 + V_0736] == V_0607) {
+			V_0732[V_0423 + V_0736] = V_0739[Weapon + V_0736]; 
+		} else if(V_0739[V_0298 + V_0736] == V_0324) {
+
+			V_0742[V_0503 + V_0736] = inv(0x1);
+		}
+	}
+
+	if(V_0739[V_0298 + V_0744[V_0702]] == V_0607) {
+		V_0178();
+	}
+
+	if(!V_0739[V_0303]) {
+		reset_rumble();
+	}
+}
+
+function V_0253(V_0254) {
+
+	V_0743[V_0700] = 0x0;
+
+	while (V_0254) { 
+
+		V_0743[V_0700]++;
+
+		V_0254 = abs(V_0254 >> 0x1);
+	}
+
+	return V_0743[V_0700];
+}
+
+function V_0255(V_0256, V_0257) {
+
+	V_0743[V_0700] = max(V_0253(V_0256), V_0253(V_0257));
+
+	if (V_0258(V_0256, V_0257)) {
+
+		V_0743[V_0700]++;
+	}
+
+	return V_0743[V_0700];
+}
+
+function V_0258(V_0256, V_0257) {
+	return (V_0256 < 0x0) || (V_0257 < 0x0);
+}
+
+function V_0261(V_0262) { 
+	return 0x1 << clamp(V_0262 - 0x1, 0x0, 0x1F);
+}
+
+function V_0263(V_0262) {
+
+	if (V_0262 == 0x20) return inv(0x1);
+
+	return 0x7FFFFFFF >> (0x1F - V_0262);
+}
+
+function V_0265(V_0262) {
+	return V_0263(V_0262 - 0x1);
+}
+
+function V_0267(V_0254, V_0262) {
+
+	if (V_0254 < 0x0) { 
+
+		return (abs(V_0254) & V_0265(V_0262)) | V_0261(V_0262);
+	}
+
+	return V_0254 & V_0265(V_0262); 
+}
+
+function V_0270() {
+
+	V_0743[V_0699] = SPVAR_1;
+
+	V_0743[Bit] = 0x0; 
+	V_0743[V_0701] = 0x0;
+}
+
+function V_0271(V_0254, V_0262) {
+
+	if (V_0254 & V_0261(V_0262)) {
+
+		return 0x0 - (V_0254 & V_0265(V_0262));
+	}
+
+	return V_0254 & V_0265(V_0262);
+}
+
+function V_0274(V_0275) {
+	return get_pvar(V_0275, 0x80000000, 0x7FFFFFFF, 0x0);
+}
+
+function V_0276(V_0254, min, max) {
+
+	V_0743[V_0698] = V_0255(min, max);
+
+	V_0254 = clamp(V_0254, min, max);
+
+	if (V_0258(min, max)) {
+
+		V_0254 = V_0267(V_0254, V_0743[V_0698]);
+	}
+
+	V_0254 = V_0254 & V_0263(V_0743[V_0698]);
+
+	if (V_0743[V_0698] >= 0x20 - V_0743[Bit]) { 
+
+		V_0743[V_0701] = V_0743[V_0701] | (V_0254 << V_0743[Bit]);
+
+		set_pvar(V_0743[V_0699], V_0743[V_0701]);
+
+		V_0743[V_0699]++;
+
+		V_0743[V_0698] -= (0x20 - V_0743[Bit]);
+
+		V_0254 = V_0254 >> (0x20 - V_0743[Bit]);
+
+		V_0743[Bit] = 0x0;
+
+		V_0743[V_0701] = 0x0;
+	}
+
+	V_0743[V_0701] = V_0743[V_0701] | (V_0254 << V_0743[Bit]);
+
+	V_0743[Bit] += V_0743[V_0698];
+
+	if (!V_0743[Bit]) {
+
+		V_0743[V_0701] = 0x0;
+	}
+
+	set_pvar(V_0743[V_0699], V_0743[V_0701]);
+}
+
+function V_0278(min, max) {
+
+	V_0743[V_0698] = V_0255(min, max);
+
+	V_0743[V_0701] = (V_0274(V_0743[V_0699]) >> V_0743[Bit]) & V_0263(V_0743[V_0698]);
+
+	if (V_0743[V_0698] >= 0x20 - V_0743[Bit]) {
+		V_0743[V_0701] = (V_0743[V_0701] & V_0263(0x20 - V_0743[Bit])) | ((V_0274(V_0743[V_0699] + 0x1) & V_0263(V_0743[V_0698] - (0x20 - V_0743[Bit]))) << (0x20 - V_0743[Bit]));
+	}
+
+	V_0743[Bit] += V_0743[V_0698];
+
+	V_0743[V_0701] = V_0743[V_0701] & V_0263(V_0743[V_0698]);
+
+	if (V_0743[Bit] >= 0x20) {
+
+		V_0743[V_0699]++;
+
+		V_0743[Bit] -= 0x20;
+	}
+
+	if (V_0258(min, max)) { 
+
+		V_0743[V_0701] = V_0271(V_0743[V_0701], V_0743[V_0698]); 
+	}
+
+	if (V_0743[V_0701] < min || V_0743[V_0701] > max) { 
+
+		return 0x0; 
+	}
+
+	return V_0743[V_0701];
+}
+
+function V_0279() {
+	V_0734[V_0463] = !V_0734[V_0463];
+	set_remapper(XB1_VIEW, PS5_TOUCH);	
+}
+
+function V_0280(V_0281) {
+
+	if(V_0731[V_0388] != V_0281) {
+		V_0731[V_0388] = V_0281; 
+		V_0731[V_0391] = 0x0; 
+		V_0239(); 
+	}
+}
+
+function V_0282() {
+	V_0242();
+	V_0241();
+	V_0248();
+
+	V_0744[V_0721] = V_0739[V_0546 + V_0744[V_0702]] * get_rtime();
+}
+
+function V_0283(V_0284) {
+	V_0732[V_0424] = V_0284; 
+	V_0744[V_0712] = 0x0; 
+
+	if((V_0732[V_0424] == V_0408) && (V_0739[V_0573 + V_0744[V_0702]] == inv(0x1))) {
+		return;
+	}
+
+	V_0107();
+}
+
+function V_0285(V_0286) {
+
+	V_0744[V_0712] = 0x0;
+
+	 V_0742[V_0505 + V_0744[V_0702]] = inv(0x2);
+}
+
+function V_0287() {
+
+	V_0740[V_0479] = V_0740[BaseSetting] + V_0740[V_0480];	
+	V_0740[V_0477] = V_0740[V_0479] + V_0164();	
+}
+
+function V_0288(V_0289) {
+
+	V_0732[V_0423 + V_0744[V_0702]] = V_0289;
+	V_0178();
+	V_091(V_0289); 
+	V_0186(V_0458); 
+}
+
+fcombo Combo_Akimbo {
+	set_val(V_029[ADS], 0x0);
+	set_val(V_029[V_0428], 0x0);
+	wait(0x78 / V_0739[V_0301 + V_0744[V_0702]]);
+	set_val(V_029[ADS], 0x64);
+	set_val(V_029[V_0428], 0x64);
+	wait(0x370 / V_0739[V_0301 + V_0744[V_0702]]);
+}
+
+fcombo Combo_AutoFocus {
+	set_val(V_029[V_0427], 0x64);
+	wait(0xFA0);
+	set_val(V_029[V_0427], 0x0);
+	wait(0xC8);
+}
+
+fcombo Combo_AutoPing {
+	set_val(V_029[V_0426], 0x64);
+	wait(0x30)
+}
+
+fcombo Combo_BunnyHop {
+	set_val(V_029[V_0431], 0x64);
+	wait(0x58)
+	set_val(V_029[V_0431], 0x0);
+	wait(0x58)
+}
+
+fcombo Combo_Crouch {
+	set_val(V_029[V_0430], 0x64);
+	wait(0x30)
+}
+
+fcombo Combo_DiveCancel {
+	wait(0x528);
+	set_val(V_029[V_0430], V_0174(V_0744[V_0707] || V_0744[V_0708] || (V_0744[V_0711] < 0x25E4), 0x0, 0x64));
+	set_val(V_029[V_0431], 0x0);
+	wait(0x30)
+	set_val(V_029[V_0430], 0x0);
+	set_val(V_029[V_0431], V_0174(V_0744[V_0707] || V_0744[V_0708] || (V_0744[V_0711] < 0x25E4), 0x0, 0x64));
+	wait(0x30)
+}
+
+fcombo Combo_EasyMeleeSwap {
+	set_val(V_029[ADS], 0x0);
+	set_val(V_029[V_0432], 0x0);
+	wait(0x1F4);
+	set_val(V_029[ADS], 0x0);
+	set_val(V_029[V_0432], 0x64);
+	wait(0x3E8);
+
+}
+
+fcombo Combo_FastMelee {
+	set_val(V_029[V_0432], 0x64);
+	wait(0x58)
+	set_val(V_029[V_0432], 0x0);
+	wait(0x58)
+}
+
+fcombo Combo_GyroscopicSlideCancel {
+	set_val(V_029[V_0430], 0x64);
+	set_val(V_024[V_0722], V_0744[V_0706]);
+	wait(0x30)
+	set_val(V_029[V_0430], 0x0);
+	set_val(V_024[V_0725], 0x0);
+	set_val(V_024[V_0722], V_0744[V_0706]);
+	wait(V_0739[V_0575] * get_rtime());
+	set_val(V_024[V_0725], 0x64);
+	set_val(V_024[V_0722], V_0744[V_0706]);
+	wait(0x38)
+}
+
+fcombo Combo_GyroscopicSlideStrafe {
+	set_val(V_024[Move], get_ival(PS5_ACCX) * 0x5);
+	wait(0x68 + (V_0739[V_0575] * get_rtime()));
+}
+
+fcombo Combo_LedAlert {
+	wait(0xF0);
+	V_0735[LedUpdate] = TRUE;
+}
+
+fcombo Combo_LedAlertAntiDrift {
+	V_0246(V_0451);
+	wait(0xF0);
+	V_0246(V_0454);
+	V_0735[V_0466] = TRUE;
+}
+
+fcombo Combo_LedAlertEx {
+	wait(0x1E0);
+	V_0246(V_0454);
+}
+
+fcombo Combo_ProfileDisplay {
+	V_0744[V_0714] = V_0380; 
+	wait(0x7D0);
+	cls_oled(OLED_BLACK);
+}
+
+fcombo Combo_Prone {
+	set_val(V_029[V_0430], 0x64);
+	wait(0x2D0);
+}
+
+fcombo Combo_RapidFire {
+	set_val(V_029[V_0428], 0x64);
+	wait(0x1E0 / V_0744[V_0712]);
+	set_val(V_029[V_0428], 0x0);
+	wait(0x208 / V_0744[V_0712]);
+}
+
+fcombo Combo_Snake {
+	set_val(V_029[V_0430], 0x64);
+	wait(0x78);
+	set_val(V_029[V_0430], 0x0);
+	wait(0x78);
+	wait(0x50);
+}
+
+fcombo Combo_SlideCancel {
+	set_val(V_024[V_0725], 0x0);
+	wait(V_0739[V_0575] * get_rtime());
+	set_val(V_024[V_0725], 0x64);
+	wait(0x30)
+}
+
+fcombo Combo_StrafeAssist {
+	V_0189(V_024[V_0722], inv(V_0744[V_0720]));
+	V_0189(V_024[Move], V_0744[V_0720]);
+	wait(V_0744[V_0721]);
+	V_0189(V_024[V_0722], V_0744[V_0720]);
+	V_0189(V_024[Move], V_0744[V_0720]);
+	wait(V_0744[V_0721]);
+	V_0189(V_024[V_0722], inv(V_0744[V_0720]));
+	V_0189(V_024[Move], inv(V_0744[V_0720]));
+	wait(V_0744[V_0721]);
+	V_0189(V_024[V_0722], V_0744[V_0720]);
+	V_0189(V_024[Move], inv(V_0744[V_0720]));
+	wait(V_0744[V_0721]);
+}
+
+fcombo Combo_ToggleDisplay {
+	wait(0x5A0);
+	cls_oled(OLED_BLACK);
+}
+
+fcombo Combo_YY {
+	set_val(V_029[V_0429], 0x64);
+	wait(0x30)
+	wait(0x58)
+	set_val(V_029[V_0429], 0x64);
+	wait(0x30)
+	wait(0x78);
+}
+
+const int16 V_01577[] = { 
+	0x0, 0x6, 0xB, 0x11, 0x17, 0x1D, 0x22, 0x28, 0x2E, 0x33, 0x39, 0x3F, 0x44, 0x4A, 0x4F, 0x55, 0x5A, 0x60,
+	0x65, 0x6B, 0x70, 0x75, 0x7B, 0x80, 0x85, 0x8A, 0x90, 0x95, 0x9A, 0x9F, 0xA4, 0xA9, 0xAE, 0xB2, 0xB7, 0xBC,
+	0xC1, 0xC5, 0xCA, 0xCE, 0xD3, 0xD7, 0xDB, 0xDF, 0xE4, 0xE8, 0xEC, 0xF0, 0xF4, 0xF7, 0xFB, 0xFF, 0x102, 0x106,
+	0x109, 0x10C, 0x110, 0x113, 0x116, 0x119, 0x11C, 0x11F, 0x121, 0x124, 0x127, 0x129, 0x12B, 0x12E, 0x130, 0x132, 0x134, 0x136,
+	0x138, 0x139, 0x13B, 0x13D, 0x13E, 0x13F, 0x141, 0x142, 0x143, 0x144, 0x144, 0x145, 0x146, 0x146, 0x147, 0x147, 0x147, 0x148,
+	0x148, 0x148, 0x147, 0x147, 0x147, 0x146, 0x146, 0x145, 0x144, 0x144, 0x143, 0x142, 0x141, 0x13F, 0x13E, 0x13D, 0x13B, 0x139,
+	0x138, 0x136, 0x134, 0x132, 0x130, 0x12E, 0x12B, 0x129, 0x127, 0x124, 0x121, 0x11F, 0x11C, 0x119, 0x116, 0x113, 0x110, 0x10C,
+	0x109, 0x106, 0x102, 0xFF, 0xFB, 0xF7, 0xF4, 0xF0, 0xEC, 0xE8, 0xE4, 0xDF, 0xDB, 0xD7, 0xD3, 0xCE, 0xCA, 0xC5,
+	0xC1, 0xBC, 0xB7, 0xB2, 0xAE, 0xA9, 0xA4, 0x9F, 0x9A, 0x95, 0x90, 0x8A, 0x85, 0x80, 0x7B, 0x75, 0x70, 0x6B,
+	0x65, 0x60, 0x5A, 0x55, 0x4F, 0x4A, 0x44, 0x3F, 0x39, 0x33, 0x2E, 0x28, 0x22, 0x1D, 0x17, 0x11, 0xB, 0x6,
+	0x0, -6, -11, -17, -23, -29, -34, -40, -46, -51, -57, -63, -68, -74, -79, -85, -90, -96,
+	-101, -107, -112, -117, -123, -128, -133, -138, -144, -149, -154, -159, -164, -169, -174, -178, -183, -188,
+	-193, -197, -202, -206, -211, -215, -219, -223, -228, -232, -236, -240, -244, -247, -251, -255, -258, -262,
+	-265, -268, -272, -275, -278, -281, -284, -287, -289, -292, -295, -297, -299, -302, -304, -306, -308, -310,
+	-312, -313, -315, -317, -318, -319, -321, -322, -323, -324, -324, -325, -326, -326, -327, -327, -327, -328,
+	-328, -328, -327, -327, -327, -326, -326, -325, -324, -324, -323, -322, -321, -319, -318, -317, -315, -313,
+	-312, -310, -308, -306, -304, -302, -299, -297, -295, -292, -289, -287, -284, -281, -278, -275, -272, -268,
+	-265, -262, -258, -255, -251, -247, -244, -240, -236, -232, -228, -223, -219, -215, -211, -206, -202, -197,
+	-193, -188, -183, -178, -174, -169, -164, -159, -154, -149, -144, -138, -133, -128, -123, -117, -112, -107,
+	-101, -96, -90, -85, -79, -74, -68, -63, -57, -51, -46, -40, -34, -29, -23, -17, -11, -6
+}
+
+const int16 V_01578[] = {
+	0x148, 0x148, 0x147, 0x147, 0x147, 0x146, 0x146, 0x145, 0x144, 0x144, 0x143, 0x142, 0x141, 0x13F, 0x13E, 0x13D, 0x13B, 0x139,
+	0x138, 0x136, 0x134, 0x132, 0x130, 0x12E, 0x12B, 0x129, 0x127, 0x124, 0x121, 0x11F, 0x11C, 0x119, 0x116, 0x113, 0x110, 0x10C,
+	0x109, 0x106, 0x102, 0xFF, 0xFB, 0xF7, 0xF4, 0xF0, 0xEC, 0xE8, 0xE4, 0xDF, 0xDB, 0xD7, 0xD3, 0xCE, 0xCA, 0xC5,
+	0xC1, 0xBC, 0xB7, 0xB2, 0xAE, 0xA9, 0xA4, 0x9F, 0x9A, 0x95, 0x90, 0x8A, 0x85, 0x80, 0x7B, 0x75, 0x70, 0x6B,
+	0x65, 0x60, 0x5A, 0x55, 0x4F, 0x4A, 0x44, 0x3F, 0x39, 0x33, 0x2E, 0x28, 0x22, 0x1D, 0x17, 0x11, 0xB, 0x6,
+	0x0, -6, -11, -17, -23, -29, -34, -40, -46, -51, -57, -63, -68, -74, -79, -85, -90, -96,
+	-101, -107, -112, -117, -123, -128, -133, -138, -144, -149, -154, -159, -164, -169, -174, -178, -183, -188,
+	-193, -197, -202, -206, -211, -215, -219, -223, -228, -232, -236, -240, -244, -247, -251, -255, -258, -262,
+	-265, -268, -272, -275, -278, -281, -284, -287, -289, -292, -295, -297, -299, -302, -304, -306, -308, -310,
+	-312, -313, -315, -317, -318, -319, -321, -322, -323, -324, -324, -325, -326, -326, -327, -327, -327, -328,
+	-328, -328, -327, -327, -327, -326, -326, -325, -324, -324, -323, -322, -321, -319, -318, -317, -315, -313,
+	-312, -310, -308, -306, -304, -302, -299, -297, -295, -292, -289, -287, -284, -281, -278, -275, -272, -268,
+	-265, -262, -258, -255, -251, -247, -244, -240, -236, -232, -228, -223, -219, -215, -211, -206, -202, -197,
+	-193, -188, -183, -178, -174, -169, -164, -159, -154, -149, -144, -138, -133, -128, -123, -117, -112, -107,
+	-101, -96, -90, -85, -79, -74, -68, -63, -57, -51, -46, -40, -34, -29, -23, -17, -11, -6,
+	-0, 0x6, 0xB, 0x11, 0x17, 0x1D, 0x22, 0x28, 0x2E, 0x33, 0x39, 0x3F, 0x44, 0x4A, 0x4F, 0x55, 0x5A, 0x60,
+	0x65, 0x6B, 0x70, 0x75, 0x7B, 0x80, 0x85, 0x8A, 0x90, 0x95, 0x9A, 0x9F, 0xA4, 0xA9, 0xAE, 0xB2, 0xB7, 0xBC,
+	0xC1, 0xC5, 0xCA, 0xCE, 0xD3, 0xD7, 0xDB, 0xDF, 0xE4, 0xE8, 0xEC, 0xF0, 0xF4, 0xF7, 0xFB, 0xFF, 0x102, 0x106,
+	0x109, 0x10C, 0x110, 0x113, 0x116, 0x119, 0x11C, 0x11F, 0x121, 0x124, 0x127, 0x129, 0x12B, 0x12E, 0x130, 0x132, 0x134, 0x136,
+	0x138, 0x139, 0x13B, 0x13D, 0x13E, 0x13F, 0x141, 0x142, 0x143, 0x144, 0x144, 0x145, 0x146, 0x146, 0x147, 0x147, 0x147, 0x148
+}
+
+const int16 V_01579[] = {
+	0x0, -3, -6, -9, -11, -14, -17, -20, -23, -26, -29, -32, -35, -38, -41, -44, -47, -50,
+	-53, -56, -60, -63, -66, -69, -73, -76, -79, -83, -86, -90, -94, -97, -101, -105, -109, -112,
+	-116, -120, -124, -129, -133, -137, -141, -146, -150, -154, -159, -164, -168, -173, -178, -182, -187, -192,
+	-197, -202, -207, -212, -217, -222, -227, -232, -237, -242, -247, -252, -257, -262, -266, -271, -276, -280,
+	-284, -289, -293, -297, -300, -304, -307, -310, -313, -316, -318, -320, -322, -324, -325, -326, -327, -328,
+	-328, -328, -327, -326, -325, -324, -322, -320, -318, -316, -313, -310, -307, -304, -300, -297, -293, -289,
+	-284, -280, -276, -271, -266, -262, -257, -252, -247, -242, -237, -232, -227, -222, -217, -212, -207, -202,
+	-197, -192, -187, -182, -178, -173, -168, -164, -159, -154, -150, -146, -141, -137, -133, -129, -124, -120,
+	-116, -112, -109, -105, -101, -97, -94, -90, -86, -83, -79, -76, -73, -69, -66, -63, -60, -56,
+	-53, -50, -47, -44, -41, -38, -35, -32, -29, -26, -23, -20, -17, -14, -11, -9, -6, -3,
+	0x0, 0x3, 0x6, 0x9, 0xB, 0xE, 0x11, 0x14, 0x17, 0x1A, 0x1D, 0x20, 0x23, 0x26, 0x29, 0x2C, 0x2F, 0x32,
+	0x35, 0x38, 0x3C, 0x3F, 0x42, 0x45, 0x49, 0x4C, 0x4F, 0x53, 0x56, 0x5A, 0x5E, 0x61, 0x65, 0x69, 0x6D, 0x70,
+	0x74, 0x78, 0x7C, 0x81, 0x85, 0x89, 0x8D, 0x92, 0x96, 0x9A, 0x9F, 0xA4, 0xA8, 0xAD, 0xB2, 0xB6, 0xBB, 0xC0,
+	0xC5, 0xCA, 0xCF, 0xD4, 0xD9, 0xDE, 0xE3, 0xE8, 0xED, 0xF2, 0xF7, 0xFC, 0x101, 0x106, 0x10A, 0x10F, 0x114, 0x118,
+	0x11C, 0x121, 0x125, 0x129, 0x12C, 0x130, 0x133, 0x136, 0x139, 0x13C, 0x13E, 0x140, 0x142, 0x144, 0x145, 0x146, 0x147, 0x148,
+	0x148, 0x148, 0x147, 0x146, 0x145, 0x144, 0x142, 0x140, 0x13E, 0x13C, 0x139, 0x136, 0x133, 0x130, 0x12C, 0x129, 0x125, 0x121,
+	0x11C, 0x118, 0x114, 0x10F, 0x10A, 0x106, 0x101, 0xFC, 0xF7, 0xF2, 0xED, 0xE8, 0xE3, 0xDE, 0xD9, 0xD4, 0xCF, 0xCA,
+	0xC5, 0xC0, 0xBB, 0xB6, 0xB2, 0xAD, 0xA8, 0xA4, 0x9F, 0x9A, 0x96, 0x92, 0x8D, 0x89, 0x85, 0x81, 0x7C, 0x78,
+	0x74, 0x70, 0x6D, 0x69, 0x65, 0x61, 0x5E, 0x5A, 0x56, 0x53, 0x4F, 0x4C, 0x49, 0x45, 0x42, 0x3F, 0x3C, 0x38,
+	0x35, 0x32, 0x2F, 0x2C, 0x29, 0x26, 0x23, 0x20, 0x1D, 0x1A, 0x17, 0x14, 0x11, 0xE, 0xB, 0x9, 0x6, 0x3
+}
+
+const int8 V_01580[] = {
+	0x0, -3, -6, -9, -11, -14, -17, -20, -23, -26, -28, -31, -34, -37, -40, -42, -45, -48,
+	-51, -53, -56, -59, -61, -64, -66, -69, -71, -74, -76, -79, -81, -83, -86, -88, -90, -92,
+	-94, -96, -98, -100, -102, -103, -105, -106, -108, -109, -110, -112, -113, -113, -114, -115, -115, -116,
+	-116, -116, -116, -115, -115, -114, -114, -112, -111, -110, -108, -106, -104, -102, -100, -97, -94, -91,
+	-88, -84, -81, -77, -73, -68, -64, -59, -54, -49, -44, -39, -34, -28, -23, -17, -11, -6,
+	0x0, 0x6, 0xB, 0x11, 0x17, 0x1C, 0x22, 0x27, 0x2C, 0x31, 0x36, 0x3B, 0x40, 0x44, 0x49, 0x4D, 0x51, 0x54,
+	0x58, 0x5B, 0x5E, 0x61, 0x64, 0x66, 0x68, 0x6A, 0x6C, 0x6E, 0x6F, 0x70, 0x72, 0x72, 0x73, 0x73, 0x74, 0x74,
+	0x74, 0x74, 0x73, 0x73, 0x72, 0x71, 0x71, 0x70, 0x6E, 0x6D, 0x6C, 0x6A, 0x69, 0x67, 0x66, 0x64, 0x62, 0x60,
+	0x5E, 0x5C, 0x5A, 0x58, 0x56, 0x53, 0x51, 0x4F, 0x4C, 0x4A, 0x47, 0x45, 0x42, 0x40, 0x3D, 0x3B, 0x38, 0x35,
+	0x33, 0x30, 0x2D, 0x2A, 0x28, 0x25, 0x22, 0x1F, 0x1C, 0x1A, 0x17, 0x14, 0x11, 0xE, 0xB, 0x9, 0x6, 0x3,
+	0x0, -3, -6, -9, -11, -14, -17, -20, -23, -26, -28, -31, -34, -37, -40, -42, -45, -48,
+	-51, -53, -56, -59, -61, -64, -66, -69, -71, -74, -76, -79, -81, -83, -86, -88, -90, -92,
+	-94, -96, -98, -100, -102, -103, -105, -106, -108, -109, -110, -112, -113, -113, -114, -115, -115, -116,
+	-116, -116, -116, -115, -115, -114, -114, -112, -111, -110, -108, -106, -104, -102, -100, -97, -94, -91,
+	-88, -84, -81, -77, -73, -68, -64, -59, -54, -49, -44, -39, -34, -28, -23, -17, -11, -6,
+	0x0, 0x6, 0xB, 0x11, 0x17, 0x1C, 0x22, 0x27, 0x2C, 0x31, 0x36, 0x3B, 0x40, 0x44, 0x49, 0x4D, 0x51, 0x54,
+	0x58, 0x5B, 0x5E, 0x61, 0x64, 0x66, 0x68, 0x6A, 0x6C, 0x6E, 0x6F, 0x70, 0x72, 0x72, 0x73, 0x73, 0x74, 0x74,
+	0x74, 0x74, 0x73, 0x73, 0x72, 0x71, 0x71, 0x70, 0x6E, 0x6D, 0x6C, 0x6A, 0x69, 0x67, 0x66, 0x64, 0x62, 0x60,
+	0x5E, 0x5C, 0x5A, 0x58, 0x56, 0x53, 0x51, 0x4F, 0x4C, 0x4A, 0x47, 0x45, 0x42, 0x40, 0x3D, 0x3B, 0x38, 0x35,
+	0x33, 0x30, 0x2D, 0x2A, 0x28, 0x25, 0x22, 0x1F, 0x1C, 0x1A, 0x17, 0x14, 0x11, 0xE, 0xB, 0x9, 0x6, 0x3
+}
+
+const int16 V_01581[] = {
+	0x0, 0x1D, 0x39, 0x55, 0x70, 0x8A, 0xA3, 0xBB, 0xD1, 0xE5, 0xF7, 0x107, 0x116, 0x121, 0x12B, 0x132, 0x136, 0x138,
+	0x138, 0x135, 0x12F, 0x127, 0x11D, 0x111, 0x103, 0xF3, 0xE2, 0xCE, 0xBA, 0xA4, 0x8E, 0x77, 0x5F, 0x47, 0x2F, 0x17,
+	0x0, -23, -45, -66, -86, -105, -122, -137, -152, -164, -174, -183, -190, -195, -198, -199, -199, -196,
+	-193, -187, -180, -172, -163, -153, -142, -130, -118, -105, -92, -79, -67, -54, -42, -30, -19, -9,
+	-0, 0x8, 0x10, 0x16, 0x1B, 0x1F, 0x22, 0x24, 0x25, 0x24, 0x23, 0x21, 0x1E, 0x1A, 0x15, 0x11, 0xB, 0x6,
+	0x0, -6, -11, -17, -21, -26, -30, -33, -35, -36, -37, -36, -34, -31, -27, -22, -16, -8,
+	-0, 0x9, 0x13, 0x1E, 0x2A, 0x36, 0x43, 0x4F, 0x5C, 0x69, 0x76, 0x82, 0x8E, 0x99, 0xA3, 0xAC, 0xB4, 0xBB,
+	0xC1, 0xC4, 0xC7, 0xC7, 0xC6, 0xC3, 0xBE, 0xB7, 0xAE, 0xA4, 0x98, 0x89, 0x7A, 0x69, 0x56, 0x42, 0x2D, 0x17,
+	0x0, -23, -47, -71, -95, -119, -142, -164, -186, -206, -226, -243, -259, -273, -285, -295, -303, -309,
+	-312, -312, -310, -306, -299, -289, -278, -263, -247, -229, -209, -187, -163, -138, -112, -85, -57, -29,
+	-0, 0x1D, 0x39, 0x55, 0x70, 0x8A, 0xA3, 0xBB, 0xD1, 0xE5, 0xF7, 0x107, 0x116, 0x121, 0x12B, 0x132, 0x136, 0x138,
+	0x138, 0x135, 0x12F, 0x127, 0x11D, 0x111, 0x103, 0xF3, 0xE2, 0xCE, 0xBA, 0xA4, 0x8E, 0x77, 0x5F, 0x47, 0x2F, 0x17,
+	0x0, -23, -45, -66, -86, -105, -122, -137, -152, -164, -174, -183, -190, -195, -198, -199, -199, -196,
+	-193, -187, -180, -172, -163, -153, -142, -130, -118, -105, -92, -79, -67, -54, -42, -30, -19, -9,
+	-0, 0x8, 0x10, 0x16, 0x1B, 0x1F, 0x22, 0x24, 0x25, 0x24, 0x23, 0x21, 0x1E, 0x1A, 0x15, 0x11, 0xB, 0x6,
+	0x0, -6, -11, -17, -21, -26, -30, -33, -35, -36, -37, -36, -34, -31, -27, -22, -16, -8,
+	-0, 0x9, 0x13, 0x1E, 0x2A, 0x36, 0x43, 0x4F, 0x5C, 0x69, 0x76, 0x82, 0x8E, 0x99, 0xA3, 0xAC, 0xB4, 0xBB,
+	0xC1, 0xC4, 0xC7, 0xC7, 0xC6, 0xC3, 0xBE, 0xB7, 0xAE, 0xA4, 0x98, 0x89, 0x7A, 0x69, 0x56, 0x42, 0x2D, 0x17,
+	0x0, -23, -47, -71, -95, -119, -142, -164, -186, -206, -226, -243, -259, -273, -285, -295, -303, -309,
+	-312, -312, -310, -306, -299, -289, -278, -263, -247, -229, -209, -187, -163, -138, -112, -85, -57, -29
+}
+
+const int16 V_01582[] = {
+	0x0, 0x6, 0xB, 0x11, 0x15, 0x1A, 0x1E, 0x21, 0x23, 0x24, 0x25, 0x24, 0x22, 0x1F, 0x1B, 0x16, 0x10, 0x8,
+	0x0, -9, -19, -30, -42, -54, -67, -79, -92, -105, -118, -130, -142, -153, -163, -172, -180, -187,
+	-193, -196, -199, -199, -198, -195, -190, -183, -174, -164, -152, -137, -122, -105, -86, -66, -45, -23,
+	-0, 0x17, 0x2F, 0x47, 0x5F, 0x77, 0x8E, 0xA4, 0xBA, 0xCE, 0xE2, 0xF3, 0x103, 0x111, 0x11D, 0x127, 0x12F, 0x135,
+	0x138, 0x138, 0x136, 0x132, 0x12B, 0x121, 0x116, 0x107, 0xF7, 0xE5, 0xD1, 0xBB, 0xA3, 0x8A, 0x70, 0x55, 0x39, 0x1D,
+	0x0, -29, -57, -85, -112, -138, -163, -187, -209, -229, -247, -263, -278, -289, -299, -306, -310, -312,
+	-312, -309, -303, -295, -285, -273, -259, -243, -226, -206, -186, -164, -142, -119, -95, -71, -47, -23,
+	-0, 0x17, 0x2D, 0x42, 0x56, 0x69, 0x7A, 0x89, 0x98, 0xA4, 0xAE, 0xB7, 0xBE, 0xC3, 0xC6, 0xC7, 0xC7, 0xC4,
+	0xC1, 0xBB, 0xB4, 0xAC, 0xA3, 0x99, 0x8E, 0x82, 0x76, 0x69, 0x5C, 0x4F, 0x43, 0x36, 0x2A, 0x1E, 0x13, 0x9,
+	0x0, -8, -16, -22, -27, -31, -34, -36, -37, -36, -35, -33, -30, -26, -21, -17, -11, -6,
+	-0, 0x6, 0xB, 0x11, 0x15, 0x1A, 0x1E, 0x21, 0x23, 0x24, 0x25, 0x24, 0x22, 0x1F, 0x1B, 0x16, 0x10, 0x8,
+	0x0, -9, -19, -30, -42, -54, -67, -79, -92, -105, -118, -130, -142, -153, -163, -172, -180, -187,
+	-193, -196, -199, -199, -198, -195, -190, -183, -174, -164, -152, -137, -122, -105, -86, -66, -45, -23,
+	-0, 0x17, 0x2F, 0x47, 0x5F, 0x77, 0x8E, 0xA4, 0xBA, 0xCE, 0xE2, 0xF3, 0x103, 0x111, 0x11D, 0x127, 0x12F, 0x135,
+	0x138, 0x138, 0x136, 0x132, 0x12B, 0x121, 0x116, 0x107, 0xF7, 0xE5, 0xD1, 0xBB, 0xA3, 0x8A, 0x70, 0x55, 0x39, 0x1D,
+	0x0, -29, -57, -85, -112, -138, -163, -187, -209, -229, -247, -263, -278, -289, -299, -306, -310, -312,
+	-312, -309, -303, -295, -285, -273, -259, -243, -226, -206, -186, -164, -142, -119, -95, -71, -47, -23,
+	-0, 0x17, 0x2D, 0x42, 0x56, 0x69, 0x7A, 0x89, 0x98, 0xA4, 0xAE, 0xB7, 0xBE, 0xC3, 0xC6, 0xC7, 0xC7, 0xC4,
+	0xC1, 0xBB, 0xB4, 0xAC, 0xA3, 0x99, 0x8E, 0x82, 0x76, 0x69, 0x5C, 0x4F, 0x43, 0x36, 0x2A, 0x1E, 0x13, 0x9,
+	0x0, -8, -16, -22, -27, -31, -34, -36, -37, -36, -35, -33, -30, -26, -21, -17, -11, -6
+}
+
+const int16 V_01583[] = {
+	0x0, -29, -57, -85, -112, -138, -163, -187, -209, -229, -247, -263, -278, -289, -299, -306, -310, -312,
+	-312, -309, -303, -295, -285, -273, -259, -243, -226, -206, -186, -164, -142, -119, -95, -71, -47, -23,
+	0x0, 0x17, 0x2D, 0x42, 0x56, 0x69, 0x7A, 0x89, 0x98, 0xA4, 0xAE, 0xB7, 0xBE, 0xC3, 0xC6, 0xC7, 0xC7, 0xC4,
+	0xC1, 0xBB, 0xB4, 0xAC, 0xA3, 0x99, 0x8E, 0x82, 0x76, 0x69, 0x5C, 0x4F, 0x43, 0x36, 0x2A, 0x1E, 0x13, 0x9,
+	0x0, -8, -16, -22, -27, -31, -34, -36, -37, -36, -35, -33, -30, -26, -21, -17, -11, -6,
+	0x0, 0x6, 0xB, 0x11, 0x15, 0x1A, 0x1E, 0x21, 0x23, 0x24, 0x25, 0x24, 0x22, 0x1F, 0x1B, 0x16, 0x10, 0x8,
+	0x0, -9, -19, -30, -42, -54, -67, -79, -92, -105, -118, -130, -142, -153, -163, -172, -180, -187,
+	-193, -196, -199, -199, -198, -195, -190, -183, -174, -164, -152, -137, -122, -105, -86, -66, -45, -23,
+	0x0, 0x17, 0x2F, 0x47, 0x5F, 0x77, 0x8E, 0xA4, 0xBA, 0xCE, 0xE2, 0xF3, 0x103, 0x111, 0x11D, 0x127, 0x12F, 0x135,
+	0x138, 0x138, 0x136, 0x132, 0x12B, 0x121, 0x116, 0x107, 0xF7, 0xE5, 0xD1, 0xBB, 0xA3, 0x8A, 0x70, 0x55, 0x39, 0x1D,
+	0x0, -29, -57, -85, -112, -138, -163, -187, -209, -229, -247, -263, -278, -289, -299, -306, -310, -312,
+	-312, -309, -303, -295, -285, -273, -259, -243, -226, -206, -186, -164, -142, -119, -95, -71, -47, -23,
+	0x0, 0x17, 0x2D, 0x42, 0x56, 0x69, 0x7A, 0x89, 0x98, 0xA4, 0xAE, 0xB7, 0xBE, 0xC3, 0xC6, 0xC7, 0xC7, 0xC4,
+	0xC1, 0xBB, 0xB4, 0xAC, 0xA3, 0x99, 0x8E, 0x82, 0x76, 0x69, 0x5C, 0x4F, 0x43, 0x36, 0x2A, 0x1E, 0x13, 0x9,
+	0x0, -8, -16, -22, -27, -31, -34, -36, -37, -36, -35, -33, -30, -26, -21, -17, -11, -6,
+	0x0, 0x6, 0xB, 0x11, 0x15, 0x1A, 0x1E, 0x21, 0x23, 0x24, 0x25, 0x24, 0x22, 0x1F, 0x1B, 0x16, 0x10, 0x8,
+	0x0, -9, -19, -30, -42, -54, -67, -79, -92, -105, -118, -130, -142, -153, -163, -172, -180, -187,
+	-193, -196, -199, -199, -198, -195, -190, -183, -174, -164, -152, -137, -122, -105, -86, -66, -45, -23,
+	0x0, 0x17, 0x2F, 0x47, 0x5F, 0x77, 0x8E, 0xA4, 0xBA, 0xCE, 0xE2, 0xF3, 0x103, 0x111, 0x11D, 0x127, 0x12F, 0x135,
+	0x138, 0x138, 0x136, 0x132, 0x12B, 0x121, 0x116, 0x107, 0xF7, 0xE5, 0xD1, 0xBB, 0xA3, 0x8A, 0x70, 0x55, 0x39, 0x1D
+}
+
+const int16 V_01584[] = {
+    0x0, 0x0, -2, -4, -8, -12, -17, -23, -29, -36, -44, -51, -59, -67, -74, -82, -89, -95,
+    -101, -106, -110, -113, -115, -116, -115, -113, -110, -105, -99, -91, -82, -71, -59, -46, -32, -16,
+    0x0, 0x11, 0x23, 0x35, 0x48, 0x5B, 0x6E, 0x80, 0x92, 0xA4, 0xB5, 0xC4, 0xD3, 0xE0, 0xEC, 0xF6, 0xFE, 0x105,
+    0x109, 0x10B, 0x10C, 0x109, 0x105, 0xFF, 0xF6, 0xEB, 0xDE, 0xCE, 0xBD, 0xAA, 0x96, 0x7F, 0x68, 0x4F, 0x35, 0x1B,
+    0x0, -27, -55, -82, -109, -135, -160, -184, -207, -229, -249, -266, -282, -296, -307, -316, -322, -326,
+    -328, -326, -322, -316, -307, -296, -282, -266, -249, -229, -207, -184, -160, -135, -109, -82, -55, -27,
+    0x0, 0x1B, 0x35, 0x4F, 0x68, 0x7F, 0x96, 0xAA, 0xBD, 0xCE, 0xDE, 0xEB, 0xF6, 0xFF, 0x105, 0x109, 0x10C, 0x10B,
+    0x109, 0x105, 0xFE, 0xF6, 0xEC, 0xE0, 0xD3, 0xC4, 0xB5, 0xA4, 0x92, 0x80, 0x6E, 0x5B, 0x48, 0x35, 0x23, 0x11,
+    0x0, -16, -32, -46, -59, -71, -82, -91, -99, -105, -110, -113, -115, -116, -115, -113, -110, -106,
+    -101, -95, -89, -82, -74, -67, -59, -51, -44, -36, -29, -23, -17, -12, -8, -4, -2, 0x0,
+    0x0, 0x0, -2, -4, -8, -12, -17, -23, -29, -36, -44, -51, -59, -67, -74, -82, -89, -95,
+    -101, -106, -110, -113, -115, -116, -115, -113, -110, -105, -99, -91, -82, -71, -59, -46, -32, -16,
+    0x0, 0x11, 0x23, 0x35, 0x48, 0x5B, 0x6E, 0x80, 0x92, 0xA4, 0xB5, 0xC4, 0xD3, 0xE0, 0xEC, 0xF6, 0xFE, 0x105,
+    0x109, 0x10B, 0x10C, 0x109, 0x105, 0xFF, 0xF6, 0xEB, 0xDE, 0xCE, 0xBD, 0xAA, 0x96, 0x7F, 0x68, 0x4F, 0x35, 0x1B,
+    0x0, -27, -55, -82, -109, -135, -160, -184, -207, -229, -249, -266, -282, -296, -307, -316, -322, -326,
+    -328, -326, -322, -316, -307, -296, -282, -266, -249, -229, -207, -184, -160, -135, -109, -82, -55, -27,
+    0x0, 0x1B, 0x35, 0x4F, 0x68, 0x7F, 0x96, 0xAA, 0xBD, 0xCE, 0xDE, 0xEB, 0xF6, 0xFF, 0x105, 0x109, 0x10C, 0x10B,
+    0x109, 0x105, 0xFE, 0xF6, 0xEC, 0xE0, 0xD3, 0xC4, 0xB5, 0xA4, 0x92, 0x80, 0x6E, 0x5B, 0x48, 0x35, 0x23, 0x11,
+    0x0, -16, -32, -46, -59, -71, -82, -91, -99, -105, -110, -113, -115, -116, -115, -113, -110, -106,
+    -101, -95, -89, -82, -74, -67, -59, -51, -44, -36, -29, -23, -17, -12, -8, -4, -2, 0x0
+} ú¼¿½„±¸Š½‹¿‰¿

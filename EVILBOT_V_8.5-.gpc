@@ -1,0 +1,3264 @@
+/*
+
+
+Um einen Key für das Script zu kaufen, kontaktiere uns einfach über Discord und öffne dort ein Ticket – oder besuche direkt unsere Webseite ZenPlanet.de und kaufe den Key bequem online.
+Der Kauf ist einmalig – kein Abo, keine Folgekosten.
+Hinweis: Wir übernehmen keine Verantwortung dafür, wo oder wie der Kunde das Script nutzt oder was er danach damit macht.
+
+
+==================================================================
+   URHEBERRECHTLICH GESCHÜTZTES MATERIAL - ALLE RECHTE VORBEHALTEN
+==================================================================
+
+Dieses Script ist geistiges Eigentum des Autors und unterliegt dem Urheberrecht.  
+Das Kopieren, Verändern, Verteilen oder Weitergeben dieses Scripts, in Teilen oder        
+als Ganzes, ist ohne die ausdrückliche schriftliche Genehmigung des Autors strikt  
+untersagt und wird strafrechtlich verfolgt.
+
+Jegliche unautorisierte Nutzung, einschließlich des Verkaufs oder der Weitergabe  
+an Dritte, ist verboten und führt zu rechtlichen Konsequenzen.
+
+Mit der Nutzung dieses Scripts akzeptierst du diese Bedingungen.
+*/
+//--  ┏┓               • ┓          
+//--  ┃ ┏┓┏┓┏┓┏┓┏╋  ┓┏┏┓╋┣┓  ┏┳┓┏┓  
+//--  ┗┛┗┛┛┗┛┗┗ ┗┗  ┗┻┛┗┗┛┗  ┛┗┗┗   :                                                                                    
+//                                  └──────► YouTube: https://youtu.be/JGxeponoKCA?feature=shared                        
+                                                                                                                       
+//                                  │                                                                                    
+//                                  └──────────► Discord: https://discord.com/invite/cronuszende
+                                                                                     
+  
+                                                                                                                                                                                                                                                                                          
+ /*                                                                                                                                                                                                                                                                                         
+   SSSSSSSSSSSSSSS HHHHHHHHH     HHHHHHHHH     OOOOOOOOO          OOOOOOOOO     TTTTTTTTTTTTTTTTTTTTTTTEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRR           SSSSSSSSSSSSSSS         CCCCCCCCCCCCCRRRRRRRRRRRRRRRRR   IIIIIIIIIIPPPPPPPPPPPPPPPPP   TTTTTTTTTTTTTTTTTTTTTTT   SSSSSSSSSSSSSSS 
+ SS:::::::::::::::SH:::::::H     H:::::::H   OO:::::::::OO      OO:::::::::OO   T:::::::::::::::::::::TE::::::::::::::::::::ER::::::::::::::::R        SS:::::::::::::::S     CCC::::::::::::CR::::::::::::::::R  I::::::::IP::::::::::::::::P  T:::::::::::::::::::::T SS:::::::::::::::S
+S:::::SSSSSS::::::SH:::::::H     H:::::::H OO:::::::::::::OO  OO:::::::::::::OO T:::::::::::::::::::::TE::::::::::::::::::::ER::::::RRRRRR:::::R      S:::::SSSSSS::::::S   CC:::::::::::::::CR::::::RRRRRR:::::R I::::::::IP::::::PPPPPP:::::P T:::::::::::::::::::::TS:::::SSSSSS::::::S
+S:::::S     SSSSSSSHH::::::H     H::::::HHO:::::::OOO:::::::OO:::::::OOO:::::::OT:::::TT:::::::TT:::::TEE::::::EEEEEEEEE::::ERR:::::R     R:::::R     S:::::S     SSSSSSS  C:::::CCCCCCCC::::CRR:::::R     R:::::RII::::::IIPP:::::P     P:::::PT:::::TT:::::::TT:::::TS:::::S     SSSSSSS
+S:::::S              H:::::H     H:::::H  O::::::O   O::::::OO::::::O   O::::::OTTTTTT  T:::::T  TTTTTT  E:::::E       EEEEEE  R::::R     R:::::R     S:::::S             C:::::C       CCCCCC  R::::R     R:::::R  I::::I    P::::P     P:::::PTTTTTT  T:::::T  TTTTTTS:::::S            
+S:::::S              H:::::H     H:::::H  O:::::O     O:::::OO:::::O     O:::::O        T:::::T          E:::::E               R::::R     R:::::R     S:::::S            C:::::C                R::::R     R:::::R  I::::I    P::::P     P:::::P        T:::::T        S:::::S            
+ S::::SSSS           H::::::HHHHH::::::H  O:::::O     O:::::OO:::::O     O:::::O        T:::::T          E::::::EEEEEEEEEE     R::::RRRRRR:::::R       S::::SSSS         C:::::C                R::::RRRRRR:::::R   I::::I    P::::PPPPPP:::::P         T:::::T         S::::SSSS         
+  SS::::::SSSSS      H:::::::::::::::::H  O:::::O     O:::::OO:::::O     O:::::O        T:::::T          E:::::::::::::::E     R:::::::::::::RR         SS::::::SSSSS    C:::::C                R:::::::::::::RR    I::::I    P:::::::::::::PP          T:::::T          SS::::::SSSSS    
+    SSS::::::::SS    H:::::::::::::::::H  O:::::O     O:::::OO:::::O     O:::::O        T:::::T          E:::::::::::::::E     R::::RRRRRR:::::R          SSS::::::::SS  C:::::C                R::::RRRRRR:::::R   I::::I    P::::PPPPPPPPP            T:::::T            SSS::::::::SS  
+       SSSSSS::::S   H::::::HHHHH::::::H  O:::::O     O:::::OO:::::O     O:::::O        T:::::T          E::::::EEEEEEEEEE     R::::R     R:::::R            SSSSSS::::S C:::::C                R::::R     R:::::R  I::::I    P::::P                    T:::::T               SSSSSS::::S 
+            S:::::S  H:::::H     H:::::H  O:::::O     O:::::OO:::::O     O:::::O        T:::::T          E:::::E               R::::R     R:::::R                 S:::::SC:::::C                R::::R     R:::::R  I::::I    P::::P                    T:::::T                    S:::::S
+            S:::::S  H:::::H     H:::::H  O::::::O   O::::::OO::::::O   O::::::O        T:::::T          E:::::E       EEEEEE  R::::R     R:::::R                 S:::::S C:::::C       CCCCCC  R::::R     R:::::R  I::::I    P::::P                    T:::::T                    S:::::S
+SSSSSSS     S:::::SHH::::::H     H::::::HHO:::::::OOO:::::::OO:::::::OOO:::::::O      TT:::::::TT      EE::::::EEEEEEEE:::::ERR:::::R     R:::::R     SSSSSSS     S:::::S  C:::::CCCCCCCC::::CRR:::::R     R:::::RII::::::IIPP::::::PP                TT:::::::TT      SSSSSSS     S:::::S
+S::::::SSSSSS:::::SH:::::::H     H:::::::H OO:::::::::::::OO  OO:::::::::::::OO       T:::::::::T      E::::::::::::::::::::ER::::::R     R:::::R     S::::::SSSSSS:::::S   CC:::::::::::::::CR::::::R     R:::::RI::::::::IP::::::::P                T:::::::::T      S::::::SSSSSS:::::S
+S:::::::::::::::SS H:::::::H     H:::::::H   OO:::::::::OO      OO:::::::::OO         T:::::::::T      E::::::::::::::::::::ER::::::R     R:::::R     S:::::::::::::::SS      CCC::::::::::::CR::::::R     R:::::RI::::::::IP::::::::P                T:::::::::T      S:::::::::::::::SS 
+ SSSSSSSSSSSSSSS   HHHHHHHHH     HHHHHHHHH     OOOOOOOOO          OOOOOOOOO           TTTTTTTTTTT      EEEEEEEEEEEEEEEEEEEEEERRRRRRRR     RRRRRRR      SSSSSSSSSSSSSSS           CCCCCCCCCCCCCRRRRRRRR     RRRRRRRIIIIIIIIIIPPPPPPPPPP                TTTTTTTTTTT       SSSSSSSSSSSSSSS   
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+     FFFFFFFFFFFFFFFFFFFFFFRRRRRRRRRRRRRRRRR                CCCCCCCCCCCCC     OOOOOOOOO     RRRRRRRRRRRRRRRRR   NNNNNNNN        NNNNNNNNUUUUUUUU     UUUUUUUU   SSSSSSSSSSSSSSS      ZZZZZZZZZZZZZZZZZZZEEEEEEEEEEEEEEEEEEEEEENNNNNNNN        NNNNNNNN                                    
+     F::::::::::::::::::::FR::::::::::::::::R            CCC::::::::::::C   OO:::::::::OO   R::::::::::::::::R  N:::::::N       N::::::NU::::::U     U::::::U SS:::::::::::::::S     Z:::::::::::::::::ZE::::::::::::::::::::EN:::::::N       N::::::N                                    
+     F::::::::::::::::::::FR::::::RRRRRR:::::R         CC:::::::::::::::C OO:::::::::::::OO R::::::RRRRRR:::::R N::::::::N      N::::::NU::::::U     U::::::US:::::SSSSSS::::::S     Z:::::::::::::::::ZE::::::::::::::::::::EN::::::::N      N::::::N                                    
+     FF::::::FFFFFFFFF::::FRR:::::R     R:::::R       C:::::CCCCCCCC::::CO:::::::OOO:::::::ORR:::::R     R:::::RN:::::::::N     N::::::NUU:::::U     U:::::UUS:::::S     SSSSSSS     Z:::ZZZZZZZZ:::::Z EE::::::EEEEEEEEE::::EN:::::::::N     N::::::N                                    
+       F:::::F       FFFFFF  R::::R     R:::::R      C:::::C       CCCCCCO::::::O   O::::::O  R::::R     R:::::RN::::::::::N    N::::::N U:::::U     U:::::U S:::::S                 ZZZZZ     Z:::::Z    E:::::E       EEEEEEN::::::::::N    N::::::N                                    
+       F:::::F               R::::R     R:::::R     C:::::C              O:::::O     O:::::O  R::::R     R:::::RN:::::::::::N   N::::::N U:::::D     D:::::U S:::::S                         Z:::::Z      E:::::E             N:::::::::::N   N::::::N                                    
+       F::::::FFFFFFFFFF     R::::RRRRRR:::::R      C:::::C              O:::::O     O:::::O  R::::RRRRRR:::::R N:::::::N::::N  N::::::N U:::::D     D:::::U  S::::SSSS                     Z:::::Z       E::::::EEEEEEEEEE   N:::::::N::::N  N::::::N                                    
+       F:::::::::::::::F     R:::::::::::::RR       C:::::C              O:::::O     O:::::O  R:::::::::::::RR  N::::::N N::::N N::::::N U:::::D     D:::::U   SS::::::SSSSS               Z:::::Z        E:::::::::::::::E   N::::::N N::::N N::::::N                                    
+       F:::::::::::::::F     R::::RRRRRR:::::R      C:::::C              O:::::O     O:::::O  R::::RRRRRR:::::R N::::::N  N::::N:::::::N U:::::D     D:::::U     SSS::::::::SS            Z:::::Z         E:::::::::::::::E   N::::::N  N::::N:::::::N                                    
+       F::::::FFFFFFFFFF     R::::R     R:::::R     C:::::C              O:::::O     O:::::O  R::::R     R:::::RN::::::N   N:::::::::::N U:::::D     D:::::U        SSSSSS::::S          Z:::::Z          E::::::EEEEEEEEEE   N::::::N   N:::::::::::N                                    
+       F:::::F               R::::R     R:::::R     C:::::C              O:::::O     O:::::O  R::::R     R:::::RN::::::N    N::::::::::N U:::::D     D:::::U             S:::::S        Z:::::Z           E:::::E             N::::::N    N::::::::::N                                    
+       F:::::F               R::::R     R:::::R      C:::::C       CCCCCCO::::::O   O::::::O  R::::R     R:::::RN::::::N     N:::::::::N U::::::U   U::::::U             S:::::S     ZZZ:::::Z     ZZZZZ  E:::::E       EEEEEEN::::::N     N:::::::::N                                    
+     FF:::::::FF           RR:::::R     R:::::R       C:::::CCCCCCCC::::CO:::::::OOO:::::::ORR:::::R     R:::::RN::::::N      N::::::::N U:::::::UUU:::::::U SSSSSSS     S:::::S     Z::::::ZZZZZZZZ:::ZEE::::::EEEEEEEE:::::EN::::::N      N::::::::N                                    
+     F::::::::FF           R::::::R     R:::::R        CC:::::::::::::::C OO:::::::::::::OO R::::::R     R:::::RN::::::N       N:::::::N  UU:::::::::::::UU  S::::::SSSSSS:::::S     Z:::::::::::::::::ZE::::::::::::::::::::EN::::::N       N:::::::N                                    
+     F::::::::FF           R::::::R     R:::::R          CCC::::::::::::C   OO:::::::::OO   R::::::R     R:::::RN::::::N        N::::::N    UU:::::::::UU    S:::::::::::::::SS      Z:::::::::::::::::ZE::::::::::::::::::::EN::::::N        N::::::N                                    
+     FFFFFFFFFFF           RRRRRRRR     RRRRRRR             CCCCCCCCCCCCC     OOOOOOOOO     RRRRRRRR     RRRRRRRNNNNNNNN         NNNNNNN      UUUUUUUUU       SSSSSSSSSSSSSSS        ZZZZZZZZZZZZZZZZZZZEEEEEEEEEEEEEEEEEEEEEENNNNNNNN         NNNNNNN                                    
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                              ....''''''''...                                                                                                                                               
+                                                                                                                                          ..',;;:;;;;;;;;;;;;,'...                                                                                                                                          
+                                                                                                                                       .',;;;;,'....   ....',,;;;;,..                                                                                                                                       
+                                                                                                                                   ..',;;;,'..                ..';;:;,'..                                                                                                                                   
+                                                                                                                                 .';;;;'..                       ...,;;:;,'.                                                                                                                                
+                                                                                                                              ..,;:;'..           ..........         ..',;;;,'.                                                                                                                             
+                                                                                                                            .';;;,'.          ..................         ..,;:;,'.                                                                                                                          
+                                                                                                                          .,;:;'.        ....................''''..         .',;;;'.                                                                                                                        
+                                                                                                                        .,;;;'.       ..''....   ...............'',,..         .,;;;,.                                                                                                                      
+                                                                                                                      .';;;,.      ..'''...   .....................',,'..        .';:;,.                                                                                                                    
+                                                                                                                     .';;,.      .';,...    .........................',;;'.        .';;;'                                                                                                                   
+                                                                                                                    .,;;,.      ';;..     .............................',;;,..       ';:,.                                                                                                                  
+                                                                                                                   .,;;,.     .';'.      ................................',;;,.      .;;;.                                                                                                                  
+                                                                                                                  .';:;.     .,;'        ..................................'';,.      ,;:,.                                                                                                                 
+                                                                                                                ..,;;;.     .,;'.       .....................................,;.      .;;;.                                                                                                                 
+                                                                                                          ...',,;;::;.      ':,.        ......................................,,.     .';;,..                                                                                                               
+                                                                                                   ....',;:::;;,'....      ';;.         ......................................,;.      .,;;;;,'...                                                                                                          
+                                                                                             ....',;;;;;;,''...           .;;.         .......................................';'       ...',;;:;;;,'....                                                                                                   
+                                                                                       ....',;;::;;,'....                .;;'          ..    ..................................,,.           ....',;;;;;;,''...                                                                                             
+                                                                                 ...'',;;;:;;,'....                     .;;,.               .......  ..........................,,...               ....',;;::;;,''...                                                                                       
+                                                                          .....',;::;;,,'...                           .,:,.              ...            ......................,'.,'                      ...'',;;;;;,''....                                                                                
+                                                                     ...',;;;;;;,''...                     .';;.       ';;.                                   .................',',;.                           ....',;;:;;;,'...                                                                           
+                                                               ...',,;;;;;,''...                     .':ldkKNWK;      .;;.                                        .............'''',,.       ..                       ....',;;;;;,,''...                                                                    
+                                                         ..'',;;::;;,'....                    ..,:lxOKNWMMMMMNo.     .,:'                           .......           .............',,.     .d0koc;..                       ....',,;::;;,,'...                                                              
+                                                         '::;;,'....                    ..;cox0XWMMMMMMMMMWWWx.     .,;,.                     ......................   ..............',.     'OWMMWX0kdl;'.                        ...',,;::;;,,'..                                                         
+                                                         .;;;.                    .';ldk0NWWMMMMMMMMMMMMMWWNx.     .';;'.......           ....             ............................,'     .xWMMMMMMMWNKOdl:,..                       ...',,;;:,.                                                        
+                                                         .;;;.              .,:ldkKNWMMMMMMMMMMMMMMWWWNX0Okl.      ';;;,,'.                                         ...................','.    .l0XNWMMMMWWMMMWNXOxoc;..                      .,;;'                                                         
+                                                         .,;:'       ..,coxOXWMMMMMMMMMMMMMMMMMWNXKOOkxxddl.      ';;'..                                                   .............';,.     'okOO0XNNWMMMMMMMMMMWX0kdl;'.                .,:;'                                                         
+                                                         .,:;'     .c0XWMMMMMMMMMMMMMMMMWWNXK0Okxxddol:;,..      .;;.                              ......                        ........',;.     .:oddxxkO0KXNWWMMMMMMMMMMWNKOdl:'.          .;;;.                                                         
+                                                          ';:,     .dMMMMMMMMMMMMMWWNXK0Okxxdolc:,'..           .;,.              .::'.       .,cxO00KK00kl.                           ...';;.      ..';:clodxkkO0KXNWWMMMMMMMMMMWNKOxl,      .;;;.                                                         
+                                                          ';:,      oMMMMMMMWWNXK0Okkxddoc;,'..                .;,.               .kWNKkdl..;d0NWWWWWMMWWWWXd,.cd:'',;co;                 .';;'            .',:coddxxkO0KXNWWMMMMMMWMMMd      .;;;.                                                         
+                                                          ';:,      oWMMMNK0Okxxddoc:,'..                     .;,.                 ,0WWWW0okNWWMMWWMMMMWWWWWWNxxXWNNNWWWo                ..',;.                 ...,:clddxxkO0KXNWMMMMWo      .;;;.                                                         
+                                                          ,;;'      oWMMW0dddxo:'..                          ';;.                   .oXWWNNWWWNXNMMMWWMMWWNNWMWWWWMWWWWK;               ...,,.                        ..';:loddxxONMMMWl      .;;;.                                                         
+                                                         .,;;'      oWMMW0xddko.                            .,:;.                     ,xNMWWMNxxNMWMWWMMWWXxOWWWMMMWWWK:               ..','.                               .cxddkNMMMWl      .;;;.                                                         
+                                                         .;;;.     .xMMMW0xxdxo.                             .;;,.                     .cKWWM0;:dox0NNX0xdd;cNMWMWWWXx'               ..''.                                  :xddkNMMMWl      .;;;.                                                         
+                                                         .;;;.     .kMMMW0dddxl.                              .;;,.                      :XWW0OKOxllolccldkkxKWMWWNk,                ..'..                                  .cxdxONMMMWo      .,;;'                                                         
+                                                        .,;;'      '0MMMWOdddkc                                .,:;.                      :0NWWWNNNNKOO0XWMWWWWWW0c.                ....                                    .cxk0WMMMMMx.      ';;,.                                                        
+                                                        .;;;.      :NMMMNkdddx;                                 .';;.                      .;::;:clccccloxxk0XWWNOd'              ....                                       cOXWWWMMMMO.      .;;;.                                                        
+                                                       .;;;'      .dWMMMXkdxxd'                                   .','.                      .;ox0KKXNWWWWXK0XMWWWK;             ...                                         lNWXOKWMMMK,       ';;,.                                                       
+                                                      .;;;'.      ,KMMMMKxddxl.                    .''.,,.          ..''.                     ...,:ldkk0NWWWWMWWMXl.           ...                   ',..'.                  cXKxdOWMMMWl       .,;;'.                                                      
+                                                    .';:;'.      .dWMMMWOdddd;                   ..,::'';,.            .....                  .:dO0KXXXNWWWWW0KW0;            ..                   .,;'';:,.                 .dxddkXMMMMk.       .,;;,.                                                     
+                                          ........',;;;,.        :XMMMMXxdxxl.                  .',,:c,';:;..             .....               .kWWWWWMMMWWMWxcxo.           ..                  ...;:;',c:,,'.                ;xxdxKMMMMNc        .,;;;'.                                                   
+                                         .;;;;;;;;;;;'.         ,0MMMMWOxxdd'                  ...'':c,,:l:'''..             ....              'kWWWWWWMWWWx. .           ..                  ..'',:c:,;c:,'..                .odx0NMMMMMO.         .,;;;,'........                                         
+                                         ';;;,'''...           'OWMMMWKxdxd:.                  .....,:,,;cc;'.''..             ....             .dKNNNNXKOl.                               ..''''':lc;,;:,.....                ;x0WMMMMMMWd.          .',;;:::;;;;,.                                        
+                                        .,;:,.                ;0WMMMMXkdxxl.                   .......'';cl;,,''''..      ...     ..              .''''...                               ..'''',',cl:,''.......                .xWMMMMMMMMNo.            .....',;:,.                                        
+                                        .,;;'               'xNMMMMMNOxdxo.                     .........:lc,'',''''..     .....                                                       .''.,,'',,:lc,........                   ;KMMMMWWMMMNd.                 .;;;.                                        
+                                        .;;;.            .:xXWMMMMWNOddxo'               ....'','. .......,;;'''','.',.     .......                                       .       .. ..'''',',,',;,.......                       :KWMWXNMMMMWO;                .;;;.                                        
+                                        .;;;.        .;okKWMMMMMMMXkxxxl.            ...';;,''.....  .........'',',,'''...    ........                                ....        ..''''''',,''.........                          ;KN0xkNMMMMMNx;.             .,;;'                                        
+                                        .;:;.        ;XMMMMMMMMMWKkdxdc.         ..',,,'.,;'........  ..........'','',''''..    .........                          .....      ....''''',,'''............                           'oxxdkKWMMMMMN0d:,.         .,;;'                                        
+                                        .;:;.        :NMMMMMMMWXOxddo;.        .,;,''.....''........  ............'',,,''.'.....  ...........                   .......    ..'''''..,,'''..............  ........                   .;dddx0NWMMMMMMWNk'         ';;,                                        
+                                        .;;,.        lWMMMMMWX0xxxd:.         .,;,.........'........  .. ..'.. ......'','..''''''.  .............          ..........    .'''..'',..',....... ..'''. .. .;,,,,,,,,'.....              .ldddkKNWMMMMMMX;         ';:,.                                       
+                                        .;;,.        oMMMMNKOxdxdc.         .';'...................  .. 'kXKkl,........''.'''''.'''.   ............................   ..''..'',''...'........,lkKXXd. ....'.....'';:;,;;,..             ,lxdxk0XWMMMMNc         ';:,.                                       
+                                        .;;,.        oMMMW0ddxdc.          .,;;'........... ......  ... ,0WMWX0d:.. .''.....'',,'..''..  .......................   ..'''....''.'.....''. .'cx0XWWWXo. ... .......';;,'',;;,..            .,ldddx0NMMMWl         ';;,.                                       
+                                        .;;;.        oMMMNkdxxo.          .;:;,'....  ...... .....  .... .lKWMWN0xl,.........''..''''''..  ..................    ..''..',,'..''.........:oOKNMMWKd,. .... ..'...'''.....'';;,'.            .;dxdxKMMMWl         ';;,.                                       
+                                        .;:;.        oWMMNkddxl.          ',''.......   ..... .....   .... .lKWMWN0ko,........'..'''''..''.    ...........  ........'',''.''.........'cxOKNWWW0l.  .... .................','.',.            .oxdxKMMMWo         ';;,.                                       
+                                        .;:;.        lWMMNkddx:          .,;..........   ....  ......    ... 'kWMMWKkko'. ..........',''........  ......... ........'''''........  'lxk0XWWWNd. .... ........................';.            .cxdxKMMMWl         ';;,                                        
+                                        .;;;.        cNMMXkdxx,          .';,...........   ...  .....       . .oXMWWXOkxc. ..........'''........ .......... .'....................cxkkKWMMW0;.     ............  ..'..... ...,;.             :ddxKMMMWl         ,;:'                                        
+                                        .;;;.        :XMMXkdxd'          .,:,...   ......   ..   ....    .   .  ;0MMWN0kkd,. ................... ........... ................  .:dkkOXWMMNd.....  ............  .......  ...',;.             ,dddKMMMNc        .,;;'                                        
+                                        .,:;.        ,KMMXkdxo.         .,;,.......    ...   ..  ....     'llllc;:OWWMN0kkxl'. ................. ....'....... .. .......... .'cdkkk0XWMMKl:lddddo. ..........  ......  ...',;;;'             .odd0WMMX;        .,;;'                                        
+                                        .,:;'        '0MMXkdxl.        .';'..........     ..      ...    .xNKkkkkol0WMMW0kkkxl,.  ............  ..............     .......,cdxkkkkKWMMMNxokkkk0NNc  ........   .....  ..',,,'',;.            .lxd0WMMK,        .;;;.                                        
+                                         ':;,.       .kMMXxdx:         .;,.............            ...    :XWXOkkkxONMMMWKkkkkkdl;......       ...............  ,ccoxxoloxkkkkkkOXWMMMMNOkkkOXWNd. .......    ...   ...'''....','            .cdd0WMM0'        .;;;.                                        
+                                         .;:,.        dMMXkdx;        .';''...............         ...  ...cKWN0OOkkKWMMMWKOkkkOOkdoodxoc:,.   ..............  ;xkOK0kkkk0KOkkkONMMMMWN0kkk0NWXo,... ....     .   .............,;.            :dd0WMMk.        .;;;.                                        
+                                         .;;;.        lWMXkdx,        .'....................        .  ;xxxdo0WNXXOxOXWMMMWXkkkOKKOkkxOK0kx;     .........    'dkONN0kk0XN0kkx0WMMMMWXOkkOOXN0ddkkkc.....       .............';;:'            ,dd0WMMd         ';;,.                                        
+                                         .;;;.        ;XMXxdd'        .;,............       ..      . .dN0kkxx0XNNOkkOXMMMMWXkxkOXN0kkONNOkd'      .....     .okOXWXOOXWN0kxkKWMMMMWKkkkk0OOOkxkOKNx. ..      ..............,;,,;,.           'dx0WMWl        .,:;'                                         
+                                         .,;;'        '0MNkxo.        .;;,..............               'ONXOkkkONXOxkk0WMMMMMXOxk0NWXOOXWXOkl.              'okOXWN0KNMN0xx0NWMMMMMNOkkkOX0kkkkOXNk' ..      .......    ..,,''.';;.           .ox0WMX;        .,:;.                                         
+                                          ';:,.       .kMNkxo.        .,;,................            .;okKN0kkONWKkkkONMMMMMMW0xx0WWNK0NWKkxc.            .dkOXWWXNWMNOxOXWMMMMMMMXOkk0NWXOkOKX0xo,       .....      ..'''....',:'           .lxKMM0'        .;:;.                                         
+                                          .;:;.        oWNkxl.        .,:,....................        :0OxxOX0kONMW0kkOXMMMMMMMWXkx0NWWXNWWKkk:           .lkkKWMMWMMXOkKWMMMMMMMMWKkkOXMMXOkKKxxx0k'             .....''......';:,.          .cxKMMk.        ';;,.                                         
+                                          .;:;.        :XNkxc          ':,.....................       :XN0kxk0kONMWXkkOXMMMMMMMMWN0x0NMMWWMNOkd'         .:kk0WMMMMWKO0NMMMMMMMMMMW0kkKWMWKkOOxkOKNk. .         ....''.........',;,.           :xKMWo        .,:;'.                                         
+                                          .,:;'        '0Nkx:          .;,'........................    ;xXXOkkkkXWMN0kkXMMMMMMMMMWWXO0WMMMMMKkkl.       .cxkONMMMMWK0XWMMMMMMMMMMMXOxONMMNOkkkkKXOc. .       ...................';,            ;xKMN:        .;;;.                                          
+                                           ';:,.       .xNOx:          .;,'..............  ..........    ,dOkkkkONWWKkkKMMMMMMMMMMMMW00NMMMMN0kx:.  .;:ldkkkKMMMMWXXWMMMMMMMMMMMMMXkkKWWXOkkkkxo;. ...    ......................';,.           ;xXM0,        .;:;.                                          
+                                           .;:;.        lN0x;          .;;'.............  ............     .:dkkkOXWW0k0WMMMMMMMMMMMMWNXWMMMMXkkko;.':loxkkONMMMMWWMMMMMMMMMMMMMMWKkKWWKOkkxl,.  ....   .........................;,.           ,xXMk.       .'::,.                                          
+                                           .,;:'        ;KKx,          .;;'..........  ........ .....        .;okkOKWNO0WMMMMMMMMMMMMMMWWWMWMNOkkkkdl;''';oONMMMMMMMMMMMMMMMMMMMMN00NN0kkd:'.  ......   .........................,'            'xXWo        .;:;.                                           
+                                            ';;,.       .OKx,          .;;'.......... ........  ......       . .,oxk0NK0NMMMMMMMMMMMMMMMMMWMMN0kkkkkkkxxl;'':d0NWMMMMMMMMMMMMMMMMNKXKOxo;.  ........    ........................';'            'xNX;        .;;;.                                           
+                                            .;;;.        oKx'          .;;'......... ........   ......       ..   'cdOKXNMMMMMMMMMMMMMMMMWWNXK0K0Okkkkkkkkxl:..':ldkKNWMMWWMMMMMMNKkl;'.     ......        ............'''''''',;;.            .kNO.       .,;;'                                            
+                                             ';;,.       :0k'          .;;'.................   ......         .    ..,lkXMMMMMMMMMMMMMMMWWNNNNWMWNKOkkkkkkkkk;     ..';lxOXWWMWXOl,.. ...  ........           .........''',,,,;;:;'.           .kWd        .;;;.                                            
+                                             .;;;.       'kk'          .;;..................  ......              ... ..;oOXNWMMMMMMMMMMMMMMMMMMMMMWKOkkkkkOd.  ....     ..;ll;'.   ...   ........    ......     ...........''''',;,'.         .ON:        ';;,.                                            
+                                             .,;;'       .lk'          .:;'................  ......     ..        ......   .';:okKNWMMMMMMMMMMMMMMMMMNXKOkkk;   ....   ...         ...   .........    ..........   ...............',;'         .O0'       .,;;'                                             
+                                              ';:,.       ;k,          .;,'...............  ......    ....        ......         .,lkNWMMMMMMMMMMMMMMMMWXOko.  .....   ........         ........     ....    ......................,:,         'Od.       .;:;.                                             
+                                              .;:;'       .o,          .;,......................    ......                 ..       .,l0WWMMMMMMMMMMMMMMMNk'   ......  ...........         ...                            .........';,.        ,Oc       .,;;'                                              
+                                               ';;,.       :,          .;'....................    .....           .     ....     ....  .:xXWMMMMMMMMMMMMMNl.   ......  .............                                           .....,;,.       ;x,       .;;;.                                              
+                                               .;;;'       ..          .'.....'..............   ....          ....    ......   ......... .'lONMWWMMMMMWMWx...  ......  ................      ...                           ..........';'.      ;l.      .,;:,.                                              
+                                                '::,.                  ......,'............. ...      ..    .....   .......   ............. .;dKNMMMMWWWk..;.  ......  . .................     ........              .................,;.      ',       .;:;.                                               
+                                                .;:;'                  ... .;'...............       ...    ...............   ...............   .:kXWWWWk..:;.  .'....  .  ...................   ..........           .................,;.      ..      .,;;,.                                               
+                                                 ';:,.                 .. .,,............          ...   ................   ................      'cxo:..;c'  .......  .   ....................  ............            .....'.......';'              .;;;.                                                
+                                                 .;:;'                    ';'........            ....   .................  ..................        ..'::,. .......  ...   ...................................    ..       ...........;,.            .,;;'                                                 
+                                                  ';;;.                  .;,....... ........   .....   ......................................         ..,,.  .......  ....    ....................................  ...       .........',.            .;:;.                                                 
+                                                  .,;;'.                 ';'...............   .....   ........................................              .......  ......     .........................................      ........',.           .,;;'                                                  
+                                                   .;;;.                .,,..............   .......  ....................................  ....            ........ ..........     .......................................      ......';;.           ';;,.                                                  
+                                                   .';;,.               .;'.............  .........  ..................... .............  .....           ........ .............    .......................................      .....,;,.          .;;;.                                                   
+                                                    .,;;'.              ';'............  .........  ..................... .............. ......          ........ ......  ........     .....................................  .. ....';;.          .,:;'                                                    
+                                                     .;;;.              ';'............ ..........  .................... .............  .'......        .....'............  ........     ...................................  .. ....';,.          ';:,.                                                    
+                                                      ';;,.             ':,'..........  .......... ...................  .............  .........       ....................   ........     .................................. .......,;.          .;;;.                                                     
+                                                      .,;;,.            .,;'.......... ..............................  ............. ...........     .......................   ..........     ............................... ....''.,'          .;;;'                                                      
+                                                       .;:;'             ':,'......................................  ............. .............    ..'.......................  ...........     ..................................';,,.         .,:;,.                                                      
+                                                        .;;;'            .,;,.....................................  ............................       ........................  .............    ................................';;.         .,;;;.                                                       
+                                                         ';;;.            .;;'..................................  .''.......................                     ................ ...............   ...................''.........':'          ';:;.                                                        
+                                                         .';;,.            ';,'................................ .','.....................                             ................'............   ..................','.......,;.         .;;;.                                                         
+                                                          .,;:,.           .,;,.............................. ..,;'............''','..                                      ..........................  ...'.............','......,.         .;:;'                                                          
+                                                           .,;;,.           .,;'..''....................... ..,;,'........'',,,;,'..                                           .............................''............';;'...'.         .;;;'                                                           
+                                                            .,;;,.           .,,'','.......................',;;'.....'',,;;;;,...                                                    .........................''...........';;,''.         .;;;'                                                            
+                                                             .,;;,.           .,;;,'.....................,;:;,'..'',;;;;,'..                                                               .....'..............'''.........',:;'.         .;;;'                                                             
+                                                              .,;;;.           .,;;,...................';;;;;,,,;;;,'...                                                                        .....''''.......';,''''''',;;,.          ';;;.                                                              
+                                                               .';;;.           .';;,''..............',;;:;;;;;,'..                                                                                  ....',,,,''',;;;;;;;;;;.          .';;;.                                                               
+                                                                 .;;;,.           .';;;,''.......'',;;;;;;:;,'..                                                                                          ...',,,;;;::;;;;'.          .,;;,.                                                                
+                                                                  .,;;,.            ..,;;;;,''',,;;;:::;;,'..                                                                                                   .....'''..           .;;;,.                                                                 
+                                                                   .';:;'.             .',;;:::;;;,,''...                                                                                                                          .,;;;.                                                                   
+                                                                     .,;;,.              .........                                                                                                                               .';;;,.                                                                    
+                                                                      .';;;,..                                                                                                                              ..'.               ..,;;,.                                                                      
+                                                                        .';;;,..                 .,cc::,'...                                                                                          ..':ll:,.              .';;;;..                                                                       
+                                                                          .',;;;'.               .,lkKXK0Oxolc:;,'...                                                                         ...',:cdkOko;.              ..,;;;,..                                                                         
+                                                                            ..,;;;,'.                'cxKNNXK0Okkxdoolc:;,'..                                                         ...',;:codxO0K0kl,.               .',;;;'.                                                                            
+                                                                               ..,::;,..                .;okXWWWNXK0Okxxdddddolc:;,'...                                      ...',;:clodddxkO0KXX0xc.                .',;:;,..                                                                              
+                                                                                  .',;;;,..                 .:oOXWMMWNNK00Okxddddxxxddolc:;,'...                   ....',;:cloddddxddxkO0KXNWXkl,.                .',;:;,'.                                                                                 
+                                                                                     .',;:;,'.                  .;oxKNMMMMWWNXK0Okxxddddxxxxdddolc:;;,,'....',,;:clooddxxxddddxxxkO0KXNWWNOd:.                ..',;:;,'.                                                                                    
+                                                                                        .',;;;,'..                  .,cdOXWMMMMMMWNXK0OOkkxdddddddxxxxxxddddddxxxxddddddxxkO00KXNWMMWXOd:'.               ...';;:;,..                                                                                       
+                                                                                           ..,;;;;,'..                   .,cdkKNWMMMMMMWWNXXK0OOOkxxxxxddddddxxxkkkO00KXXNWWMMMMWXOo:'.                ..',;;;,'..                                                                                          
+                                                                                              ..',;:;;,...                    .':lxOKNWMMMMMMMWWWWNNXXXXXXXXXXNNNWWWMMMMMMMWX0xl;.                 ..',;:;;,..                                                                                              
+                                                                                                  ..';;:;;,'..                      .';ldk0XNWMMMMMMMMMMMMMMMMMMMWMMMMWKOxl;..                 ..',;;;;,'..                                                                                                 
+                                                                                                      ..',;:;;,'...                       ..,;coxOKXNWMMMMMMMMWNX0kdl:,.                  ..'',;;;,'...                                                                                                     
+                                                                                                          ..',;;:;;,'...                          ..';:clllc:;,'..                   ..'',;;:;,'...                                                                                                         
+                                                                                                              ...',;;;;;,'...                                                  ...',;;;;;,'...                                                                                                              
+                                                                                                                   ...',;;;;;,'....                                      ...'',;;;;;,'...                                                                                                                   
+                                                                                                                        ...',;;;:;;,''....                        ....'',;;;;;,,'...                                                                                                                        
+                                                                                                                              ...'',;;::;;,,'......     ......'',,;;::;;,''...                                                                                                                              
+                                                                                                                                    ....'',;;;;;;;;;;;;;;;;:::;;;,''....                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                          
+                          */
+
+
+
+//===============================================================
+//    ADJUSTABLE VARIABLES                                       
+//===============================================================
+// Index to find Value Name string - switchable in game with left/right in ModEdit
+int EvilBot202; 
+int EvilBot203; //0
+int EvilBot204; //1
+int EvilBot205; // 2spinning speed
+int EvilBot206; // 3circle size
+int EvilBot207; // 4count of turns each way
+int EvilBot208; // 5active on fire&aim only - AA booster
+int EvilBot209; // 6active on fire&aim only - AA booster
+int EvilBot210; // 7
+int EvilBot211; // 8
+int EvilBot212; // 9active on fire&aim or fire
+int EvilBot213; // 10
+int EvilBot214; // 11 
+int EvilBot215; // 12 
+int EvilBot216; // 13
+int EvilBot217; // 14
+int EvilBot218;// 15
+int EvilBot219;// 16
+int EvilBot220;//17
+int EvilBot221;//18
+int EvilBot222;//19
+int EvilBot223;//20
+int EvilBot224;//21
+int EvilBot225;//22
+int EvilBot226; //23
+int EvilBot227; //24
+int EvilBot228; //25
+int EvilBot229; //26
+int EvilBot230; //27 
+int EvilBot231; //28
+int EvilBot232;//29
+int EvilBot233;//30
+int EvilBot234;
+int EvilBot235;
+int EvilBot236;
+int EvilBot237;
+int EvilBot238;
+int EvilBot239;
+int EvilBot240;
+int EvilBot241;
+//---Adjustable Variables Count                          
+define EvilBot242 = 0x26; 
+//===============================================================
+//    MODS TOGGLE VARIABLES                                      
+//===============================================================
+// Number of MODS -----------------------------------------------
+define EvilBot243 = 0x18; 
+// Index to find Mod Toggle Variable 
+int EvilBot244; 
+//  MODS Toggles ------------------------------------------------
+ int EvilBot245;
+ int EvilBot246;
+ int EvilBot247; 
+ int EvilBot248;
+ int EvilBot249;
+ int EvilBot250;
+ int EvilBot251;
+ int EvilBot252;
+ int EvilBot253;
+ int EvilBot254;
+ int EvilBot255;
+ int EvilBot256;
+ int EvilBot257;
+ int EvilBot258;
+ int EvilBot259;
+ int EvilBot260;
+ int EvilBot261;
+ int EvilBot262;
+ int EvilBot263;
+ int EvilBot264;
+ int EvilBot265;
+ int EvilBot266;
+ int EvilBot267;
+ int EvilBot268; 
+ int EvilBot269; 
+//===============================================================
+//    MODS TEXT TO DISPLAY                                       
+//===============================================================
+// Mod Name      -   Text to Display
+const string EvilBot377        = "RECOILKILLER";
+const string EvilBot380        = "SPEZIEL RECOIL";
+const string EvilBot383            = "Stabil Zielen"; 
+const string EvilBot386         = "Tote Zone";
+const string EvilBot389           = "Klebriges Zielen";
+const string EvilBot392           = "Ziel Verfolger"; 
+const string EvilBot395                 = "EVILBOT ";
+const string EvilBot398                = "Opfer Verfolger";
+  const string EvilBot401		        = "EVIL Aim" ;
+  const string EvilBot404		        = "Block Vibro" ;
+  const string EvilBot407              = "VM Speed" ;
+  const string EvilBot410		        = "Aim SPAM" ;
+  const string EvilBot413		        = "Hip Assist" ;
+  const string EvilBot416		        = "Headshot AIM" ;
+  const string EvilBot419            = "Rapid Fire" ;
+  const string EvilBot422			        = "Enemy Ping" ;
+ const string EvilBot425               = "Dynamische Sens";
+const string EvilBot428              = "Ausweich Schuss";
+const string EvilBot431                  = "DROPSHOT";
+const string EvilBot434              = "YY Spam";
+const string EvilBot437                 = "Hasen Sprung";
+const string EvilBot440                  = "Atem Anhalten";
+const string EvilBot443                 = "Rutsch Abbruch";
+const string EvilBot446          = "Tasten Layout"; 
+const string EvilBot449           = "Stick Layout";
+ 
+//===============================================================
+//    TITLE STRING                                               
+//===============================================================
+const string EvilBot894   = "AUS";    
+const string EvilBot892    = "AN";   
+const string EvilBot371  = "Kill Mode";   
+// Constant bytes - Convert numbers array - ASCII_NUM[column number] 
+const int8 EvilBot818[] =                          
+//      0  1  2  3  4  5  6  7  8  9  (column numbers)
+      {0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39};                
+                                                   
+const string EvilBot374  = "nicht rum ";
+const string EvilBot375  = "Basteln";
+const string EvilBot376  = "Chill";
+const uint8 EvilBot379 [] = {
+  0x1 , //  # 1
+  0x1 ,
+  0x1	, //  # 2
+  0x1 , //  # 3
+  0x1F,	 //  # 4
+  0x1 ,
+  0x45,
+  0x45,
+  0x45 ,
+  0x1 ,
+  0x32,
+  0x48 ,
+  0x1 ,
+  0x1 ,
+  0x46,
+  0x1 ,
+  0x1 ,
+  0x1 ,
+  0x44,
+  0x1 ,
+  0x1 ,
+  0x1 ,
+  0x47 ,
+  0x51,
+  0x52
+};
+const uint8 EvilBot1133 [] = {
+  0x1 ,
+  0x1 ,
+  0x1	,
+  0x1 ,
+  0x1 ,
+  0x1 , 
+  0x1 , 
+  0x1 ,
+  0x1 ,
+  0x0 ,
+  0x0 ,
+  0x1 ,
+  0x1 ,
+  0x1 ,
+  0x1 ,
+  0x1 ,
+  0x1 ,
+  0x1 ,
+  0x1 ,
+  0x1 ,
+  0x0 ,
+  0x0 ,
+  0x1 ,
+  0x0 ,
+  0x0
+};
+const uint8 EvilBot1134 [][] = {
+  { 0x9 , 0x9 },  //  # //5 anti
+  { 0x21 ,0x23},
+  { 0x0 , 0x0 }, // STEADYAIM # 1
+  { 0x1 , 0x1 },  // DEADZONE_MOD # 2
+  { 0x2 , 0x6 }, //  # # 3 soft
+  { 0x7 , 0x8 }, //  # 4 track
+  { 0xD ,0xE}, // 9 meat
+  { 0xA ,0xC},// 8 hippy
+  { 0x1F ,0x20},
+  { 0x0 , 0x0 },
+  { 0x0 , 0x0 },
+  { 0xF ,0x10},
+  { 0x11 ,0x11},
+  { 0x12 ,0x13},
+  { 0x14 ,0x15},
+  { 0x16 ,0x16},
+  { 0x17 ,0x1C},
+  { 0x1D ,0x1E},
+  { 0x24 ,0x24},
+  { 0x25 ,0x25},
+  { 0x0 , 0x0 },
+  { 0x0 , 0x0 },
+  { 0x26 , 0x26 },
+  { 0x0 , 0x0 },
+  { 0x0 , 0x0 }
+};
+const uint8 EvilBot1135 [][]={ 
+  { 0x0 , 0x1 }, //  # 1
+  { 0x0 , 0x1 },
+  { 0x0 , 0x1 },  // # 2
+  { 0x0 , 0x1 }, //  # 3
+  { 0x0 , 0x2 }, //  # 4
+  { 0x0 , 0x1 },  //  # 5
+  { 0x0 , 0x2 },
+  { 0x0 , 0x3 },
+  { 0x0 , 0x2 },
+  { 0x0 , 0x1 },
+  { 0x0 , 0x5 },  // VMSPEED 
+  { 0x0 , 0x2 },
+  { 0x0 , 0x1 },
+  { 0x0 , 0x1 },
+  { 0x0 , 0x2 },
+  { 0x0 , 0x1 },
+  { 0x0 , 0x1 },
+  { 0x0 , 0x1 },
+  { 0x0 , 0x2 },
+  { 0x0 , 0x1 },
+  { 0x0 , 0x1 },
+  { 0x0 , 0x1 },
+  { 0x0 , 0x2 },
+  { 0x0 , 0x1B}, // BUTTONLAYOUT # 1
+  { 0x0 , 0x5 }  // STICKLAYOUT # 2
+}; 
+       
+const string EvilBot810[] = { 
+    "Stabil",       // 1
+    "Tote Zone",    // 2
+    "Speed",        // Soft
+    "Size",         // Soft
+    "Turn",         // Soft
+    "Boost Size",   // Soft
+    "Boost Zeit",   // Soft
+    "Track Size",   // Track
+    "Track Zeit",   // Track
+    "Vert Recoil",  // Anti
+    "Radius",       // Hippy
+    "Speed",        // Hippy
+    "Petals",       // Hippy
+    "Meat Rad",     // Meat
+    "Meat Str",     // Meat
+    "Spam Start",
+    "Spam Wait",
+    "Hip Size",
+    "Head Size",
+    "Head Zeit",
+    "RF Speed",
+    "RF Release",
+    "Top Delay",
+    "Sens Schwelle",
+    "Max Sens",
+    "Gen Sens",
+    "ADS Sens",
+    "Fire Sens",
+    "ADS/Fire",
+    "Start Zeit",   // Sit
+    "Zeit",         // Sit
+    "OG Size",
+    "OG Wait",
+    "V Recoil",
+    "Kick Recoil",
+    "Kick Zeit",
+    "Aim Adj",
+    "Swap Delay",
+    "Slide Delay"
+};
+
+
+define EvilBot270 = 0x1;define EvilBot271 = 0x0;int EvilBot272,EvilBot273,EvilBot274,EvilBot275,EvilBot276,EvilBot277,EvilBot278,EvilBot279,EvilBot280,EvilBot281,EvilBot282,EvilBot283,EvilBot284,EvilBot285,EvilBot286,EvilBot49,EvilBot288 = 0x1,EvilBot289 = 0x10E;
+int EvilBot108,EvilBot291,EvilBot292,EvilBot293,EvilBot294,EvilBot295,EvilBot296,EvilBot297,EvilBot298 = 0x1,EvilBot299 = 0x1,EvilBot300 = 0x1;
+define EvilBot301 = 0x0, EvilBot302 = 0x1, EvilBot303 = 0x7FFF, EvilBot304 = 0x1,EvilBot305 = 0x2710;
+int EvilBot306, EvilBot307;
+define EvilBot308 = 0x1;
+int EvilBot309, EvilBot310, EvilBot311, EvilBot312, EvilBot313, EvilBot314, EvilBot315, EvilBot316, EvilBot317,EvilBot318,EvilBot319;
+int EvilBot320,EvilBot321,EvilBot322,EvilBot323,EvilBot324,EvilBot325,EvilBot326,EvilBot327,EvilBot328,EvilBot329,EvilBot330,EvilBot331,EvilBot332,EvilBot333;
+int EvilBot334,EvilBot335,EvilBot336,EvilBot337,EvilBot338,EvilBot65,EvilBot340;
+int EvilBot341,EvilBot342,EvilBot343,EvilBot344,EvilBot345 = 0x1E,EvilBot346 = 0x1,EvilBot347;
+int EvilBot348 = 0x0; // Variable to track the time Fire button was pressed
+int EvilBot349 = 0x1; // Change to -1 for counter-clockwise rotation
+int EvilBot86, EvilBot351[0x2];
+int EvilBot352 = 0x0; // Variable to track the time Fire button was presse
+
+define EvilBot353 = 0x03E80000;
+define EvilBot354 = 0x00010000; /*!< fix16_t value of 1 */
+define EvilBot355 = 0x80000000; /*!< the value used to indicate overflows when FIXMATH_NO_OVERFLOW is not specified */
+define EvilBot356 = 0x7FFFFFFF; /*!< the maximum value of fix16_t */
+define EvilBot357 = 0x80000000; /*!< the minimum value of fix16_t */
+define EvilBot358 = 0x2B7E1; /*!< fix16_t value of e */
+int EvilBot359,EvilBot360;
+const string EvilBot452[] = { "EVILBOT", "V8.5", "ZENDE" };
+const string EvilBot368[] = { "AIMBOT","LADET", ""};
+/////////////////////////////////////////////////////////////////////////////  
+///   INITIALIZATION BLOCK                                                      
+/////////////////////////////////////////////////////////////////////////////   
+init {  
+	EvilBot133();
+	EvilBot286	= (((0x168 + EvilBot205)/EvilBot205) + 0x1) * EvilBot207;cls_oled(0x0);
+	EvilBot359			= 0x0;
+	EvilBot362 = get_pvar(0xA, 0x2, 0x1770, 0x0);
+	if(!EvilBot362)
+	{
+		EvilBot362 = random(0x1, 0x1770);
+		set_pvar(0xA, EvilBot362);
+	}
+	EvilBot101();
+	EvilBot798 = EvilBot135(EvilBot708, 0x65, 0x0);
+}
+///////////////////////////////////////////////////////////////////////////// 
+///   MAIN BLOCK                                                             
+/////////////////////////////////////////////////////////////////////////////
+main {//---------------------------------
+	if(EvilBot798 <= 0x64)
+	{
+		EvilBot93();
+
+		EvilBot80(EvilBot801  ,  0x8, EvilBot365[0x0], OLED_FONT_SMALL);
+		EvilBot75(EvilBot801, 0x14, EvilBot362			 , OLED_FONT_SMALL);
+
+		EvilBot98();
+		EvilBot99();
+
+		if(event_press(PS4_CROSS))
+		{
+			EvilBot100();
+		}
+	}
+	else
+	{
+	if(EvilBot359 <= 0x64)
+	{
+		cls_oled(0x0);
+		EvilBot62(EvilBot563);
+		print(EvilBot191(EvilBot36(0x1), OLED_FONT_SMALL_WIDTH),0xF,OLED_FONT_SMALL,OLED_WHITE, EvilBot368[0x0]);
+		print(EvilBot191(EvilBot36(0x1), OLED_FONT_SMALL_WIDTH),0x1E,OLED_FONT_SMALL,OLED_WHITE, EvilBot368[0x1]);
+		EvilBot32(EvilBot359, 0x5F);
+		EvilBot35();
+
+		EvilBot359++;
+	}
+	else{
+
+
+    combo_run(EvilBot9);
+	EvilBot201();
+	if(EvilBot254){
+	block_rumble();}
+    deadzone(PS4_L2, PS4_R2, 0x64, 0x64);
+
+	if(get_ival(EvilBot1085) > 0x1)set_val(EvilBot1085, 0x64); // hair trigger
+	if(get_ival(EvilBot1084) > 0x1)set_val(EvilBot1084, 0x64); // hair trigger
+
+	if(get_console() == PIO_PS4)
+    {
+        if(get_controller() != PIO_PS4) // If not PS4 controller:
+        {
+            if(get_ival(PS4_SHARE)) // View
+            {
+                if(get_ival(PS4_R3)) // RS + View =  ScreenShot
+                {
+                    set_val(PS4_SHARE,0x64);
+                    set_val(PS4_TOUCH,0x0);
+                    set_val(PS4_R3,0x0);
+                }
+                else // View only = PS4_TOUCH
+                {
+                    set_val(PS4_TOUCH, 0x64);
+                    set_val(PS4_SHARE, 0x0);
+                }
+            }
+        }
+    }
+    else if(get_console() == PIO_XB360) // If XBOX console
+    {
+        if(get_controller() == PIO_PS4) // If PS4 controller:
+            swap(PS4_TOUCH, PS4_SHARE);
+    }
+                                  
+   /////////////////////////////////////////
+ if(get_ival(EvilBot1085)){
+     if(event_press(PS4_SHARE)){
+         EvilBot370    = !EvilBot370;
+         cls_oled(0x0);
+         EvilBot194();
+         //display_mod(f_idx, f_string, mod_name, f_toggle, f_option)
+         EvilBot195( EvilBot191(sizeof(EvilBot371)- 0x1, OLED_FONT_MEDIUM_WIDTH) ,EvilBot371 [0x0],EvilBot370 ,0x1);
+         EvilBot373 = 0x7D0;
+ 		 //--- Set Virtual Machine Speed to Default if script is OFF    
+ 		 if(!EvilBot370) EvilBot18(EvilBot559); 
+     }
+ }
+                          
+ if(EvilBot373){
+     EvilBot373 -= get_rtime();
+     if(EvilBot373 <= 0x0) {
+         cls_oled(0x0);    
+     }
+ }
+                               
+//============================================================
+// KILL SWITCH FOR ENTIRE SCRIPT
+//============================================================
+ if(EvilBot370){
+  //--- Set Virtual Machine Speed to Default for MENU                     
+	if(EvilBot458 || EvilBot462) EvilBot18(EvilBot559);
+	combo_run(EvilBot9)
+    if(EvilBot572){                
+    	  // Clear OLED screen         
+        cls_oled(0x0);                        
+       // display_edit(f_idx, f_string, f_print, f_val) 
+		if(EvilBot1133[ EvilBot244 ] == 0x0 ){  
+			  //--- print label                
+		    line_oled(0x1,0x2D,0x7F,0x2D,0x1,0x0);    
+ 
+		    EvilBot80(EvilBot801, 0xF, EvilBot374[0x0], OLED_FONT_SMALL);
+			EvilBot80(EvilBot801, 0x1E, EvilBot375[0x0], OLED_FONT_SMALL);
+			EvilBot80(EvilBot801, 0x2D, EvilBot376[0x0], OLED_FONT_SMALL);
+
+		}                                                                                            
+		else {//----  ELSE BEGIN --------------  
+          EvilBot170( EvilBot202 [EvilBot202 + 0x1]);
+          EvilBot202 [EvilBot202 + 0x1] = EvilBot185(EvilBot202 [EvilBot202 + 0x1] );
+		}//--- ELSE END   ----------- 
+   }//  end of display edit  
+    if(EvilBot569)
+    { 
+        // Clear OLED screen 
+        cls_oled(0x0);       
+                           
+        // Draw Rectangle 
+        EvilBot194(); 
+        // Display Mod Name and togle status  : ON/OFF 
+        if(EvilBot244 == 0x0)EvilBot195( EvilBot191(sizeof(EvilBot377)- 0x1, OLED_FONT_SMALL_WIDTH ) ,EvilBot377[0x0],EvilBot245,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x1)EvilBot195( EvilBot191(sizeof(EvilBot380)- 0x1, OLED_FONT_SMALL_WIDTH ) ,EvilBot380[0x0],EvilBot246,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x2)EvilBot195( EvilBot191(sizeof(EvilBot383)- 0x1, OLED_FONT_SMALL_WIDTH ) ,EvilBot383[0x0],EvilBot247,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x3)EvilBot195( EvilBot191(sizeof(EvilBot386)- 0x1, OLED_FONT_SMALL_WIDTH ) ,EvilBot386[0x0],EvilBot248,EvilBot379[ EvilBot244 ]);        
+        if(EvilBot244 == 0x4)EvilBot195( EvilBot191(sizeof(EvilBot389)- 0x1, OLED_FONT_SMALL_WIDTH ) ,EvilBot389[0x0],EvilBot249,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x5)EvilBot195( EvilBot191(sizeof(EvilBot392)- 0x1, OLED_FONT_SMALL_WIDTH ) ,EvilBot392[0x0],EvilBot250,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x6)EvilBot195( EvilBot191(sizeof(EvilBot395)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot395[0x0],EvilBot251,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x7)EvilBot195( EvilBot191(sizeof(EvilBot398)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot398[0x0],EvilBot252,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x8)EvilBot195( EvilBot191(sizeof(EvilBot401)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot401[0x0],EvilBot253,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x9)EvilBot195( EvilBot191(sizeof(EvilBot404)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot404[0x0],EvilBot254,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0xA)EvilBot195( EvilBot191(sizeof(EvilBot407)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot407[0x0],EvilBot255,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0xB)EvilBot195( EvilBot191(sizeof(EvilBot410)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot410[0x0],EvilBot256,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0xC)EvilBot195( EvilBot191(sizeof(EvilBot413)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot413[0x0],EvilBot257,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0xD)EvilBot195( EvilBot191(sizeof(EvilBot416)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot416[0x0],EvilBot258,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0xE)EvilBot195( EvilBot191(sizeof(EvilBot419)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot419[0x0],EvilBot259,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0xF)EvilBot195( EvilBot191(sizeof(EvilBot422)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot422[0x0],EvilBot260,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x10)EvilBot195( EvilBot191(sizeof(EvilBot425)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot425[0x0],EvilBot261,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x11)EvilBot195( EvilBot191(sizeof(EvilBot428)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot428[0x0],EvilBot262,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x12)EvilBot195( EvilBot191(sizeof(EvilBot431)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot431[0x0],EvilBot263,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x13)EvilBot195( EvilBot191(sizeof(EvilBot434)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot434[0x0],EvilBot264,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x14)EvilBot195( EvilBot191(sizeof(EvilBot437)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot437[0x0],EvilBot265,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x15)EvilBot195( EvilBot191(sizeof(EvilBot440)- 0x1, OLED_FONT_SMALL_WIDTH) ,EvilBot440[0x0],EvilBot266,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x16)EvilBot195( EvilBot191(sizeof(EvilBot443)- 0x1, OLED_FONT_SMALL_WIDTH ) ,EvilBot443[0x0],EvilBot267,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x17)EvilBot195( EvilBot191(sizeof(EvilBot446)- 0x1, OLED_FONT_SMALL_WIDTH ) ,EvilBot446[0x0],EvilBot268,EvilBot379[ EvilBot244 ]);
+        if(EvilBot244 == 0x18)EvilBot195( EvilBot191(sizeof(EvilBot449)- 0x1, OLED_FONT_SMALL_WIDTH ) ,EvilBot449[0x0],EvilBot269,EvilBot379[ EvilBot244 ]);
+         EvilBot569 = FALSE; 
+    } 
+     if(EvilBot575){           
+		// clear OLED screen    
+		cls_oled(0x0);            
+		// screen saver
+		EvilBot80(EvilBot801, 0xA, EvilBot452[0x0], OLED_FONT_SMALL);
+		EvilBot80(EvilBot801, 0x19, EvilBot452[0x1], OLED_FONT_SMALL);
+		EvilBot80(EvilBot801, 0x28, EvilBot452[0x2], OLED_FONT_SMALL);
+		EvilBot462 = FALSE;   
+		EvilBot575 = FALSE;  
+		EvilBot318 = TRUE;                                   
+	}
+    if(EvilBot318)         
+    {                            
+        EvilBot319 += get_rtime();
+        if(EvilBot319 >= EvilBot305)   
+        {                        
+            cls_oled(0x0);         
+            EvilBot319 = 0x0;      
+            EvilBot318 = FALSE; 
+        }                         
+    }
+      
+    //-----------------------------
+                          
+                                
+   /////////////////////////////////////////////////////////
+   // MENU EDIT VALUES             
+   if(EvilBot458){ 
+        block_all_inputs(); 
+        if(EvilBot1072){
+            EvilBot200();
+        } 
+       //--- Exit from EDIT MENU  
+       if(event_release(PS4_CIRCLE)){
+             EvilBot458      = FALSE;           
+             EvilBot572 = FALSE;           
+             EvilBot462      = TRUE;            
+             EvilBot569 = TRUE;   // display MODS 
+       }                    
+        ////////////////////////////////////////////////////////////////////////////////  
+        //  GO FORWARD                                                                      
+        if(!get_ival(EvilBot1085) && event_press(PS4_DOWN)){            
+                                          
+        	   EvilBot202 ++;                 
+        	   if(EvilBot202 > EvilBot1134[ EvilBot244 ][ 0x1 ])  EvilBot202 = EvilBot1134[ EvilBot244 ][ 0x1 ]; 
+             EvilBot569 = FALSE;      
+             EvilBot572 = TRUE;        
+        }          
+        ///////////////////////////////////////////////////////////////////////////////  
+        //  GO BACK                                                                      
+        if(!get_ival(EvilBot1085) && event_press(PS4_UP)){  
+                                                               
+        	   EvilBot202 --;                                      
+        	   if(EvilBot202 < EvilBot1134[ EvilBot244 ][ 0x0 ]) EvilBot202 = EvilBot1134[ EvilBot244 ][ 0x0 ];
+             EvilBot569 = FALSE;      
+             EvilBot572 = TRUE;        
+        }                                                           
+            /////////////////////////////////////////////////////// 
+        if(EvilBot1072){
+            EvilBot200();
+        }
+   }// end of EDIT MENU    
+   /////////////////////////////////////////////////////////
+   // EDIT MENU ON/OFF            
+   if(get_ival(EvilBot1085) && event_press(PS4_OPTIONS)){  
+        EvilBot462 = TRUE;  
+        // toggle EditMenu ON/OFF                      
+                 EvilBot244  = 0x0;                   
+                 EvilBot569 = TRUE;   // display Title    
+                 EvilBot572 = FALSE;        
+                 EvilBot1072  = EvilBot1073;
+   }      
+   /////////////////////////////////////////////////////////
+   // MENU SYSTEM              
+   if(EvilBot462){  
+        block_all_inputs(); 
+      //--- Exit from MENU  
+      if(event_press(PS4_CIRCLE)){
+          EvilBot462 = FALSE;                     
+          EvilBot458 = FALSE;              
+          combo_run(EvilBot17);             
+      }                    
+      //--- Enter in EDIT MENU 
+      if(event_press(PS4_CROSS)){
+          EvilBot462             = FALSE;   
+          EvilBot202 = EvilBot1134[ EvilBot244 ][ 0x0 ]; 
+          EvilBot458             = TRUE;   
+          EvilBot572        = TRUE; 
+      }                    
+                                  
+        //Display MOD NAME and togle status 
+        // Switch MODs                     
+        if( !get_ival(EvilBot1085) && event_press(PS4_DOWN)){ 
+                                          
+        	   EvilBot244 ++;                 
+        	   if(EvilBot244 > EvilBot243) EvilBot244 = 0x0; 
+             //////////////////////////////////////
+        	   
+             //////////////////////////////////////
+        }                          
+        if(!get_ival(EvilBot1085) && event_press(PS4_UP)){  
+                                                               
+        	  EvilBot244 --;                                      
+        	  if(EvilBot244 < 0x0) EvilBot244 = EvilBot243;
+             //////////////////////////////////////
+        	   
+             //////////////////////////////////////
+          }                        
+        	//////////////////////////
+                                  
+                                    
+        //////////////////////////////  
+        // display mod name and Toggle ON/OFF | Scroll Options 
+        if(!get_ival(EvilBot1085) ){    
+             if(event_press(PS4_RIGHT)){ //   go back
+                 EvilBot244[EvilBot244 + 0x1] = EvilBot174( EvilBot244[EvilBot244 + 0x1] ); 
+             }// go back 
+             if(event_press(PS4_LEFT)){//   go forward
+                 EvilBot244[EvilBot244 + 0x1] = EvilBot172( EvilBot244[EvilBot244 + 0x1] );
+             }// go forward 
+       } 
+        EvilBot569 = TRUE;   
+        set_val(PS4_RIGHT,0x0); 
+        set_val(PS4_LEFT,0x0); 
+        set_val(PS4_UP,0x0); 
+        set_val(PS4_DOWN,0x0); 
+        if(EvilBot1072){
+            EvilBot200();
+        }
+    } 
+    /////////////////////////////////////////////////////////////
+    ///    END OF MENU  /////////////////////////////////////////
+    /////////////////////////////////////////////////////////////
+//========================================================================================================== 
+   if(!EvilBot458 && !EvilBot462){              
+           	 
+           	 EvilBot18 (EvilBot255);
+
+		if(get_val(EvilBot1085))
+		{
+			if(event_press(PS4_RIGHT))
+			{
+				EvilBot259 = !EvilBot259;
+				combo_run(vibrate);
+			}
+			else if(event_press(PS4_DOWN))
+			{
+				EvilBot263 = !EvilBot263;
+				combo_run(vibrate);
+			}
+				set_val(PS4_RIGHT, 0x0);
+				set_val(PS4_DOWN , 0x0);
+		}
+
+    //===========================================
+    //   STEADY AIM 
+    //===========================================
+   		if(EvilBot247){
+	      	EvilBot275 = get_val(EvilBot1097);
+			EvilBot276 = get_val(EvilBot1098);
+
+			EvilBot275 = EvilBot53(EvilBot275, EvilBot203);
+			EvilBot276 = EvilBot53(EvilBot276, EvilBot203);
+
+			set_val(EvilBot1097, clamp(EvilBot275, inv(0x64), 0x64));
+			set_val(EvilBot1098, clamp(EvilBot276, inv(0x64), 0x64));
+		
+    }
+            //===========================================
+            //   Stick Noise                      
+            //===========================================
+            if( EvilBot248 ) { 
+                EvilBot129();
+            }
+
+//###################################################//
+
+  	
+    //===========================================
+    //  sticky
+    //===========================================
+	
+	if (EvilBot249 == 0x1)
+		{
+		if (get_ival(EvilBot1085) || get_ival(EvilBot1084) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))){
+			EvilBot44();}
+			
+		if (get_val(EvilBot1085) && get_val(EvilBot1084)){
+			combo_run(EvilBot1);
+            combo_run(EvilBot2);}
+			}
+			if (EvilBot249 == 0x2)
+		{
+		if (get_ival(EvilBot1085) || get_ival(EvilBot1084) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))){
+			EvilBot44();}
+			
+		if (get_val(EvilBot1085) || get_val(EvilBot1084)){
+			combo_run(EvilBot1);
+            combo_run(EvilBot2);}
+			}
+	//===========================================
+    //   killer
+    //===========================================
+	if (EvilBot250){
+		if (get_ival(EvilBot1085) || get_ival(EvilBot1084) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))) {
+			EvilBot273 = get_ival(EvilBot1097);
+			EvilBot274 = get_ival(EvilBot1098);
+
+			if (get_ival(EvilBot1085) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))) {
+				EvilBot273 += EvilBot38(EvilBot210, EvilBot48(EvilBot289));
+				EvilBot274 += EvilBot38(EvilBot210, EvilBot56(EvilBot289));
+			}
+			else {
+				EvilBot273 += EvilBot38(EvilBot210, EvilBot56(EvilBot289));
+				EvilBot274 += EvilBot38(EvilBot210, EvilBot48(EvilBot289));
+			}
+
+			EvilBot289 = (EvilBot289 + EvilBot211) % 0x168;
+			set_val(EvilBot1097, clamp(EvilBot273, inv(0x64), 0x64));
+			set_val(EvilBot1098, clamp(EvilBot274, inv(0x64), 0x64));
+
+			
+		}
+	}
+
+	//===========================================
+    //   victim Tracker
+    //===========================================
+    if(EvilBot252 == 0x1){
+    if (get_ival(EvilBot1085) || (get_ival(EvilBot1085) && get_ival(EvilBot1084)) || get_ival(EvilBot1084)){
+
+    	EvilBot293 = get_ival(EvilBot1097);
+        EvilBot294 = get_ival(EvilBot1098);
+
+        EvilBot295 = EvilBot293 + ((EvilBot297 * EvilBot48(EvilBot108)) / 0x3E8);
+        EvilBot296 = EvilBot294 + ((EvilBot297 * EvilBot56(EvilBot108)) / 0x3E8);
+        set_val(EvilBot1097, EvilBot295);
+        set_val(EvilBot1098, EvilBot296);
+
+        if (EvilBot300) {
+            EvilBot108 += EvilBot291 * EvilBot214;
+        } else {
+            EvilBot108 -= EvilBot291 * EvilBot214;
+        }
+
+        EvilBot292++;
+
+        if (EvilBot292 >= EvilBot215) {
+            EvilBot297 += (EvilBot213 / 0x2);
+            if (EvilBot297 > (EvilBot213)) {
+                EvilBot297 = EvilBot213;
+                EvilBot299--;
+
+                if (EvilBot299 <= 0x0) {
+                    EvilBot300 = !EvilBot300;
+                    EvilBot299 = EvilBot298;
+                    EvilBot291 = 0x167 / EvilBot215;
+
+                    if (!EvilBot300) {
+                        EvilBot291 = -EvilBot291;
+                    }
+                }
+            }
+            EvilBot292 = 0x0;
+        }
+
+        EvilBot108 %= 0x168;
+	}}
+    if(EvilBot252 == 0x2){
+    if (get_ival(EvilBot1085) || get_ival(EvilBot1084) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))){
+
+    	EvilBot309 = get_ival(EvilBot1097);
+        EvilBot310 = get_ival(EvilBot1098);
+
+        EvilBot311 = isqrt(pow(EvilBot309, 0x2) + pow(EvilBot310, 0x2));
+        EvilBot312 = (EvilBot311 < 0x64);
+
+        if (!(EvilBot313++ % EvilBot308)) {
+            EvilBot108 += EvilBot214;
+        }
+        EvilBot108 = EvilBot108 % 0x168;
+        EvilBot314 = EvilBot1142[EvilBot108 % 0x168];
+        EvilBot315 = EvilBot1142[(EvilBot108 + 0x10E) % 0x168];
+        EvilBot316 = EvilBot1142[(EvilBot108 + 0x5A) % 0xB4];
+        EvilBot317 = EvilBot1142[(EvilBot108 + 0xB4) % 0x168];
+
+        if (get_ival(EvilBot1085) || get_ival(EvilBot1084) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))) {
+            if (EvilBot311 <= EvilBot213) {
+                EvilBot315 -= EvilBot310;
+                EvilBot314 -= EvilBot309;
+            } else {
+                EvilBot315 = (EvilBot315 * (0xC8 - ((abs(EvilBot310) + EvilBot311) / 0xA) * 0xA) / 0xC8) * EvilBot312;
+                EvilBot314 = (EvilBot314 * (0xC8 - ((abs(EvilBot309) + EvilBot311) / 0xA) * 0xA) / 0xC8) * EvilBot312;
+            }
+
+            EvilBot102();
+        }
+    }}
+    if(EvilBot252 == 0x3){
+	if (get_ival(EvilBot1085) || get_ival(EvilBot1084) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))){
+
+    	EvilBot309 = get_ival(EvilBot1097);
+        EvilBot310 = get_ival(EvilBot1098);
+
+        EvilBot311 = isqrt(pow(EvilBot309, 0x2) + pow(EvilBot310, 0x2));
+        EvilBot312 = (EvilBot311 < 0x64);
+
+        if (!(EvilBot313++ % EvilBot308)) {
+            EvilBot108 += EvilBot214;
+        }
+        EvilBot108 = EvilBot108 % 0x168;
+        EvilBot314 = EvilBot1142[EvilBot108 % 0x168];
+        EvilBot315 = EvilBot1142[(EvilBot108 + 0x10E) % 0x168];
+        EvilBot316 = EvilBot1142[(EvilBot108 + 0x5A) % 0xB4];
+        EvilBot317 = EvilBot1142[(EvilBot108 + 0xB4) % 0x168];
+
+        if (get_ival(EvilBot1085) || get_ival(EvilBot1084) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))) {
+            if (EvilBot311 <= EvilBot213) {
+                EvilBot315 -= EvilBot310;
+                EvilBot314 -= EvilBot309;
+            } else {
+                EvilBot315 = (EvilBot315 * (0xC8 - ((abs(EvilBot310) + EvilBot311) / 0xA) * 0xA) / 0xC8) * EvilBot312;
+                EvilBot314 = (EvilBot314 * (0xC8 - ((abs(EvilBot309) + EvilBot311) / 0xA) * 0xA) / 0xC8) * EvilBot312;
+            }
+
+            EvilBot102();
+        }
+    }
+    
+    if (get_ival(EvilBot1085) || (get_ival(EvilBot1085) && get_ival(EvilBot1084)) || get_ival(EvilBot1084)){
+
+    	EvilBot293 = get_ival(EvilBot1097);
+        EvilBot294 = get_ival(EvilBot1098);
+
+        EvilBot295 = EvilBot293 + ((EvilBot297 * EvilBot48(EvilBot108)) / 0x3E8);
+        EvilBot296 = EvilBot294 + ((EvilBot297 * EvilBot56(EvilBot108)) / 0x3E8);
+        set_val(EvilBot1097, EvilBot295);
+        set_val(EvilBot1098, EvilBot296);
+
+        if (EvilBot300) {
+            EvilBot108 += EvilBot291 * EvilBot214;
+        } else {
+            EvilBot108 -= EvilBot291 * EvilBot214;
+        }
+
+        EvilBot292++;
+
+        if (EvilBot292 >= EvilBot215) {
+            EvilBot297 += (EvilBot213 / 0x2);
+            if (EvilBot297 > (EvilBot213)) {
+                EvilBot297 = EvilBot213;
+                EvilBot299--;
+
+                if (EvilBot299 <= 0x0) {
+                    EvilBot300 = !EvilBot300;
+                    EvilBot299 = EvilBot298;
+                    EvilBot291 = 0x167 / EvilBot215;
+
+                    if (!EvilBot300) {
+                        EvilBot291 = -EvilBot291;
+                    }
+                }
+            }
+            EvilBot292 = 0x0;
+        }
+
+        EvilBot108 %= 0x168;
+	}
+  }
+  	//===========================================
+    //   Meat Beater
+    //===========================================
+  
+  if (EvilBot251 == 0x1) {
+        if (EvilBot304) {
+            if (get_ival(EvilBot1085) || get_ival(EvilBot1084) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))) {
+
+                if (abs(get_val(EvilBot1097)) <= EvilBot216 && abs(get_val(EvilBot1098)) <= EvilBot216) {
+                    if (get_val(EvilBot1084)) {
+                        EvilBot306 = (0x1863B + EvilBot217);
+                    } else {
+                        EvilBot306 = (0x1863B + EvilBot217);
+                        EvilBot333 = EvilBot216;
+                    }
+                    set_polar(EvilBot1080, EvilBot307 = (EvilBot307 + EvilBot306) % 0x168, (EvilBot333 * 0x148) + get_polar(EvilBot1080,0x0));
+                }else {
+		    		combo_run(EvilBot13);			
+           } 
+      }
+        } else {
+            if (abs(get_val(EvilBot1097)) < EvilBot216 && abs(get_val(EvilBot1098)) < EvilBot216) {
+                set_val(EvilBot1080, 0x0);
+            } else {
+                if (get_val(EvilBot1097) >= EvilBot216) {
+                    set_val(EvilBot1080, 0x2D);
+                } else if (get_val(EvilBot1097) <= -EvilBot216) {
+                    set_val(EvilBot1080, 0x5A);
+                } else if (get_val(EvilBot1098) >= EvilBot216) {
+                    set_val(EvilBot1080, 0x0);
+                } else if (get_val(EvilBot1098) <= -EvilBot216) {
+                    set_val(EvilBot1080, 0x5A);
+                }
+            }
+        }
+    }
+     if (EvilBot251 == 0x2) {
+
+		
+    if (EvilBot304) {
+        if (get_ival(EvilBot1085) || get_ival(EvilBot1084) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))) {
+          EvilBot307 = (EvilBot307 + EvilBot306 + EvilBot217 * EvilBot349) % 0x168;
+            if (abs(get_val(EvilBot1097)) <= EvilBot216 && abs(get_val(EvilBot1098)) <= EvilBot216) {
+                if (get_val(EvilBot1084)) {
+                    EvilBot306 = EvilBot217 * EvilBot349;
+                } else {
+                    EvilBot306 = EvilBot217 * EvilBot349;
+                }
+                set_polar(EvilBot1080, EvilBot307, (EvilBot216 * 0x148) + get_polar(EvilBot1080, 0x0));
+            }
+        }
+    } else {
+        if (abs(get_val(EvilBot1097)) < EvilBot216 && abs(get_val(EvilBot1098)) < EvilBot216) {
+            set_val(EvilBot1080, 0x0);
+        } else {
+            if (get_val(EvilBot1097) >= EvilBot216) {
+                set_val(EvilBot1080, 0x2D);
+            } else if (get_val(EvilBot1097) <= -EvilBot216) {
+                set_val(EvilBot1080, 0x5A);
+            } else if (get_val(EvilBot1098) >= EvilBot216) {
+                set_val(EvilBot1080, 0x0);
+            } else if (get_val(EvilBot1098) <= -EvilBot216) {
+                set_val(EvilBot1080, 0x5A);
+            }
+        }
+    }
+    if (EvilBot251 == 0x2) {
+        EvilBot324 = get_val(EvilBot1083);
+        EvilBot325 = get_val(EvilBot1082);
+        EvilBot323 = EvilBot29(EvilBot1080, POLAR_RADIUS);
+        EvilBot326 = (EvilBot216 * 0x7FFF / 0x64);
+        if (get_val(EvilBot1084) || get_val(EvilBot1085)) {
+            if (EvilBot323 >= (0x7FFF / 0x64)) {
+                EvilBot320 -= 0x12D; 
+
+                if (get_val(EvilBot1084) || get_val(EvilBot1085)) {
+                    EvilBot327 = ((EvilBot326 >> 0x1) * (0x7FFF - isqrt(pow(abs(get_val(EvilBot1083)), 0x2) + pow(abs(get_val(EvilBot1082)), 0x2))) + (EvilBot326 << 0x1)) / 0x7FFF;
+                } else {
+                    EvilBot327 = ((EvilBot326 >> 0x1 + (EvilBot204 * 0x7FFF / 0x3E8) >> 0x1) * (0x7FFF - isqrt(pow(abs(get_val(EvilBot1083)), 0x2) + pow(abs(get_val(EvilBot1082)), 0x2))) + EvilBot326) / 0x7FFF;
+                }
+            }
+        } else {
+            set_val(EvilBot1083, clamp(EvilBot324 + EvilBot321, inv(0x7FFF), 0x7FFF));
+            set_val(EvilBot1082, clamp(EvilBot325 + EvilBot322, inv(0x7FFF), 0x7FFF));
+        }
+        if (get_val(EvilBot1084) || get_val(EvilBot1085)) {
+            EvilBot321 = ((EvilBot109(EvilBot320) * EvilBot327) / (0x7FFF));
+            EvilBot322 = ((EvilBot107(EvilBot320) * EvilBot327) / (0x7FFF));
+        } else {
+            EvilBot321 = ((EvilBot109(EvilBot320) * EvilBot327) / (0x7FFF * EvilBot217));
+            EvilBot322 = ((EvilBot107(EvilBot320) * EvilBot327) / (0x7FFF * EvilBot217));
+        }
+        set_val(EvilBot1083, clamp(EvilBot324 + EvilBot321, inv(0x7FFF), 0x7FFF));
+        set_val(EvilBot1082, clamp(EvilBot325 + EvilBot322, inv(0x7FFF), 0x7FFF));
+    }
+}
+	//===========================================
+    //   AIM ABUSE 
+    //===========================================
+		if (EvilBot256 == 0x1){
+		if( get_ival(EvilBot1085) && !get_ival(EvilBot1084)){
+		    		combo_run (EvilBot3);}}
+		    		if (EvilBot256 == 0x2){
+		if( get_ival(EvilBot1085)){
+		    		combo_run (EvilBot3);}}
+	//===========================================
+    //   Hip tracker
+    //===========================================
+
+	if (EvilBot257){	
+	if(!get_ival(EvilBot1085)){
+	EvilBot328 = (isqrt(pow(get_ival(EvilBot1083), 0x2) + pow(get_ival(EvilBot1082), 0x2)));
+		if(EvilBot328 <= EvilBot220){
+	EvilBot329 = random(0x146, 0x148);
+	EvilBot330 = (EvilBot330 + 0x64) % 0x168;
+	set_polar(EvilBot1080, EvilBot330, (EvilBot220 * EvilBot329));
+			}
+		}
+		if(!get_ival(EvilBot1085)){
+	EvilBot328 = (isqrt(pow(get_ival(EvilBot1096), 0x2) + pow(get_ival(EvilBot1095), 0x2)));
+		if(EvilBot328 <= EvilBot220){
+	EvilBot329 = random(0x146, 0x148);
+	EvilBot331 = (EvilBot331 + 0x64) % 0x168;
+	set_polar(EvilBot1081, EvilBot331, (EvilBot220 * EvilBot329));
+			}
+		}
+	}
+	//===========================================
+    //  head
+    //===========================================
+		if(EvilBot258 ) {
+		if(get_ival(EvilBot1085) && get_ptime(EvilBot1084) < EvilBot222) {
+	        		
+	        		EvilBot332 = EvilBot221;
+	        		combo_run(HeadAssist);
+			}
+		}
+	//===========================================
+    //   rapid
+    //=========================================== 
+        if(EvilBot259) { 
+            if ((EvilBot259 == 0x2 && get_ival(EvilBot1085) && get_ival(EvilBot1084)) || (EvilBot259 == 0x1 && get_ival(EvilBot1084))) {
+                 combo_run(EvilBot10);         
+            }                                       
+        } 
+    if(EvilBot531){               
+                EvilBot531 -= get_rtime();
+                if(EvilBot531 <= 0x0 ){     
+                    EvilBot61();     
+                }                              
+            }
+    //===========================================
+    //  UP
+    //===========================================
+    if(EvilBot260){
+        		if(get_ival(EvilBot1084) && get_ptime(EvilBot1084) >= 0x12C)
+	         		combo_run(EvilBot11); 
+	     		else
+	         		combo_stop(EvilBot11);		
+        	}
+	//===========================================
+    //  Dynamic
+    //===========================================
+		    		
+		if(EvilBot261){ 
+    			EvilBot341       = EvilBot87(POLAR_RS)
+				EvilBot334       = EvilBot226  * 0x7FFF/0x64;
+				EvilBot335     = EvilBot345     * 0x7FFF/0x64;
+				EvilBot336    = EvilBot346    * 0x7FFF/0x64;
+				EvilBot337 = EvilBot227 * 0x7FFF/0x64; 
+				
+				if(get_ival(EvilBot1085)){ 
+					if(!get_ival(EvilBot1084)){ 
+						EvilBot344 = EvilBot229;
+					}else{ 
+						EvilBot344 = EvilBot231;
+					} 
+				}
+				else if(get_ival(EvilBot1084)){ 
+					EvilBot344 = EvilBot230; 
+				}else{ 
+					EvilBot344 = EvilBot228;
+				}
+				if(EvilBot341 >= EvilBot334){
+				    EvilBot342 = clamp(EvilBot342 + 0x147,0x0,0x7FFF); 
+					if(EvilBot342 >= EvilBot336 && (EvilBot343 * 0x7FFF/0x64)  < EvilBot337){ 
+					    EvilBot343 = clamp(EvilBot343 + 0x1,0x0,0x7FFF);  
+					    EvilBot342 = 0x0; 
+					} 
+					else if(EvilBot343 >= EvilBot337) 
+						EvilBot342 = 0x0;  
+				}
+			    else if(EvilBot341 < EvilBot335){
+				    EvilBot342 = 0x0; 
+				    EvilBot343 = EvilBot344;
+				} 
+				EvilBot89(POLAR_RX,0x4000,EvilBot343 * 0x7FFF/0x64);
+				EvilBot89(POLAR_RY,0x4000,EvilBot343 * 0x7FFF/0x64);
+			}
+	//===========================================
+    //   Sit Bitch
+    //===========================================
+    
+    if(EvilBot262){
+		if(	get_val(EvilBot1084) && get_ptime(EvilBot1084) <= 0xC8 && !get_val(EvilBot1085)){
+				combo_run(EvilBot12);
+				}
+				if(combo_running(EvilBot12) && (event_release(EvilBot1085) || !get_val(EvilBot1084) || event_press(EvilBot1087) || event_press(EvilBot1086) || event_press(EvilBot1092))){
+			combo_stop(EvilBot12)
+			}
+		}
+	//===========================================
+    //   OG SOFT
+    //===========================================
+		if(EvilBot253 == 0x1){
+		if( get_ival(EvilBot1085) || get_ival(EvilBot1085) && get_ival(EvilBot1084)){
+             combo_run(EvilBot4);
+        }
+	}
+	if (EvilBot253 == 0x2) {
+	
+        if (get_val(EvilBot1085) || get_val(EvilBot1084)) {
+            // Track the time Aim button is pressed
+            if (EvilBot352 == 0x0 || get_val(EvilBot1084)) {
+                EvilBot352 = get_ptime(EvilBot1085) < 0x0;
+            }
+            // Check if the time duration has passed for sensitivity adjustment
+            if (get_ptime(EvilBot1085) >= EvilBot352 + EvilBot235) {
+                EvilBot86 = (EvilBot86 + 0x1) % 0x8; // Update sensitivity index
+                EvilBot85(EvilBot86); // Update sensitivity adjustments
+                EvilBot352 = get_ptime(EvilBot1085); // Update the tracking variable
+            }
+            // Apply sensitivity adjustments
+            EvilBot58(EvilBot1097, EvilBot351[0x0]);
+            EvilBot58(EvilBot1098, EvilBot351[0x1]);
+
+            // Check if Fire is pressed and track the time
+            if (get_val(EvilBot1084) || get_val(EvilBot1085) && get_val(EvilBot1084)) {
+                if (EvilBot348 == 0x0) {
+                    EvilBot348 = get_ptime(EvilBot1084) < 0x0;
+                }
+            } else {
+                EvilBot348 = 0x0;
+            }
+        } else {
+            // Reset sensitivity adjustments when Aim is not pressed
+            EvilBot86 = 0x0;
+            EvilBot352 = 0x0;
+            EvilBot348 = 0x0;
+            EvilBot85(0x0); // Set sensitivity to default
+            EvilBot58(EvilBot1097, 0x0); // Reset aim_x to zero
+            EvilBot58(EvilBot1098, 0x0); // Reset aim_y to zero
+        }
+    }
+    //===========================================
+    //   anti
+    //===========================================
+	if (EvilBot245) {
+	if (get_val(EvilBot1085) && get_val(EvilBot1084) || get_val(EvilBot1084)){
+ 		if(!get_rumble(RUMBLE_A) || !get_rumble(RUMBLE_B)) { // Until Rumble Is Detected , Set the Strength To Maintain Anti-Recoil Until Rumble Detected \\ 
+            EvilBot50(EvilBot1098, EvilBot212);
+        } else {
+        	EvilBot347 = get_rumble(EvilBot128())  
+        }
+        
+        if((EvilBot347 > 0xA) && (EvilBot347 < 0x5A)) { // If Get Rumble \\ // Calculate The Rumble & Vertical Strength Divided By 4 \\
+            EvilBot347 = EvilBot212 + EvilBot347 >> 0x4; // was / 4
+        } else if(EvilBot347 < 0xA) {  // If NO Rumble Is Detected \\// This Will Act Like Normal Anti-Recoil \\
+            EvilBot50(EvilBot1098, EvilBot212);
+        } else {     
+            EvilBot50(EvilBot1098, EvilBot347 / 0x64);  // If Get Rumble  
+        }
+        
+        EvilBot347 = 0x0;  // Reset Rumble Calculation
+        
+		}
+    }
+	//===========================================
+    //   ADVANCED RECOIL
+    //===========================================
+
+	if (EvilBot246) {
+        if (get_ival(EvilBot1084) || (get_ival(EvilBot1085) && get_ival(EvilBot1084))) {
+            EvilBot340 = get_ival(EvilBot1098);
+
+            if (get_val(EvilBot1085) && get_ptime(EvilBot1084) < (EvilBot238 * 0xA)) {
+                EvilBot340 = EvilBot237;
+            } else if (get_val(EvilBot1084) || get_ival(EvilBot1084)) {
+                EvilBot340 = EvilBot236;
+            }
+
+            EvilBot340 = min(EvilBot340, 0x64);
+            EvilBot20(EvilBot1098, EvilBot340);
+        }
+    }
+    //===========================================
+    //   drop
+    //=========================================== 
+            if(EvilBot263 == 0x1){
+            	if(get_val(EvilBot1084) && get_ptime(EvilBot1084) <= 0xC8 && !get_val(EvilBot1085)){
+						combo_run(EvilBot5);
+						}
+				if(!get_val(EvilBot1084) && combo_running(EvilBot5)){ 
+					combo_stop(EvilBot5);
+				} 
+			}
+			else if(EvilBot263 == 0x2){
+				EvilBot360 = EvilBot29(POLAR_LS,POLAR_RADIUS);
+				if(get_val(EvilBot1084) && get_ptime(EvilBot1084) <= 0xC8 && !get_val(EvilBot1085)){
+					if(EvilBot360 >= (0x55*0x7FFF/0x64)){ 
+						combo_run(EvilBot5);
+					}
+					else {
+						combo_stop(EvilBot5);
+					} 
+				}
+				if(!get_val(EvilBot1084) && combo_running(EvilBot5) || get_ival(EvilBot1084) && get_val(EvilBot1085) && combo_running(EvilBot5)){ 
+					combo_stop(EvilBot5);
+				} 
+			}
+	//===========================================
+    //   SWAP SPAM 
+    //===========================================
+                   if(EvilBot264){
+            				if (event_press(EvilBot1093) && get_brtime(EvilBot1093) < 0x12C){
+						combo_run(EvilBot6)
+				}
+			}
+	//===========================================
+    //   BUNNY 
+    //===========================================
+                   if(EvilBot265) {
+		    	if (EvilBot265 && get_ival(EvilBot1088) && get_ptime(EvilBot1088) > 0xC8) 
+		    		combo_run(BunnyHop); 
+			}
+	//===========================================
+    //   hold
+    //===========================================
+        	if(EvilBot266){
+				if(get_val(EvilBot1085))
+		    		set_val(EvilBot1093, 0x64);
+	                      
+	   			if(get_val(EvilBot1085) && get_lval(EvilBot1093)) 
+	       			set_val(EvilBot1093, 0x0);  
+	        }
+	//===========================================
+    //  Slide cancel
+    //===========================================  
+    
+        if(EvilBot267 == 0x1){
+    			if((get_val(EvilBot1095) < inv(0x32)) || (get_val(EvilBot1095) > 0x32) || (get_val(EvilBot1096) < inv(0x32)) || (get_val(EvilBot1096) > 0x32)){
+					if(EvilBot267 == 0x1 && event_release(EvilBot1091))
+						combo_run(EvilBot7)
+
+					if(EvilBot267 && combo_running(EvilBot7) && (get_val(EvilBot1085) && event_release(EvilBot1091)))
+		                combo_stop(EvilBot7)
+		                
+				}
+			}
+			if(EvilBot267 == 0x2){
+    			if((get_val(EvilBot1095) < inv(0x4B)) || (get_val(EvilBot1095) > 0x4B) || (get_val(EvilBot1096) < inv(0x4B)) || (get_val(EvilBot1096) > 0x4B)){
+					if(EvilBot267 == 0x2 && event_release(EvilBot1091))
+						combo_run(EvilBot8)
+
+					if(EvilBot267 == 0x2 && combo_running(EvilBot8) && (get_val(EvilBot1085) && event_release(EvilBot1091)))
+		                combo_stop(EvilBot8)
+		                
+						}
+					}
+				} //  end of MODS CODE 
+			} //  ENTIRE SCRIPT KILL SWITCH 
+		}//loading
+	}
+} //  end of main block 
+///////////////////////////////////////////////////////////////////////////// 
+///   COMBO BLOCK                                                             
+/////////////////////////////////////////////////////////////////////////////
+const int16 EvilBot1139 [][] ={
+{ 0x1,0x5A }, // STEADY_AIM
+{ 0x1,0x32 },  // DeadZoneSize
+{ 0x1,0x64 },
+{ 0x1,0x64 },
+{ 0x1,0x64 },
+{ 0x1,0x64 },
+{ 0x1,0x32 },
+{ 0x1,0x64 },
+{ 0x1,0x64 },
+{ -100,0x64 },
+{ 0x1,0x64 },
+{ 0x1,0x64 },
+{ 0x1,0x64 },
+{ 0x1,0x64 },
+{ 0x1,0x64 },
+{ 0x1,0x1F4 },	//aim glitch1
+{ 0x1,0xC8 },	//aim glitch2
+{ 0x1,0x64 },
+{ 0x1,0x63 },	
+{ 0x1,0x7D0 },
+{ 0x1,0x3E8 },
+{ 0x1,0x3E8 },
+{ 0x1,0x7D0 },
+{ 0x1,0x147 },
+{ 0x1,0x147 },
+{ 0x1,0x147 },
+{ 0x1,0x147 },
+{ 0x1,0x147 },
+{ 0x1,0x147 },
+{ 0x1,0xA },
+{ 0x1,0x3E7 },
+{ 0x1,0x64 },
+{ 0x1,0x64 },
+{ -100,0x64 },
+{ -100,0x64 },
+{ 0x1,0x64 },
+{ 0x1,0x64 },
+{ 0x1,0x1F4 },
+{ 0x1,0xC8 }
+};
+
+       
+//-- VM Speed
+define EvilBot559 = 0x0;
+function EvilBot18 (EvilBot19){
+    if     (EvilBot19 == 0x0) vm_tctrl(inv(0x0));//10 ms Default
+    else if(EvilBot19 == 0x1) vm_tctrl(inv(0x2));// 8 ms
+    else if(EvilBot19 == 0x2) vm_tctrl(inv(0x4));// 6 ms
+    else if(EvilBot19 == 0x3) vm_tctrl(inv(0x6));// 4 ms
+    else if(EvilBot19 == 0x4) vm_tctrl(inv(0x8));// 2 ms
+    else if(EvilBot19 == 0x5) vm_tctrl(inv(0x9));// 1 ms
+}
+                                     
+                       
+int EvilBot560 = 0x5DC;
+combo EvilBot0 {     
+	wait(EvilBot560);     
+	cls_oled(0x0);    
+	EvilBot462 = FALSE;  
+	EvilBot458 = FALSE;    
+	EvilBot572  = FALSE;  
+}                              
+
+define EvilBot561 = 0x0;
+define EvilBot562 = 0x1;
+define EvilBot563 = 0x2;
+define EvilBot564 = 0x3;
+define EvilBot565 = 0x4;
+define EvilBot566 = 0x5;
+define EvilBot567 = 0x6;
+define EvilBot568 = 0x7;
+                      
+data(                 
+  0x0,0x0,0x0, //0. ColorOFF
+  0x2,0x0,0x0, //1. Blue     
+  0x0,0x2,0x0, //2. Red      
+  0x0,0x0,0x2, //3. Green    
+  0x2,0x2,0x0, //4. Pink     
+  0x2,0x0,0x2, //5. SkyBlue 
+  0x0,0x2,0x2, //6. Yellow   
+  0x2,0x2,0x2  //7. White    
+); // end of data segment-------------- 
+// COLOR LED function        
+//-------------------------------------------------------------- 
+
+// Refresh OLED                    
+ int EvilBot569; 
+ int EvilBot462; 
+ int EvilBot458; 
+ int EvilBot572; 
+ int EvilBot370 = TRUE;// Kill Swith For Entire Script 
+ int EvilBot373; 
+////////////////////////////////////// 
+///////////////////////////////////////                                       
+int EvilBot575 = TRUE;
+combo EvilBot1 
+{EvilBot41(EvilBot1096,EvilBot208 * 0xA);
+wait(EvilBot209  * 0xA);
+EvilBot41(EvilBot1096,inv(EvilBot208 * 0xA));
+wait(EvilBot209  * 0xA);}
+combo EvilBot2{
+EvilBot272 = random(inv(EvilBot208), EvilBot208);
+EvilBot41(EvilBot1096, 0x1B);
+EvilBot41(EvilBot1095, EvilBot272);
+wait(EvilBot209 * 0xA);
+EvilBot41(EvilBot1096, inv(0x19));
+EvilBot41(EvilBot1095, EvilBot272);
+wait(EvilBot209 * 0x8);
+EvilBot41(EvilBot1095, EvilBot272);
+EvilBot41(EvilBot1096, 0x19);
+wait(EvilBot209 * 0xA);
+EvilBot41(EvilBot1096, inv(0x1B));
+EvilBot41(EvilBot1095, EvilBot272);
+wait(EvilBot209 * 0x8);}
+combo EvilBot3 {
+ 	wait(EvilBot218);
+    set_val(EvilBot1085, 0x0);
+    wait(EvilBot219 - get_rtime());
+    set_val(EvilBot1085, 0x0);}
+    combo HeadAssist{
+
+	set_val(EvilBot1098,inv(EvilBot332) + get_val(EvilBot1098));
+}
+combo EvilBot4 {
+    EvilBot58(EvilBot1097, -EvilBot234)
+    wait(EvilBot235)
+    EvilBot58(EvilBot1097, EvilBot234)
+    wait(EvilBot235)
+    EvilBot58(EvilBot1098, EvilBot234)
+    wait(EvilBot235)
+    EvilBot58(EvilBot1098, -EvilBot234)
+    wait(EvilBot235)
+    EvilBot58(EvilBot1097, -EvilBot234)
+    wait(EvilBot235)
+    EvilBot58(EvilBot1098, EvilBot234)
+    wait(EvilBot235)
+    EvilBot58(EvilBot1098, -EvilBot234)
+    wait(EvilBot235)
+    EvilBot58(EvilBot1097, EvilBot234)
+    wait(EvilBot235)
+}
+combo EvilBot5 {
+set_val(EvilBot1091,0x64);
+wait(0x64);
+set_val(EvilBot1095,0x64);
+wait(0x1E);
+set_val(EvilBot1091,0x64);
+if(EvilBot245){ 
+	EvilBot23(EvilBot1098,EvilBot212 - EvilBot239);
+}else{
+	EvilBot20(EvilBot1082,(EvilBot239 * inv(0x1)) * 0x7FFF/0x64);
+}
+if(EvilBot246){ 
+	EvilBot23(EvilBot1098,EvilBot212 - EvilBot239);
+}else{
+	EvilBot20(EvilBot1082,(EvilBot239 * inv(0x1)) * 0x7FFF/0x64);
+}
+wait(0x2BC);
+set_val(EvilBot1091,0x0);
+set_val(EvilBot1095,0x0);
+wait(0x14);
+}
+combo EvilBot6 {
+	set_val(EvilBot1093,0x64);
+	set_val(EvilBot1089,0x64);
+	wait(EvilBot240);
+	set_val(EvilBot1089,0x0);
+	wait(EvilBot240);
+	set_val(EvilBot1089,0x64);
+	wait(EvilBot240);
+	set_val(EvilBot1089,0x0);
+	wait(EvilBot240);
+	set_val(EvilBot1089,0x64);
+	wait(EvilBot240);
+	set_val(EvilBot1089,0x0);
+	wait(EvilBot240);
+	set_val(EvilBot1089,0x64);
+	wait(EvilBot240);
+	set_val(EvilBot1089,0x0);
+	wait(EvilBot240);
+	set_val(PS4_L3,0x0);
+	}
+	combo BunnyHop{
+set_val(EvilBot1088,0x64);
+wait(0xA);
+set_val(EvilBot1088,0x0);
+wait(0xA);
+}
+combo EvilBot7 {              
+set_val(EvilBot1091, 0x64);          
+wait(EvilBot241);                         
+set_val(EvilBot1091, 0x0);            
+wait(0x14);                          
+set_val(EvilBot1091, 0x64);          
+wait(0x3C);                          
+set_val(EvilBot1091, 0x0);
+set_val(EvilBot1093, 0x64);
+wait(0x28);                          
+set_val(EvilBot1091, 0x64);
+set_val(EvilBot1088, 0x64);
+wait(0x3C); 
+set_val(EvilBot1091, 0x0);
+set_val(EvilBot1088, 0x0);
+}
+combo EvilBot8 {
+	set_val(EvilBot1091, 0x64);
+	wait(EvilBot241);
+	set_val(EvilBot1091, 0x0);
+	wait(0x14);
+	set_val(EvilBot1093, 0x0); // Sprint
+	set_val(EvilBot1091, 0x64);
+	set_val(EvilBot1093, 0x64);
+	wait(0x14);
+	set_val(EvilBot1091, 0x0);
+	set_val(EvilBot1093, 0x0);
+	wait(0x28);
+	wait(EvilBot241);
+	set_val(EvilBot1093, 0x64);
+	wait(0x14);
+	set_val(EvilBot1093, 0x0);
+	wait(0x14);
+}
+int EvilBot595,EvilBot596 = 0x6,EvilBot597,EvilBot598;
+combo EvilBot9 {
+    EvilBot595 += get_rtime();
+	if(!(EvilBot595++ % EvilBot596)){ // Change stepInterval to determine how many loops you want to use to increase/decrease the colour change,lower means faster - higher means slower 
+		if(!EvilBot597){ 
+			EvilBot598     -= 0x1; // 360 / 100 = 3.6 ( due to no floating points I round up to 4 ) 
+			if(EvilBot598 < 0x0) // When the colourChange has reached max 359 , decrease back to 0 
+				EvilBot597 = TRUE;
+		}
+		else { 
+			EvilBot598     += 0x1;// 360 / 100 = 3.6 ( due to no floating points I round up to 4 )
+			if(EvilBot598 > 0x167) // when the colourChange has reached 0 , increase back up to 359
+				EvilBot597 = FALSE;
+		}
+		EvilBot595 = 0x0; // reset cycleRunTime 
+	} 
+	set_hsb(EvilBot598,0x46,0x46);
+}
+combo EvilBot10 { 
+  set_val(EvilBot1084, 0x64);
+  wait(random(EvilBot223, EvilBot223 * 0x2));
+  set_val(EvilBot1084, 0x0);
+  wait(random(EvilBot224, EvilBot224 * 0x2)); 
+  }
+  combo vibrate {                                   
+	set_rumble(RUMBLE_A, 0x64);                   
+	wait(0x12C);                                       
+	reset_rumble();                                 
+	wait(0x64);                                       
+	set_rumble(RUMBLE_A, 0x64);                   
+	wait(0x12C);                                       
+	reset_rumble();                                 
+}
+combo EvilBot11 {
+set_val(EvilBot1094,0x64);
+wait(0x14)
+set_val(EvilBot1094,0x0);
+wait(0x14)
+set_val(EvilBot1094,0x64);
+wait(0x14)
+set_val(EvilBot1094,0x0); 
+wait(EvilBot225); 
+}
+combo EvilBot12 {
+wait(EvilBot232 * 0xFA);
+set_val(EvilBot1091,0x64);
+wait(EvilBot233);
+set_val(EvilBot1091,0x0);
+wait(EvilBot233);	
+set_val(EvilBot1088,0x64);
+wait(EvilBot233 / 0x2);
+set_val(EvilBot1088,0x64);
+set_val(EvilBot1088,0x0);}
+combo EvilBot13 {
+	
+	EvilBot26(EvilBot1097,EvilBot216 / 0x2);
+	EvilBot26(EvilBot1098,EvilBot216 / 0x2);
+	wait(0xA);
+	EvilBot26(EvilBot1097,(EvilBot216 / 0x2) * inv(0x1));
+	EvilBot26(EvilBot1098,(EvilBot216 / 0x2) * inv(0x1));
+	wait(0xA);
+}
+function EvilBot20(EvilBot21,EvilBot22) {
+  set_val(EvilBot21, clamp(EvilBot22 * (0x64 - abs(get_val(EvilBot21))) / 0x64 + get_val(EvilBot21), inv(0x64), 0x64));
+  return;
+}
+function EvilBot23(EvilBot21,EvilBot22) {
+set_val(EvilBot21, clamp(EvilBot22 * (0x64 - abs(get_ival(EvilBot21))) / 0x64 + get_ival(EvilBot21), inv(0x64), 0x64));return;
+}
+function EvilBot26(EvilBot27,EvilBot28) {
+
+      set_val(EvilBot27,clamp(EvilBot28 * (0x64 - abs(get_val(EvilBot27))) / 0x64 + get_val(EvilBot27),inv(0x64),0x64));
+        
+      return; 
+}
+function EvilBot29(EvilBot21, EvilBot31) {
+  if (EvilBot31) return get_polar(EvilBot21, POLAR_ANGLE);
+  return isqrt((get_val(EvilBot21 + 0x2A) * get_val(EvilBot21 + 0x2A)) + (get_val(EvilBot21 + 0x2B) * get_val(EvilBot21 + 0x2B)));   
+}
+function EvilBot32( EvilBot33, EvilBot34) {
+	rect_oled(0xD, 0x32, ((EvilBot33 * 0x64) / EvilBot34), 0x8, 0x1, 0x1);
+	
+}
+
+
+function EvilBot35() 
+{
+	set_val(PS4_UP     , 0x0 ); 	set_val(PS4_DOWN  , 0x0 ); 	set_val(PS4_LEFT  , 0x0 );	set_val(PS4_RIGHT   , 0x0);
+	set_val(PS4_CROSS  , 0x0 ); 	set_val(PS4_CIRCLE, 0x0 ); 	set_val(PS4_SQUARE, 0x0 ); 	set_val(PS4_TRIANGLE, 0x0);
+	set_val(PS4_L1     , 0x0 ); 	set_val(PS4_R1    , 0x0 ); 	set_val(PS4_L3    , 0x0 ); 	set_val(PS4_R3      , 0x0);
+	set_val(PS4_OPTIONS, 0x0 ); 	set_val(PS4_SHARE , 0x0 );	set_val(PS4_TOUCH , 0x0 );	set_val(PS4_PS      , 0x0);
+	set_val(XB1_PL1    , 0x0 ); 	set_val(XB1_PL2   , 0x0 );	set_val(XB1_PR1   , 0x0 );	set_val(XB1_PR2     , 0x0);
+	set_val(PS4_LX, 0x0); 		set_val(PS4_LY, 0x0); 		set_val(PS4_RX, 0x0); 		set_val(PS4_RY, 0x0);
+	set_val(PS4_L2, 0x0); 		set_val(PS4_R2, 0x0);
+}
+function EvilBot36( EvilBot37 ) {
+	if (EvilBot368[EvilBot37 + 0x1] != inv(0x1))
+		return EvilBot368[EvilBot37 + 0x1] - EvilBot368[EvilBot37] - 0x1;
+	return sizeof(EvilBot368) - EvilBot368[EvilBot37];
+}
+
+function EvilBot38(EvilBot39, EvilBot40) {
+	if (EvilBot39 > 0x20) {
+		EvilBot39 = 0x20;
+	}
+	else if (EvilBot39 > 0x14) {
+		EvilBot39 = 0x14;
+	}
+
+	return (EvilBot39 * EvilBot40) / 0x3E8;
+}
+
+function EvilBot41(EvilBot21,EvilBot22) {
+set_val(EvilBot21, clamp(EvilBot22 * (0x64 - abs(get_ival(EvilBot21))) / 0x64 + get_ival(EvilBot21), inv(0x64), 0x64));return;
+}
+
+function EvilBot44() {
+    EvilBot278 = get_ival(EvilBot1097);
+    EvilBot279 = get_ival(EvilBot1098);
+    EvilBot280 = isqrt((EvilBot278 * EvilBot278) + (EvilBot279 * EvilBot279));
+    
+    if (EvilBot280 < EvilBot204) {
+        EvilBot278 = 0x0;
+        EvilBot279 = 0x0;
+    }
+    
+    if (EvilBot281) {
+        EvilBot281 = 0x1;
+        EvilBot282 = EvilBot45(EvilBot279, EvilBot278);
+    }
+    else {
+        EvilBot282 += EvilBot205;
+        EvilBot282 = (EvilBot282 % 0x168);
+    }
+    
+    EvilBot283 = 0x0;
+    EvilBot284 = EvilBot206 + EvilBot283;
+    
+    if (EvilBot284 > 0x20) {
+        EvilBot284 = 0x20;
+    }
+    else if (EvilBot284 < inv(0x1F)) {
+        EvilBot284 = inv(0x1F);
+    }
+    
+    if (EvilBot288) {
+        EvilBot278 = EvilBot278 + ((EvilBot284 * EvilBot56(EvilBot282)) / 0x3E8);
+        EvilBot279 = EvilBot279 + ((EvilBot284 * EvilBot48(EvilBot282)) / 0x3E8);
+    }
+    else {
+        EvilBot278 = EvilBot278 + ((EvilBot284 * EvilBot48(EvilBot282)) / 0x3E8);
+        EvilBot279 = EvilBot279 + ((EvilBot284 * EvilBot56(EvilBot282)) / 0x3E8);
+    }
+    
+    EvilBot285++;
+    
+    if (EvilBot286 == EvilBot285) {
+        EvilBot285 = 0x0;
+        EvilBot288 = EvilBot288 ^^ 0x1;
+    }
+    
+    EvilBot278 = clamp(EvilBot278, inv(0x64), 0x64);
+    EvilBot279 = clamp(EvilBot279, inv(0x64), 0x64);
+    set_val(EvilBot1097, EvilBot278);
+    set_val(EvilBot1098, EvilBot279);
+}	
+function EvilBot45(EvilBot46, EvilBot47) {
+    if (EvilBot46 >= 0x0) {
+        if (EvilBot47 >= 0x0) {
+            if (EvilBot47 > EvilBot46) {
+                EvilBot49 = ((EvilBot46 * 0x12C) / EvilBot47);
+            }
+            else {
+                if (EvilBot46 == 0x0)
+                    EvilBot49 = 0x0;
+                else
+                    EvilBot49 = 0x21C - ((EvilBot47 * 0x12C) / EvilBot46);
+            }
+        }
+        else {
+            if (EvilBot47 >= inv(EvilBot46)) {
+                EvilBot49 = 0x21C - ((EvilBot47 * 0x12C) / EvilBot46);
+            }
+            else {
+                EvilBot49 = 0x438 + ((EvilBot46 * 0x12C) / EvilBot47);
+            }
+        }
+    }
+    else {
+        if (EvilBot47 < 0x0) {
+            if (EvilBot47 < EvilBot46) {
+                EvilBot49 = ((EvilBot46 * 0x12C) / EvilBot47) - 0x438;
+            }
+            else {
+                EvilBot49 = ((inv(EvilBot47) * 0x12C) / EvilBot46) - 0x21C;
+            }
+        }
+        else {
+            if (inv(EvilBot47) >= EvilBot46) {
+                EvilBot49 = ((inv(EvilBot47) * 0x12C) / EvilBot46) - 0x21C;
+            }
+            else {
+                EvilBot49 = ((EvilBot46 * 0x12C) / EvilBot47);
+            }
+        }
+    }
+    
+    return (EvilBot49 / 0x6);
+}	
+function EvilBot48(EvilBot49) {
+	if (EvilBot49 <= 0x5A) {
+		return EvilBot1140[EvilBot49];
+	}
+	else if (EvilBot49 <= 0xB4) {
+		return EvilBot1140[0xB4 - EvilBot49];
+	}
+	else if (EvilBot49 <= 0x10E) {
+		return inv(EvilBot1140[EvilBot49 - 0xB4]);
+	}
+	else {
+		return inv(EvilBot1140[0x168 - EvilBot49]);
+	}
+
+	return 0x0;
+}
+// Offset_Ar value to stick and gradually reduce it as it approaches maximum movement
+function EvilBot50(EvilBot51, EvilBot52) {
+	set_val(EvilBot51, clamp(EvilBot52 * (0x64 - abs(get_val(EvilBot51))) / 0x64 + get_val(EvilBot51), inv(0x64), 0x64));
+}
+function EvilBot53(EvilBot54, EvilBot55) {
+    if (EvilBot54 >= 0x0) {
+        EvilBot277 = (EvilBot54 % EvilBot55);
+        if (EvilBot277 >= (EvilBot55 / 0x2)) {
+            EvilBot54 = EvilBot54 + (EvilBot55 - EvilBot277);
+        } else {
+            EvilBot54 -= EvilBot277;
+        }
+    } else {
+        EvilBot277 = (EvilBot54 % EvilBot55);
+        if (abs(EvilBot277) >= (EvilBot55 / 0x2)) {
+            EvilBot54 = EvilBot54 - (EvilBot55 + EvilBot277);
+        } else {
+            EvilBot54 += abs(EvilBot277);
+        }
+    }
+    return EvilBot54;
+}
+function EvilBot56(EvilBot49) {
+	if (EvilBot49 <= 0x5A) {
+		return EvilBot1140[0x5A - EvilBot49];
+	}
+	else if (EvilBot49 <= 0xB4) {
+		return inv(EvilBot1140[EvilBot49 - 0x5A]);
+	}
+	else if (EvilBot49 <= 0x10E) {
+		return inv(EvilBot1140[0x10E - EvilBot49]);
+	}
+	else {
+		return EvilBot1140[EvilBot49 - 0x10E];
+	}
+	return 0x0;
+}
+int EvilBot644,sensitivity,EvilBot645,EvilBot646,EvilBot647;
+function EvilBot58(EvilBot59, EvilBot60) {
+    EvilBot644 = get_val(EvilBot59);
+    sensitivity = 0x64 - abs(EvilBot644);
+    EvilBot645 = EvilBot60 * (sensitivity / 0x64);
+    EvilBot646 = EvilBot644 + EvilBot645;
+    EvilBot647 = clamp(EvilBot646, inv(0x64), 0x64);
+    set_val(EvilBot59, EvilBot647);
+}
+int EvilBot531;
+
+function EvilBot61 (){     
+	// Clear OLED Screen              
+	cls_oled(0x0); // will clear oled   
+	EvilBot575  = FALSE;           
+}
+int EvilBot652;
+function EvilBot62(EvilBot63) {  
+    for( EvilBot652 = 0x0; EvilBot652 < 0x3; EvilBot652++ ) {
+        set_led(EvilBot652,duint8 ((EvilBot63 * 0x3) + EvilBot652));
+    }
+}
+function EvilBot64(EvilBot65) {
+	putc_oled(EvilBot661, EvilBot65);
+	EvilBot661++;
+}
+
+function EvilBot66(EvilBot65) {
+	if(EvilBot65 < 0x0)
+	{
+		EvilBot64(ASCII_MINUS);
+		EvilBot65 = abs(EvilBot65);
+	}
+
+	EvilBot655		= EvilBot65;	
+	EvilBot793	= 0x0;		
+
+	do
+	{
+		EvilBot655 /= 0xA;
+		EvilBot793++;
+	}
+		while(EvilBot655)
+
+	for(EvilBot795 = 0x0; EvilBot795 < EvilBot793; EvilBot795++)
+	{
+		EvilBot656[EvilBot795] = (EvilBot65 % 0xA) + 0x30;
+		EvilBot65 /= 0xA;
+	}
+
+	for(EvilBot795 = EvilBot793 - 0x1; EvilBot795 >= 0x0; EvilBot795--)
+	{
+		EvilBot64(EvilBot656[EvilBot795]);
+	}
+}
+
+function EvilBot68(EvilBot69, EvilBot70, EvilBot71, EvilBot72) {
+	EvilBot661--;
+
+	switch(EvilBot69)
+	{
+		case EvilBot802  { EvilBot69 = OLED_WIDTH - (EvilBot661 * fontWidth[EvilBot71]) - 0x4; break; }
+		case EvilBot801 { EvilBot69 = (OLED_WIDTH >> 0x1) - ((EvilBot661 * fontWidth[EvilBot71]) >> 0x1); break; }
+	}
+
+	switch(EvilBot70)
+	{ 
+		case EvilBot801 { EvilBot70 = (OLED_HEIGHT >> 0x1) - (fontHeight[EvilBot71] >> 0x1); break; }
+		case EvilBot804 { EvilBot70 = OLED_HEIGHT - fontHeight[EvilBot71] - 0x4; break; }
+	}
+		puts_oled(EvilBot69, EvilBot70, EvilBot71, EvilBot661, EvilBot72);	
+		EvilBot661 = 0x1;								
+}
+
+function EvilBot73(EvilBot74) {
+	do
+	{
+		EvilBot64(dint8(EvilBot74));	
+		EvilBot74++;						
+	}
+		while(dint8(EvilBot74))			
+}
+
+function EvilBot75(EvilBot69, EvilBot70, EvilBot78, EvilBot71) {
+	EvilBot66(EvilBot78);
+	EvilBot68(EvilBot69, EvilBot70, EvilBot71, OLED_WHITE);
+}
+
+function EvilBot80(EvilBot69, EvilBot70, EvilBot83, EvilBot71) {
+	EvilBot73(EvilBot83);
+	EvilBot68(EvilBot69, EvilBot70, EvilBot71, OLED_WHITE);
+}
+function EvilBot85(EvilBot86) {
+    // Sensitivity adjustments for each axis based on the sensitivityIndex
+    switch (EvilBot86) {
+        case 0x0: {
+            EvilBot351[0x0] = EvilBot234; // x to y
+            EvilBot351[0x1] = 0x0;
+            break;
+        }
+        case 0x1: {
+            EvilBot351[0x0] = -EvilBot234; // -x to y
+            EvilBot351[0x1] = 0x0;
+            break;
+        }
+        case 0x2: {
+            EvilBot351[0x0] = 0x0; // y to x
+            EvilBot351[0x1] = EvilBot234;
+            break;
+        }
+        case 0x3: {
+            EvilBot351[0x0] = 0x0; // y to -x
+            EvilBot351[0x1] = -EvilBot234;
+            break;
+        }
+        case 0x4: {
+            EvilBot351[0x0] = -EvilBot234; // -x to -y
+            EvilBot351[0x1] = 0x0;
+            break;
+        }
+        case 0x5: {
+            EvilBot351[0x0] = EvilBot234; // x to -y
+            EvilBot351[0x1] = 0x0;
+            break;
+        }
+        case 0x6: {
+            EvilBot351[0x0] = 0x0; // -y to -x
+            EvilBot351[0x1] = -EvilBot234;
+            break;
+        }
+        case 0x7: {
+            EvilBot351[0x0] = 0x0; // -y to x
+            EvilBot351[0x1] = EvilBot234;
+            break;
+        }
+    }
+}
+
+function EvilBot87(EvilBot21) {
+  return isqrt((get_val(EvilBot21 + 0x2A) * get_val(EvilBot21 + 0x2A)) + (get_val(EvilBot21 + 0x2B) * get_val(EvilBot21 + 0x2B)));
+}
+function EvilBot89(EvilBot90,EvilBot91,EvilBot92) {
+	EvilBot65 = get_val(EvilBot90);
+    if(EvilBot91 != NOT_USE) {
+    	EvilBot338 = inv(0x1);
+    	if(EvilBot65 >= 0x0) EvilBot338 = 0x1;
+        	EvilBot65 *= EvilBot338;
+        if(EvilBot65 <= EvilBot91) 
+        	EvilBot65 = (EvilBot65 * 0x4000) / EvilBot91;
+        else 
+        	EvilBot65 = ((0x4000 * (EvilBot65 - EvilBot91)) / (0x7FFF - EvilBot91)) + 0x4000;
+        	EvilBot65 *= EvilBot338;
+    }
+    if(EvilBot92 != NOT_USE) {
+        EvilBot65 = (EvilBot65 * EvilBot92) / 0x7FFF;
+    }
+    set_val(EvilBot90,clamp(EvilBot65,inv(0x8000),0x7FFF));
+    return;
+}
+function EvilBot93() {
+    for(EvilBot796 = 0x0; EvilBot796 < 0x1E; EvilBot796++)
+    {
+        if(get_ival(BlockBTNs[EvilBot796]) || event_press(BlockBTNs[EvilBot796]))
+        {
+            set_val(BlockBTNs[EvilBot796], 0x0);
+        }
+    }
+}
+
+function EvilBot94(EvilBot52, EvilBot96, EvilBot97) {
+    return EvilBot135(EvilBot52 > EvilBot97, EvilBot96, EvilBot135(EvilBot52 < EvilBot96, EvilBot97, EvilBot52));
+}
+
+function EvilBot98() {
+	if(event_press(PS4_LEFT) || event_press(PS4_RIGHT))
+	{
+		EvilBot702 = EvilBot94(EvilBot702 + EvilBot135(event_press(PS4_RIGHT), 0x1, inv(0x1)), 0x0, 0x5);
+		cls_oled(0x0);
+	}
+
+	if(event_press(PS4_UP) || event_press(PS4_DOWN))
+	{
+		EvilBot703[EvilBot702] = EvilBot94(EvilBot703[EvilBot702] + EvilBot135(event_press(PS4_UP), 0x1, inv(0x1)), 0x0, 0x9);
+		cls_oled(0x0);
+	}
+}
+
+function EvilBot99() {
+	line_oled(0x8 + EvilBot702 * 0x14, 0x1E, 0x8 + EvilBot702 * 0x14 + 0xB, 0x1E, 0x2, 0x1);
+
+	for(EvilBot796 = 0x0; EvilBot796 < 0x6; EvilBot796++)
+	{
+		EvilBot75(0x8 + EvilBot796 * 0x14, 0x26, EvilBot703[EvilBot796], 0x1);
+	}
+}
+
+function EvilBot100() {
+	EvilBot706 = 0x0;
+
+	for(EvilBot796 = 0x0; EvilBot796 < 0x6; EvilBot796++)
+	{
+		EvilBot706 = EvilBot788;
+	}
+
+	if(EvilBot706 == EvilBot788)
+	{
+		EvilBot708 = 0x1;
+		EvilBot134();
+		combo_run(EvilBot14);
+	}
+	else
+	{
+		combo_run(EvilBot15);
+	}
+		combo_run(EvilBot16);
+}
+combo EvilBot14 {
+    cls_oled(0x0);
+    EvilBot80(EvilBot801,  0x4, EvilBot709[0x0], OLED_FONT_MEDIUM);
+    EvilBot80(EvilBot801, 0x16, EvilBot710[0x0]	 , OLED_FONT_MEDIUM);
+    EvilBot80(EvilBot801, 0x2B, EvilBot711[0x0]	 , OLED_FONT_MEDIUM);
+    wait(0x384);
+    cls_oled(0x0);
+    EvilBot798 = 0x65;
+}
+function EvilBot101() {
+	EvilBot712		= ((EvilBot362 * 0x75 + (EvilBot362 ^ 0x3) * 0x391) * 0x14B + 0x65) % 0xF4240;
+	EvilBot713	= (EvilBot712 ^ (EvilBot362 << 0x2)) & 0xFFFFFF;
+
+	if(EvilBot362 % 0x3 == 0x0)
+	{
+		EvilBot713 = EvilBot713 * 0x7 + 0x181CD;
+	}
+	else if(EvilBot362 % 0x5 == 0x0)
+	{
+		EvilBot713 = EvilBot713 * 0xB + 0xD431;
+	}
+	else
+	{
+		EvilBot713 = EvilBot713 ^ (EvilBot362 * 0x7A69);
+	}
+		EvilBot788 = EvilBot713 % 0xF4240;
+}
+combo EvilBot15 {
+	cls_oled(0x0);
+	EvilBot80(EvilBot801, 0x16, EvilBot716[0x0], OLED_FONT_MEDIUM);
+	wait(0x258);
+
+	EvilBot798			= 0x0;
+	EvilBot706		= 0x0;
+	EvilBot702	= 0x0;
+
+	for(EvilBot796 = 0x0; EvilBot796 < 0x6; EvilBot796++)
+	{
+		EvilBot703[EvilBot796] = 0x0;
+	}
+		cls_oled(0x0);
+}
+/*const int16 TrackerCords[] = {
+	0, 8, 17, 23, 34, 41, 52, 59, 63, 69,
+	75, 81, 87, 90, 104, 121, 139, 156, 173, 190,
+	207, 224, 241, 258, 275, 292, 309, 325, 342, 358,
+	374, 390, 406, 422, 438, 453, 469, 484, 500, 515,
+	529, 544, 559, 573, 587, 601, 615, 629, 642, 656,
+	669, 682, 694, 707, 719, 731, 743, 754, 766, 777,
+	788, 798, 809, 819, 829, 838, 848, 857, 866, 874,
+	882, 891, 898, 906, 913, 920, 927, 933, 939, 945,
+	951, 956, 961, 965, 970, 974, 978, 981, 984, 987,
+	990, 992, 994, 996, 997, 998, 999, 1000
+};  */
+const int16 EvilBot1140[] = {
+    0x0, 0x8, 0x11, 0x17, 0x22, 0x29, 0x34, 0x3B, 0x3F, 0x45,
+    0x4B, 0x51, 0x57, 0x5A, 0x68, 0x79, 0x8B, 0x9C, 0xAD, 0xBE,
+    0xCF, 0xE0, 0xF1, 0x102, 0x113, 0x124, 0x135, 0x145, 0x156, 0x166,
+    0x176, 0x186, 0x196, 0x1A6, 0x1B6, 0x1C5, 0x1D5, 0x1E4, 0x1F4, 0x203,
+    0x211, 0x220, 0x22F, 0x23D, 0x24B, 0x259, 0x267, 0x275, 0x282, 0x290,
+    0x29D, 0x2AA, 0x2B6, 0x2C3, 0x2CF, 0x2DB, 0x2E7, 0x2F2, 0x2FE, 0x309,
+    0x314, 0x31E, 0x329, 0x333, 0x33D, 0x346, 0x350, 0x359, 0x362, 0x36A,
+    0x372, 0x37B, 0x382, 0x38A, 0x391, 0x398, 0x39F, 0x3A5, 0x3AB, 0x3B1,
+    0x3B7, 0x3BC, 0x3C1, 0x3C5, 0x3CA, 0x3CE, 0x3D2, 0x3D5, 0x3D8, 0x3DB,
+    0x3DE, 0x3E0, 0x3E2, 0x3E4, 0x3E5, 0x3E6, 0x3E7, 0x3E8, 0x3EF, 0x3F7,
+    0x3FE, 0x405, 0x40B, 0x411, 0x417, 0x41C, 0x421, 0x425, 0x429, 0x42D,
+    0x430, 0x433, 0x436, 0x438, 0x43B, 0x43D, 0x43F, 0x441, 0x442, 0x444,
+    0x445, 0x446, 0x447, 0x448, 0x449, 0x44A, 0x44B, 0x44C
+};
+function EvilBot102() {
+    if (EvilBot252) {
+        EvilBot315 = (EvilBot315 * EvilBot213) / 0x64;
+        EvilBot314 = (EvilBot314 * EvilBot213) / 0x64;
+        EvilBot317 = (EvilBot317 * EvilBot213) / 0x64;
+        EvilBot316 = (EvilBot316 * EvilBot213) / 0x64;
+    }
+
+    set_val(EvilBot1097, EvilBot309);
+    set_val(EvilBot1098, EvilBot310);
+
+    set_val(EvilBot1097, EvilBot103(EvilBot309 + EvilBot314, inv(0x64), 0x64));
+    set_val(EvilBot1098, EvilBot103(EvilBot310 + EvilBot315, inv(0x64), 0x64));
+	EvilBot108 += EvilBot215; // Increment the angle to make the shape spin
+    set_val(EvilBot1097, EvilBot103(EvilBot309 + EvilBot316, inv(0x64), 0x64));
+    set_val(EvilBot1098, EvilBot103(EvilBot310 + EvilBot317, inv(0x64), 0x64));
+	EvilBot108 += EvilBot215; // Increment the angle to make the shape spin
+    
+}
+combo EvilBot16 {
+    set_rumble(RUMBLE_A, 0x55);
+    wait(0xDC);
+    reset_rumble();
+}
+function EvilBot103(EvilBot104, EvilBot105, EvilBot106) {
+    if (EvilBot104 < EvilBot105) return EvilBot105;
+    if (EvilBot104 > EvilBot106) return EvilBot106;
+    return EvilBot104;
+}
+function EvilBot107(EvilBot108){
+  		return EvilBot111(EvilBot726[(EvilBot126(EvilBot108 - 0x1))], EvilBot726[(EvilBot126(EvilBot108 + 0x1))], 0x8000);
+  	return 0x0;
+}
+function EvilBot109(EvilBot108){
+    	return EvilBot111(EvilBot726[((EvilBot126(EvilBot108 - 0x1) + 0x5A) % 0x168)],  EvilBot726[((EvilBot126(EvilBot108 + 0x1) + 0x5A) % 0x168)], 0x8000);
+    return 0x0;
+}
+function EvilBot111(EvilBot112, EvilBot113, EvilBot114) { return EvilBot117(EvilBot122(EvilBot115(EvilBot112), EvilBot115(EvilBot113), EvilBot114)); }
+function EvilBot115(EvilBot112) { return EvilBot112 * 0x10000; }
+function EvilBot117(EvilBot112) { if (EvilBot112 >= 0x0) return (EvilBot112 + 0x10000 >> 0x1) / 0x10000; return (EvilBot112 - 0x10000 >> 0x1) / 0x10000; }
+function EvilBot119(EvilBot120, EvilBot121) { return ((EvilBot120 >> 0x8) * (EvilBot121 >> 0x8)); }
+function EvilBot122(EvilBot112, EvilBot113, EvilBot125) { return EvilBot119((0x10000 - EvilBot125), EvilBot112) + EvilBot119(EvilBot125, EvilBot113); }
+function EvilBot126(EvilBot108){
+  if (EvilBot108 < 0x0) EvilBot108 = 0x168 + (EvilBot108 % 0x168);
+  EvilBot108 = (EvilBot108 + 0x5A) % 0x168;
+  return EvilBot108;
+}
+function EvilBot128()
+{
+
+    if(get_rumble(RUMBLE_A) == get_rumble(RUMBLE_B)) {
+        return RUMBLE_A;
+    }
+    
+    if(get_rumble(RUMBLE_A) == 0x64) {
+        return RUMBLE_B;
+    }
+    
+    if(get_rumble(RUMBLE_B) == 0x64) {
+        return RUMBLE_A;
+    }
+    
+    if(get_rumble(RUMBLE_A) > get_rumble(RUMBLE_B)) {
+        return RUMBLE_A;
+    }
+    
+    if(get_rumble(RUMBLE_A) < get_rumble(RUMBLE_B)) {
+        return RUMBLE_B;
+    }
+    
+    return 0x0;
+}
+const int16 EvilBot726[] =
+{ 0x5A82,  0x5A7F,  0x5A74,  0x5A63,  0x5A4A,  0x5A2A,  0x5A04,  0x59D6,  0x59A1,  0x5965,  0x5922,  0x58D9,  0x5888,  0x5831,  0x57D2,  0x576D,  0x5701,  0x568E,  0x5614,  0x5594,  0x550D,  0x5480,  0x53EB,  0x5351,  0x52AF,  0x5208,  0x5159,  0x50A5,  0x4FEA,  0x4F29,  0x4E62,  0x4D95,  0x4CC2,  0x4BE8,  0x4B09,  0x4A24,  0x4939,  0x4849,  0x4753,  0x4657,  0x4556,  0x444F,  0x4343,  0x4232,  0x411B,  0x4000,  0x3EE0,  0x3DBA,  0x3C90,  0x3B61,  0x3A2E,  0x38F6,  0x37B9,  0x3678,  0x3533,  0x33EA,  0x329D,  0x314C,  0x2FF6,  0x2E9E,  0x2D41,  0x2BE1,  0x2A7E,  0x2917,  0x27AD,  0x2640,  0x24D0,  0x235D,  0x21E8,  0x2070,  0x1EF5,  0x1D78,  0x1BF8,  0x1A76,  0x18F3,  0x176D,  0x15E5,  0x145C,  0x12D1,  0x1145,  0xFB8,  0xE29,  0xC99,  0xB08,  0x976,  0x7E3,  0x650,  0x4BD,  0x329,  0x194,  0x0,  -404,  -809,  -1213,  -1616,  -2019,  -2422,  -2824,  -3225,  -3625,  -4024,  -4421,  -4817,  -5212,  -5605,  -5997,  -6387,  -6774,  -7160,  -7544,  -7925,  -8304,  -8680,  -9053,  -9424,  -9792,  -10157,  -10519,  -10878,  -11233,  -11585,  -11934,  -12278,  -12620,  -12957,  -13290,  -13619,  -13944,  -14265,  -14582,  -14894,  -15201,  -15504,  -15802,  -16096,  -16384,  -16667,  -16946,  -17219,  -17487,  -17750,  -18007,  -18259,  -18505,  -18745,  -18980,  -19209,  -19432,  -19650,  -19861,  -20066,  -20265,  -20458,  -20645,  -20825,  -21000,  -21167,  -21329,  -21483,  -21632,  -21773,  -21908,  -22036,  -22158,  -22273,  -22381,  -22482,  -22577,  -22664,  -22745,  -22818,  -22885,  -22945,  -22998,  -23044,  -23082,  -23114,  -23139,  -23156,  -23167,  -23170,  -23167,  -23156,  -23139,  -23114,  -23082,  -23044,  -22998,  -22945,  -22885,  -22818,  -22745,  -22664,  -22577,  -22482,  -22381,  -22273,  -22158,  -22036,  -21908,  -21773,  -21632,  -21483,  -21329,  -21167,  -21000,  -20825,  -20645,  -20458,  -20265,  -20066,  -19861,  -19650,  -19432,  -19209,  -18980,  -18745,  -18505,  -18259,  -18007,  -17750,  -17487,  -17219,  -16946,  -16667,  -16384,  -16096,  -15802,  -15504,  -15201,  -14894,  -14582,  -14265,  -13944,  -13619,  -13290,  -12957,  -12620,  -12278,  -11934,  -11585,  -11233,  -10878,  -10519,  -10157,  -9792,  -9424,  -9053,  -8680,  -8304,  -7925,  -7544,  -7160,  -6774,  -6387,  -5997,  -5605,  -5212,  -4817,  -4421,  -4024,  -3625,  -3225,  -2824,  -2422,  -2019,  -1616,  -1213,  -809,  -404,  0x0,  0x194,  0x329,  0x4BD,  0x650,  0x7E3,  0x976,  0xB08,  0xC99,  0xE29,  0xFB8,  0x1145,  0x12D1,  0x145C,  0x15E5,  0x176D,  0x18F3,  0x1A76,  0x1BF8,  0x1D78,  0x1EF5,  0x2070,  0x21E8,  0x235D,  0x24D0,  0x2640,  0x27AD,  0x2917,  0x2A7E,  0x2BE1,  0x2D41,  0x2E9E,  0x2FF6,  0x314C,  0x329D,  0x33EA,  0x3533,  0x3678,  0x37B9,  0x38F6,  0x3A2E,  0x3B61,  0x3C90,  0x3DBA,  0x3EE0,  0x4000,  0x411B,  0x4232,  0x4343,  0x444F,  0x4556,  0x4657,  0x4753,  0x4849,  0x4939,  0x4A24,  0x4B09,  0x4BE8,  0x4CC2,  0x4D95,  0x4E62,  0x4F29,  0x4FEA,  0x50A5,  0x5159,  0x5208,  0x52AF,  0x5351,  0x53EB,  0x5480,  0x550D,  0x5594,  0x5614,  0x568E,  0x5701,  0x576D,  0x57D2,  0x5831,  0x5888,  0x58D9,  0x5922,  0x5965,  0x59A1,  0x59D6,  0x5A04,  0x5A2A,  0x5A4A,  0x5A63,  0x5A74,  0x5A7F,  0x5A82 };
+
+
+const int8 EvilBot1142[]={0x64,0x64,0x64,0x64,0x64,0x64,0x64,0x64,0x63,0x63,0x63,0x63,0x62,0x62,0x61,0x61,0x61,0x60,0x5F,0x5F,0x5E,0x5E,0x5D,0x5C,0x5C,0x5B,0x5A,0x59,0x59,0x58,0x57,0x56,0x55,0x54,0x53,0x52,0x51,0x50,0x4F,0x4E,0x4D,0x4B,0x4A,0x49,0x48,0x47,0x46,0x45,0x43,0x42,0x41,0x3F,0x3E,0x3D,0x3B,0x3A,0x38,0x37,0x35,0x34,0x32,0x31,0x2F,0x2E,0x2C,0x2B,0x29,0x28,0x26,0x24,0x23,0x21,0x1F,0x1E,0x1C,0x1A,0x19,0x17,0x15,0x14,0x12,0x10,0xE,0xD,0xB,0x9,0x7,0x6,0x4,0x2,0x0,
+-1,-3,-5,-7,-8,-10,-12,-13,-15,-17,-19,-20,-22,-24,-25,-27,-29,-30,-32,-34,-35,-37,-39,-40,-42,-43,-45,-46,-48,-50,-51,-53,-54,-55,-57,-58,-60,-61,-62,-64,-65,-66,-68,-69,-70,-71,-73,-74,-75,-76,-77,-78,-79,-80,-81,-82,-83,-84,-85,-86,-87,-88,-89,-89,-90,-91,-92,-92,-93,-93,-94,-95,-95,-96,-96,-97,-97,-97,-98,-98,-99,-99,-99,-99,-100,-100,-100,-100,-100,
+-100,-100,-100,-100,-100,-100,-100,-100,-100,-99,-99,-99,-98,-98,-98,-97,-97,-96,-96,-95,-94,-94,-93,-93,-92,-91,-90,-90,-89,-88,-87,-86,-85,-84,-83,-82,-81,-80,-79,-78,-77,-76,-75,-74,-72,-71,-70,-69,-67,-66,-65,-63,-62,-61,-59,-58,-56,-55,-53,-52,-50,-49,-47,-46,-44,-43,-41,-40,-38,-36,-35,-33,-31,-30,-28,-26,-25,-23,-21,-20,-18,-16,-14,-13,-11,-9,-7,-6,-4,-2,
+0x0,0x2,0x4,0x6,0x7,0x9,0xB,0xD,0xE,0x10,0x12,0x14,0x15,0x17,0x19,0x1A,0x1C,0x1E,0x1F,0x21,0x23,0x24,0x26,0x28,0x29,0x2B,0x2C,0x2E,0x2F,0x31,0x33,0x34,0x36,0x37,0x38,0x3A,0x3B,0x3D,0x3E,0x3F,0x41,0x42,0x43,0x45,0x46,0x46,0x48,0x49,0x4A,0x4B,0x4D,0x4E,0x4F,0x50,0x51,0x52,0x53,0x54,0x55,0x56,0x57,0x58,0x59,0x59,0x5A,0x5B,0x5C,0x5C,0x5D,0x5E,0x5E,0x5F,0x5F,0x60,0x61,0x61,0x61,0x62,0x62,0x63,0x63,0x63,0x63,0x64,0x64,0x64,0x64,0x64,0x64,0x64
+};
+       
+//===============================================================
+//   MODS COMBO SECTION
+//===============================================================
+function EvilBot129() {
+
+  if(isqrt(pow(abs(get_ival(EvilBot1096)),0x2) + pow(abs(get_ival(EvilBot1095)),0x2)) <= EvilBot204) {
+    set_val(EvilBot1096,0x0);
+    set_val(EvilBot1095,0x0);
+  }
+
+  if(isqrt(pow(abs(get_ival(EvilBot1097)),0x2) + pow(abs(get_ival(EvilBot1098)),0x2)) <= EvilBot204) {
+    set_val(EvilBot1097,0x0);
+    set_val(EvilBot1098,0x0);
+  }
+}
+
+define EvilBot737 = 0x0; 
+define EvilBot738 = 0x1; 
+define EvilBot739 = 0x2; 
+                                      
+                                      
+//////////////////////////////////////////////////////////////// 
+function EvilBot130(EvilBot131, EvilBot132) { 
+    return (0x80 - EvilBot131 * EvilBot1146[EvilBot132][EvilBot737]) / 0x2;
+}             
+              
+const string EvilBot808 = "AI GO";  // "SETTINGS"
+const string EvilBot809 = ""; //"SAVED"
+                                     
+////////////////////////////////////////////////////////////////////////////// 
+///  SAVE  
+function EvilBot133() {
+    EvilBot139();
+
+	EvilBot708		  = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot247      = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot248     = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot249               = EvilBot166(0x0, 0x2, 0x0);
+    EvilBot250         = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot245      = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot252   = EvilBot166(0x0, 0x3, 0x0);
+    EvilBot251           = EvilBot166(0x0, 0x2, 0x0);
+    EvilBot253               = EvilBot166(0x0, 0x2, 0x0);
+    EvilBot254         = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot255              = EvilBot166(0x0, 0x5, 0x0);
+    EvilBot256        = EvilBot166(0x0, 0x2, 0x0);
+    EvilBot257             = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot258  = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot259       = EvilBot166(0x0, 0x2, 0x0);
+    EvilBot260             = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot261             = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot262         = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot246        = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot263           = EvilBot166(0x0, 0x2, 0x0);
+    EvilBot264             = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot265              = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot266      = EvilBot166(0x0, 0x1, 0x0);
+    EvilBot267           = EvilBot166(0x0, 0x2, 0x0);
+    EvilBot203            = EvilBot166(0x1, 0x5A, 0x4);
+    EvilBot204          = EvilBot166(0x1, 0x32, 0x3);
+    EvilBot205         = EvilBot166(0x1, 0x64, 0x46);
+    EvilBot206          = EvilBot166(0x1, 0x64, 0x10);
+    EvilBot207         = EvilBot166(0x1, 0x64, 0x6);
+    EvilBot208         = EvilBot166(0x1, 0x64, 0x6);
+    EvilBot209         = EvilBot166(0x1, 0x32, 0xA);
+    EvilBot210       = EvilBot166(0x1, 0x64, 0x10);
+    EvilBot211          = EvilBot166(0x1, 0x64, 0x50);
+    EvilBot212           = EvilBot166(0x1, 0x64, 0xD);
+    EvilBot213         = EvilBot166(0x1, 0x64, 0xD);
+    EvilBot214         = EvilBot166(0x1, 0x64, 0x32);
+    EvilBot215             = EvilBot166(0x1, 0x64, 0x9);
+    EvilBot216                = EvilBot166(0x1, 0x64, 0xD);
+    EvilBot217            = EvilBot166(0x1, 0x64, 0x50);
+    EvilBot218            = EvilBot166(0x1, 0x1F4, 0xC8);
+    EvilBot219            = EvilBot166(0x1, 0xC8, 0x1);
+    EvilBot220       = EvilBot166(0x1, 0x64, 0x5);
+    EvilBot221      = EvilBot166(0x1, 0x63, 0x3);
+    EvilBot222      = EvilBot166(0x1, 0x7D0, 0x1F4);
+    EvilBot223               = EvilBot166(0x1, 0x3E8, 0x3);
+    EvilBot224            = EvilBot166(0x1, 0x3E8, 0x3);
+    EvilBot225             = EvilBot166(0x1, 0x7D0, 0x3E8);
+    EvilBot226        = EvilBot166(0x1, 0x147, 0x1E);
+    EvilBot227       = EvilBot166(0x1, 0x147, 0x55);
+    EvilBot228        = EvilBot166(0x1, 0x147, 0x64); 
+    EvilBot229        = EvilBot166(0x1, 0x147, 0x5F); 
+    EvilBot230       = EvilBot166(0x1, 0x147, 0x64); 
+    EvilBot231    = EvilBot166(0x1, 0x147, 0x5F);
+    EvilBot232     = EvilBot166(0x1, 0xA, 0x1);
+    EvilBot233          = EvilBot166(0x1, 0x3E7, 0x50);
+    EvilBot234       = EvilBot166(0x1, 0x64, 0xC);
+    EvilBot235       = EvilBot166(0x1, 0x64, 0xF);
+    EvilBot236      = EvilBot166(0x1, 0x64, 0xD);
+    EvilBot237         = EvilBot166(0x1, 0x64, 0xE);
+    EvilBot238      = EvilBot166(0x1, 0x64, 0x32);
+    EvilBot239        = EvilBot166(0x1, 0x64, 0x14);
+    EvilBot240             = EvilBot166(0x1, 0x1F4, 0x19);
+    EvilBot241            = EvilBot166(0x1, 0xC8, 0x50);
+    EvilBot268         = EvilBot166(0x1, 0x1B, 0x0); 
+    EvilBot269          = EvilBot166(0x1, 0x5, 0x0);
+
+	EvilBot872			  = get_slot();
+}
+
+function EvilBot134() {
+    EvilBot139();
+
+	EvilBot162(EvilBot708, 		 0x0, 0x1);
+	EvilBot162(EvilBot247,      0x0, 0x1);
+    EvilBot162(EvilBot248,     0x0, 0x1);
+    EvilBot162(EvilBot249,               0x0, 0x2);
+    EvilBot162(EvilBot250,         0x0, 0x1);
+    EvilBot162(EvilBot245,      0x0, 0x1);
+    EvilBot162(EvilBot252,   0x0, 0x3);
+    EvilBot162(EvilBot251,           0x0, 0x2);
+    EvilBot162(EvilBot253,               0x0, 0x2);
+    EvilBot162(EvilBot254,         0x0, 0x1);
+    EvilBot162(EvilBot255,              0x0, 0x5);
+    EvilBot162(EvilBot256,        0x0, 0x2);
+    EvilBot162(EvilBot257,             0x0, 0x1);
+    EvilBot162(EvilBot258,  0x0, 0x1);
+    EvilBot162(EvilBot259,       0x0, 0x2);
+    EvilBot162(EvilBot260,             0x0, 0x1);
+    EvilBot162(EvilBot261,             0x0, 0x1);
+    EvilBot162(EvilBot262,         0x0, 0x1);
+    EvilBot162(EvilBot246,        0x0, 0x1);
+    EvilBot162(EvilBot263,           0x0, 0x2);
+    EvilBot162(EvilBot264,             0x0, 0x1);
+    EvilBot162(EvilBot265,              0x0, 0x1);
+    EvilBot162(EvilBot266,      0x0, 0x1);
+    EvilBot162(EvilBot267,           0x0, 0x2);
+
+    EvilBot162(EvilBot203,            0x1, 0x5A);
+    EvilBot162(EvilBot204,          0x1, 0x32);
+    EvilBot162(EvilBot205,         0x1, 0x64);
+    EvilBot162(EvilBot206,          0x1, 0x64);
+    EvilBot162(EvilBot207,         0x1, 0x64);
+    EvilBot162(EvilBot208,         0x1, 0x64);
+    EvilBot162(EvilBot209,         0x1, 0x32);
+    EvilBot162(EvilBot210,       0x1, 0x64);
+    EvilBot162(EvilBot211,          0x1, 0x64);
+    EvilBot162(EvilBot212,           0x1, 0x64);
+    EvilBot162(EvilBot213,         0x1, 0x64);
+    EvilBot162(EvilBot214,         0x1, 0x64);
+    EvilBot162(EvilBot215,             0x1, 0x64);
+    EvilBot162(EvilBot216,                0x1, 0x64);
+    EvilBot162(EvilBot217,            0x1, 0x64);
+    EvilBot162(EvilBot218,            0x1, 0x1F4);
+    EvilBot162(EvilBot219,            0x1, 0xC8);
+    EvilBot162(EvilBot220,       0x1, 0x64);
+    EvilBot162(EvilBot221,      0x1, 0x63);
+    EvilBot162(EvilBot222,      0x1, 0x7D0);
+    EvilBot162(EvilBot223,               0x1, 0x3E8);
+    EvilBot162(EvilBot224,            0x1, 0x3E8);
+    EvilBot162(EvilBot225,             0x1, 0x7D0);
+    EvilBot162(EvilBot226,        0x1, 0x147);
+    EvilBot162(EvilBot227,       0x1, 0x147);
+    EvilBot162(EvilBot228,        0x1, 0x147); 
+    EvilBot162(EvilBot229,        0x1, 0x147); 
+    EvilBot162(EvilBot230,       0x1, 0x147); 
+    EvilBot162(EvilBot231,    0x1, 0x147);
+    EvilBot162(EvilBot232,     0x1, 0xA);
+    EvilBot162(EvilBot233,          0x1, 0x3E7);
+    EvilBot162(EvilBot234,       0x1, 0x64);
+    EvilBot162(EvilBot235,       0x1, 0x64);
+    EvilBot162(EvilBot236,      0x1, 0x64);
+    EvilBot162(EvilBot237,         0x1, 0x64);
+    EvilBot162(EvilBot238,      0x1, 0x64);
+    EvilBot162(EvilBot239,        0x1, 0x64);
+    EvilBot162(EvilBot240,             0x1, 0x1F4);
+    EvilBot162(EvilBot241,            0x1, 0xC8);
+    EvilBot162(EvilBot268,         0x1, 0x1B); 
+    EvilBot162(EvilBot269,          0x1, 0x5);
+
+    combo_run(EvilBot0);
+}
+// end of save   
+function EvilBot135(EvilBot136, EvilBot137, EvilBot138) {if(EvilBot136) {return EvilBot137;}return EvilBot138;}
+int EvilBot745, EvilBot746, EvilBot747, EvilBot748, EvilBot749;
+function EvilBot139(){
+    EvilBot746	= SPVAR_1;
+    EvilBot745	= 0x0;
+	EvilBot747	= 0x0;
+}
+
+function EvilBot140(EvilBot65){
+	EvilBot748	= 0x0;
+	EvilBot65			= abs(EvilBot65);
+
+	while(EvilBot65)
+	{
+		EvilBot748++;
+		EvilBot65 >>= 0x1;
+	}
+		return EvilBot748;
+}
+
+function EvilBot142(EvilBot143, EvilBot144){
+	return EvilBot135(EvilBot145(EvilBot143, EvilBot144), max(EvilBot140(EvilBot143), EvilBot140(EvilBot144))+ 0x1, max(EvilBot140(EvilBot143), EvilBot140(EvilBot144)));
+}
+
+function EvilBot145(EvilBot143, EvilBot144){
+    return EvilBot143 < 0x0 || EvilBot144 < 0x0;
+}
+
+function EvilBot148(EvilBot149){
+    return 0x1 << clamp(EvilBot149 - 0x1, 0x0, 0x1F);
+}
+
+function EvilBot150(EvilBot149){
+    return EvilBot135(EvilBot149 == 0x20, inv(0x1), 0x7FFFFFFF >> (0x1F - EvilBot149));
+}
+
+function EvilBot152(EvilBot149){
+    return EvilBot150(EvilBot149 - 0x1);
+}
+
+function EvilBot154(EvilBot65, EvilBot149){
+    return EvilBot135(EvilBot65 < 0x0, (abs(EvilBot65) & EvilBot152(EvilBot149)) | EvilBot148(EvilBot149), EvilBot65 & EvilBot152(EvilBot149));
+}
+
+function EvilBot157(EvilBot65, EvilBot149){
+    return EvilBot135(EvilBot65 & EvilBot148(EvilBot149), inv(0x1) * (EvilBot65 & EvilBot152(EvilBot149)), EvilBot65 & EvilBot152(EvilBot149));
+}
+
+function EvilBot160(EvilBot161){
+    return get_pvar(EvilBot161, 0x80000000, 0x7FFFFFFF, 0x0);
+}
+
+function EvilBot162(EvilBot65, EvilBot143, EvilBot144){
+    EvilBot749	= EvilBot142(EvilBot143, EvilBot144);
+    EvilBot65		= clamp(EvilBot65, EvilBot143, EvilBot144);
+
+    if(EvilBot145(EvilBot143, EvilBot144))
+	{
+        EvilBot65 = EvilBot154(EvilBot65, EvilBot749);
+    }
+
+    if(EvilBot749 >= 0x20 - EvilBot745)
+	{
+        EvilBot747 |= (EvilBot65 << EvilBot745);
+        set_pvar(EvilBot746, EvilBot747);
+        EvilBot746++;
+        EvilBot749 -= 0x20 - EvilBot745;
+        EvilBot65 >>= 0x20 - EvilBot745;
+        EvilBot745 = EvilBot747 = 0x0;
+    }
+
+    EvilBot747 |= EvilBot65 << EvilBot745;
+    EvilBot745 += EvilBot749;
+
+    if(!EvilBot745)
+	{
+        EvilBot747 = 0x0;
+    }
+		set_pvar(EvilBot746, EvilBot747);
+}
+
+function EvilBot166(EvilBot143, EvilBot144, EvilBot169){
+    EvilBot749 = EvilBot142(EvilBot143, EvilBot144);
+    EvilBot747 = EvilBot160(EvilBot746) >> EvilBot745 & EvilBot150(EvilBot749);
+
+    if(EvilBot749 >= 0x20 - EvilBot745)
+	{
+        EvilBot747 |= (EvilBot160(EvilBot746 + 0x1) & EvilBot150(EvilBot749 - (0x20 - EvilBot745))) << (0x20 - EvilBot745);
+    }
+
+    EvilBot745 += EvilBot749;
+
+    if(EvilBot745 >= 0x20)
+	{
+        EvilBot746++;
+        EvilBot745 -= 0x20;
+    }
+
+    if(EvilBot145(EvilBot143, EvilBot144))
+	{
+        EvilBot747 = EvilBot157(EvilBot747, EvilBot749);
+    }
+		return EvilBot135(EvilBot747 < EvilBot143 || EvilBot747 > EvilBot144, EvilBot169, EvilBot747);
+}
+int EvilBot362, EvilBot713, EvilBot788; int EvilBot703[0x6], EvilBot656[0x5]; int EvilBot661 = 0x1, EvilBot655, EvilBot793; int EvilBot712 = 0x0, EvilBot795, EvilBot796, EvilBot708, EvilBot798 = 0x0, EvilBot706 = 0x0, EvilBot702 = 0x0; enum { EvilBot801 = 0xfffe, EvilBot802, EvilBot803 = 0x5, EvilBot804 = 0xffff, EvilBot805 = 0x5 } const string EvilBot365[] = { "Passwort eingeben" }; const string EvilBot709[] = { "Willkommen" }; const string EvilBot710[] = { "Und" }; const string EvilBot711[] = { "Genieben!" }; const string EvilBot716[] = { "Falsch!" }; const uint8 fontHeight[] = { OLED_FONT_SMALL_HEIGHT, OLED_FONT_MEDIUM_HEIGHT, OLED_FONT_LARGE_HEIGHT }; const uint8 fontWidth[] = { OLED_FONT_SMALL_WIDTH, OLED_FONT_MEDIUM_WIDTH, OLED_FONT_LARGE_WIDTH }; const uint8 BlockBTNs[] = { PS4_UP, PS4_DOWN, PS4_LEFT, PS4_RIGHT, PS4_CROSS, PS4_CIRCLE, PS4_SQUARE, PS4_TRIANGLE, PS4_L1, PS4_R1, PS4_L3, PS4_R3, PS4_OPTIONS, PS4_SHARE, PS4_TOUCH, PS4_PS, PS4_R2, PS4_RY, PS4_L2, PS4_LY, PS4_RX, PS4_LX, PS4_ACCX, PS4_ACCY, PS4_ACCZ, PS4_GYROX, PS4_GYROY, PS4_GYROZ, XB1_PL1, XB1_PL2, XB1_PR1, XB1_PR2 };
+combo EvilBot17 {       
+    wait(0x14);         
+    EvilBot134 ();  
+    cls_oled(0x0);      
+    print(EvilBot191(sizeof(EvilBot808)  - 0x1, OLED_FONT_LARGE_WIDTH),EvilBot807,OLED_FONT_LARGE,OLED_WHITE, EvilBot808[0x0]);
+    print(EvilBot130(sizeof(EvilBot809), OLED_FONT_MEDIUM ), 0x17, OLED_FONT_MEDIUM, 0x1, EvilBot809[0x0]);
+    EvilBot560 = 0x3E8;     
+}                                                
+                                
+const uint8 EvilBot1146[][] = {  
+    {  0x7, 0xA, 0x12 }, // Small    
+    { 0xB, 0x12, 0xB }, // Medium   
+    { 0x10, 0x1A,  0x7 }  // Large    
+};                              
+                                
+function EvilBot170(  EvilBot60) {
+    print(0x2, 0x2, OLED_FONT_SMALL, OLED_WHITE, EvilBot810[EvilBot202]); 
+    EvilBot176(EvilBot60, EvilBot189(EvilBot60));     
+}       
+        
+function EvilBot172 (EvilBot173) {
+    EvilBot173       +=0x1;   
+    if(EvilBot173  > EvilBot1135[EvilBot244][0x1] )EvilBot173  = EvilBot1135[EvilBot244][0x0]; // max option
+
+    return EvilBot173;
+}
+
+function EvilBot174 (EvilBot173) {
+    EvilBot173       -=0x1;   
+    if(EvilBot173  < EvilBot1135[EvilBot244][0x0] )EvilBot173  = EvilBot1135[EvilBot244][0x1]; 
+      
+
+    return EvilBot173;
+}
+// Variables for function number_to_string()  
+int EvilBot814; 
+int EvilBot815,EvilBot816; 
+function EvilBot176(EvilBot60,EvilBot178) {                  
+//=======================================================
+//  number_to_string(value to convert, # of digits in value) 
+//                                                           
+//  Display Up to Max 16-bit Signed Integer (-32,768 to 32,767) 
+//                                                      
+//      Convert digits to ASCII                         
+//      Add ASCII character to print buffer            
+//      Print string centered X & Y on OLED             
+//                                                       
+//======================================================
+    EvilBot814 = 0x1;  EvilBot816 = 0x2710;                            
+                                                      
+    if(EvilBot60 < 0x0) //--neg numbers                     
+    {                                                 
+         putc_oled(EvilBot814,0x2D);    //--add leading "-"      
+         EvilBot814 += 0x1;                                      
+         EvilBot60 = abs(EvilBot60);                          
+    }                                                 
+                                                      
+    for(EvilBot815 = 0x5; EvilBot815 >= 0x1; EvilBot815--)                           
+    {                                                 
+        if(EvilBot178 >= EvilBot815)                             
+        {                                             
+            putc_oled(EvilBot814,EvilBot818[EvilBot60 / EvilBot816]);    
+            EvilBot60 = EvilBot60 % EvilBot816;                    
+            EvilBot814 +=  0x1;                                  
+            if(EvilBot815 == 0x4)                               
+            {                                         
+                putc_oled(EvilBot814,0x2C);   //--add ","        
+                EvilBot814 += 0x1;                               
+            }                                        
+        }                                             
+        EvilBot816 /= 0xA;                                  
+    }                                                
+    puts_oled(EvilBot191(EvilBot814 - 0x1,OLED_FONT_MEDIUM_WIDTH),0x1B,OLED_FONT_MEDIUM,EvilBot814 - 0x1,OLED_WHITE); // adjustable value centered in X 
+}                                                     
+int EvilBot820; 
+                             
+function EvilBot179(EvilBot60,EvilBot178 ,EvilBot182 , EvilBot183 , EvilBot184) { 
+                                                      
+    EvilBot820 = 0x1;  EvilBot816 = 0x2710;                       
+                                                      
+    if(EvilBot60 < 0x0) //--neg numbers                     
+    {                                                 
+         putc_oled(EvilBot820,0x2D);    //--add leading "-" 
+         EvilBot820 += 0x1;                                 
+         EvilBot60 = abs(EvilBot60);                          
+                                                      
+    }                                                 
+                                                      
+    for(EvilBot815 = 0x5; EvilBot815 >= 0x1; EvilBot815--)                           
+    {                                                 
+        if(EvilBot178 >= EvilBot815)                             
+        {                                              
+            putc_oled(EvilBot820,EvilBot818[EvilBot60 / EvilBot816]);
+            EvilBot60 = EvilBot60 % EvilBot816;                    
+            EvilBot820 +=  0x1;                             
+                                                      
+        }                                             
+        EvilBot816 /= 0xA;                                  
+    }                                                 
+    puts_oled(EvilBot182,EvilBot183,EvilBot184,EvilBot820 - 0x1,OLED_WHITE); // adjustable value centered in X
+}                                       
+                                                      
+                                                      
+int EvilBot830, EvilBot831;
+define EvilBot832 = 0x24;
+const string EvilBot833 = "HALTE LT/L2 +"; 
+function EvilBot185( EvilBot60) {  // antirecoil = edit_val( 0 , antirecoil, 99  , 99  ) 
+    line_oled(0x1,0xE,0x7F,0xE,0x1,0x1);                                        
+    // print the range values
+    line_oled(0x1,0x30,0x7F,0x30,0x1,0x1); 
+    // print text 
+    print( 0x2, 0x34, OLED_FONT_SMALL, 0x1, EvilBot833[0x0] ); 
+    // print Left/ Right arrow
+    rect_oled(0x5A, 0x32, 0x7F, 0x3C, OLED_WHITE , EvilBot834); // rectangle left (line 1)
+    //rect_oled(100, 48, OLED_FONT_SMALL_WIDTH + 2, OLED_FONT_SMALL_HEIGHT + 2, OLED_WHITE, col_rec_right); // rectangle right (line 1)
+    putc_oled(0x1,EvilBot835); 
+    puts_oled(0x5B, 0x33, OLED_FONT_SMALL, 0x1, EvilBot836);     
+    putc_oled(0x1,EvilBot837); 
+    puts_oled(0x65, 0x33, OLED_FONT_SMALL, 0x1, EvilBot838);
+    
+    putc_oled(0x1,EvilBot839); 
+    puts_oled(0x6F, 0x33, OLED_FONT_SMALL, 0x1, EvilBot836);     
+    putc_oled(0x1,EvilBot841); 
+    puts_oled(0x79, 0x33, OLED_FONT_SMALL, 0x1, EvilBot838);  
+
+    
+    
+    EvilBot830 = EvilBot1139[EvilBot202][0x0];                          
+    EvilBot831 = EvilBot1139[EvilBot202][0x1];  
+     
+    // on the left: min value                                          
+    EvilBot179(EvilBot830 ,EvilBot189(EvilBot830) ,0x4 , 0x14 , OLED_FONT_SMALL); 
+    // on the right: max value                                         
+    EvilBot179(EvilBot831 ,EvilBot189(EvilBot831) ,0x61 , 0x14 , OLED_FONT_SMALL);
+                                          
+    if(get_ival(EvilBot1085)){                  
+        if(EvilBot187(PS4_RIGHT)){            
+            EvilBot60 ++;                           
+            if(EvilBot60 > EvilBot831 ) EvilBot60 = EvilBot831;   
+            EvilBot572 = TRUE;                
+            
+        }                                     
+                                          
+        if(EvilBot187(PS4_LEFT)){             
+            EvilBot60 --;                           
+            if(EvilBot60 < EvilBot830 ) EvilBot60 = EvilBot830;   
+            EvilBot572 = TRUE;                
+            
+        }                                     
+        if(EvilBot187(PS4_UP)){               
+            EvilBot60 +=0xA;                         
+            if(EvilBot60 > EvilBot831 ) EvilBot60 = EvilBot831;   
+            EvilBot572 = TRUE;                
+            
+        }                                     
+                                          
+        if(EvilBot187(PS4_DOWN)){             
+            EvilBot60 -=0xA;                         
+            if(EvilBot60 < EvilBot830 ) EvilBot60 = EvilBot830;   
+            EvilBot572 = TRUE;                
+            
+        }                                     
+    }                                      
+    return EvilBot60;                        
+}    
+                                             
+                                   
+function EvilBot187(EvilBot188) {       
+//  return TRUE - event_press()    
+//- every 250ms when button is held 
+	  return event_press(EvilBot188) || get_ival(EvilBot188) && get_ptime(EvilBot188) > 0xFA 
+	       && get_ptime(EvilBot188) % (get_rtime() * 0x8) == 0x0;
+}               
+                
+function EvilBot189(EvilBot190) {                         
+//  find_digits(value)                                
+//        return Number of Digits in Value Passed     
+                                                      
+    EvilBot190 = abs(EvilBot190);                               
+    if(EvilBot190 / 0x2710 > 0x0) return 0x5;                   
+    if(EvilBot190 /  0x3E8 > 0x0) return 0x4;                   
+    if(EvilBot190 /   0x64 > 0x0) return 0x3;                   
+    if(EvilBot190 /    0xA > 0x0) return 0x2;                   
+                          return 0x1;                  
+}                                                     
+///////////////////////////////////////////////
+//  FUNCTIONS                                 
+                                              
+function EvilBot191(EvilBot192,EvilBot184) {           
+//  center_x(number of chars,font size);     
+//        return X for Centering String Horizontally 
+                                                      
+    return (OLED_WIDTH / 0x2) - ((EvilBot192 * EvilBot184) / 0x2); 
+}                                                      
+                                                       
+function EvilBot194()        
+{
+    rect_oled(0x0, 0x0,OLED_WIDTH,0x40,FALSE,0x1); 
+    line_oled(0x1,0xE,0x7F,0xE,0x1,0x1); 
+    line_oled(0x1,0x30,0x7F,0x30,0x1,0x1); 
+}
+define EvilBot850 = 0x1F;
+define EvilBot851 = 0x9;
+define EvilBot852 = 0x44;
+define EvilBot853 = 0x45;
+define EvilBot854 = 0x46;
+define EvilBot855 = 0x47;
+define EvilBot856 = 0x48;
+const string EvilBot896 = "Deaktiviert"; 
+const string EvilBot898 = "ADS&Feuer"; 
+const string EvilBot900 = "ADSoderFeuer"; 
+const string EvilBot902 = "Nur ADS"; 
+const string EvilBot910 = "Nur Feuer";
+
+const string EvilBot912 = "Standard"; 
+const string EvilBot914 = "08 ms"; 
+const string EvilBot916 = "06 ms"; 
+const string EvilBot918 = "PLAYSI"; 
+const string EvilBot920 = "XBOX"; 
+const string EvilBot922 = "PC";
+
+const string EvilBot924 = "Deaktiviert"; 
+const string EvilBot926 = "Normal"; 
+const string EvilBot928 = "Nur Sprint"; 
+
+const string EvilBot930 = "Deaktiviert"; 
+const string EvilBot932 = "v1"; 
+const string EvilBot934 = "v2"; 
+const string EvilBot936 = "v3";
+
+const string EvilBot938 = "Ausgeschaltet";
+const string EvilBot940 = "Feuer"; 
+const string EvilBot942 = "ADS & Feuer";
+
+const string EvilBot944 = "Ausgeschaltet";
+const string EvilBot946 = "Rutschen V1";
+const string EvilBot948 = "Rutschen V2";
+
+const string EvilBot950 = "Ausgeschaltet";
+const string EvilBot952 = "Ranglisten Modus";
+const string EvilBot954 = "Zombie Modus";
+
+define EvilBot839 = 0x83; 
+define EvilBot841 = 0x84; 
+define EvilBot835 = 0x85; 
+define EvilBot837 = 0x86; 
+define EvilBot861 = 0x82; 
+define EvilBot862 = 0x59; 
+define EvilBot863 = 0x7F; 
+define EvilBot864 = 0x41;
+
+define EvilBot836 = 0x0;
+define EvilBot838 = 0x0;
+int EvilBot834 = 0x1;
+int EvilBot868 = 0x1;
+
+define EvilBot807 = 0x15;
+define EvilBot870 = 0x10;
+define EvilBot871 = 0x1A;
+
+const string EvilBot889 = " Keine V zum Bearbeiten";
+const string EvilBot890  = " A/CROSS zum Bearbeiten ";
+const string EvilBot877        = "MOD:";
+const string EvilBot879       = "SLT:";
+
+int EvilBot872 ;
+function EvilBot195( EvilBot196, EvilBot197, EvilBot198, EvilBot199) {   
+        // Display MOD_NAME                                    
+        print(EvilBot196, 0x2, OLED_FONT_SMALL, OLED_WHITE, EvilBot197); 
+        // display MOD : label with MOD number
+        print( 0x2,0x26,OLED_FONT_SMALL, OLED_WHITE, EvilBot877[0x0]); 
+        EvilBot179(EvilBot244 + 0x1 ,EvilBot189(EvilBot244 + 0x1) ,0x1C , 0x26 , OLED_FONT_SMALL);
+        
+        
+        // display Slot ; label and slot number
+        print( 0x54,0x26,OLED_FONT_SMALL, OLED_WHITE, EvilBot879[0x0]); 
+        EvilBot179(EvilBot872 ,EvilBot189(EvilBot872) ,0x70 , 0x26 , OLED_FONT_SMALL); 
+                                                       
+        // display Up / Down for scroll MODs
+        // Clears/fill rectangle
+        rect_oled(0x37, EvilBot832, OLED_FONT_SMALL_WIDTH + 0x2, OLED_FONT_SMALL_HEIGHT + 0x2, OLED_WHITE , EvilBot834); // rectangle left (line 2)
+        rect_oled(0x3F, EvilBot832, OLED_FONT_SMALL_WIDTH + 0x2, OLED_FONT_SMALL_HEIGHT + 0x2, OLED_WHITE, EvilBot868); //  rectangle right (line 2)
+        
+        putc_oled(0x1,EvilBot841); 
+    	puts_oled(0x38, 0x25, OLED_FONT_SMALL, 0x1, EvilBot836); 
+        putc_oled(0x1,EvilBot839); 
+		puts_oled(0x40, 0x25, OLED_FONT_SMALL, 0x1, EvilBot838);
+
+        // display text                                                         
+		if(EvilBot1133[ EvilBot244 ] == 0x0 ){ 
+			print( 0x2, 0x34, OLED_FONT_SMALL, 0x1, EvilBot889[0x0] ); 
+		}else{
+			print( 0x2, 0x34, OLED_FONT_SMALL, 0x1, EvilBot890[0x0] ); 
+        }
+        if(EvilBot199 == 0x1)                              
+        {                                                     
+        // Display Disable / Enable                                 
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot892)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot892[0x0]);// Enable 
+            else                                                                                               
+                print(EvilBot191(sizeof(EvilBot894) - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE,EvilBot894[0x0]);// Disable 
+        }            
+        if(EvilBot199 == EvilBot850)// 31    
+        {                                                     
+            if(EvilBot198 == 0x0)                                                             
+                print(EvilBot191(sizeof(EvilBot896)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot896[0x0]);// Disable
+                                                                                                                           
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot898)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot898[0x0]);// ADS & Fire
+                                                                                                                           
+            if(EvilBot198 == 0x2)                                                             
+                print(EvilBot191(sizeof(EvilBot900)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot900[0x0]);// ADS or Fire
+                
+			if(EvilBot198 == 0x3)                                                             
+                print(EvilBot191(sizeof(EvilBot902)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot902[0x0]);// ADS 
+                                                                                                                           
+        }            
+        if(EvilBot199 == EvilBot851)// 9 FireModOptions   
+        {                                                     
+            if(EvilBot198 == 0x0)                                                             
+                print(EvilBot191(sizeof(EvilBot896)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot896[0x0]);// Disable
+                                                                                                                           
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot898)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot898[0x0]);// Fire Only
+                                                                                                                           
+            if(EvilBot198 == 0x2)                                                             
+                print(EvilBot191(sizeof(EvilBot900)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot900[0x0]);// ADS & Fire
+                                                                                                                 
+            if(EvilBot198 == 0x3)                                                             
+                print(EvilBot191(sizeof(EvilBot910)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot910[0x0]);// On Fire
+                                                                                                                 
+        }
+        if(EvilBot199 == 0x32)   
+        {                                                     
+            if(EvilBot198 == 0x0)                                                             
+                print(EvilBot191(sizeof(EvilBot912)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot912[0x0]);// Default
+                                                                                                                           
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot914)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot914[0x0]);// 8 ms
+                                                                                                                           
+            if(EvilBot198 == 0x2)                                                             
+                print(EvilBot191(sizeof(EvilBot916)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot916[0x0]);// 6 ms
+                                                                                                                           
+            if(EvilBot198 == 0x3)                                                             
+                print(EvilBot191(sizeof(EvilBot918)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot918[0x0]);// 4 ms
+                                                                                                                           
+            if(EvilBot198 == 0x4)                                                             
+                print(EvilBot191(sizeof(EvilBot920)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot920[0x0]);// 2 ms
+                                                                                                                           
+            if(EvilBot198 == 0x5)                                                             
+                print(EvilBot191(sizeof(EvilBot922)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot922[0x0]);// 1 ms
+                                                                                                                           
+        }
+        if(EvilBot199 == EvilBot852)// 68   
+        {                                                     
+            if(EvilBot198 == 0x0)                                                             
+                print(EvilBot191(sizeof(EvilBot924)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot924[0x0]);// Disable
+                                                                                                                           
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot926)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot926[0x0]);// normal
+                                                                                                                           
+            if(EvilBot198 == 0x2)                                                             
+                print(EvilBot191(sizeof(EvilBot928)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot928[0x0]);// sprint
+                
+			                                                                                                                           
+        } 
+        if(EvilBot199 == EvilBot853)// 69    
+        {                                                     
+            if(EvilBot198 == 0x0)                                                             
+                print(EvilBot191(sizeof(EvilBot930)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot930[0x0]);// Disable
+                                                                                                                           
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot932)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot932[0x0]);// v1
+                                                                                                                           
+            if(EvilBot198 == 0x2)                                                             
+                print(EvilBot191(sizeof(EvilBot934)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot934[0x0]);// v2
+                
+			if(EvilBot198 == 0x3)                                                             
+                print(EvilBot191(sizeof(EvilBot936)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot936[0x0]);// v3 
+                                                                                                                           
+        } 
+        if(EvilBot199 == EvilBot854)// 70    
+        {                                                     
+            if(EvilBot198 == 0x0)                                                             
+                print(EvilBot191(sizeof(EvilBot938)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot938[0x0]);// Disable
+                                                                                                                           
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot940)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot940[0x0]);// fire
+                                                                                                                           
+            if(EvilBot198 == 0x2)                                                             
+                print(EvilBot191(sizeof(EvilBot942)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot942[0x0]);// adsfire
+                }
+        if(EvilBot199 == EvilBot855)// 71    
+        {                                                     
+            if(EvilBot198 == 0x0)                                                             
+                print(EvilBot191(sizeof(EvilBot944)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot944[0x0]);// Disable
+                                                                                                                           
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot946)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot946[0x0]);
+                                                                                                                           
+            if(EvilBot198 == 0x2)                                                             
+                print(EvilBot191(sizeof(EvilBot948)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot948[0x0]);
+                }
+        if(EvilBot199 == EvilBot856)// 72    
+        {                                                     
+            if(EvilBot198 == 0x0)                                                             
+                print(EvilBot191(sizeof(EvilBot950)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot950[0x0]);// Disable
+                                                                                                                           
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot952)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot952[0x0]);
+                                                                                                                           
+            if(EvilBot198 == 0x2)                                                             
+                print(EvilBot191(sizeof(EvilBot954)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot954[0x0]);
+                }
+		if(EvilBot199 == 0x51)                              
+        {                                                     
+        // Display Disable / Enable               // Display Disable / Enable                                 
+            if(EvilBot198 == 0x0)                                                             
+                print(EvilBot191(sizeof(EvilBot956)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot956[0x0]);// DEFAULT  = 0
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot958)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot958[0x0]);// TACTICAL = 1
+            if(EvilBot198 == 0x2)                                                             
+                print(EvilBot191(sizeof(EvilBot960)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot960[0x0]);// LEFTY    = 2
+            if(EvilBot198 == 0x3)                                                             
+                print(EvilBot191(sizeof(EvilBot962)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot962[0x0]);// N0M4D/CHARLIE = 3
+            if(EvilBot198 == 0x4){                                                             
+                print(EvilBot191(sizeof(EvilBot964)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot964[0x0]);// N0M4D/CHARLIE = 4  
+                print(EvilBot191(sizeof(EvilBot966)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot966[0x0]);//      TACTICAL = 4  
+            } 
+            if(EvilBot198 == 0x5){                                                            
+                print(EvilBot191(sizeof(EvilBot968)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot968[0x0]);// N0M4D/CHARLIE = 5
+                print(EvilBot191(sizeof(EvilBot970)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot970[0x0]);//         LEFTY = 5
+            } 
+            if(EvilBot198 == 0x6){                                                             
+                print(EvilBot191(sizeof(EvilBot972)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot972[0x0]);// BUMPER        = 6
+                print(EvilBot191(sizeof(EvilBot974)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot974[0x0]);// JUMPER        = 6
+            } 
+            if(EvilBot198 == 0x7){                                                             
+                print(EvilBot191(sizeof(EvilBot976)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot976[0x0]);// BUMPER JUMPER = 7
+                print(EvilBot191(sizeof(EvilBot978)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot978[0x0]);// TACTICAL      = 7
+            } 
+            if(EvilBot198 == 0x8){                                                             
+                print(EvilBot191(sizeof(EvilBot980)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot980[0x0]);// ONE-HAND      = 8
+                print(EvilBot191(sizeof(EvilBot982)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot982[0x0]);// GUNSLINGER    = 8
+            } 
+            if(EvilBot198 == 0x9) {                                                            
+                print(EvilBot191(sizeof(EvilBot984)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot984[0x0]);// STICK AND MOVE= 9
+                print(EvilBot191(sizeof(EvilBot986)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot986[0x0]);//               = 9
+            } 
+            if(EvilBot198 == 0xA)                                                             
+                print(EvilBot191(sizeof(EvilBot988)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot988[0x0]);//    BRAWLER       =10 
+            if(EvilBot198 == 0xB)                                                             
+                print(EvilBot191(sizeof(EvilBot990)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot990[0x0]);//    BEASTY        =11
+            if(EvilBot198 == 0xC)                                                             
+                print(EvilBot191(sizeof(EvilBot992)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot992[0x0]);//   BUMPPER PING   =12
+            if(EvilBot198 == 0xD){                                                            
+                print(EvilBot191(sizeof(EvilBot994)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot994[0x0]);// BUMPPER PING  =13    
+                print(EvilBot191(sizeof(EvilBot996)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot996[0x0]);// TACTICAL   
+            } 
+            if(EvilBot198 == 0xE)                                                             
+                print(EvilBot191(sizeof(EvilBot998)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot998[0x0]);// DEF FLIPPED      =14   
+            if(EvilBot198 == 0xF){                                                             
+                print(EvilBot191(sizeof(EvilBot1000)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1000[0x0]);// TACTICAL      =15    
+                print(EvilBot191(sizeof(EvilBot1002)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1002[0x0]);// FLIPPED  
+            } 
+            if(EvilBot198 == 0xF){                                                             
+                print(EvilBot191(sizeof(EvilBot1000)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1000[0x0]);// TACTICAL      =15    
+                print(EvilBot191(sizeof(EvilBot1002)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1002[0x0]);// FLIPPED  
+            } 
+            if(EvilBot198 == 0x10){                                                             
+                print(EvilBot191(sizeof(EvilBot1008)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1008[0x0]);// LEFTY FLIPPED = 16    
+                print(EvilBot191(sizeof(EvilBot1010)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1010[0x0]);//   
+            } 
+            if(EvilBot198 == 0x11){                                                             
+                print(EvilBot191(sizeof(EvilBot1012)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1012[0x0]);// N0M4D/CHARLIE FLIPPED = 17  
+                print(EvilBot191(sizeof(EvilBot1014)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1014[0x0]);//    
+            } 
+            if(EvilBot198 == 0x12){                                                             
+                print(EvilBot191(sizeof(EvilBot1016)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1016[0x0]);// N0M4D/CHARLIE TACTICAL FLIPPED = 18 
+                print(EvilBot191(sizeof(EvilBot1018)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1018[0x0]);//    
+            } 
+            if(EvilBot198 == 0x13){                                                             
+                print(EvilBot191(sizeof(EvilBot1020)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1020[0x0]);// N0M4D/CHARLIE LEFTY FLIPPED = 19    
+                print(EvilBot191(sizeof(EvilBot1022)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1022[0x0]);//    
+            } 
+            if(EvilBot198 == 0x14){                                                             
+                print(EvilBot191(sizeof(EvilBot1024)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1024[0x0]);// BUMPER JUMPER FLIPPED = 20   
+                print(EvilBot191(sizeof(EvilBot1026)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1026[0x0]);//    
+            } 
+            if(EvilBot198 == 0x15){                                                             
+                print(EvilBot191(sizeof(EvilBot1028)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1028[0x0]);// BUMPER JUMPER TACTICAL FLIPPED = 21   
+                print(EvilBot191(sizeof(EvilBot1030)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1030[0x0]);//    
+            } 
+            if(EvilBot198 == 0x16){                                                             
+                print(EvilBot191(sizeof(EvilBot1032)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1032[0x0]);// ONE-HAND GUNSLINGER FLIPPED = 22  
+                print(EvilBot191(sizeof(EvilBot1034)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1034[0x0]);//    
+            } 
+            if(EvilBot198 == 0x17){                                                             
+                print(EvilBot191(sizeof(EvilBot1036)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1036[0x0]);// STICK AND MOVE FLIPPED = 23  
+                print(EvilBot191(sizeof(EvilBot1038)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1038[0x0]);//    
+            } 
+            if(EvilBot198 == 0x18){                                                             
+                print(EvilBot191(sizeof(EvilBot1040)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1040[0x0]);// BRAWLER FLIPPED = 24   
+                print(EvilBot191(sizeof(EvilBot1042)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1042[0x0]);//    
+            } 
+            if(EvilBot198 == 0x19){                                                             
+                print(EvilBot191(sizeof(EvilBot1044)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1044[0x0]);// BEASTY FLIPPED = 25   
+                print(EvilBot191(sizeof(EvilBot1046)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1046[0x0]);//    
+            } 
+            if(EvilBot198 == 0x1A){                                                             
+                print(EvilBot191(sizeof(EvilBot1048)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1048[0x0]);// BUMPER PING FLIPPED = 26   
+                print(EvilBot191(sizeof(EvilBot1050)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1050[0x0]);//    
+            } 
+            if(EvilBot198 == 0x1B){                                                             
+                print(EvilBot191(sizeof(EvilBot1052)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1052[0x0]);// BUMPER PING TACTICAL FLIPPED = 27  
+                print(EvilBot191(sizeof(EvilBot1054)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1054[0x0]);//    
+            } 
+        } 
+        if(EvilBot199 == 0x52)                              
+        {  
+            if(EvilBot198 == 0x0)                                                             
+                print(EvilBot191(sizeof(EvilBot1056)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot1056[0x0]);// Disable
+            if(EvilBot198 == 0x1)                                                             
+                print(EvilBot191(sizeof(EvilBot1058)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot1058[0x0]);//
+            if(EvilBot198 == 0x2)                                                             
+                print(EvilBot191(sizeof(EvilBot1060)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot1060[0x0]);//
+            if(EvilBot198 == 0x3)                                                             
+                print(EvilBot191(sizeof(EvilBot1062)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot807,OLED_FONT_SMALL,OLED_WHITE, EvilBot1062[0x0]);//    
+            if(EvilBot198 == 0x4){                                                             
+                print(EvilBot191(sizeof(EvilBot1064)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1064[0x0]);// 
+                print(EvilBot191(sizeof(EvilBot1066)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1066[0x0]);// 
+            }
+            if(EvilBot198 == 0x5){                                                             
+                print(EvilBot191(sizeof(EvilBot1068)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot870,OLED_FONT_SMALL,OLED_WHITE, EvilBot1068[0x0]);// 
+                print(EvilBot191(sizeof(EvilBot1070)  - 0x1, OLED_FONT_SMALL_WIDTH),EvilBot871,OLED_FONT_SMALL,OLED_WHITE, EvilBot1070[0x0]);// 
+            }
+                
+        }
+
+}//display mod end           
+const uint8 EvilBot1179 [] = {  
+  PS4_RIGHT , //0. Up
+  PS4_LEFT , //1. Down
+  PS4_UP , //2. go back
+  PS4_DOWN , //3. go forward
+  PS4_CROSS , //4. enter in Edit Menu
+  PS4_CIRCLE , //5. exit  Menu
+  PS4_OPTIONS , //5. enter in  Menu
+  PS4_L2     //6. hold ADS
+};//--- End Menu Buttons  
+
+int EvilBot1071;
+int EvilBot1072;
+define EvilBot1073 = 0x7530;
+function EvilBot200 (){  
+    for(EvilBot1071 = 0x0; EvilBot1071 < 0x7; EvilBot1071++){
+         if(event_press(EvilBot1179[EvilBot1071]) ){
+             EvilBot1072 = EvilBot1073;
+         }
+         if(EvilBot1072){              
+            EvilBot1072 -=0x1;
+            if(EvilBot1072 <= 0x0 ){    
+                EvilBot462 = FALSE;      
+                EvilBot458 = FALSE;      
+                EvilBot572  = FALSE;  
+            }
+        }
+    }
+}
+
+const string EvilBot956 =    "STANDARD";          // 0
+const string EvilBot958 =    "TACTICAL";         // 1
+const string EvilBot960 =    "LEFTY";            // 2
+const string EvilBot962 =    "N0M4D/CHARLIE";    // 3
+const string EvilBot964 =    "NOM4D/CHARLIE";    // 4
+const string EvilBot966 =    "TACTICAL";         // 4
+const string EvilBot968 =    "NOM4D/CHARLIE";    // 5
+const string EvilBot970 =    "LEFTY";            // 5
+const string EvilBot972 =    "BUMPER";           // 6
+const string EvilBot974 =    "JUMPER";           // 6
+const string EvilBot976=    "BUMPER JUMPER";    // 7
+const string EvilBot978=    "TACTICAL";         // 7
+const string EvilBot980 =    "ONE-HAND";        // 8
+const string EvilBot982 =    "GUNSLINGER";      // 8
+const string EvilBot984 =    "STICK AND MOVE";   // 9
+const string EvilBot986 =    " ";                // 9
+const string EvilBot988 =    "BRAWLER";          // 10
+const string EvilBot990 =    "BEASTY";           // 11
+const string EvilBot992 =    "BUMPP UP";       // 12
+const string EvilBot994 =    "BUMPPER UP";     // 13
+const string EvilBot996 =    "TACTICAL";         // 13
+const string EvilBot998 =    "DEF FLIPPED";      // 14
+const string EvilBot1000 =    "TACTICAL";         // 15 
+const string EvilBot1002 =    "FLIPPED";          // 15 
+const string EvilBot1008 =    "LEFTY";            // 16
+const string EvilBot1010 =    "FLIPPED";          // 16
+const string EvilBot1012 =    "N0M4D/CHARLIE";    // 17
+const string EvilBot1014 =    "FLIPPED"           // 17
+const string EvilBot1016 =    "N0M4D/CHARLIE";    // 18
+const string EvilBot1018 =    "TACTICAL FLIPPED"  // 18
+const string EvilBot1020 =    "N0M4D/CHARLIE";    // 19
+const string EvilBot1022 =    "LEFTY FLIPPED"     // 19
+const string EvilBot1024 =    "BUMPER JUMPER";    // 20
+const string EvilBot1026 =    "FLIPPED"           // 20
+const string EvilBot1028 =    "BUMPER JUMPER";    // 21
+const string EvilBot1030 =    "TACTICAL FLIPPED"  // 21
+const string EvilBot1032 =    "ONE-HAND";         // 22
+const string EvilBot1034 =    "GUNSLING FLIPPED"  // 22
+const string EvilBot1036 =    "STICK AND MOVE";   // 23
+const string EvilBot1038 =    "FLIPPED"           // 23
+const string EvilBot1040 =    "BRAWLER";          // 24
+const string EvilBot1042 =    "FLIPPED"           // 24
+const string EvilBot1044 =    "BEASTY";           // 25
+const string EvilBot1046 =    "FLIPPED"           // 25
+const string EvilBot1048 =    "BUMPER UP";      // 26
+const string EvilBot1050 =    "FLIPPED"           // 26
+const string EvilBot1052 =    "BUMPER UP";      // 27
+const string EvilBot1054 =    "TACTICAL FLIPPED"  // 27
+
+const string EvilBot1056 =    "STANDARD";          // 0
+const string EvilBot1058 =    "SOUTHPAW";         // 1
+const string EvilBot1060 =    "LEGACY";           // 2
+const string EvilBot1062 =    "LEGACY SOUTHPAW";  // 3
+
+const string EvilBot1064 =    "SOUTHPAW";         // 4
+const string EvilBot1066 =    "NO CLICK SWAP";    // 5
+
+const string EvilBot1068 =    "LEGACY SOUTHPAW";  // 6
+const string EvilBot1070 =    "NO CLIC SWAP";     // 7
+
+//===============================================================
+//    BUTTON LAYOUT                                              
+//===============================================================
+
+define EvilBot1077 = PS4_RIGHT;
+define EvilBot1078 = PS4_DOWN;
+define EvilBot1079 = PS4_LEFT;
+define EvilBot1080 = POLAR_RS;
+define EvilBot1081 = POLAR_LS;
+define EvilBot1082 = POLAR_RY;
+define EvilBot1083 = POLAR_RX;
+
+
+
+int EvilBot1084,EvilBot1085,EvilBot1086,EvilBot1087,EvilBot1088,EvilBot1089,EvilBot1090,EvilBot1091,EvilBot1092,EvilBot1093,EvilBot1094,EvilBot1095,EvilBot1096,EvilBot1097,EvilBot1098;
+
+function EvilBot201(){
+	
+	EvilBot1084     	 = EvilBot1237[EvilBot268][0x0];
+	EvilBot1085     	 = EvilBot1237[EvilBot268][0x1];
+	
+	EvilBot1086   = EvilBot1237[EvilBot268][0x2];
+	EvilBot1087 = EvilBot1237[EvilBot268][0x3];
+	
+	EvilBot1088    	 = EvilBot1237[EvilBot268][0x4];
+	EvilBot1091	     = EvilBot1237[EvilBot268][0x5];
+	EvilBot1092    = EvilBot1237[EvilBot268][0x6];
+	EvilBot1093  	 = EvilBot1237[EvilBot268][0x7];
+	EvilBot1090  	 = EvilBot1237[EvilBot268][0x8];
+	EvilBot1089     = EvilBot1237[EvilBot268][0x9];
+	EvilBot1094		     = EvilBot1237[EvilBot268][0xA];
+
+	EvilBot1095       = EvilBot1236[EvilBot269][0x0];
+	EvilBot1096       = EvilBot1236[EvilBot269][0x1];
+	EvilBot1098        = EvilBot1236[EvilBot269][0x2];
+	EvilBot1097        = EvilBot1236[EvilBot269][0x3];}
+	
+const int16 EvilBot1236[][] = {            
+	//Walk,     Strafe, AimY,    AimX    
+	{ XB1_LY,     XB1_LX, XB1_RY, XB1_RX },    // DEFAULT
+	{ XB1_RY,     XB1_RX, XB1_LY, XB1_LX },    // SOUTHPAW
+	{ XB1_LY,     XB1_RX, XB1_RY, XB1_LX },    // LEGACY
+	{ XB1_RY,     XB1_LX, XB1_LY, XB1_RX },    // LEGACY SOUTHPAW
+    { XB1_RY,     XB1_RX, XB1_LY, XB1_LX },  // SOUTHPAW NO CLICK SWAP
+    { XB1_RY,     XB1_LX, XB1_LY, XB1_RX }}; // LEGACY SOUTHPAW NO CLICK SWAP
+
+const uint8 EvilBot1237[][] = {            
+//    Fire     Ads    Lethal Tactical Jump    Crouch  Melee   Sprint  Reload WSwap,  UP     
+    { XB1_RT, XB1_LT, XB1_RB, XB1_LB, XB1_A,  XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // DEFAULT = 0
+    { XB1_RT, XB1_LT, XB1_RB, XB1_LB, XB1_A,  XB1_RS, XB1_B,  XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // TACTICAL = 1
+    { XB1_LT, XB1_RT, XB1_LB, XB1_RB, XB1_A,  XB1_B,  XB1_LS, XB1_RS ,XB1_X, XB1_Y, XB1_UP }, // LEFTY = 2
+    { XB1_RT, XB1_RB, XB1_LT, XB1_LB, XB1_A,  XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // N0M4D/CHARLIE = 3
+    { XB1_RT, XB1_RB, XB1_LT, XB1_LB, XB1_A,  XB1_RS, XB1_B,  XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // N0M4D/CHARLIE TACTICAL = 4
+    { XB1_LT, XB1_LB, XB1_RT, XB1_RB, XB1_A,  XB1_B,  XB1_LS, XB1_RS ,XB1_X, XB1_Y, XB1_UP }, // N0M4D/CHARLIE LEFTY = 5
+    { XB1_RT, XB1_LT, XB1_RB, XB1_A,  XB1_LB, XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // BUMPER JUMPER = 6 
+    { XB1_RT, XB1_LT, XB1_RB, XB1_A,  XB1_LB, XB1_RS, XB1_B,  XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // BUMPER JUMPER TACTICAL = 7
+    { XB1_LB, XB1_LT, XB1_RT, XB1_RB, XB1_A,  XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // ONE-HAND GUNSLINGER = 8
+    { XB1_RT, XB1_LT, XB1_RB, XB1_LB, XB1_RS, XB1_B,  XB1_A,  XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // STICK AND MOVE = 9
+    { XB1_RT, XB1_LT, XB1_RB, XB1_LB, XB1_A,  XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // BRAWLER = 10
+    { XB1_RT, XB1_LT, XB1_RS, XB1_A,  XB1_LB, XB1_B,  XB1_RB, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // BEASTY = 11
+    { XB1_RT, XB1_LT, XB1_RB, XB1_RB, XB1_A,  XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_LB }, // BUMPER UP = 12
+    { XB1_RT, XB1_LT, XB1_RB, XB1_RB, XB1_A,  XB1_RS, XB1_B,  XB1_LS ,XB1_X, XB1_Y, XB1_LB }, // BUMPER UP TACTICAL = 13
+    { XB1_RB, XB1_LB, XB1_RT, XB1_LT, XB1_A,  XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // DEFAULT FLIPPED = 14
+    { XB1_RB, XB1_LB, XB1_RT, XB1_LT, XB1_A,  XB1_RS, XB1_B,  XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // TACTICAL FLIPPED = 15
+    { XB1_LB, XB1_RB, XB1_LT, XB1_RT, XB1_A,  XB1_B,  XB1_LS, XB1_RS ,XB1_X, XB1_Y, XB1_UP }, // LEFTY FLIPPED = 16
+    { XB1_RB, XB1_RT, XB1_LB, XB1_LT, XB1_A,  XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // N0M4D/CHARLIE FLIPPED = 17
+    { XB1_RB, XB1_RT, XB1_LB, XB1_LT, XB1_A,  XB1_RS, XB1_B,  XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // N0M4D/CHARLIE TACTICAL FLIPPED = 18
+    { XB1_LB, XB1_LT, XB1_RB, XB1_RT, XB1_A,  XB1_B,  XB1_LS, XB1_RS ,XB1_X, XB1_Y, XB1_UP }, // N0M4D/CHARLIE LEFTY FLIPPED = 19  
+    { XB1_RB, XB1_LB, XB1_RT, XB1_A,  XB1_LT, XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // BUMPER JUMPER FLIPPED = 20   
+    { XB1_RB, XB1_LB, XB1_RT, XB1_A,  XB1_LT, XB1_RS, XB1_B,  XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // BUMPER JUMPER TACTICAL FLIPPED = 21 
+    { XB1_LT, XB1_LB, XB1_RB, XB1_RT, XB1_A,  XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // ONE-HAND GUNSLINGER FLIPPED = 22    
+    { XB1_RB, XB1_LB, XB1_RT, XB1_LT, XB1_RS, XB1_B,  XB1_A,  XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // STICK AND MOVE FLIPPED = 23 
+    { XB1_RB, XB1_LB, XB1_RS, XB1_LT, XB1_A,  XB1_B,  XB1_RT, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // BRAWLER FLIPPED = 24  
+    { XB1_RB, XB1_LB, XB1_RS, XB1_A,  XB1_LT, XB1_B,  XB1_RT, XB1_LS ,XB1_X, XB1_Y, XB1_UP }, // BEASTY FLIPPED = 25
+    { XB1_RB, XB1_LB, XB1_RT, XB1_RT, XB1_A,  XB1_B,  XB1_RS, XB1_LS ,XB1_X, XB1_Y, XB1_LT }, // BUMPER UP FLIPPED = 26 
+    { XB1_RB, XB1_LB, XB1_RT, XB1_RT, XB1_A,  XB1_RS, XB1_B,  XB1_LS ,XB1_X, XB1_Y, XB1_LT }};// BUMPER UP TACTICAL FLIPPED = 27  ����������������
