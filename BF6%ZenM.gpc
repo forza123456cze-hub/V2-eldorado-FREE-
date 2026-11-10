@@ -1,0 +1,2498 @@
+// Color constants
+const uint16 _color[][] = {
+	{ 120, 100, 100 }, 		// Green
+	{ 300, 100, 75 }, 		// Purple
+	{ 35, 100, 100 }, 		// Yellow
+	{ 240, 100, 93 }, 		// Blue
+	{ 350, 100, 100 }, 		// Pink
+	{ 0, 100, 100 }, 		// Red
+	{ 0, 100, 75 }, 		// Menu Red
+	{ 120, 100, 75 }, 		// Menu Green
+	{ 305, 100, 50 },		// Menu Purple
+	{ 20, 50, 100 } 		// White
+}
+
+// Footer count
+const uint8 _footerCount[] = {
+	2,						// Home Screen
+	3, 						// Script Menu
+	4,						// Aim Assist
+	2,						// Anti Recoil
+	4,						// Controller
+	3,						// Options
+	4,						// Profiles
+	3,						// Settings
+	5						// Toggles
+};
+
+// Font sizes
+const uint8 _fontHeight[] = { OLED_FONT_SMALL_HEIGHT, OLED_FONT_MEDIUM_HEIGHT, OLED_FONT_LARGE_HEIGHT };
+const uint8 _fontWidth[] = { OLED_FONT_SMALL_WIDTH, OLED_FONT_MEDIUM_WIDTH, OLED_FONT_LARGE_WIDTH };
+
+// Sub Menu boundaries
+const uint8 _subMenuBoundaries[][] = {
+	{ 0, 6, AimAssist },		// Aim Assist
+	{ 0, 17, AntiRecoil },		// Anti Recoil
+	{ 0, 2, ButtonLayout },		// Controller
+	{ 0, 4, AutoFocus },		// Options
+	{ 0, 1, BlockVibration }	// Settings
+};
+
+// VM Speed
+const uint8 _vmSpeed[] = { 10, 8, 4, 2 };
+
+// Version constants
+const uint8 _versionInfo[] = { 1, 0 };
+
+// Toggle buttons
+const uint8 _allowableButtons[] = { XB1_XBOX, XB1_VIEW, XB1_MENU, XB1_SYNC, XB1_RB, XB1_RT, XB1_RS, XB1_LB, XB1_LT, XB1_LS, XB1_UP, XB1_DOWN, XB1_LEFT, XB1_RIGHT, XB1_Y, XB1_B, XB1_A, XB1_X };
+
+// Aim assist menu names
+const string _aimassistMenuNames[] = { "Aim Assist", "Radius", "Speed", "Boost Radius", "Boost Speed", "Strafe Radius", "Strafe Time" };
+
+// Antirecoil names
+const string _antirecoilNames[] = { "Off", "Basic", "Advanced", "Expert" };
+
+// Antirecoil menu names
+const string _antirecoilMenuNames[] = { "Anti-recoil", "Strength", "Kick Strength", "Kick Time", "Vertical Start", "Vertical Mid", "Vertical End", "V Start Time", "V Mid Time", "Horizontal Start", "Horizontal Mid", "Horizontal End", "H Start Time", "H Mid Time" };
+
+// Button names (PlayStation)
+const string _buttonNamePs[] = { "PS", "Share", "Options", "R1", "R2", "R3", "L1", "L2", "L3", "", "", "", "", "Up", "Down", "Left", "Right", "", "", "", "", "", "", "", "", "", "", "Touch", "", "", "Finger1", "", "", "Finger2", "", "", "", "" };
+
+// Button names (Xbox)
+const string _buttonNameXb[] = { "Xbox", "View", "Menu", "RB", "RT", "RS", "LB", "LT", "LS", "", "", "", "", "Up", "Down", "Left", "Right", "Y", "B", "A", "X", "", "", "", "", "", "", "Sync", "", "", "", "", "", "", "PR1", "PR2", "PL1", "PL2" };
+
+// Button name (not set)
+const string _buttonNameNotSet = "";
+
+// Layout button names
+const string _layoutButtonNames[] = { "Aim", "Fire", "Ping", "Steady Scope", "Crouch", "Melee", "Jump", "Grenade" };
+
+// Directions
+const string _directions[] = { "Left", "Right", "Up", "Down" };
+
+// Controller menu names
+const string _controllerMenuNames[] = { "Button Layout", "Hair Triggers", "Inverted" };
+
+// Options menu names
+const string _optionsMenuNames[] = { "Auto Focus", "Auto Ping", "Bunny Hop", "Crouch Shot", "Fast Melee" };
+
+// Script Menu names
+const string _scriptMenuNames[] = { "Aim Assist", "Anti Recoil", "Controller", "Options", "Settings" };
+
+// Settings menu names
+const string _settingsMenuNames[] = { "Block Vibration", "Device VM Speed" };
+
+// Aim Assist menu
+const int8 _aimassistSettings[][] = {
+	{ FALSE, TRUE, Setting_Toggle | Setting_Profile },				// Aim Assist
+	{ 0, 100, Setting_Number | Setting_Profile },					// Radius
+	{ 1, 100, Setting_Number | Setting_Profile },					// Speed
+	{ -100, 100, Setting_Number | Setting_Profile },				// Boost Radius
+	{ -100, 100, Setting_Number | Setting_Profile },				// Boost Speed
+	{ 0, 100, Setting_Number | Setting_Profile },					// Strafe Radius
+	{ 1, 50, Setting_Timer | Setting_Profile }						// Strafe Time
+};
+
+// Antirecoil menu
+const int16 _antirecoilSettings[][] = { 
+	{ Off, Expert, Setting_String | Setting_Profile },				// Anti Recoil
+	{ 0, 100, Setting_Number | Setting_Profile },					// Strength
+	{ 0, 100, Setting_Number | Setting_Profile },					// Kick Strength
+	{ 0, 250, Setting_Timer | Setting_Profile },					// Kick Time
+	{ 0, 100, Setting_Number | Setting_Profile },					// Vertical Start
+	{ 0, 100, Setting_Number | Setting_Profile },					// Vertical Mid
+	{ 0, 100, Setting_Number | Setting_Profile },					// Vertical End
+	{ 0, 250, Setting_Timer | Setting_Profile },					// V Start Time
+	{ 0, 250, Setting_Timer | Setting_Profile },					// V Mid Time
+	{ -100, 100, Setting_Number | Setting_Profile },				// Horizontal Start
+	{ -100, 100, Setting_Number | Setting_Profile },				// Horizontal Mid
+	{ -100, 100, Setting_Number | Setting_Profile },				// Horizontal End
+	{ 0, 250, Setting_Timer | Setting_Profile },					// H Start Time
+	{ 0, 250, Setting_Timer | Setting_Profile }						// H Mid Time
+};
+
+// Controller menu
+const uint16 _controllerSettings[][] = {
+	{ 0, 0, Setting_EnterSubMenu },									// Button Layout
+	{ FALSE, TRUE, Setting_Toggle },								// Hair Triggers
+	{ FALSE, TRUE, Setting_Toggle }									// Inverted
+};
+
+// Options menu
+const int8 _optionsSettings[][] = {
+	{ FALSE, TRUE, Setting_Toggle },								// Auto Focus
+	{ FALSE, TRUE, Setting_Toggle },								// Auto Ping
+	{ FALSE, TRUE, Setting_Toggle },								// Bunny Hop
+	{ FALSE, TRUE, Setting_Toggle },								// Crouch Shot
+	{ FALSE, TRUE, Setting_Toggle }									// Fast Melee
+};
+
+// Settings menu
+const uint8 _settingsSettings[][] = {
+	{ FALSE, TRUE, Setting_Toggle },								// Controller Vibration
+	{ 0, 4, Setting_VM }											// Device VM Speed
+};
+
+// Constant strings
+const string _automatic = "Automatic";
+const string _changeProfiles = "Change Profiles";
+const string _changeStick = "Change Stick";
+const string _dpadForDirection = "DPad For Direction";
+const string _forOneSecond = "For One Second";
+const string _holdButtonToSet = "Hold Button to Set";
+const string _hold = "Hold";
+const string _menu = "Menu: ";
+const string _moveSticks = "Move Sticks";
+const string _noChange = "No Change";
+const string _off = "Off";
+const string _on = "On";
+const string _press = "Press";
+const string _profile = "Profile";
+const string _push = "Push";
+const string _pushedTooFar = "Pushed Too Far";
+const string _release = "Release"
+const string _scriptAuthor = "ZenMaster";
+const string _scriptTitle = "Battlefield";
+const string _scriptVersion = "Version";
+const string _slowlyRelease = "Slowly Release";
+const string _stick = "Stick";
+const string _then = "Then";
+const string _toAdjust = " to Adjust";
+const string _toCalibrate = " to Calibrate";
+const string _toCycle = " to Cycle";
+const string _toEditLayout = " to Edit Layout";
+const string _toEnterMenu = " to Enter Menu";
+const string _toGoBack = " to Go Back";
+const string _toReset = " to Reset";
+const string _toSaveAndExit = " to Save & Exit";
+const string _toSelect = " to Select";
+const string _valuesReset = "All Values Reset";
+const string _vehicle = "Vehicle";
+
+// Definitions
+define FOOTER_TIME = 4000; // Timeout for updating the footer
+define SCREENSAVER_TIME = 8000; // Timeout for the screen saver
+define SCRIPT_MENU_MIN = 0; // Script menu minimum item
+define SCRIPT_MENU_MAX = 4; // Script menu maximum item
+
+// Enumeration for variables
+enum {
+	// Anti-recoil elements
+	AntiRecoil_X = 0, AntiRecoil_Y, AntiRecoil_X_StartTime, AntiRecoil_X_MidTime, AntiRecoil_Y_StartTime, AntiRecoil_Y_MidTime,
+	
+	// Button elements
+	ADS = 0, Fire, Ping, SteadyScope, Crouch, Melee, Jump, Grenade,
+
+	// Color identifiers
+	Hue = 0, Saturation, Brightness,
+	Green = 0, Purple, Yellow, Blue, Pink, Red,
+	MenuRed, MenuGreen, MenuPurple, White,
+	
+	// Device elements
+	Console = 0, Controller, Remapped, VM, ZenLink,
+	
+    // Display elements
+    LedUpdate = 0, Update, Buffer, BufferCopyValue, BufferDigitCount, BufferDigits,
+    
+    // Display alignment options
+    AlignCenter = -3, AlignBottom = -2, AlignRight = -1, AlignLeft = 2, AlignTop = 5,
+    
+    // Menu elements
+   	BaseSetting = 0, ButtonBlock, ButtonHoldTime, EditIndex, ScriptMenuIndex, SettingIndex, SubMenuIndex, SelectedItem, SelectedRow,
+   	
+   	// Menu identifiers
+   	AimAssistMenu = 0, AntiRecoilMenu, ControllerMenu, OptionsMenu, SettingsMenu,
+   	CustomButtonLayoutMenu,
+   	
+   	// Output elements
+   	X = 0, Y, AimAngle, RotationAngle, AimRadius, RotationRadius, AimSpeed, RotationSpeed,
+	
+   	// Screen identifiers
+   	HomeScreen = -3, ScriptMenu,
+   	Setting_Button = 1, Setting_Number = 2, Setting_Timer = 4, Setting_Profile = 8, Setting_RPS = 16, Setting_Toggle = 32, Setting_String = 64, Setting_VM = 128, Setting_EnterSubMenu = 256, Setting_None = 512, Setting_Percent = 1024,
+   	
+   	// Settings elements
+   	ButtonLayout = 0, HairTriggers, Inverted,
+   	AimAssist, Radius = AimAssist + 5, Speed = Radius + 5, BoostRadius = Speed + 5, BoostSpeed = BoostRadius + 5, StrafeRadius = BoostSpeed + 5, StrafeTime = StrafeRadius + 5,
+   	AntiRecoil = StrafeTime + 5,
+   	Strength = AntiRecoil + 5, // Basic
+   	KickStrength = Strength + 5, KickTime = KickStrength + 5, // Advanced
+   	VerticalStart = KickTime + 5, VerticalMid = VerticalStart + 5, VerticalEnd = VerticalMid + 5, VerticalSTime = VerticalEnd + 5, VerticalMTime = VerticalSTime + 5,
+   	HorizontalStart = VerticalMTime + 5, HorizontalMid = HorizontalStart + 5, HorizontalEnd = HorizontalMid + 5, HorizontalSTime = HorizontalEnd + 5, HorizontalMTime = HorizontalSTime + 5, // Expert
+   	AutoFocus = HorizontalMTime + 5, AutoPing, BunnyHop, CrouchShot, FastMelee,
+   	BlockVibration, DeviceVMSpeed,
+   	Layout_ADS, Layout_Fire, Layout_Ping, Layout_SteadyScope, Layout_Crouch, Layout_Melee, Layout_Jump, Layout_Grenade,
+   	
+   	// Settings identifiers
+   	Basic = 1, Advanced, Expert,
+   	Off = 0, DropShot, JumpShot, Slide,
+   	AutoAim_ADSOnFire = 1, AutoAim_FireOnADS,
+   	ShotMod_CrouchShot = 1, ShotMod_JumpShot, ShotMod_ProneShot,
+   	VM_Automatic = 0,
+   	AimAssistEdit = AimAssist, RadiusEdit, SpeedEdit, BoostRadiusEdit, BoostSpeedEdit, StrafeRadiusEdit, StrafeTimeEdit,
+   	AntiRecoilEdit = AntiRecoil, StrengthEdit, KickStrengthEdit, KickTimeEdit,
+   	VerticalStartEdit, VerticalMidEdit, VerticalEndEdit, VerticalSTimeEdit, VerticalMTimeEdit,
+   	HorizontalStartEdit, HorizontalMidEdit, HorizontalEndEdit, HorizontalSTimeEdit, HorizontalMTimeEdit,
+   	AntiRecoil_AntiRecoil = 0, AntiRecoil_Strength,
+   	AntiRecoil_KickStrength, AntiRecoil_KickTime,
+	AntiRecoil_VerticalStart, AntiRecoil_VerticalMid, AntiRecoil_VerticalEnd, AntiRecoil_VerticalSTime, AntiRecoil_VerticalMTime,
+	AntiRecoil_HorizontalStart, AntiRecoil_HorizontalMid, AntiRecoil_HorizontalEnd, AntiRecoil_HorizontalSTime, AntiRecoil_HorizontalMTime,
+	AntiRecoil_Weapon, AntiRecoil_VerticalValue, AntiRecoil_HorizontalValue,
+   	
+   	// SPVAR elements
+	Bit = 0, Bits, Slot, Temp, Value,
+	
+    // State elements
+    ActionBlock = 0, Footer, FooterTimer, HoldingADS, HoldingFire, Page, Screen, ScreenSaver, VehicleMode, CurrentProfile, MenuProfile,
+    
+	// Stick elements
+  	Move = 0, Strafe, Look, Rotate
+
+}
+
+int antirecoil[6];						// Anti recoil
+int button[8];							// Button Layout
+int device[5];							// I/O device information
+int display[10];						// Display buffer and properties
+int i, j;								// Iterators
+int rumble[2];							// Rumble variables
+int settings[123];						// Script settings
+int menu[9];							// Menu management
+int output[8];							// Output values for aimer
+int spvar[5];							// SPVAR data
+int state[11];							// Script state information
+int stick[4];							// Joystick axises
+
+// Script initialization
+init {
+	display[Buffer] = 1; 				// Initialize display buffer
+	display[LedUpdate] = TRUE;			// Initialize the LED color
+	menu[ButtonBlock] = -1;				// Initialize menu button blocks
+	state[ActionBlock] = -1;			// Initialize action button blocks
+	ChangeScreen(HomeScreen);			// Initialize the starting screen
+	SettingsLoad();						// Loads the script settings
+}
+
+// Main script loop
+main {
+	GetCommsState();					// Get I/O device state
+	HandleDisplayUpdate();				// Handle any display updates
+	HandleInputDevice();				// Handle any inputs
+	HandleOutputBlocks();				// Handle any output blocks
+}
+
+// Cycles the menu index based on the adjustment factor, previous and next page identifiers
+function AdjustMenuIndex(index, adjustment, previous, next) {
+	menu[index] = iif(adjustment == 1, previous, next);
+}
+
+// Adjusts a value within bounds
+function AdjustValue(value, lower, upper, adjustment, cyclable) {
+	// Check if the value is increasing
+	if(adjustment > 0) {
+		// Check if the adjustment is in range or the value can cycle
+		if(value + adjustment <= upper) {
+			LedAlert(MenuGreen);
+			return value + adjustment;
+		} else if(cyclable) {
+			LedAlert(MenuGreen);
+			return lower;
+		}
+	} else {
+		// Check if the adjustment is in range or the value can cycle
+		if(value + adjustment >= lower) {
+			LedAlert(MenuGreen);
+			return value + adjustment;
+		} else if(cyclable) {
+			LedAlert(MenuGreen);
+			return upper;
+		}
+	}
+
+	// Determine if a failure alert should be triggered
+	if(!iif(iif(adjustment > 0, value == upper, value == lower), FALSE, TRUE)) {
+		LedAlert(MenuRed);
+	}
+
+	return iif(adjustment > 0, upper, lower);
+}
+
+// This function adjust a value based on how long the button is held for
+function AdjustValueBasedOnTime(time) {
+	return iif(menu[ButtonHoldTime] >= time, 0, menu[ButtonHoldTime] + 10);
+}
+
+// This function calculates a percentage of a value
+function CalculatePercentage(input, percentage) {
+    return (input * percentage) / 100;
+}
+
+// Switch active screen and request display update
+function ChangeScreen(screen) {
+	// Check for setting menu profile to current profile for Options menu
+	if(screen == AimAssistMenu || screen == AntiRecoilMenu) {
+		state[MenuProfile] = state[CurrentProfile];
+	} else {
+		state[MenuProfile] = 0;
+	}
+	
+	// Check how the VM speed should be adjusted
+	if(state[Screen] == HomeScreen) {
+		vm_tctrl(0);													// Use a slower VM speed
+	} else if((state[Screen] == ScriptMenu) && (screen != HomeScreen)) {
+		menu[BaseSetting] = _subMenuBoundaries[screen][2];				// Set the base setting index
+		menu[SubMenuIndex] = 0;											// Reset the sub menu index
+		menu[SettingIndex] = menu[BaseSetting] + menu[SubMenuIndex];	// Set the new setting index
+		menu[EditIndex] = menu[SettingIndex] + GetProfileAdjustment();	// Set the new edit index
+	}
+
+	combo_stop_all();													// Terminate all running combos
+	display[LedUpdate] = TRUE;											// Indicate the LED needs to be reset
+	display[Update] = TRUE;												// Indicate the display should update
+	state[Footer] = 0;													// Set the default footer index
+	state[FooterTimer] = 0;												// Reset the footer timer
+	state[Screen] = screen;												// Set the new screen to display
+	state[ScreenSaver] = 0;												// Reset screen saver state
+}
+
+// This function checks for an action button that toggles a value
+function CheckActionButton(button, variable) {
+	// Check if the button is being heled
+	if(get_ival(button)) {
+		// Check if no button is being held
+		if(menu[ButtonBlock] == -1)  {
+			menu[ButtonBlock] = button;
+		}
+		
+		// Check if the first action button pressed is being held so dont let another button held interrupt the operation
+		if(menu[ButtonBlock] == button) {
+			// Return true if the button is just being pressed
+			if(event_press(button)) {
+				return TRUE;
+			}
+			
+			// Check for increasing speeds
+			if(variable) {
+                // Cycle values based on the hold duration
+                if (get_ptime(button) >= 200) {
+                	// Determine how long the button has been held for
+                    if (get_ptime(button) > 4000)  {
+                        // For every 10ms button is held after 2000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(10);
+                    } else if (get_ptime(button) > 3000) {
+                        // For every 30ms button is held after 2000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(30);
+                    } else if (get_ptime(button) > 2000) {
+                        // For every 50ms button is held after 2000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(50);
+                    } else if (get_ptime(button) > 1000) {
+                        // For every 70ms button is held after 1000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(70);
+                    } else {
+                        // For every 90ms button is held after initial 200ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(90);
+                    }
+                    
+                } else {
+                	return FALSE;
+                }
+			} else {
+				// Cycle values every 160ms milliseconds
+				menu[ButtonHoldTime] = iif(menu[ButtonHoldTime] >= 200, 0, menu[ButtonHoldTime] + 10);
+			}
+			
+			return !menu[ButtonHoldTime];
+		}
+	}
+	else if(event_release(menu[ButtonBlock])) {
+		menu[ButtonBlock] = -1;			// Release any button block
+		menu[ButtonHoldTime] = 0;		// Reset the hold time
+		ResetDisplay();					// Reset the display
+	}
+	
+	return FALSE;
+}
+
+// Checks if a button was held and released for less than 1000ms
+function CheckButtonHoldAndRelease(button_to_check) {
+	return event_release(button_to_check) && (get_ptime(button_to_check) < 1000);
+}
+
+// Checks if the user is cycling a menu setting
+function CheckCycleSetting(lower, upper, isNumeric) {
+	// Set the menu setting index
+	menu[SettingIndex] = menu[BaseSetting] + menu[SubMenuIndex];
+	menu[EditIndex] = menu[SettingIndex] + GetProfileAdjustment();
+	
+	// Check if the user is holding up/down to change the setting
+	if(CheckActionButton(XB1_UP, iif(isNumeric, TRUE, FALSE))) {
+		// Adjust the value
+		settings[menu[EditIndex]] = AdjustValue(
+			settings[menu[EditIndex]],
+			lower,
+			upper,
+			1,
+			!isNumeric
+		);
+		
+		return TRUE; 	// Indicate changes were made
+		
+	} else if(CheckActionButton(XB1_DOWN, iif(isNumeric, TRUE, FALSE))) {
+		// Adjust the value
+		settings[menu[EditIndex]] = AdjustValue(
+			settings[menu[EditIndex]],
+			lower,
+			upper,
+			-1,
+			!isNumeric
+		);
+		
+		return TRUE; 	// Indicate changes were made
+	}
+	
+	return FALSE;		// Indicate no changes were made
+}
+
+// Check for users cycling the submenu
+function CheckCycleSubMenu() {
+	// Check if the user is advancing through the menu
+	if(CheckActionButton(XB1_RIGHT, FALSE)) {
+		return CycleScriptMenu(
+			SubMenuIndex,
+			_subMenuBoundaries[state[Screen]][0],
+			_subMenuBoundaries[state[Screen]][1],
+			1
+		);
+		
+	// Check if the user is reversing through the menu
+	} else if(CheckActionButton(XB1_LEFT, FALSE)) {
+		return CycleScriptMenu(
+			SubMenuIndex,
+			_subMenuBoundaries[state[Screen]][0],
+			_subMenuBoundaries[state[Screen]][1],
+			-1
+		);
+	}
+	else if(event_press(XB1_Y)) {
+		// Check if the user is switching profiles in the anti recoil menu
+		if(state[Screen] == AntiRecoilMenu) {
+			CycleProfile(MenuProfile); // Cycle profile
+			menu[BaseSetting] = _subMenuBoundaries[AntiRecoilMenu][2];		// Set the base setting index
+			menu[SubMenuIndex] = 0;											// Reset the sub menu index
+			menu[SettingIndex] = menu[BaseSetting] + menu[SubMenuIndex];	// Set the new setting index
+			menu[EditIndex] = menu[SettingIndex] + GetProfileAdjustment();	// Set the new edit index
+		}
+		// Check if the user is switching profiles in the aim assist menu
+		else if(state[Screen] == AimAssistMenu) {
+			CycleProfile(MenuProfile); // Cycle profile
+		}
+	}
+	
+	return FALSE;
+}
+
+// Check for exiting a submenu
+function CheckExitSubMenu() {
+	// Check for the user releasing the B button
+	if(event_release(XB1_B)) {
+		ChangeScreen(ScriptMenu);
+		return TRUE; 	// Indicate the menu is being exited
+	}
+	
+	return FALSE;			// Indicate no menu is being exited
+}
+
+// Check for the screen saver status
+function CheckScreenSaver() {
+	// Increase the footer timer
+	state[FooterTimer] += get_rtime();
+	
+	// Check if the footer has timed out
+	if(state[FooterTimer] >= FOOTER_TIME) {
+		state[Footer] = (state[Footer] + 1) % iif(state[Screen] == CustomButtonLayoutMenu, 4, iif(state[Screen] == HomeScreen, 2, _footerCount[state[Screen] + 2]));
+		state[FooterTimer] = 0;			// Reset the footer timer
+		display[Update] = TRUE;			// Indicate the display should update
+	}
+		
+	// Only care about screen saver when on home screen
+	if((state[Screen] != HomeScreen) || state[VehicleMode]) {
+		return FALSE;
+	}
+	
+	// Check if the screen saver is enabled
+	if(state[ScreenSaver] >= SCREENSAVER_TIME) {
+		return TRUE;
+	}
+	
+	// Increase the counter
+	state[ScreenSaver] += get_rtime();
+	
+	// Check if the screen saver is engaging
+	if(state[ScreenSaver] >= SCREENSAVER_TIME) {
+		cls_oled(OLED_BLACK);
+		return TRUE;
+	}
+	
+	return FALSE; // Indicate the screen saver is not running
+}
+
+// Checks for any toggle combos
+function CheckToggles() {
+
+	// Check for exiting Vehicle Mode
+	if(state[VehicleMode]) {
+		if(get_ival(XB1_X) && (get_ptime(XB1_X) >= 1000)) {
+			state[VehicleMode] = FALSE;							// Disable Vehicle Mode
+			display[LedUpdate] = TRUE;							// Indicate the LED should update
+			ResetDisplay();										// Reset the display
+			return TRUE;
+		}
+	} else if(state[HoldingFire] && event_press(XB1_RIGHT) && (get_brtime(XB1_RIGHT) <= 250)) {
+		state[VehicleMode] = TRUE;
+		display[LedUpdate] = TRUE;
+		ResetDisplay();
+		return TRUE;
+	}
+	
+	return FALSE;
+}
+
+// Cycles a script profile
+function CycleProfile(profile) {
+	state[profile] = (state[profile] + 1) % 5;
+	DrawProfileName();
+}
+
+// Cycles the script menu within boundaries
+function CycleScriptMenu(index, lower, upper, adjustment) {
+
+	// Check for coming off a Share/View to Set Default
+	if((state[Screen] == OptionsMenu) && (menu[SubMenuIndex] == 0 || menu[SubMenuIndex] == 10) && (state[Footer] == 1)) {
+		state[Footer] = 0;
+	}
+	
+	// Prevent cycling in anti-recoil menu based on settings
+	if(state[Screen] == AntiRecoilMenu) {
+		// Determine adjustment based on anti-recoil type
+		switch(menu[index]) {
+			case AntiRecoil_AntiRecoil {
+				switch(settings[menu[EditIndex]]) {
+					case Off {
+						// Anti Recoil cannot traverse if disabled
+						LedAlert(MenuRed);
+						return TRUE;
+					} case Basic {
+						// Anti Recoil can only toggle with Strength
+						menu[index] = AntiRecoil_Strength;
+						break;
+					} case Advanced {
+						// Anti Recoil can move towards Strength or back to Kick Time
+						AdjustMenuIndex(index, adjustment, AntiRecoil_Strength, AntiRecoil_KickTime);
+						break;
+					} case Expert {
+						// Anti Recoil can move towards Vertical Start or back to Horizontal Time
+						AdjustMenuIndex(index, adjustment, AntiRecoil_VerticalStart, AntiRecoil_HorizontalMTime);
+						break;
+					}
+				}
+				break;
+			} case AntiRecoil_KickStrength {
+				// [Advanced] Kick Strength can go towards Kick Time or back to Strength
+				AdjustMenuIndex(index, adjustment, AntiRecoil_KickTime, AntiRecoil_Strength);
+				break;
+			} case AntiRecoil_KickTime {
+				// [Advanced] Kick Time can go towards Anti Recoil or back to Kick Strength
+				AdjustMenuIndex(index, adjustment, AntiRecoil_AntiRecoil, AntiRecoil_KickStrength);
+				break;
+			} case AntiRecoil_Strength {
+				// [Basic/Advanced] Strength can toggle with Anti Recoil (on Basic) or move towards Kick Strength (Advanced)
+				if(adjustment == 1 && (settings[AntiRecoil] == Advanced)) {
+					menu[index] = AntiRecoil_KickStrength;
+				} else {
+					menu[index] = AntiRecoil_AntiRecoil;
+				}
+				break;
+			} case AntiRecoil_VerticalStart {
+				// [Expert] Vertical Start can move towards Vertical End or back towards Anti Recoil
+				AdjustMenuIndex(index, adjustment, AntiRecoil_VerticalMid, AntiRecoil_AntiRecoil);
+				break;
+			} case AntiRecoil_VerticalMid {
+				// [Expert] Vertical Mid can move towards Vertical End or back towards Anti Recoil
+				AdjustMenuIndex(index, adjustment, AntiRecoil_VerticalEnd, AntiRecoil_VerticalStart);
+				break;
+			} case AntiRecoil_VerticalEnd {
+				// [Expert] Vertical End can move towards Vertical Time or back towards Anti Recoil
+				AdjustMenuIndex(index, adjustment, AntiRecoil_VerticalSTime, AntiRecoil_VerticalMid);
+				break;
+			} case AntiRecoil_VerticalSTime {
+				// [Expert] Vertical Start Time can move towards Vertical Mid Time or back towards Anti Recoil
+				AdjustMenuIndex(index, adjustment, AntiRecoil_VerticalMTime, AntiRecoil_VerticalEnd);
+				break;
+			} case AntiRecoil_VerticalMTime {
+				// [Expert] Vertical Mid Time can move towards Horizontal Start or back towards Anti Recoil
+				AdjustMenuIndex(index, adjustment, AntiRecoil_HorizontalStart, AntiRecoil_VerticalSTime);
+				break;
+			} case AntiRecoil_HorizontalStart {
+				// [Expert] Horizontal Start can move towards Horizontal Mid or back towards Anti Recoil
+				AdjustMenuIndex(index, adjustment, AntiRecoil_HorizontalMid, AntiRecoil_VerticalMTime);
+				break;
+			} case AntiRecoil_HorizontalMid {
+				// [Expert] Horizontal Mid can move towards Horizontal Time or back towards Anti Recoil
+				AdjustMenuIndex(index, adjustment, AntiRecoil_HorizontalEnd, AntiRecoil_HorizontalStart);
+				break;
+			} case AntiRecoil_HorizontalEnd {
+				// [Expert] Horizontal End can move towards Horizontal Time or back towards Horizontal Mid Time
+				AdjustMenuIndex(index, adjustment, AntiRecoil_HorizontalSTime, AntiRecoil_HorizontalMid);
+				break;
+			} case AntiRecoil_HorizontalSTime {
+				// [Expert] Horizontal Time can move towards Horizontal Mid Time or back towards Horizontal End
+				AdjustMenuIndex(index, adjustment, AntiRecoil_HorizontalMTime, AntiRecoil_HorizontalEnd);
+				break;
+			} case AntiRecoil_HorizontalMTime {
+				// [Expert] Horizontal Time can move towards Anti Recoil or back towards Horizontal Start Time
+				AdjustMenuIndex(index, adjustment, AntiRecoil_AntiRecoil, AntiRecoil_HorizontalSTime);
+				break;
+			} case AntiRecoil_Weapon {
+				// [Weapon] can move towards Vertical Value or back towards Anti Recoil
+				AdjustMenuIndex(index, adjustment, AntiRecoil_VerticalValue, AntiRecoil_AntiRecoil);
+				break;
+			} case AntiRecoil_VerticalValue {
+				// [Automatic/Weapon] can move towards Horizontal Value or back towards Weapon [Weapon] or Anti Recoil [Automatic]
+				if(adjustment == 1) {
+					menu[index] = iif(get_console() == PIO_XB1, AntiRecoil_AntiRecoil, AntiRecoil_HorizontalValue);
+				} else {
+					menu[index] = AntiRecoil_AntiRecoil;
+				}
+				break;
+			} case AntiRecoil_HorizontalValue {
+				// [Automatic/Weapon] can move towards Anti Recoil or back to Vertical Value
+				AdjustMenuIndex(index, adjustment, AntiRecoil_AntiRecoil, AntiRecoil_VerticalValue);
+				break;
+			}
+		}
+		
+		LedAlert(MenuGreen);
+	} else {
+		menu[index] = AdjustValue(menu[index], lower, upper, adjustment, TRUE);	// Adjust the menu index
+	}
+	
+	menu[SettingIndex] = menu[BaseSetting] + menu[SubMenuIndex];			// Set the menu setting index
+	menu[EditIndex] = menu[SettingIndex] + GetProfileAdjustment();			// Get the edit index
+	
+	return TRUE; // Indicate the menu has been cycled
+}
+
+// Executes aim assist
+function ExecuteAimAssist() {
+	// Do nothing if aim assist is not enabled
+	if(!settings[AimAssist]) {
+		return;
+	}
+	
+	// Check for aim assist
+	if(state[HoldingADS] || state[HoldingFire]) {
+		// Retrieve base values
+		output[AimRadius] = settings[Radius];
+		output[AimSpeed] = settings[Speed];
+		
+		// Check for boost
+		if(state[HoldingADS] && state[HoldingFire]) {
+			output[AimRadius] = clamp(output[AimRadius] + settings[BoostRadius], 0, 100);
+			output[AimSpeed] = clamp(output[AimSpeed] + settings[BoostSpeed], 1, 200);
+		}
+	} else {
+		output[AimAngle] = 0; // Reset the angle and return
+		return;
+	}
+	
+	// Only apply assist if aiming or firing
+	if(state[HoldingADS] || state[HoldingFire]) {
+		// Retrieve the X/Y coordinates
+		output[X] = cos[output[AimAngle]] * output[AimRadius];
+		output[Y] = sin[output[AimAngle]] * output[AimRadius];
+		
+		// Advance the angle
+		output[AimAngle] = (output[AimAngle] + output[AimSpeed]) % 360;
+	}
+	
+	// Output stick values
+	Output(stick[Rotate], output[X]);
+	Output(stick[Look], output[Y]);
+}
+
+// Draws a custom button layout button
+function DrawCustomButton(row, Layout_button) {
+	// Draw nothing if no button is set
+	if(Layout_button == -1) {
+		return;
+	}
+	
+	// Determine how the button should be drawn to the screen
+	if(device[Controller] == PIO_XB1) {
+		InsertString(GetOledButtonName(Layout_button));
+	} else {
+		switch(Layout_button) {
+			case XB1_A { InsertCharacter(OLED_CROSS); break; }
+			case XB1_B { InsertCharacter(OLED_CIRCLE); break; }
+			case XB1_X { InsertCharacter(OLED_SQUARE); break; }
+			case XB1_Y { InsertCharacter(OLED_TRIANGLE); break; }
+			default { InsertString(GetOledButtonName(Layout_button)); }
+		}
+	}
+	
+	// Flush the buffer to the display
+	FlushBuffer(AlignRight, (row * (OLED_FONT_SMALL_HEIGHT + 5)) + 5, OLED_FONT_SMALL, iif(menu[SelectedRow] == row, OLED_BLACK, OLED_WHITE));
+}
+
+// Draws "Action: " for binding a custom button
+function DrawCustomButtonName(row, name) {
+	// Draw the name of the action to bind a button to
+	InsertString(_layoutButtonNames[name]);
+	InsertCharacter(ASCII_COLON);
+	InsertCharacter(ASCII_SPACE);
+	FlushBuffer(AlignLeft, (row * (OLED_FONT_SMALL_HEIGHT + 5)) + 5, OLED_FONT_SMALL, iif(menu[SelectedRow] == row, OLED_BLACK, OLED_WHITE));
+	
+	// Draw the custom button
+	DrawCustomButton(row, settings[Layout_ADS + name]);
+}
+
+// Draws a "Hold" or "Press" button
+function DrawHoldOrPressButton(description) {
+	InsertString(description);
+	InsertCharacter(ASCII_SPACE);
+	
+	// Determine which button to display based on input device
+	if(device[Controller] == PIO_XB1) {
+		InsertString(GetOledButtonName(XB1_A));
+	} else {
+		InsertCharacter(OLED_CROSS);
+	}
+}
+
+// Draws the header for a screen
+function DrawMenuHeader() {
+	// Do not print a header for custom button layout menu
+	if(state[Screen] != CustomButtonLayoutMenu) {
+		PrintString(AlignCenter, AlignTop, OLED_FONT_SMALL, OLED_WHITE, GetMenuNameAddr());	// Draw option name
+	}
+}
+
+// Draws the current profile name to the screen and requests an LED update
+function DrawProfileName() {
+	// Indicate the LED should update
+	display[LedUpdate] = TRUE;
+	
+	// Check which screen is being displayed
+	if(state[Screen] != HomeScreen) {
+		// Indicate the script menu must refresh
+		display[Update] = TRUE;
+		return;
+	}
+	
+	// Clear the OLED
+	cls_oled(OLED_BLACK);
+
+	// Display the profile name for 1 second
+	InsertString(addr(_profile));
+	InsertCharacter(ASCII_SPACE);
+	InsertNumber(state[CurrentProfile] + 1);
+	FlushBuffer(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_WHITE);
+	combo_restart(Combo_ProfileDisplay);
+}
+
+// Draws lines on the script menu
+function DrawSeparators(both) {
+	// Check for drawing top separator
+	if(both) {
+		line_oled(0, 16, OLED_WIDTH - 1, 16, 1, OLED_WHITE);
+	}
+	
+	// Draw bottom separator
+	line_oled(0, OLED_HEIGHT - 16, OLED_WIDTH - 1, OLED_HEIGHT - 16, 1, OLED_WHITE);
+}
+
+// Draws a setting based on the type to be displayed
+function DrawSetting(type) {
+	// Determine which type the data should be presented as
+	switch(type & ~Setting_Profile) {
+		case Setting_Button {
+			if(device[Controller] == PIO_XB1) {
+				InsertString(GetOledButtonName(settings[menu[EditIndex]]));
+			} else {
+				switch(settings[menu[EditIndex]]) {
+					case XB1_A { InsertCharacter(OLED_CROSS); break; }
+					case XB1_B { InsertCharacter(OLED_CIRCLE); break; }
+					case XB1_X { InsertCharacter(OLED_SQUARE); break; }
+					case XB1_Y { InsertCharacter(OLED_TRIANGLE); break; }
+					default { InsertString(GetOledButtonName(settings[menu[EditIndex]])); }
+				}
+			}
+			break;
+		}
+		case Setting_Number {
+			InsertNumber(settings[menu[EditIndex]]);
+			break;
+		}
+		case Setting_Percent {
+			if(!settings[menu[EditIndex]]) {
+				InsertString(addr(_noChange));
+				break;
+			}
+			
+			if(settings[menu[EditIndex]] > 0) {
+				InsertCharacter(ASCII_PLUS);
+			}
+			InsertNumber(settings[menu[EditIndex]]);
+			InsertCharacter(ASCII_PERCENT);
+			break;
+		}
+		case Setting_String {
+			InsertString(GetSettingStringAddr());
+			break;
+		}
+		case Setting_Toggle {
+			InsertString(GetToggleStringAddr());
+			break;
+		}
+		case Setting_Timer {
+			// 0 will display "Off"
+			if(!settings[menu[EditIndex]]) {
+				InsertString(addr(_off));
+				
+			// >0 shows value in milliseconds
+			} else {
+				InsertNumber(settings[menu[EditIndex]] * (10 + device[VM]));
+				InsertCharacter(ASCII_LOWER_M);
+				InsertCharacter(ASCII_LOWER_S);
+			}
+			break;
+		}
+		case Setting_RPS {
+
+			// <0 will display "Fully Automatic"
+			if(settings[menu[EditIndex]] < 0) {
+				InsertString(addr(_automatic));
+				
+			// 0 will display "Off"
+			} else if(!settings[menu[EditIndex]]) {
+				InsertString(addr(_off));
+				
+			// >0 shows value in RPS
+			} else {
+				InsertNumber(settings[menu[EditIndex]]);
+				InsertCharacter(ASCII_SPACE);
+				InsertCharacter(ASCII_UPPER_R);
+				InsertCharacter(ASCII_UPPER_P);
+				InsertCharacter(ASCII_UPPER_S);
+			}
+			
+			break;
+		}
+		case Setting_VM {
+			// Check for "Automatic"
+			if(settings[menu[EditIndex]] == 0) {
+				InsertString(addr(_automatic));
+			} else {
+				InsertNumber(_vmSpeed[settings[menu[EditIndex]] - 1]);
+				InsertCharacter(ASCII_LOWER_M);
+				InsertCharacter(ASCII_LOWER_S);
+			}
+			
+			break;
+		}
+		case Setting_EnterSubMenu {
+			// Display "Press X/A"
+			DrawHoldOrPressButton(addr(_press));
+			break;
+		}
+	}
+	
+	// Flush the display buffer
+	FlushBuffer(AlignCenter, AlignCenter, iif(state[Screen] == AimAssistMenu || type == Setting_Number || type == Setting_Button || type == Setting_VM || (state[Screen] == AntiRecoilMenu) || state[Screen] == OptionsMenu, OLED_FONT_MEDIUM, OLED_FONT_SMALL), OLED_WHITE);
+
+	// Check for Profile setting
+	if(type & Setting_Profile) {
+		PrintNumber(AlignRight, AlignTop, OLED_FONT_SMALL, OLED_WHITE, state[MenuProfile] + 1);
+	}
+}
+
+// Builds the sub menu footer
+function DrawSubMenuFooter() {
+	switch(state[Screen]) {
+		case AimAssistMenu {
+			switch(state[Footer]) {
+				case 0 { // "Up/Down to Adjust"
+					InsertCharacter(OLED_UP);
+					InsertCharacter(ASCII_SLASH);
+					InsertCharacter(OLED_DOWN);
+					InsertString(addr(_toAdjust));
+					return;
+				}
+				case 1 { // "Left/Right to Cycle"
+					InsertCharacter(OLED_LEFT);
+					InsertCharacter(ASCII_SLASH);
+					InsertCharacter(OLED_RIGHT);
+					InsertString(addr(_toCycle));
+					return;
+				}
+				case 2 { // "Y/Triangle Change Profiles"
+					InsertCharacter(GetOledCharacter(ASCII_UPPER_Y));
+					InsertCharacter(ASCII_SPACE);
+					InsertString(addr(_changeProfiles));
+					return;
+				}
+				case 3 { // "B/Circle to Go Back"
+					InsertCharacter(GetOledCharacter(ASCII_UPPER_B));
+					InsertString(addr(_toGoBack));
+					return;
+				}
+			}
+			break;
+		}
+		case ControllerMenu {
+			// Determine which footer to display for the script menu
+			if(menu[EditIndex] == ButtonLayout) {
+				switch(state[Footer]) {
+					case 0 { // "A/X to Edit Custom"
+						InsertCharacter(GetOledCharacter(ASCII_UPPER_A));
+						InsertString(addr(_toEditLayout));
+						break;	
+					}
+					case 1 { // "Left/Right to Cycle"
+						InsertCharacter(OLED_LEFT);
+						InsertCharacter(ASCII_SLASH);
+						InsertCharacter(OLED_RIGHT);
+						InsertString(addr(_toCycle));
+						return;
+					}
+					case 2 { // "B/O to Go Back"
+						InsertCharacter(GetOledCharacter(ASCII_UPPER_B));
+						InsertString(addr(_toGoBack));
+						return;
+					}
+				}
+			} else {
+				switch(state[Footer]) {
+					case 0 {
+						// "Up/Down to Adjust"
+						InsertCharacter(OLED_UP);
+						InsertCharacter(ASCII_SLASH);
+						InsertCharacter(OLED_DOWN);
+						InsertString(addr(_toAdjust));
+						return;
+					}
+					case 1 { // "Left/Right to Cycle"
+						InsertCharacter(OLED_LEFT);
+						InsertCharacter(ASCII_SLASH);
+						InsertCharacter(OLED_RIGHT);
+						InsertString(addr(_toCycle));
+						return;
+					}
+					case 2 { // "B/O to Go Back"
+						InsertCharacter(GetOledCharacter(ASCII_UPPER_B));
+						InsertString(addr(_toGoBack));
+						return;
+					}
+				}
+			}
+			
+			if(state[Footer] == 3) {
+				state[Footer] = 0;
+				DrawSubMenuFooter();
+			}
+			
+			return;
+		}
+		case CustomButtonLayoutMenu {
+			// Determine which footer to draw for the toggles menu
+			switch(state[Footer]) {
+				case 0 { // "Hold Button to Set"
+					InsertString(addr(_holdButtonToSet));
+					return;
+				}
+				case 1 { // "View/Share x 2 to Reset"
+					InsertString(GetOledButtonName(XB1_VIEW));
+					InsertCharacter(ASCII_SPACE);
+					InsertCharacter(ASCII_LOWER_X);
+					InsertCharacter(ASCII_SPACE);
+					InsertNumber(2);
+					InsertString(addr(_toReset));
+					return;
+				}
+				case 2 { // "Up/Down to Select"
+					InsertCharacter(OLED_UP);
+					InsertCharacter(ASCII_SLASH);
+					InsertCharacter(OLED_DOWN);
+					InsertString(addr(_toSelect));
+					return;
+				}
+				case 3 { // "B/Circle to Exit"
+					InsertCharacter(GetOledCharacter(ASCII_UPPER_B));
+					InsertString(addr(_toGoBack));
+					return;
+				}
+			}
+			return;
+		}
+		default {
+			// Determine which footer to display for the script menu
+			switch(state[Footer]) {
+				case 0 { // "Up/Down to Adjust"
+					InsertCharacter(OLED_UP);
+					InsertCharacter(ASCII_SLASH);
+					InsertCharacter(OLED_DOWN);
+					InsertString(addr(_toAdjust));
+					return;
+				}
+				case 1 { 
+					// "Left/Right to Cycle"
+					InsertCharacter(OLED_LEFT);
+					InsertCharacter(ASCII_SLASH);
+					InsertCharacter(OLED_RIGHT);
+					InsertString(addr(_toCycle));
+					return;
+				}
+				case 2 {
+					// "B/Circle to Go Back"
+					InsertCharacter(GetOledCharacter(ASCII_UPPER_B));
+					InsertString(addr(_toGoBack));
+					return;
+				}
+			}
+		}
+	}
+}
+
+// Executes anti-recoil
+function ExecuteAntiRecoil() {
+	// Return early if fire is not held
+	if(!state[HoldingFire] || (!rumble[RUMBLE_A] && !rumble[RUMBLE_B])) {
+		return;
+	}
+	
+	// Determine which type of anti-recoil
+	switch(settings[AntiRecoil]) {
+		case Off { return; }
+		case Basic { ExecuteAntiRecoilBasic(); break; }
+		case Advanced { ExecuteAntiRecoilAdvanced(); break; }
+		case Expert { ExecuteAntiRecoilExpert(); break; }
+	}
+	
+	// Output anti-recoil compensation
+	Output(stick[Rotate], antirecoil[AntiRecoil_X] * 328);
+	Output(stick[Look], antirecoil[AntiRecoil_Y] * iif(settings[Inverted], -328, 328));
+}
+
+
+// Executes basic anti-recoil
+function ExecuteAntiRecoilBasic() {
+	// Set the vertical recoil based on the strength
+	antirecoil[AntiRecoil_Y] = settings[Strength + state[CurrentProfile]];
+	
+	// Disable any horizontal recoil correction
+	antirecoil[AntiRecoil_X] = 0;
+}
+
+// Executes advanced anti-recoil
+function ExecuteAntiRecoilAdvanced() {
+	// Check if fire is held for the length of kick time
+	if(get_ptime(button[Fire]) <= (settings[KickTime + state[CurrentProfile]] * get_rtime())) {
+		// Apply the kick strength for the duration of the kick time
+		antirecoil[AntiRecoil_Y] = settings[KickStrength + state[CurrentProfile]];
+	} else {
+		// Revert back to basic anti-recoil strength
+		antirecoil[AntiRecoil_Y] = settings[Strength + state[CurrentProfile]];
+	}
+	
+	// Disable any horizontal recoil correction
+	antirecoil[AntiRecoil_X] = 0;
+}
+
+// Executes expert anti-recoil
+function ExecuteAntiRecoilExpert() {
+	ExecuteAntiRecoilExpertEx(HorizontalSTime, HorizontalMTime, HorizontalStart, HorizontalMid, HorizontalEnd, AntiRecoil_X, AntiRecoil_X_StartTime, AntiRecoil_X_MidTime);
+	ExecuteAntiRecoilExpertEx(VerticalSTime, VerticalMTime, VerticalStart, VerticalMid, VerticalEnd, AntiRecoil_Y, AntiRecoil_Y_StartTime, AntiRecoil_Y_MidTime);
+}
+
+// Performs the expert anti-recoil algorithm
+function ExecuteAntiRecoilExpertEx(start_time, mid_time, start_value, mid_value, end_value, axis, axis_start_time, axis_mid_time) {
+	// Check if fire was pressed
+	if(event_press(button[Fire])) {
+		// Set the axis times
+		antirecoil[axis_start_time] = settings[start_time + state[CurrentProfile]] * get_rtime();
+		antirecoil[axis_mid_time] = antirecoil[axis_start_time] + (settings[mid_time + state[CurrentProfile]] * get_rtime());
+	}
+	
+	// Check if fire is held for equal to or less the start time
+	if(get_ptime(button[Fire]) <= antirecoil[axis_start_time]) {
+		// Apply the starting strength for the duration of the start time
+		antirecoil[axis] = settings[start_value + state[CurrentProfile]];
+	} else if(get_ptime(button[Fire]) <= antirecoil[axis_mid_time]) {
+		// Apply the starting strength for the duration of the mid time
+		antirecoil[axis] = settings[mid_value + state[CurrentProfile]];
+	} else {
+		// Apply the ending strength
+		antirecoil[axis] = settings[end_value + state[CurrentProfile]];
+	}
+}
+
+// Executes Auto Focus
+function ExecuteAutoFocus() {
+	// Check if AutoFocus is enabled
+	if(settings[AutoFocus]) {
+		if(state[HoldingADS]) {
+			set_val(button[SteadyScope], 100);
+		}
+	}
+}
+
+// Executes Auto Ping
+function ExecuteAutoPing() {
+	// Check if Auto Ping is enabled
+	if(settings[AutoPing]) {
+		// Engage when:
+		// - Holding ADS + pressing fire
+		// - FastMelee is ON and pressing Melee
+		if(
+			(state[HoldingADS] && event_press(button[Fire]))
+			|| (settings[FastMelee] && event_press(button[Melee]))
+		) {
+			combo_run(Combo_AutoPing);		
+		}
+	}
+}
+
+// Executes Bunny Hop
+function ExecuteBunnyHop() {
+	// Check if Bunny Hop is enabled
+	if(settings[BunnyHop]) {
+		// Check if the Jump button is being held
+		if(get_ival(button[Jump])) {
+			combo_run(Combo_BunnyHop);
+		} else {
+			combo_stop(Combo_BunnyHop);
+		}
+	}
+}
+
+// Executes Crouch Shot
+function ExecuteCrouchShot() {
+	// Check if Crouch Shot is enabled
+	if(settings[CrouchShot]) {
+		// Check if Grenade is held while ADS is held
+		if(state[HoldingADS]) {
+			if(event_press(button[Grenade])) {
+				combo_run(Combo_Crouch);
+			} else if(get_ival(button[Grenade])) {
+				set_val(button[Fire], 100);
+			} else if(event_release(button[Grenade])) {
+				combo_run(Combo_Crouch);
+			}
+		}
+	}
+}
+
+// Executes Fast Melee
+function ExecuteFastMelee() {
+	// Check if Fast Melee is enabled
+	if(settings[FastMelee]) {
+		// Check if the Melee button is being held
+		if(!state[HoldingADS] && !state[HoldingFire] && get_ival(button[Melee])) {
+			combo_run(Combo_FastMelee);
+			return;
+		}
+		
+		// Terminate fast melee if no conditions are met
+		combo_stop(Combo_FastMelee);
+	}
+}
+
+// Executes any fire mods
+function ExecuteFireMods() {
+	// First check for mods that can engage with Akimbo
+	ExecuteAutoPing();
+	
+	// Engage fire mods
+	ExecuteAutoFocus();
+	ExecuteCrouchShot();
+	ExecuteFastMelee();
+	
+	// Execute aim assist and anti-recoil
+	ExecuteAimAssist();
+	ExecuteAntiRecoil();
+	ExecuteStrafeAssist();
+}
+
+// Executes any movement mods
+function ExecuteMovement() {
+	// First check for mods that don't require nearly full stick movement
+	ExecuteBunnyHop();
+}
+
+// Executes any profile actions
+function ExecuteProfiles() {
+	// Check if the resync button is being held
+	if(get_ival(button[ADS])) {
+		if(event_press(XB1_Y)) {
+			CycleProfile(CurrentProfile); // Cycle profile
+		}
+	}
+}
+
+// Executes the strafe assist
+function ExecuteStrafeAssist() {
+	// Do nothing if not firing and no rumble detected
+	if(!state[HoldingFire] || (!rumble[RUMBLE_A] && !rumble[RUMBLE_B])) {
+		combo_stop(Combo_StrafeAssist);
+		return;
+	}
+	
+	// Execute the strafe assist combo
+	combo_run(Combo_StrafeAssist);
+}
+
+// Render buffered content to screen at specified position
+function FlushBuffer(x, y, size, color) {
+	// Prepare buffer for rendering
+	display[Buffer]--;
+	
+	// Calculate horizontal position
+	if(x == AlignRight) {
+		x = OLED_WIDTH - (display[Buffer] * _fontWidth[size]) - 3; // Additional 2 for padding from border
+	} else if(x == AlignCenter) {
+		x = (OLED_WIDTH >> 1) - ((display[Buffer] * _fontWidth[size]) >> 1);
+	}
+	
+	// Calculate vertical position
+	if(y == AlignBottom) {
+		y = OLED_HEIGHT - _fontHeight[size] - 2; // Additional 2 for padding from border
+	} else if(y == AlignCenter) {
+		y = (OLED_HEIGHT >> 1) - (_fontHeight[size] >> 1);
+	}
+	
+	// Output to display
+	puts_oled(clamp(x, 2, 127), clamp(y, 2, 63), size, display[Buffer], color);
+	
+	// Reset buffer position
+	display[Buffer] = 1;	
+}
+
+// Flushes the footer
+function FlushFooter() {
+	FlushBuffer(AlignCenter, AlignBottom, OLED_FONT_SMALL, OLED_WHITE);
+}
+
+// This function processes the input device
+function GetCommsState() {
+	// Check if the output protocol has changed
+	if(device[Console] != get_console()) {
+		device[Console] = get_console(); // Set the new output protocol
+		ResetDisplay(); // Signal a display update
+	}
+	
+	// Check if the input device has changed
+	if(device[Controller] != get_controller()) {
+		device[Controller] = get_controller(); // Set the new input device
+		ResetDisplay(); // Signal a display update
+		
+		// Only update VM on home screen
+		if(state[Screen] == HomeScreen) {
+			if(settings[DeviceVMSpeed] == VM_Automatic) {
+				// Determine the VM speed to set
+				SetVmSpeed(iif(device[Controller] == PIO_XB1, -2, iif(device[ZenLink] == 3, -8, -6)));
+			} else {
+				// Set the VM speed based on the user configured setting
+				SetVmSpeed(_vmSpeed[settings[DeviceVMSpeed] - 1] - 10);
+			}
+		} else if(settings[DeviceVMSpeed] == VM_Automatic) {
+			// Determine the VM speed to set
+			device[VM] = iif(device[Controller] == PIO_XB1, -2, iif(device[ZenLink] == 3, -8, -6));
+		}
+		
+		// Check for swapping touch with view
+		if(((device[Controller] == PIO_XB1) && (device[Console] != PIO_XB1)) || device[Remapped]) {
+			// Toggle the Touchpad/Share remapping
+			ToggleCrossoverRemap();
+		}
+	}
+	
+	// Check if a ZenLink is detected
+	if((device[ZenLink] != get_info(ZENLINK_STATUS)) && (device[Console] == PIO_PS5)) {
+		// Set the new ZenLink state
+		device[ZenLink] = get_info(ZENLINK_STATUS);
+		
+		// Only update VM on home screen
+		if(state[Screen] == HomeScreen) {
+			if(settings[DeviceVMSpeed] == VM_Automatic) {
+				// Set the VM speed based on the ZenLink state
+				SetVmSpeed(iif(device[ZenLink] == 3, iif(device[Controller] == PIO_XB1, -2, -8), iif(device[Controller] == PIO_XB1, -2, -6)));
+			} else {
+				// Set the VM speed based on the user configured setting
+				SetVmSpeed(_vmSpeed[settings[DeviceVMSpeed] - 1] - 10);
+			}
+		} else if(settings[DeviceVMSpeed] == VM_Automatic) {
+			device[VM] = iif(device[ZenLink] == 3, iif(device[Controller] == PIO_XB1, -2, -8), iif(device[Controller] == PIO_XB1, -2, -6));
+		}
+	}
+	
+	// Retrieve main button states
+	state[HoldingADS] = get_ival(iif(button[ADS] == -1, XB1_LT, button[ADS]));
+	state[HoldingFire] = get_ival(button[Fire]);
+	
+	// Retrieve rumbles
+	rumble[RUMBLE_A] = get_rumble(RUMBLE_A);
+	rumble[RUMBLE_B] = get_rumble(RUMBLE_B);
+}
+
+// Finds a custom button being held
+function GetHeldButton() {
+	// Only proceed if no button is currently detected
+	if(menu[ButtonBlock] == -1) {
+		// Check if the user wants to clear the current button
+		if(event_press(XB1_VIEW) && (get_brtime(XB1_VIEW) <= 250) && (settings[menu[SettingIndex]] != -1)) {
+			settings[menu[SettingIndex]] = -1;					// Reset the new custom button
+			LedAlert(MenuGreen);
+			return TRUE;
+		}
+		
+		// Iterate through each of the configurable buttons
+		for(j = 0; j < (sizeof(_allowableButtons) / sizeof(_allowableButtons[0])); j++) {
+			// Check if the button is held for 1000ms or longer
+			if(get_ival(_allowableButtons[j]) && (get_ptime(_allowableButtons[j]) >= 1000)) {
+				// Set a button block
+				menu[ButtonBlock] = _allowableButtons[j];
+				
+				// Make sure the button is not already assigned
+				if(settings[menu[SettingIndex]] == _allowableButtons[j]) {
+					return FALSE;
+				}
+				
+				// Set the new button
+				settings[menu[SettingIndex]] = _allowableButtons[j];
+				
+				// Indicate the operation was successful
+				return TRUE;
+			}
+		}
+		
+	// Check if the button being held is released
+	} else if(event_release(menu[ButtonBlock])) {
+		// Reset any button block
+		menu[ButtonBlock] = -1;
+		HandleLedUpdate();
+	}
+	
+	// Indicate the operation failed
+	return FALSE;													
+}
+
+// Gets the address of a string for a menu
+function GetMenuNameAddr() {
+	switch(state[Screen]) {
+		case AimAssistMenu { return _aimassistMenuNames[menu[SubMenuIndex]]; }
+		case AntiRecoilMenu { return _antirecoilMenuNames[menu[SubMenuIndex]]; }
+		case ControllerMenu { return _controllerMenuNames[menu[SubMenuIndex]]; }
+		case OptionsMenu { return _optionsMenuNames[menu[SubMenuIndex]]; }
+		case SettingsMenu { return _settingsMenuNames[menu[SubMenuIndex]]; }
+	}
+	
+	// Default return case
+	return 0;
+}
+
+// Returns a button name based on PlayStation or Xbox
+function GetOledButtonName(button) {
+	return iif(button == -1, addr(_buttonNameNotSet), iif(device[Controller] == PIO_XB1, _buttonNameXb[button], _buttonNamePs[button]));
+}
+
+// Returns a character based on PlayStation or Xbox
+function GetOledCharacter(character) {
+	// Return the Xbox character by default
+	if(device[Controller] == PIO_XB1) {
+		return character;
+	}
+	
+	// Determine which PlayStation character to return
+	switch(character) {
+		case ASCII_UPPER_A { return OLED_CROSS; }
+		case ASCII_UPPER_B { return OLED_CIRCLE; }
+		case ASCII_UPPER_X { return OLED_SQUARE; }
+		case ASCII_UPPER_Y { return OLED_TRIANGLE; }
+	}
+	
+	return character;
+}
+
+// Returns the adjustment to the setting index being adjusted
+function GetProfileAdjustment() {
+	if(state[Screen] == AimAssistMenu) {
+		switch(menu[SettingIndex]) {
+			case AimAssistEdit { return state[MenuProfile]; }
+			case RadiusEdit { return 4 + state[MenuProfile]; }
+			case SpeedEdit { return 8 + state[MenuProfile]; }
+			case BoostRadiusEdit { return 12 + state[MenuProfile]; }
+			case BoostSpeedEdit { return 16 + state[MenuProfile]; }
+			case StrafeRadiusEdit { return 20 + state[MenuProfile]; }
+			case StrafeTimeEdit { return 24 + state[MenuProfile]; }
+		}
+	} else if(state[Screen] == AntiRecoilMenu) {
+		switch(menu[SettingIndex]) {
+			case AntiRecoilEdit { return state[MenuProfile]; }
+			case StrengthEdit { return 4 + state[MenuProfile]; }
+			case KickStrengthEdit { return 8 + state[MenuProfile]; }
+			case KickTimeEdit { return 12 + state[MenuProfile]; }
+			case VerticalStartEdit { return 16 + state[MenuProfile]; }
+			case VerticalMidEdit { return 20 + state[MenuProfile]; }
+			case VerticalEndEdit { return 24 + state[MenuProfile]; }
+			case VerticalSTimeEdit { return 28 + state[MenuProfile]; }
+			case VerticalMTimeEdit { return 32 + state[MenuProfile]; }
+			case HorizontalStartEdit { return 36 + state[MenuProfile]; }
+			case HorizontalMidEdit { return 40 + state[MenuProfile]; }
+			case HorizontalEndEdit { return 44 + state[MenuProfile]; }
+			case HorizontalSTimeEdit { return 48 + state[MenuProfile]; }
+			case HorizontalMTimeEdit { return 52 + state[MenuProfile]; }
+		}
+	}
+	
+	return 0;
+}
+
+// Returns a string address
+function GetSettingStringAddr() {
+	// Determine which screen is showing
+	switch(state[Screen]) {
+		case AntiRecoilMenu {
+			// Return anti-recoil type name
+			if(menu[SubMenuIndex] == AntiRecoil_AntiRecoil) {
+				return _antirecoilNames[settings[menu[EditIndex]]];
+			}
+			break;
+		}
+	}
+	
+	return 0;
+}
+
+// Returns a toggle string address
+function GetToggleStringAddr() {
+	return iif(settings[menu[EditIndex]], addr(_on), addr(_off));
+}
+
+// Handles a display update
+function HandleDisplayUpdate() {
+	// Check if the LED requires an update
+	if(display[LedUpdate]) {
+		HandleLedUpdate();
+	}
+	
+	// Only proceed if the display is signalled to update
+	if(CheckScreenSaver() || !display[Update]) {
+		return;
+	}
+	
+	// Clear the screen and draw an outline
+	cls_oled(OLED_BLACK);
+	rect_oled(0, 0, OLED_WIDTH, OLED_HEIGHT, 0, OLED_WHITE);
+	
+	// Call the appropriate handler
+	switch(state[Screen]) {
+		case HomeScreen { RenderHomeScreen(); break; }
+		case ScriptMenu { RenderScriptMenu(); break; }
+		default {
+			// Call the appropriate sub menu handler
+			switch(state[Screen]) {
+				case AimAssistMenu { RenderAimAssistMenu(); break; }
+				case AntiRecoilMenu { RenderAntirecoilMenu(); break; }
+				case ControllerMenu { RenderControllerMenu(); break; }
+				case CustomButtonLayoutMenu { RenderCustomButtonLayoutMenu(); break; }
+				case OptionsMenu { RenderOptionsMenu(); break; }
+				case SettingsMenu { RenderSettingsMenu(); break; }
+			}
+			
+			DrawMenuHeader();			// Draw the menu header
+			
+			// Check for universal rendering of a sub menu
+			if(IsSubMenu()) {
+				DrawSeparators(TRUE);
+				DrawSubMenuFooter(); // Build the sub menu footer
+			} else if(state[Screen] == CustomButtonLayoutMenu) {
+				DrawSeparators(FALSE);	// Draw bottom separator for formatting
+				DrawSubMenuFooter();	// Draw the sub menu footer
+			}
+		}
+	}
+	
+	FlushFooter();					// Flush the footer
+	display[Update] = FALSE;		// Indicate the display has been updated
+}
+
+// Handles input device communication
+function HandleInputDevice() {
+	// Call the appropriate handler
+	switch(state[Screen]) {
+		case HomeScreen { ProcessHomeScreen(); return; }
+		case ScriptMenu { ProcessScriptMenu(); return; }
+		default {
+			// Check for exiting to the script menu or cycling a sub menu
+			if(IsSubMenu()) {
+				// Handle any universal sub menu actions
+				if(!CheckExitSubMenu() && !CheckCycleSubMenu()) {
+					switch(state[Screen]) {
+						case AimAssistMenu { ProcessAimAssistMenu(); return; }
+						case AntiRecoilMenu { ProcessAntirecoilMenu(); return; }
+						case ControllerMenu { ProcessControllerMenu(); return; }
+						case OptionsMenu { ProcessOptionsMenu(); return; }
+						case SettingsMenu { ProcessSettingsMenu(); return; }
+					}
+				}
+				return;
+			} else {
+				// Handle any deeper menus
+				switch(state[Screen]) {
+					case CustomButtonLayoutMenu { ProcessCustomButtonLayoutMenu(); return; }
+				}
+			}
+		}
+	}
+}
+
+// Handles an LED update
+function HandleLedUpdate() {
+	// Only update if there is no button block or alert running
+	if((menu[ButtonBlock] == -1) && !combo_running(Combo_LedAlert)) {
+		// Check if the screen is a menu with profile-specific settings
+		if(state[Screen] == HomeScreen) {
+			SetLedColor(iif(state[VehicleMode], White, state[CurrentProfile]));
+		} else if(state[Screen] == AimAssistMenu || state[Screen] == AntiRecoilMenu) {
+			SetLedColor(state[MenuProfile]);
+		} else {
+			SetLedColor(Blue);
+		}
+	}
+	
+	display[LedUpdate] = FALSE;	// Indicate the LED has been updated
+}
+
+// Handles any button blocks
+function HandleOutputBlocks() {
+	// Check for blocking all inputs while in menus
+	if(state[Screen] != HomeScreen) {
+		block_all_inputs();
+		return;
+	}
+	
+	// Check for blocking any menu actions
+	if(state[HoldingADS]) {
+		set_val(XB1_VIEW, 0);
+		set_val(XB1_MENU, 0);
+		set_val(XB1_Y, 0);
+	}
+	
+	// Check for blocking rumble
+	if(settings[BlockVibration]) {
+		block_rumble();
+	}
+	
+	// Check for crouch shot block
+	if(settings[CrouchShot] && state[HoldingADS] && get_ival(button[Grenade])) {
+		set_val(button[Grenade], 0);
+	}
+}
+
+// Ternary operator replacement
+function iif(expression, true, false) {
+	// Evaluate expression
+	if(expression) {
+		return true; // Return truepart
+	}
+	
+	// Return falsepart
+	return false;
+}
+
+// Add character to display buffer
+function InsertCharacter(value) {
+	putc_oled(display[Buffer], value); // STore the 
+	display[Buffer]++; // Advance to the next position
+}
+
+// Add number to display buffer
+function InsertNumber(value) {
+	// Handle negatives
+	if(value < 0) {
+		InsertCharacter(ASCII_MINUS);	// Insert '-' into the display buffer
+		value = abs(value);
+	}
+	
+	display[BufferCopyValue] = value;
+	display[BufferDigitCount] = 0;
+	
+    // Count digits
+    do {
+        display[BufferCopyValue] /= 10;
+        display[BufferDigitCount]++;
+    } while(display[BufferCopyValue]);
+    
+    // Extract digits
+    for(i = 0; i < display[BufferDigitCount]; i++) {
+        display[BufferDigits + i] = (value % 10) + 48;
+        value /= 10;
+    }
+    
+   // Insert digits in correct order
+    for(i = display[BufferDigitCount] - 1; i >= 0; i--) {
+        InsertCharacter(display[BufferDigits + i]);
+    }
+}
+
+// Add string to display buffer
+function InsertString(str) {
+	do {
+		InsertCharacter(dint8(str)); 	// Insert the current character
+		str++; 							// Advance to the next character in the string
+	} while(dint8(str));
+}
+
+// Returns whether or not the user is in a sub menu
+function IsSubMenu() {
+	return (state[Screen] >= SCRIPT_MENU_MIN && state[Screen] <= SCRIPT_MENU_MAX);
+}
+
+// This function triggers an led alert
+function LedAlert(color) {
+	ResetDisplay();
+	SetLedColor(color);
+	combo_restart(Combo_LedAlert);
+}
+
+// Outputs a value to a stick
+function Output(stick, value) {
+	set_val(stick, clamp(value * (32767 - abs(get_val(stick))) / 32767 + get_val(stick), -32768, 32767));
+}
+
+// This function prints a character to the screen
+function PrintCharacter(x, y, size, color, character) {
+	InsertCharacter(character);
+	FlushBuffer(x, y, size, color);
+}
+
+// Render number at specified position
+function PrintNumber(x, y, size, color, value) {
+	InsertNumber(value);
+	FlushBuffer(x, y, size, color);
+}
+
+
+// This function prints a string to the screen
+function PrintString(x, y, size, color, text) {
+	InsertString(text);
+	FlushBuffer(x, y, size, color);
+}
+
+// Processes the aim assist menu
+function ProcessAimAssistMenu() {
+	// Check for cycling settings
+	CheckCycleSetting(_aimassistSettings[menu[SubMenuIndex]][0], _aimassistSettings[menu[SubMenuIndex]][1], !(_aimassistSettings[menu[SubMenuIndex]][2] & Setting_String));
+}
+
+// Processes any antirecoil menu input
+function ProcessAntirecoilMenu() {
+	// Check for cycling settings
+	CheckCycleSetting(_antirecoilSettings[menu[SubMenuIndex]][0], _antirecoilSettings[menu[SubMenuIndex]][1], !(_antirecoilSettings[menu[SubMenuIndex]][2] & Setting_String));
+}
+
+// Processes any controller menu input
+function ProcessControllerMenu() {
+	// Cycle through any settings
+	if(CheckCycleSetting(_controllerSettings[menu[SubMenuIndex]][0], _controllerSettings[menu[SubMenuIndex]][1], !(_controllerSettings[menu[SubMenuIndex]][2] & Setting_String))) {
+		// Check if the user just changed to the Custom setting
+		if(menu[EditIndex] == ButtonLayout) {
+			state[Footer] = 3;					// Reset to the first footer
+			state[FooterTimer] = 0;				// Reset the footer timer
+		}
+	} else if(event_press(XB1_A) && (menu[SubMenuIndex] == ButtonLayout)) {
+		ChangeScreen(CustomButtonLayoutMenu);	// Enter into the Custon Button Layout menu
+		LedAlert(MenuGreen);					// Alert success
+		menu[SelectedItem] = 0;					// Reset selected item
+		menu[SelectedRow] = 0;					// Reset highlighted row
+	}
+}
+
+// Processes any custom button layout menu input
+function ProcessCustomButtonLayoutMenu() {
+	// Set the settings index
+	menu[SettingIndex] = Layout_ADS + menu[SelectedItem];
+
+	// Check for user actions
+	if(CheckButtonHoldAndRelease(XB1_B)) {
+		menu[SettingIndex] = ButtonLayout;		// Revert setting index back to button layout
+		ChangeScreen(ControllerMenu);			// Revert back to the Controller screen
+		state[Footer] = 3;						// Reset to the first footer
+	} else if(CheckButtonHoldAndRelease(XB1_DOWN)) {
+		menu[SelectedRow] = AdjustValue(menu[SelectedRow], 0, 2, 1, FALSE);
+		menu[SelectedItem] = AdjustValue(menu[SelectedItem], 0, 7, 1, FALSE);
+	} else if(CheckButtonHoldAndRelease(XB1_UP)) {
+		menu[SelectedRow] = AdjustValue(menu[SelectedRow], 0, 2, -1, FALSE);
+		menu[SelectedItem] = AdjustValue(menu[SelectedItem], 0, 7, -1, FALSE);
+	} else if(GetHeldButton()) {
+		// Iterate through each of the custom buttons to check for duplicates
+		for(j = 0; j < 8; j++) {
+			// Make sure it is not checking against itself
+			if(j != menu[SelectedItem]) {
+				// Check for a duplicate setting
+				if(settings[Layout_ADS + j] == settings[menu[SettingIndex]]) {
+					settings[menu[SettingIndex]] = -1; // Disallow the button to be set
+					LedAlert(MenuRed); // Indicate failure
+					return;
+				}
+			}
+		}
+		
+		// Indicate success
+		LedAlert(MenuGreen);
+	}
+}
+
+// Processes any home screen input
+function ProcessHomeScreen() {
+	// Check for a menu action
+	if(state[HoldingADS]) {
+		// Check for user entering script menu
+		if(event_press(XB1_MENU)) {
+			ChangeScreen(ScriptMenu); // Enter script menu
+			combo_stop_all(); // Stop all combos
+			return;
+		}
+	}
+	
+	// Check for any toggle combos
+	if(CheckToggles()) {
+		return;
+	}
+	
+	// No further processing if Vehicle Mode is engaged
+	if(state[VehicleMode]) {
+		return;
+	}
+	
+	SetHairTriggers(); // Set hair triggers
+	ExecuteFireMods(); // Execute any firing mods
+	ExecuteMovement(); // Execute any movement mods
+	ExecuteProfiles(); // Execute any profile actions
+}
+
+// Processes any script menu input
+function ProcessScriptMenu() {
+	// Check for entering a submenu
+	if(event_press(XB1_A)) {
+		ChangeScreen(menu[ScriptMenuIndex]);
+		menu[SettingIndex] = menu[BaseSetting] + menu[SubMenuIndex];			// Set the menu setting index
+		menu[EditIndex] = menu[SettingIndex] + GetProfileAdjustment();			// Get the edit index
+		return;
+	}
+	
+	// Check for exiting the script menu
+	if(event_release(XB1_B)) {
+		device[Controller] = PIO_NONE; // Clear controller state to reset VM
+		SettingsSave(); // Save settings
+		ChangeScreen(HomeScreen); // Go back to home screen
+		return;
+	}
+	
+	// Check for scrolling downwards
+	if(CheckActionButton(XB1_DOWN, FALSE)) {
+		menu[SubMenuIndex] = 0;												// Reset the sub menu index
+		CycleScriptMenu(ScriptMenuIndex, SCRIPT_MENU_MIN, SCRIPT_MENU_MAX, 1);
+		return;
+	}
+	
+	// Check for scrolling upwards
+	if(CheckActionButton(XB1_UP, FALSE)) {
+		menu[SubMenuIndex] = 0;												// Reset the sub menu index
+		CycleScriptMenu(ScriptMenuIndex, SCRIPT_MENU_MIN, SCRIPT_MENU_MAX, -1);
+		return;
+	}
+}
+
+// Processes options menu input
+function ProcessOptionsMenu() {
+	CheckCycleSetting(_optionsSettings[menu[SubMenuIndex]][0], _optionsSettings[menu[SubMenuIndex]][1], !(_optionsSettings[menu[SubMenuIndex]][2] & Setting_String));
+}
+
+
+// Processes settings menu input
+function ProcessSettingsMenu() {
+	CheckCycleSetting(_settingsSettings[menu[SubMenuIndex]][0], _settingsSettings[menu[SubMenuIndex]][1], !(_settingsSettings[menu[SubMenuIndex]][2] & Setting_String));
+	
+	// Check for adjusting the VM speed
+	if(menu[EditIndex] == DeviceVMSpeed) {
+		if((device[ZenLink] != 3) && (device[Console] == PIO_PS5) && (settings[DeviceVMSpeed] == 4)) {
+			device[VM] = -6; // Force VM speed to 4ms
+			settings[DeviceVMSpeed] = 3; // Revert VM setting back to 4ms
+			LedAlert(MenuRed); // Indicate this VM speed cannot be used
+		} else if(settings[DeviceVMSpeed] != 0) {
+			device[VM] = iif(settings[DeviceVMSpeed], _vmSpeed[settings[DeviceVMSpeed] - 1] - 10, 0); // Allow the VM speed to be set
+		} else {
+			device[VM] = iif(device[ZenLink] == 3, iif(device[Controller] == PIO_XB1, -2, -8), iif(device[Controller] == PIO_XB1, -2, -6));
+		}
+	}
+}
+
+// Renders the aim-assist menu
+function RenderAimAssistMenu() {
+	DrawSetting(_aimassistSettings[menu[SubMenuIndex]][2]);
+}
+
+// Renders the antirecoil menu
+function RenderAntirecoilMenu() {
+	DrawSetting(_antirecoilSettings[menu[SubMenuIndex]][2]);
+}
+
+// Renders the controller menu
+function RenderControllerMenu() {
+	// Draw option value
+	DrawSetting(_controllerSettings[menu[SubMenuIndex]][2]);
+}
+
+// Renders the custom button layout menu
+function RenderCustomButtonLayoutMenu() {
+	// Draw the highlighted selection
+	rect_oled(2, (menu[SelectedRow] * (OLED_FONT_SMALL_HEIGHT + 5)) + 2, OLED_WIDTH - 4, OLED_FONT_SMALL_HEIGHT + 5, 1, OLED_WHITE);
+	
+	// Draw each line showing the action and button currently set
+	DrawCustomButtonName(0, menu[SelectedItem] - menu[SelectedRow] + 0);
+	DrawCustomButtonName(1, menu[SelectedItem] - menu[SelectedRow] + 1);
+	DrawCustomButtonName(2, menu[SelectedItem] - menu[SelectedRow] + 2);
+}
+
+// Renders the home screen
+function RenderHomeScreen() {
+	// Check for Parachute mode
+	if(state[VehicleMode]) {
+		PrintString(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_WHITE, addr(_vehicle));
+		return;
+	}
+	
+	// Print the script title and author
+	PrintString(AlignCenter, AlignTop, OLED_FONT_MEDIUM, OLED_WHITE, addr(_scriptTitle));
+	PrintString(AlignCenter, (OLED_HEIGHT >> 1) - 4, OLED_FONT_MEDIUM, OLED_WHITE, addr(_scriptAuthor));
+	
+	// Determine which footer to display
+	switch(state[Footer]) {
+		case 0 {
+			// Format the version string (major.minor)
+			InsertString(addr(_scriptVersion));
+			InsertCharacter(ASCII_SPACE);
+			InsertNumber(_versionInfo[0]);
+			InsertCharacter(ASCII_PERIOD);
+			
+			// Format the version minor to two digits
+			if(_versionInfo[1] < 10) { 
+				InsertNumber(0);
+			}
+			
+			// Finalize the version string and flush the buffer
+			InsertNumber(_versionInfo[1]);
+			break;
+		}
+		case 1 {
+			// "Menu: LT & Menu"
+			InsertString(addr(_menu));
+			InsertString(GetOledButtonName(iif(button[ADS] == -1, XB1_LT, button[ADS])));
+			InsertCharacter(ASCII_SPACE);
+			InsertCharacter(ASCII_AMPERSAND);
+			InsertCharacter(ASCII_SPACE);
+			InsertString(GetOledButtonName(XB1_MENU));
+			break;
+		}
+	}
+}
+
+// Renders the options menu
+function RenderOptionsMenu() {
+	DrawSetting(_optionsSettings[menu[SubMenuIndex]][2]); // Draw option value
+}
+
+// Renders the script menu
+function RenderScriptMenu() {
+	// Draw a separator for formatting
+	DrawSeparators(FALSE);
+	
+	// Draw the menu options
+	PrintString(AlignCenter, AlignTop, OLED_FONT_SMALL, OLED_WHITE, _scriptMenuNames[iif(menu[ScriptMenuIndex] - 1 < SCRIPT_MENU_MIN, SCRIPT_MENU_MAX, menu[ScriptMenuIndex] - 1)]);
+	PrintString(AlignCenter, AlignTop + _fontHeight[OLED_FONT_SMALL] + 1, OLED_FONT_MEDIUM, OLED_WHITE, _scriptMenuNames[menu[ScriptMenuIndex]]);
+	PrintString(AlignCenter, AlignTop + _fontHeight[OLED_FONT_SMALL] + _fontHeight[OLED_FONT_MEDIUM] + 2, OLED_FONT_SMALL, OLED_WHITE, _scriptMenuNames[iif(menu[ScriptMenuIndex] + 1 > SCRIPT_MENU_MAX, SCRIPT_MENU_MIN, menu[ScriptMenuIndex] + 1)]);
+	
+	// Determine which footer to display
+	switch(state[Footer]) {
+		case 0 {
+			InsertCharacter(OLED_UP);
+			InsertCharacter(ASCII_SLASH);
+			InsertCharacter(OLED_DOWN);
+			InsertString(addr(_toSelect));
+			break;	
+		}
+		case 1 {
+			InsertCharacter(GetOledCharacter(ASCII_UPPER_A));
+			InsertString(addr(_toEnterMenu));
+			break;
+		}
+		case 2 {
+			InsertCharacter(GetOledCharacter(ASCII_UPPER_B));
+			InsertString(addr(_toSaveAndExit));
+			break;
+		}
+	}
+}
+
+// Renders the settings menu
+function RenderSettingsMenu() {
+	// Draw the setting
+	DrawSetting(_settingsSettings[menu[SubMenuIndex]][2]);
+}
+
+// Resets the display
+function ResetDisplay() {
+	display[Update] = TRUE;				// Indicate the display must update
+	state[ScreenSaver] = 0;				// Reset the screensaver
+}
+
+// Sets the button layout for the script
+function SetButtonLayout() {
+	// Set custom button layout
+	button[ADS] = iif(settings[Layout_ADS] == -1, XB1_LT, settings[Layout_ADS]);
+	button[Fire] = settings[Layout_Fire];
+	button[Ping] = settings[Layout_Ping];
+	button[SteadyScope] = settings[Layout_SteadyScope];
+	button[Crouch] = settings[Layout_Crouch];
+	button[Melee] = settings[Layout_Melee];
+	button[Jump] = settings[Layout_Jump];
+	button[Grenade] = settings[Layout_Grenade];
+}
+
+// Sets hair triggers
+function SetHairTriggers() {
+	// Check if hair triggers are enabled
+	if(settings[HairTriggers]) {
+		set_val(button[ADS], iif(state[HoldingADS], 100, 0));
+		set_val(button[Fire], iif(state[HoldingFire], 100, 0));
+	}
+}
+
+// This fucntion sets the Cronus LED color based on a given hue, saturation and brightness
+function SetLedColor(color) {
+	set_hsb(_color[color][Hue], _color[color][Saturation], _color[color][Brightness]);
+}
+
+// Sets the stick layout for the script
+function SetStickLayout() {
+	// Set the joystick axis information
+	stick[Move] = POLAR_LY;
+	stick[Strafe] = POLAR_LX;
+	stick[Look] = POLAR_RY;
+	stick[Rotate] = POLAR_RX;
+}
+
+// Sets and updates the VM speed
+function SetVmSpeed(speed) {
+	device[VM] = speed;					// Store the VM difference
+	vm_tctrl(device[VM]);				// Set the new VM speed
+}
+
+// Loads the script settings
+function SettingsLoad() {
+	// Reset SPVAR state
+	SpvarReset();
+	
+	// Check if the first bit is set to indicate a saved configuration
+	if(SpvarRead(0, 1)) {
+		// Anti Recoil
+		for(i = 0; i < 5; i++) {
+			settings[AntiRecoil + i] = SpvarRead(Off, Expert);
+			settings[Strength + i] = SpvarRead(0, 100);
+			settings[KickStrength + i] = SpvarRead(0, 100);
+			settings[KickTime + i] = SpvarRead(0, 250);
+			settings[VerticalStart + i] = SpvarRead(0, 100);
+			settings[VerticalMid + i] = SpvarRead(0, 100);
+			settings[VerticalEnd + i] = SpvarRead(0, 100);
+			settings[VerticalSTime + i] = SpvarRead(0, 250);
+			settings[VerticalMTime + i] = SpvarRead(0, 250);
+			settings[HorizontalStart + i] = SpvarRead(-100, 100);
+			settings[HorizontalMid + i] = SpvarRead(-100, 100);
+			settings[HorizontalEnd + i] = SpvarRead(-100, 100);
+			settings[HorizontalSTime + i] = SpvarRead(0, 250);
+			settings[HorizontalMTime + i] = SpvarRead(0, 250);
+		}
+
+		// Aim Assist
+		for(i = 0; i < 5; i++) {
+			settings[AimAssist + i] = SpvarRead(FALSE, TRUE);
+			settings[Radius + i] = SpvarRead(0, 100);
+			settings[Speed + i] = SpvarRead(1, 100);
+			settings[BoostRadius + i] = SpvarRead(-100, 100);
+			settings[BoostSpeed + i] = SpvarRead(-100, 100);
+			settings[StrafeRadius + i] = SpvarRead(0, 100);
+			settings[StrafeTime + i] = SpvarRead(1, 50);
+		}
+		
+		// Controller Button Layout
+		settings[Layout_ADS] = SpvarRead(-1, XB1_X);
+		settings[Layout_Fire] = SpvarRead(-1, XB1_X);
+		settings[Layout_Ping] = SpvarRead(-1, XB1_X);
+		settings[Layout_SteadyScope] = SpvarRead(-1, XB1_X);
+		settings[Layout_Crouch] = SpvarRead(-1, XB1_X);
+		settings[Layout_Melee] = SpvarRead(-1, XB1_X);
+		settings[Layout_Jump] = SpvarRead(-1, XB1_X);
+		settings[Layout_Grenade] = SpvarRead(-1, XB1_X);
+		
+		// Controller
+		settings[HairTriggers] = SpvarRead(FALSE, TRUE);
+		settings[Inverted] = SpvarRead(FALSE, TRUE);
+		
+		// Options
+		settings[AutoFocus] = SpvarRead(FALSE, TRUE);
+		settings[AutoPing] = SpvarRead(FALSE, TRUE);
+		settings[BunnyHop] = SpvarRead(FALSE, TRUE);
+		settings[CrouchShot] = SpvarRead(FALSE, TRUE);
+		settings[FastMelee] = SpvarRead(FALSE, TRUE);
+		
+		// Settings
+		settings[BlockVibration] = SpvarRead(FALSE, TRUE);
+		settings[DeviceVMSpeed] = SpvarRead(0, 4);
+		
+	} else {
+		// Set default aim assist settings
+		for(i = 0; i < 5; i++) {
+			settings[Radius + i] = 5;
+			settings[Speed + i] = 24;
+			settings[BoostRadius + i] = 1;
+			settings[BoostSpeed + i] = 10;
+			settings[StrafeRadius + i] = 0;
+			settings[StrafeTime + i] = 4;
+		}
+		
+		// Set default Custom Layout buttons
+		for(i = 0; i < 8; i++) {
+			settings[Layout_ADS + i] = -1;
+		}
+	}
+	
+	// Update the button and stick layouts
+	UpdateControls();
+}
+
+// Saves the script settings
+function SettingsSave() {
+	// Reset SPVAR state
+	SpvarReset();
+	
+	// Write first bit to indicate settings exist
+	SpvarSave(1, 0, 1);
+	
+	// Anti Recoil
+	for(i = 0; i < 5; i++) {
+		SpvarSave(settings[AntiRecoil + i], Off, Expert);
+		SpvarSave(settings[Strength + i], 0, 100);
+		SpvarSave(settings[KickStrength + i], 0, 100);
+		SpvarSave(settings[KickTime + i], 0, 250);
+		SpvarSave(settings[VerticalStart + i], 0, 100);
+		SpvarSave(settings[VerticalMid + i], 0, 100);
+		SpvarSave(settings[VerticalEnd + i], 0, 100);
+		SpvarSave(settings[VerticalSTime + i], 0, 250);
+		SpvarSave(settings[VerticalMTime + i], 0, 250);
+		SpvarSave(settings[HorizontalStart + i], -100, 100);
+		SpvarSave(settings[HorizontalMid + i], -100, 100);
+		SpvarSave(settings[HorizontalEnd + i], -100, 100);
+		SpvarSave(settings[HorizontalSTime + i], 0, 250);
+		SpvarSave(settings[HorizontalMTime + i], 0, 250);
+	}
+	
+	// Aim Assist
+	for(i = 0; i < 5; i++) {
+		SpvarSave(settings[AimAssist + i], FALSE, TRUE);
+		SpvarSave(settings[Radius + i], 0, 100);
+		SpvarSave(settings[Speed + i], 1, 100);
+		SpvarSave(settings[BoostRadius + i], -100, 100);
+		SpvarSave(settings[BoostSpeed + i], -100, 100);
+		SpvarSave(settings[StrafeRadius + i], 0, 100);
+		SpvarSave(settings[StrafeTime + i], 1, 50);
+	}
+	
+	// Controller Button Layout
+	SpvarSave(settings[Layout_ADS], -1, XB1_X);
+	SpvarSave(settings[Layout_Fire], -1, XB1_X);
+	SpvarSave(settings[Layout_Ping], -1, XB1_X);
+	SpvarSave(settings[Layout_SteadyScope], -1, XB1_X);
+	SpvarSave(settings[Layout_Crouch], -1, XB1_X);
+	SpvarSave(settings[Layout_Melee], -1, XB1_X);
+	SpvarSave(settings[Layout_Jump], -1, XB1_X);
+	SpvarSave(settings[Layout_Grenade], -1, XB1_X);
+	
+	// Controller
+	SpvarSave(settings[HairTriggers], FALSE, TRUE);
+	SpvarSave(settings[Inverted], FALSE, TRUE);
+	
+	// Options
+	SpvarSave(settings[AutoFocus], FALSE, TRUE);
+	SpvarSave(settings[AutoPing], FALSE, TRUE);
+	SpvarSave(settings[BunnyHop], FALSE, TRUE);
+	SpvarSave(settings[CrouchShot], FALSE, TRUE);
+	SpvarSave(settings[FastMelee], FALSE, TRUE);
+	
+	// Settings
+	SpvarSave(settings[BlockVibration], FALSE, TRUE);
+	SpvarSave(settings[DeviceVMSpeed], 0, 4);
+
+	// Update the button and stick layouts
+	UpdateControls();
+	
+	// Reset rumble state, if necessary
+	if(!settings[BlockVibration]) {
+		reset_rumble();
+	}
+}
+
+// Function used to count the number of bits used by the given value
+function SpvarGetBitCount(v) {
+	// We need to Roset at 0, we use spvar[Temp] here as we need to track
+	// the bits during our loop below
+	spvar[Temp] = 0; 
+	
+	// Loop while v is anything but 0
+	while (v) { 
+		// Increment the bit count by 1
+		spvar[Temp]++; 
+		
+		// Shift the value down 1 bit, once we have no more bits set this
+		// will r in 0, unless the value is negative - in which case
+		// this will be endless, we do abs here to make it always
+		v = abs(v >> 1);
+	}
+	return spvar[Temp];
+}
+
+// Function used to count the number of bits used by 2 given values
+function SpvarGetBitCount2(v1, v2) {
+	// Get the highest bit count required for either min or max
+	spvar[Temp] = max(SpvarGetBitCount(v1), SpvarGetBitCount(v2));
+	
+	// Check if we need to know if the value is negative or not
+	if (SpvarIsSigned(v1, v2)) {
+		// If we need to track if the saved value is negative, we need 1 bit
+		// for that specifically - the others are used to store the actual value
+		spvar[Temp]++;
+	}
+	
+	return spvar[Temp];
+}
+
+// Function used to determine if either of 2 given values is negative
+function SpvarIsSigned(v1, v2) {
+	return (v1 < 0) || (v2 < 0);
+}
+
+// Function used to generate a bitmask for the sign bit, this will always be
+// the highest bit in the range we're requesting it for, to do that - we need
+// to Roset with the lowest bit set and move it up the number of steps there
+// is between 1 and the bits we need, this needs to be a maximum of 31 but can
+// never be negative
+function SpvarMakeSign(bits) { 
+	return 1 << clamp(bits - 1, 0, 31);
+}
+
+// Function used to generate a full bitmask (essentially all bits set up to
+// and including the number of bits given)
+function SpvarMakeFullMask(bits) {
+	// If we're wanting a bitmask for all bits, we can simply return -1
+	// (which is all bits set to 1)
+	if (bits == 32) return -1;
+	
+	// What we do here is basically take a value with all bits except the highest
+	// set and shift them down as many times as we need to get a mask that fits
+	// the bit count we're looking for
+	return 0x7FFFFFFF >> (31 - bits);
+}
+
+// Function used to generate a bitmask for just the bits required for the value
+// part of a signed range, this means all the bits below the sign bit
+function SpvarMakeSign_mask(bits) {
+	return SpvarMakeFullMask(bits - 1);
+}
+
+// Function used to pack a value that has potential for being negative in a way
+// that we use the least number of bits we really need to represent the value
+function SpvarPack(v, bits) {
+	// Check if we have a negative value, if so - handle it accordingly
+	if (v < 0) { 
+		// Get the positive version of the value and keep the bits that are within
+		// range of what we're doing and add the sign bit since we have a negative
+		// value and return the r
+		return (abs(v) & SpvarMakeSign_mask(bits)) | SpvarMakeSign(bits);
+	}
+	
+	// Get the bits that are within our range
+	return v & SpvarMakeSign_mask(bits); 
+}
+
+function SpvarReset() {
+	 // Change this to say where it's safe to Roset storing data
+	spvar[Slot] = SPVAR_1; 
+	
+	// Should always be 0, unless you're using part of the first SPVAR 
+	// in which case you should also change the next line to include the 
+	// value you are storing in the bits you are using
+	spvar[Bit] = 0; 
+	spvar[Value] = 0;
+}
+
+// Function used to unpack (restore) a value that has potential for being negative,
+// essentially reversing what SpvarPack does above
+function SpvarUnpack(v, bits) {
+	// Check if the stored value is supposed to be negative
+	if (v & SpvarMakeSign(bits)) {
+		// Retrieve the stored positive value and subtract it from 0 (ring in
+		// the same value except negative), return the r
+		return 0 - (v & SpvarMakeSign_mask(bits));
+	}
+	
+	// Retrieve the stored positive value and return it
+	return v & SpvarMakeSign_mask(bits);
+}
+
+// Function used to read the value of a SPVAR without any limits
+function SpvarReadSpvarSlot(slot) {
+	return get_pvar(slot, 0x80000000, 0x7FFFFFFF, 0);
+}
+
+// Function used to save your value in the SPVARs, this is the function you'll be
+// calling when saving a value. You need to provide the value to save aswell as
+// the range (minimum and maximum value, this is how we determine how many bits
+// to use when saving this value)
+function SpvarSave(v, min, max) {
+	// Set spvar[Bits] to the number of bits we need for this range
+	spvar[Bits] = SpvarGetBitCount2(min, max);
+	
+	// Make sure the value is within our defined range to begin with
+	v = clamp(v, min, max);
+	
+	// If either min or max is negative, we need to pack this value as a
+	// possibly negative value
+	if (SpvarIsSigned(min, max)) {
+		// Pack as signed value (possibly negative)
+		v = SpvarPack(v, spvar[Bits]);
+	}
+	
+	// Pack as unsigned value (always positive), this essentially just makes the
+	// ring value not have any extra bits set - it's safe to use after the
+	// signed packing since we're not using any bits outside of the unsigned range anyways
+	v = v & SpvarMakeFullMask(spvar[Bits]); 
+	
+	// Check if there is not enough bits remaining to save this value as-is. if
+	// there aren't enough bits, we save what we can here and store the remaining
+	// bits in the next spvar, if this means we're hitting the end, we can make
+	// this smaller by handling the case where we use all bits here aswell
+	if (spvar[Bits] >= 32 - spvar[Bit]) { 
+		// Add what we can to the current value where there is bits available to use
+		spvar[Value] = spvar[Value] | (v << spvar[Bit]);
+		
+		// Save the current SPVAR before advancing to the next one
+		set_pvar(spvar[Slot], spvar[Value]);
+		
+		// Move to the next slot
+		spvar[Slot]++;
+		
+		// Update the required bits according to our needs for the next slot, 
+		// if we don't do this here, we'll screw up the saved value by moving
+		// it too far out of range
+		spvar[Bits] -= (32 - spvar[Bit]);
+		
+		// Move the remaining bits down, discarding the bits we've already saved
+		v = v >> (32 - spvar[Bit]);
+		
+		// Reset the current bit counter since we're Roseting with a new SPVAR
+		spvar[Bit] = 0;
+		
+		// Reset our value so we Roset clean, we aren't currently using any bits anyways
+		spvar[Value] = 0;
+	}
+	
+	// Merge the current SPVAR value with our currently value where there is space to keep our value
+	spvar[Value] = spvar[Value] | (v << spvar[Bit]);
+	
+	// Move up the counter of next available bit to where we are currently saving data at
+	spvar[Bit] += spvar[Bits];
+	
+	if (!spvar[Bit]) {
+		// Reset our value so we Roset clean, we aren't currently using any bits anyways
+		spvar[Value] = 0;
+	}
+	
+	// Save the SPVAR with the current value, this won't write anything to flash unless
+	//the value changed - so we can do this for each variable saved to no risk missing anything
+	set_pvar(spvar[Slot], spvar[Value]);
+}
+
+// Function used to read your value from the SPVARs, this is the function you'll be
+// calling when reading a value. You need to provide the range (minimum and maximum
+// value, this is how we determine how many bits to use when reading the value) aswell
+// as a default value if what we read is out of range
+function SpvarRead(min, max) {
+	// Set spvar[Bits] to the number of bits we need for this range
+	spvar[Bits] = SpvarGetBitCount2(min, max);
+	
+	// Read the current SPVAR value from flash and shift them into position,
+	// we'll handle split values next
+	spvar[Value] = (SpvarReadSpvarSlot(spvar[Slot]) >> spvar[Bit]) & SpvarMakeFullMask(spvar[Bits]);
+	
+	// Check if we are dealing with a split SPVAR value, essentially if the current
+	// position means we're using more than 32 bits in the SPVAR, we need to retrieve
+	// the missing bits from the next SPVAR and put them back to our current value,
+	// we use the same space saving trick here as in the save function
+	if (spvar[Bits] >= 32 - spvar[Bit]) {
+		spvar[Value] = (spvar[Value] & SpvarMakeFullMask(32 - spvar[Bit])) | ((SpvarReadSpvarSlot(spvar[Slot] + 1) & SpvarMakeFullMask(spvar[Bits] - (32 - spvar[Bit]))) << (32 - spvar[Bit]));
+	}
+	
+	// Move up the counter of next available bit to where we are will be reading data from next
+	spvar[Bit] += spvar[Bits];
+	// Extract all bits included for this value and discard any other bits
+	spvar[Value] = spvar[Value] & SpvarMakeFullMask(spvar[Bits]); 
+	
+	if (spvar[Bit] >= 32) {
+		// Move to the next SPVAR slot
+		spvar[Slot]++;
+		// Remove 32 from the spvar[Bit] tracker since we've gone beyond what we can do here
+		spvar[Bit] -= 32;
+	}
+	
+	// Check if the value can be negative and handle it accordingly
+	if (SpvarIsSigned(min, max)) { 
+		// Restore the signed, possibly negative value
+		spvar[Value] = SpvarUnpack(spvar[Value], spvar[Bits]); 
+	}
+	
+	// Check if the value is below our specified min or above our specified max,
+	// if so - return the default value instead
+	if (spvar[Value] < min || spvar[Value] > max) { 
+		// This can be changed to min instead as a reasonable default with the
+		// default parameter being removed if you don't need to have a override
+		// value for the default when out of range, that will save a bit of code size
+		return 0; // edited
+	}
+	
+	// Return the retrieved value to the user since it's within the expected range
+	return spvar[Value];
+}
+
+// Toggle the Xbox controller on PlayStation remap
+function ToggleCrossoverRemap() {
+	device[Remapped] = !device[Remapped];
+	set_remapper(XB1_VIEW, PS5_TOUCH);	// Toggle the Touch/View remapper
+}
+
+// Updates the button and stick layout
+function UpdateControls() {
+	SetButtonLayout();
+	SetStickLayout();
+}
+
+// Combo for Auto Ping
+fcombo Combo_AutoPing {
+	set_val(button[Ping], 100);
+	wait(48)
+}
+
+// Combo for Bunny Hop
+fcombo Combo_BunnyHop {
+	set_val(button[Jump], 100);
+	wait(88)
+	set_val(button[Jump], 0);
+	wait(88)
+}
+
+// Combo for Crouch
+fcombo Combo_Crouch {
+	set_val(button[Crouch], 100);
+	wait(48)
+}
+
+// Combo for Fast Melee
+fcombo Combo_FastMelee {
+	set_val(button[Melee], 100);
+	wait(88)
+	set_val(button[Melee], 0);
+	wait(88)
+}
+
+// Combo for an LED alert
+fcombo Combo_LedAlert {
+	wait(240);
+	display[LedUpdate] = TRUE;
+}
+
+// Combo for an LED alert without an update
+fcombo Combo_LedAlertEx {
+	wait(480);
+	SetLedColor(Blue);
+}
+
+// Combo for Profile Display
+fcombo Combo_ProfileDisplay {
+	state[ScreenSaver] = SCREENSAVER_TIME; // Indicate the screen saver is enabled
+	wait(1000);
+	cls_oled(OLED_BLACK);
+}
+
+// Combo for Strafe Assist
+fcombo Combo_StrafeAssist {
+	Output(stick[Strafe], settings[StrafeRadius] * 328);
+	wait(settings[StrafeTime] * get_rtime());
+	Output(stick[Strafe], settings[StrafeRadius] * -328);
+	wait(settings[StrafeTime] * get_rtime());
+}
+
+const int16 sin[] = { 
+	0, 6, 11, 17, 23, 29, 34, 40, 46, 51, 57, 63, 68, 74, 79, 85, 90, 96,
+	101, 107, 112, 117, 123, 128, 133, 138, 144, 149, 154, 159, 164, 169, 174, 178, 183, 188,
+	193, 197, 202, 206, 211, 215, 219, 223, 228, 232, 236, 240, 244, 247, 251, 255, 258, 262,
+	265, 268, 272, 275, 278, 281, 284, 287, 289, 292, 295, 297, 299, 302, 304, 306, 308, 310,
+	312, 313, 315, 317, 318, 319, 321, 322, 323, 324, 324, 325, 326, 326, 327, 327, 327, 328,
+	328, 328, 327, 327, 327, 326, 326, 325, 324, 324, 323, 322, 321, 319, 318, 317, 315, 313,
+	312, 310, 308, 306, 304, 302, 299, 297, 295, 292, 289, 287, 284, 281, 278, 275, 272, 268,
+	265, 262, 258, 255, 251, 247, 244, 240, 236, 232, 228, 223, 219, 215, 211, 206, 202, 197,
+	193, 188, 183, 178, 174, 169, 164, 159, 154, 149, 144, 138, 133, 128, 123, 117, 112, 107,
+	101, 96, 90, 85, 79, 74, 68, 63, 57, 51, 46, 40, 34, 29, 23, 17, 11, 6,
+	0, -6, -11, -17, -23, -29, -34, -40, -46, -51, -57, -63, -68, -74, -79, -85, -90, -96,
+	-101, -107, -112, -117, -123, -128, -133, -138, -144, -149, -154, -159, -164, -169, -174, -178, -183, -188,
+	-193, -197, -202, -206, -211, -215, -219, -223, -228, -232, -236, -240, -244, -247, -251, -255, -258, -262,
+	-265, -268, -272, -275, -278, -281, -284, -287, -289, -292, -295, -297, -299, -302, -304, -306, -308, -310,
+	-312, -313, -315, -317, -318, -319, -321, -322, -323, -324, -324, -325, -326, -326, -327, -327, -327, -328,
+	-328, -328, -327, -327, -327, -326, -326, -325, -324, -324, -323, -322, -321, -319, -318, -317, -315, -313,
+	-312, -310, -308, -306, -304, -302, -299, -297, -295, -292, -289, -287, -284, -281, -278, -275, -272, -268,
+	-265, -262, -258, -255, -251, -247, -244, -240, -236, -232, -228, -223, -219, -215, -211, -206, -202, -197,
+	-193, -188, -183, -178, -174, -169, -164, -159, -154, -149, -144, -138, -133, -128, -123, -117, -112, -107,
+	-101, -96, -90, -85, -79, -74, -68, -63, -57, -51, -46, -40, -34, -29, -23, -17, -11, -6
+}
+
+const int16 cos[] = { 
+	328, 328, 327, 327, 327, 326, 326, 325, 324, 324, 323, 322, 321, 319, 318, 317, 315, 313,
+	312, 310, 308, 306, 304, 302, 299, 297, 295, 292, 289, 287, 284, 281, 278, 275, 272, 268,
+	265, 262, 258, 255, 251, 247, 244, 240, 236, 232, 228, 223, 219, 215, 211, 206, 202, 197,
+	193, 188, 183, 178, 174, 169, 164, 159, 154, 149, 144, 138, 133, 128, 123, 117, 112, 107,
+	101, 96, 90, 85, 79, 74, 68, 63, 57, 51, 46, 40, 34, 29, 23, 17, 11, 6,
+	0, -6, -11, -17, -23, -29, -34, -40, -46, -51, -57, -63, -68, -74, -79, -85, -90, -96,
+	-101, -107, -112, -117, -123, -128, -133, -138, -144, -149, -154, -159, -164, -169, -174, -178, -183, -188,
+	-193, -197, -202, -206, -211, -215, -219, -223, -228, -232, -236, -240, -244, -247, -251, -255, -258, -262,
+	-265, -268, -272, -275, -278, -281, -284, -287, -289, -292, -295, -297, -299, -302, -304, -306, -308, -310,
+	-312, -313, -315, -317, -318, -319, -321, -322, -323, -324, -324, -325, -326, -326, -327, -327, -327, -328,
+	-328, -328, -327, -327, -327, -326, -326, -325, -324, -324, -323, -322, -321, -319, -318, -317, -315, -313,
+	-312, -310, -308, -306, -304, -302, -299, -297, -295, -292, -289, -287, -284, -281, -278, -275, -272, -268,
+	-265, -262, -258, -255, -251, -247, -244, -240, -236, -232, -228, -223, -219, -215, -211, -206, -202, -197,
+	-193, -188, -183, -178, -174, -169, -164, -159, -154, -149, -144, -138, -133, -128, -123, -117, -112, -107,
+	-101, -96, -90, -85, -79, -74, -68, -63, -57, -51, -46, -40, -34, -29, -23, -17, -11, -6,
+	-0, 6, 11, 17, 23, 29, 34, 40, 46, 51, 57, 63, 68, 74, 79, 85, 90, 96,
+	101, 107, 112, 117, 123, 128, 133, 138, 144, 149, 154, 159, 164, 169, 174, 178, 183, 188,
+	193, 197, 202, 206, 211, 215, 219, 223, 228, 232, 236, 240, 244, 247, 251, 255, 258, 262,
+	265, 268, 272, 275, 278, 281, 284, 287, 289, 292, 295, 297, 299, 302, 304, 306, 308, 310,
+	312, 313, 315, 317, 318, 319, 321, 322, 323, 324, 324, 325, 326, 326, 327, 327, 327, 328
+} ˙ºçøèΩÑ±Å∏äΩãøâø
