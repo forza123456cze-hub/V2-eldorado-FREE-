@@ -1,0 +1,1398 @@
+                                         
+/*
+RABBIT V1
+ ___       _______   ________  _________  ___  ___  ________  ___               ________  ________  ________   ________  ________     
+|\  \     |\  ___ \ |\   __  \|\___   ___\\  \|\  \|\   __  \|\  \             |\   __  \|\   __  \|\   ___  \|\   ___ \|\   __  \    
+\ \  \    \ \   __/|\ \  \|\  \|___ \  \_\ \  \\\  \ \  \|\  \ \  \            \ \  \|\  \ \  \|\  \ \  \\ \  \ \  \_|\ \ \  \|\  \   
+ \ \  \    \ \  \_|/_\ \   __  \   \ \  \ \ \   __  \ \   __  \ \  \            \ \   ____\ \   __  \ \  \\ \  \ \  \ \\ \ \   __  \  
+  \ \  \____\ \  \_|\ \ \  \ \  \   \ \  \ \ \  \ \  \ \  \ \  \ \  \____        \ \  \___|\ \  \ \  \ \  \\ \  \ \  \_\\ \ \  \ \  \ 
+   \ \_______\ \_______\ \__\ \__\   \ \__\ \ \__\ \__\ \__\ \__\ \_______\       \ \__\    \ \__\ \__\ \__\\ \__\ \_______\ \__\ \__\
+    \|_______|\|_______|\|__|\|__|    \|__|  \|__|\|__|\|__|\|__|\|_______|        \|__|     \|__|\|__|\|__| \|__|\|_______|\|__|\|__|
+
+                                    ....................    .~YPGP57:                               
+                                ..........      .  .....:..!5BBBBBBBG7                              
+                             ......             ...     .:!GBBBGYJYGB#7                             
+                           .:...             .            .~PGY7!!!5B&Y                             
+                   ^!!~:. ... ...           .  !5P5Y?~.    .~?7!!7JG#G:                             
+                 ^5GBBBGPJ: ...           ... :J!^::^~~.    .^JP5PPY7.                              
+                !BBBBGBB#Y .   .::.      ......    :^:.   ....^7~^.                 .^!77!77~.      
+                PBB577?JP~   :YGPY!..           :?PGGBP?:     .^^:               .!YPB##B####B5.    
+                Y#B57!!!7^  .PY^        .   .  ~GBBBBBGGGY!:.   :~^            :?GBBBBBBBBBGPJ~     
+                .JG##GP55:  ~7  :7???!^.     . 5#BBBG!!7?Y#BPJ.  :~:        ..~P#BBBBBBBBG?^        
+                  .~?Y55J:  .  ~G###BBB5~::... ^5GBBP~GGG~GBB&J  :~^    :~7J5GGBBBBBBBBBBBBG7       
+                        .. .  !B5?JGBGGBGGBGGY. .^!5BPJJ?PBBB#! .^^^:~J5GBBBBBBBBBB#####BPJ~.       
+                        : ..^JGJ^5PGBBBBBBB##7     .7G#B###BP!  :^~YPBBBBBBBBBBBB#BYJJ7~:           
+                        : .?GBB5PBBBBBBBBBBP7 .^:.. ::?55Y7^.  :^!PBBBBBBBBBBBB##P^                 
+                        :. YBGPGBBBBBBB###J^^7YBG.  :        .:^?GBBBBBBBBBB###G!.                  
+                         ^75GGBBBBBBB#GY75GB###P~ .^: .   ..:~?PBBBBBBBBBB###G7.                    
+                      .!YGBBBBBBBBB#G~:. .^~~!!::^~:  ...:~75GBBBBBBBB#####P7.                      
+                    .7PBBBBBBBBBBB#P:   .::^!JPBG5^ ~!7?YPB#&###########&P^                         
+// discord.gg/coldz
+                   ~PBBBBBBBBBBBB#B?!!~~!?^:~7?!^.^Y###B#BB#############Y.                          
+                  ~GBBBBBBBBBBBB#BB###BB##BP5J?JY5GGGGGGBBBB##########G~                            
+                  PBBBBBBBBBB###B###BBBBBBG5J?!~^::..:::^~!?YPB#&&###J.                             
+                  J##BBB##BGGB#&###BBBB5?~:.                 .:~JYP5^                               
+                   !J5GBBG5PPY5PYJBBP?^.    ....                 :^^.                               
+                       ......    :J~.  ... .  ............       .^^^:                              
+                                 :       . ...::::...........     .^^^^                             
+                                .. ..   ...:...             .      ^^^~^                            
+                                :.      . .                        .^^^^:                           
+                                :.                                 .^^^^^                           
+                                :.                                 :~^^^^.                          
+                                :.  .       ....                  .^^^^^~^                          
+                                :^  .       ......            .. .:^^^^^7B~                         
+                               ^55^.        .......            ..^^^^^^~G##~                        
+                              7GBB5~:.          .            ..:^^^^^^~5B##B:                       
+                            .?BBBBBP7^:..                 ..:^^^^^^^^7PBBBB&5                       
+                            ?GBBBBBBB5!^^^::..........::^^^^^^^^^^^!YBBBBBB##~                      
+                           !PBBBBBBBBBB5?~^^^^^^^^^^^^^^^^^^^^^^~7YGBBBBBBBB&Y                      
+                          .YGBBBBBBBBBBBBBPY?!~~~^^^^^^^^~~~!7J5GBBBBBBBBBBB#G.                     
+                          .YBBBBBBBBBBBBB#####GY~:::::::::?PB##BBBBBBBBBBBBBB#5.                    
+                           !PBBBBBBBBBBB####B?:.           .^?G#GGGBBBBBBBBBBB#Y                    
+// discord.gg/coldz
+                          . ~5GBBBBBBBBBB###~                 .?PP5PBBBBBBBBBBB#7                   
+                             ~P#BBBBBBBBB###~                   ^YGGBBBBBBBBBBBBB:                  
+                              :JGBBBBBBBBBBBP.                    !P#BBBBBBBBBBBBP:                 
+                                ~5BBBBBBBBB##Y                      ~5BBBBBBBBBBB#G?^               
+                            .~JPPGBBBBBBBBB##&!                       ^YBBBBBBBBBBBBBY^             
+                           ^5B#BBBBBBBBBB##&##!                         ^GBBBBBBBBBBB##^            
+                           !GBBBBBBBBBGGP5YJ7^                           ~PBBB###B#BBBY.            
+77!!777777777777777777??7777JYJJYYYYJJ??7777777777777777777777777777777777?J5PP55PPYYJ77777777?77777
+P?!!!5J?JJJJJJ?YY?JJJ?J?Y?J???J5555555555555PPPPPPPPPPPPPPPPPPPPPPPPPPPPP55555555JYYJJJJJJYY5YJYYY5P
+5Y??J5YYYYYYYYYYYYYYYYYYYJYJJYY5555555555555555555555555555555555555555555555555555555Y5555555Y5YY55
+
+
+
+EDIT RECOIL: ADS+DPAD
+ENTER MENU: LT/L2 + OPTIONS/MENU
+*/
+
+// Button Layout
+const uint8 _buttonLayout[][] = {
+// discord.gg/coldz
+	// ADS	  Lethal  Ping 	  Focus	  Fire	  Switch SldDve Jump   Melee   Reload
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X }, 	// Default
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_A, XB1_B, XB1_X }, 	// Tactical
+	{ XB1_RT, XB1_LB, XB1_UP, XB1_RS, XB1_LT, XB1_Y, XB1_B, XB1_A, XB1_LS, XB1_X }, 	// Lefty
+	{ XB1_RB, XB1_LT, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X }, 	// Nomad/Charlie
+	{ XB1_RB, XB1_LT, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_A, XB1_B, XB1_X }, 	// Nomad/Charlie Tac
+	{ XB1_LB, XB1_RT, XB1_UP, XB1_RS, XB1_LT, XB1_Y, XB1_B, XB1_A, XB1_LS, XB1_X }, 	// Nomad/Charlie Left
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_LB, XB1_RS, XB1_X }, 	// Bumper Jumper
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_LB, XB1_B, XB1_X }, 	// Bumper Jumper Tact
+	{ XB1_LT, XB1_RT, XB1_UP, XB1_LS, XB1_LB, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X }, 	// One-hand Gunslinger
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_RS, XB1_A, XB1_X }, 	// Stick and Move
+	{ XB1_LT, XB1_RS, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RB, XB1_X }, 	// Brawler
+	{ XB1_LT, XB1_RS, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_LB, XB1_RB, XB1_X } 	// Beast
+};
+
+// Font sizes
+const uint8 _fontHeight[] = { OLED_FONT_SMALL_HEIGHT, OLED_FONT_MEDIUM_HEIGHT, OLED_FONT_LARGE_HEIGHT };
+const uint8 _fontWidth[] = { OLED_FONT_SMALL_WIDTH, OLED_FONT_MEDIUM_WIDTH, OLED_FONT_LARGE_WIDTH };
+
+// Script menu data
+const int8 _scriptMenuData[][] = {
+	{ Default, Beast, Setting_String }, // Button Layout
+	{ Default, LegacySouthpawNoClickSwap, Setting_String }, // Stick Layout
+	{ FALSE, TRUE, Setting_Toggle }, // Flipped
+// discord.gg/coldz
+	{ FALSE, TRUE, Setting_Toggle }, // Inverted
+	{ FALSE, TRUE, Setting_Toggle }, // Polar Aim Assist
+	{ 1, 100, Setting_Number }, // Polar Size
+	{ 1, 100, Setting_Number }, // Polar Speed
+	{ FALSE, TRUE, Setting_Toggle }, // Hip Aim Assist
+	{ 1, 100, Setting_Number }, // Hip Size
+	{ 1, 100, Setting_Number }, // Hip Speed
+	{ FALSE, TRUE, Setting_Toggle }, // Auto Slide
+	{ FALSE, TRUE, Setting_Toggle }, // Auto Ping
+	{ FALSE, TRUE, Setting_Toggle }, // SlideCancel
+	{ 0, 100, Setting_Number }, // Vertical
+	{ -100, 100, Setting_Number | Setting_AR } // Horizontal
+}
+
+// Stick Layout
+const uint8 _stickLayout[][] = {
+	// Move   	Strafe    Look      Rotate    
+	{ POLAR_LY, POLAR_LX, POLAR_RY, POLAR_RX }, // Default
+	{ POLAR_RY, POLAR_RX, POLAR_LY, POLAR_LX }, // Southpaw
+	{ POLAR_LY, POLAR_RX, POLAR_RY, POLAR_LX }, // Legacy
+	{ POLAR_RY, POLAR_LX, POLAR_LY, POLAR_RX }, // Legacy Southpaw
+	{ POLAR_RY, POLAR_RX, POLAR_LY, POLAR_LX }, // Southpaw No Click Swap
+	{ POLAR_RY, POLAR_LX, POLAR_LY, POLAR_RX }  // Legacy Southpaw No Click Swap
+};
+
+// Color constants
+const uint16 _color[][] = {
+	{ 240, 100, 93 }, 		// Blue
+// discord.gg/coldz
+	{ 0, 100, 75 }, 		// Menu Red
+	{ 120, 100, 75 } 		// Menu Green
+};
+
+// Panda photo
+const int16 _rabbit[] = {90, 63, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFC0, 0x3FFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xE001, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFF9, 0xF01F, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFE7F, 0x81FF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0x8FF8, 0x1FFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFF1, 0xFF83, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFC3F, 0xF83F, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0x43FF, 0x87FF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFCC, 0x7FF0, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xF38F, 0xFF00, 0x07FF, 0xFFFF, 0xFFFF, 0xFFFE, 0x78FF, 0xE000, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFC7, 0x1FFF, 0xFE0F, 0xFFFF, 0xFFFF, 0xFFFF, 0xF871, 0xFFFF, 0xE1FF, 0xFFFF, 0xFFFF, 0xFFFF, 0x071F, 0xFFFC, 0x7FFF, 0xFFFF, 0xFFFF, 0xFFF0, 0x38FF, 0xFF8F, 0xFFFF, 0xFFFF, 0xFFFF, 0xFF00, 0xFFFE, 0xF1FF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFC07, 0xFF1E, 0x3FFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xF9FF, 0x87C7, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFE, 0xFFF1, 0xF8FF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFF9F, 0xFFFF, 0x3FFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xE7FF, 0xFFCF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFF9, 0xFFFF, 0xF3FF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFE7F, 0xFFF9, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0x9FFF, 0xFE7F, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFC7, 0xFFFF, 0x3FFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xE3FF, 0xFF8F, 0xFFFF, 0xFFFF, 0xFFFF, 0xFF81, 0xFFFF, 0x8FFF, 0xFFFF, 0xFFFF, 0xFFFF, 0x80FF, 0xFFC7, 0xFFFF, 0xFFFF, 0xFFFF, 0xFF01, 0xFFFF, 0xEFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0x03FF, 0xFFF3, 0xFFFF, 0xFFFF, 0xFFFF, 0xFF83, 0xFFFF, 0xFEFF, 0xFFFF, 0xFFFF, 0xFFFF, 0x83FF, 0xFFFF, 0xBFFF, 0xFFFF, 0xFFFF, 0xFFC3, 0xFFFF, 0xFFE7, 0xFFFF, 0xFFFF, 0xFFFF, 0xE1FF, 0xFFFF, 0xF9FF, 0xFFFF, 0xFFFF, 0xFFF0, 0xFFFF, 0xFFFF, 0x7FFF, 0xFFFF, 0xFFFF, 0xF87F, 0xFFFF, 0xFFCF, 0xFFFF, 0xFFFF, 0xFFFE, 0x3FFF, 0xFFFF, 0xF3FF, 0xFFFF, 0xFFFF, 0xFF1F, 0xFFFF, 0xFFFC, 0xFFFF, 0xFFFF, 0xFFFF, 0xCFFF, 0xFFFF, 0xFF3F, 0xFFFF, 0xFFFF, 0xFFE3, 0xFFFF, 0xFFFF, 0xCFFF, 0xFFFF, 0xFFFF, 0xF9FF, 0xFFFF, 0xFFF3, 0xFFFF, 0xFFFF, 0xFFFC, 0x7FFF, 0xFFFF, 0xF9FF, 0xFFFF, 0xFFFF, 0xFF3F, 0xFFFF, 0xFFFE, 0x7FFF, 0xFFFF, 0xFFFF, 0xCFFF, 0xFFFF, 0xFF1F, 0xFFFF, 0xFFFF, 0xFFF3, 0xFFFF, 0xFFFF, 0xCFFF, 0xFFFF, 0xFFFF, 0xFCFF, 0xFF9F, 0xFFE3, 0xFFFF, 0xFFFF, 0xFFFF, 0x7FFF, 0xF3FF, 0xF1FF, 0xFFFF, 0xFFFF, 0xFFDF, 0xFFFE, 0x7FF8, 0xFFFF, 0xFFFF, 0xFFFF, 0xE3FF, 0xFFCF, 0xFE3F, 0xFFFF, 0xFFFF, 0xFFF1, 0xFFFF, 0xF9FF, 0x9FFF, 0xFFFF, 0xFFFF, 0xF9FF, 0xFFFE, 0x7FC7, 0xFFFF, 0xFFFF, 0xFFFE, 0x7FFF, 0xFFCF, 0xF1FF, 0xFFFF, 0xFFFF, 0xFF1F, 0xFFFF, 0xF3FC, 0x7FFF, 0xFFFF, 0xFFFF, 0xC7FF, 0xFFFC, 0xFF1F, 0xFFFF, 0xFFFF, 0xFFF1, 0xFFFF, 0xFF33, 0xC7FF, 0xFFFF, 0xFFFF, 0xFC7F, 0xFFFF, 0xC0F1, 0xFFFF, 0xFFFF, 0xFFFF, 0x8FFF, 0xFFE0, 0x3C7F, 0xFFFF, 0xFFFF, 0xFFE3, 0xFFFF, 0xFC87, 0x8FFF, 0xFFFF, 0xFFFF, 0xFC07, 0xFFFF, 0xF1E3, 0xFFFF, 0xFFFF, 0xFFFF, 0x81FF, 0xFFFC, 0x3C7F, 0xFFFF, 0xFFFF, 0xFFFF, 0x0000, 0x0000, 0x1FFF, 0xFFFF, 0xFFFF, 0xFFE0, 0x0000, 0x080F, 0xFC00};
+
+// Menu names
+const string _buttonLayoutNames[] = { "Default", "Tactical", "Lefty", "Nomad/Charlie", "Nomad/Charlie Tact", "Nomad/Charlie Left", "Bumper Jumper", "Bumper Jumper Tact", "1-hand Gunslinger", "Stick and Move", "Brawler", "Beast" };
+const string _saved = "SAVED";
+const string _scriptAuthor = "LethalPanda";
+const string _scriptTitle = "Rabbit";
+const string _scriptVersion = "Version 1";
+const string _scriptMenuNames[] = { "Button Layout", "Stick Layout", "Flipped", "Inverted", "Polar Aim Assist", "Polar Aim Size", "Polar Aim Speed", "Hip Aim Assist", "Hip Assist Size", "Hip Assist Speed", "Auto Breath", "Bunny Hop", "Slide Cancel", "Vertical AR", "Horizontal AR" };
+const string _stickLayoutNames[] = { "Default", "Southpaw", "Legacy", "Legacy Southpaw", "Southpaw NoClkSwap", "LegSthPw NoClkSwap" };
+const string _toggle[] = { "Off", "On" };
+
+// discord.gg/coldz
+// Enumeration
+enum {
+	// Aim assist elements
+	Angle = 0,
+	
+	// Button elements
+	ADS = 0, Lethal, Ping, Focus, Fire, SwitchWeapon, Action, Jump, Melee, Reload, IsRemapped,
+	
+	// Button identifiers
+	Default = 0, Tactical, Lefty, NomadCharlie, NomadCharlieTactical, NomadCharlieLefty, BumperJumper, BumperJumperTactical, OneHandGunslinger, StickAndMove, Brawler, Beast,
+	Southpaw = 1, Legacy, LegacySouthpaw, SouthpawNoClickSwap, LegacySouthpawNoClickSwap,
+	
+	// Color identifiers
+	Hue = 0, Saturation, Brightness,
+	Blue = 0, MenuRed, MenuGreen,
+	
+    // Display elements
+// discord.gg/coldz
+    Update = 0, Buffer, BufferCopyValue, BufferDigitCount, BufferDigits,
+    
+    // Display identifiers
+    AlignCenter = -3, AlignBottom = -2, AlignRight = -1, AlignLeft = 2, AlignTop = 5,
+   	
+   	// Menu elements
+   	ButtonBlock = 0, ButtonHoldTime, Min, Max, Type, Setting,
+   	
+   	// Picture elements
+   	Data = 1, Offset, Width, Height, X, X2, Y, Y2,
+   	
+    // Settings elements
+    ButtonLayout = 0, StickLayout, Flipped, Inverted, PolarAimAssist, PolarAimSize, PolarAimSpeed, HipAimAssist, HipAssistSize, HipAssistSpeed, AutoBreath, BunnyHop, SlideCancel, Vertical, Horizontal,
+    
+    // Settings identifier
+    Setting_Toggle = 0, Setting_Number, Setting_Timer, Setting_String = 4, Setting_AR = 8,
+    
+// discord.gg/coldz
+	// SPVAR elements
+	Bit = 0, Bits, Slot, Temp, Value,
+	
+    // State elements
+    Screen = 0, Menu, VM, HoldingADS, HoldingFire, ScreenSaver, ScreenSaverCounter,
+    
+    // State identifiers
+    Screen_Home = 0, Screen_ScriptMenu,
+    
+    // Stick elements
+  	Move = 0, Strafe, Look, Rotate, StrafeStick
+}
+
+// Variables
+int i;
+int aimassist[1];
+int button[11];
+int display[9];
+int menu[6];
+int picture[9];
+int settings[15];
+int spvar[5];
+int state[7];
+// discord.gg/coldz
+int stick[5];
+
+init {
+
+	// Initialize display buffer
+	display[Buffer] = 1;
+	display[Update] = FALSE;
+	
+	// Initialize button block state
+	menu[ButtonBlock] = -1;
+	
+	// Load script settings and set initial LED color
+	SettingsLoad();
+	SetLedColor(Blue);
+	
+	// Set device speed to be compatible with both Xbox and PlayStation
+	vm_tctrl(-2);
+	
+	// Draw picture
+	DrawPicture(0, 0);
+	
+// discord.gg/coldz
+	// Delay loading home screen
+	combo_run(HomeDelay);
+}
+
+main {
+
+	// Handle any required display update, process input and check the screen saver
+	HandleDisplayUpdate();
+	ProcessInput();
+	CheckScreenSaver();
+}
+
+// Combo for Bunny Hop
+fcombo BunnyHop {
+	set_val(button[Jump], 100);
+	wait(88)
+	set_val(button[Jump], 0);
+	wait(88)
+}
+
+fcombo HomeDelay {
+	wait(2000);
+	state[ScreenSaverCounter] = 0;
+	display[Update] = TRUE;
+}
+
+fcombo LedAlert {
+// discord.gg/coldz
+	wait(240);
+	
+	// Only reset LED if no button is held during an alert
+	if(menu[ButtonBlock] == -1) {
+		SetLedColor(Blue);
+	}
+	
+}
+
+fcombo RecoilAlert {
+	wait(1000);
+	SetLedColor(Blue);
+	ResetDisplay();
+}
+
+// Combo for Slide Cancel
+fcombo SlideCancel {
+	set_val(stick[StrafeStick], 0);
+// discord.gg/coldz
+	wait(88);
+	set_val(stick[Move], -3276);
+	set_val(stick[StrafeStick], 100);
+	wait(40);
+}
+
+// Adjusts a script setting
+function AdjustSetting(direction) {
+
+	// Adjust the configuration setting and update the display value
+	settings[state[Menu]] = AdjustValue(settings[state[Menu]], menu[Min], menu[Max], direction, iif(menu[Type] == Setting_String, TRUE, FALSE));
+	menu[Setting] = settings[state[Menu]];
+	
+}
+
+// Adjusts a value within bounds
+function AdjustValue(value, lower, upper, adjustment, cyclable) {
+
+	// Check if the value is increasing
+	if(adjustment > 0) {
+	
+		// Check if the adjustment is in range or the value can cycle
+// discord.gg/coldz
+		if(value + adjustment <= upper) {
+			LedAlert(MenuGreen);
+			return value + adjustment;
+		} else if(cyclable) {
+			LedAlert(MenuGreen);
+			return lower;
+		}
+		
+	} else {
+	
+		// Check if the adjustment is in range or the value can cycle
+		if(value + adjustment >= lower) {
+			LedAlert(MenuGreen);
+			return value + adjustment;
+		} else if(cyclable) {
+			LedAlert(MenuGreen);
+			return upper;
+		}
+		
+	}
+
+	// Determine if a failure alert should be triggered
+	if(!iif(iif(adjustment > 0, value == upper, value == lower), FALSE, TRUE)) {
+		LedAlert(MenuRed);
+	}
+
+	return iif(adjustment > 0, upper, lower);
+}
+
+// This function adjust a value based on how long the button is held for
+// discord.gg/coldz
+function AdjustValueBasedOnTime(time) {
+	return iif(menu[ButtonHoldTime] >= time, 0, menu[ButtonHoldTime] + state[VM]);
+}
+
+// Blocks any menu-related buttons
+function BlockMenuButtons() {
+	
+	// Block all buttons related to script actions
+	set_val(XB1_MENU, 0);
+	set_val(XB1_UP, 0);
+	set_val(XB1_DOWN, 0);
+	set_val(XB1_LEFT, 0);
+	set_val(XB1_RIGHT, 0);
+	
+}
+
+// Changes the screen
+function ChangeScreen(new_screen) {
+
+	// Set the new screen and request a display update
+	state[Screen] = new_screen;
+	ResetDisplay();
+	
+}
+
+// This function checks for an action button that toggles a value
+function CheckActionButton(button, variable) {
+
+	// Check if the button is being heled
+	if(get_ival(button)) {
+// discord.gg/coldz
+	
+		// Check if no button is being held
+		if(menu[ButtonBlock] == -1)  {
+			menu[ButtonBlock] = button;
+		}
+		
+		// Check if the first action button pressed is being held so dont let another button held interrupt the operation
+		if(menu[ButtonBlock] == button) {
+		
+			// Return true if the button is just being pressed
+			if(event_press(button)) {
+				return TRUE;
+			}
+			
+			// Check for increasing speeds
+			if(variable) {
+			
+                // Cycle values based on the hold duration
+// discord.gg/coldz
+                if (get_ptime(button) >= 200) {
+                
+                	// Determine how long the button has been held for
+                    if (get_ptime(button) > 4000)  {
+                        // For every 10ms button is held after 2000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(8);
+                        
+                    } else if (get_ptime(button) > 3000) {
+                        // For every 30ms button is held after 2000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(24);
+                        
+                    } else if (get_ptime(button) > 2000) {
+                        // For every 50ms button is held after 2000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(48);
+                        
+                    } else if (get_ptime(button) > 1000) {
+                        // For every 70ms button is held after 1000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(64);
+                        
+                    } else {
+                        // For every 90ms button is held after initial 200ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(88);
+// discord.gg/coldz
+                        
+                    }
+                    
+                } else {
+                	return FALSE;
+                }
+                
+			} else {
+				// Cycle values every 160ms milliseconds
+				menu[ButtonHoldTime] = iif(menu[ButtonHoldTime] >= 200, 0, menu[ButtonHoldTime] + state[VM]);
+			}
+			
+			return !menu[ButtonHoldTime];
+		}
+	}
+	
+	// Check if the held button is being released
+// discord.gg/coldz
+	else if(event_release(menu[ButtonBlock])) {
+		// Reset any button block, the hold time and update the display
+		menu[ButtonBlock] = -1;
+		menu[ButtonHoldTime] = 0;
+		display[Update] = TRUE;
+	}
+	
+	return FALSE;
+}
+
+// Checks for the screen saver
+function CheckScreenSaver() {
+	
+	// Check which screen is being displayed and if the screen saver is enabled
+	if((state[Screen] == Screen_Home) && !state[ScreenSaver]) {
+		// Check if the timeout is met
+		if(state[ScreenSaverCounter] < 5000) {
+			// Increase the screensaver counter
+			state[ScreenSaverCounter] += state[VM];
+		} else  {
+			// Enable the screen saver
+// discord.gg/coldz
+			state[ScreenSaver] = TRUE;
+			cls_oled(OLED_BLACK);
+		}
+	}
+}
+
+// Cycles through the script menu
+function CycleScriptMenu(direction) {
+
+	// Traverse to the next menu item
+	state[Menu] = AdjustValue(state[Menu], 0, (sizeof(_scriptMenuData) / sizeof(_scriptMenuData[0])) - 1, direction, TRUE); 
+	
+	// Set the new menu item information
+	SetMenuItemInformation();
+
+}
+
+// Draws the home screen
+function DrawHomeScreen() {
+	
+	// Print the script details to the display
+// discord.gg/coldz
+	PrintString(AlignCenter, AlignTop, OLED_FONT_MEDIUM, OLED_BLACK, addr(_scriptTitle));
+	PrintString(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_BLACK, addr(_scriptVersion));
+	PrintString(AlignCenter, AlignBottom, OLED_FONT_MEDIUM, OLED_BLACK, addr(_scriptAuthor));
+	
+}
+
+// Draws a packed image
+function DrawPicture(x, y) {
+	// Clear the screen
+	cls_oled(OLED_WHITE);
+	
+	// Prepare image data
+	picture[Offset] = 1;
+	picture[Width] = _rabbit[0];
+	picture[Height] = _rabbit[1];
+	
+	// Iterate through the Y axis
+	for(picture[Y] = 0; picture[Y] < picture[Height]; picture[Y]++) {
+		// Determine Y offset
+		picture[Y2] = y + picture[Y];
+		
+		// Check coordinate boundaries
+// discord.gg/coldz
+		if(picture[Y2] < 0 || picture[Y2] >= 64) {
+			picture[Y2] -= 64;	
+		}
+		
+		// Iterate through the X axis
+		for(picture[X] = 0; picture[X] < picture[Width]; picture[X]++) {
+			if(!picture[Bit]) {
+				picture[Bit] = 16;
+				picture[Offset]++;
+				picture[Data] = _rabbit[picture[Offset]];
+			}
+			
+			// Decrement bit flag as we're moving to the next bit
+			picture[Bit]--;
+			picture[X2] = x + picture[X];
+			
+			// Check coordinate boundaries
+			if(picture[X2] < 0 || picture[X2] >= 128) {
+				picture[X2] -= 128;
+			}
+			
+			// Output the pixel
+			pixel_oled(picture[X2], picture[Y2], test_bit(picture[Data], picture[Bit]));
+		}
+	}
+// discord.gg/coldz
+}
+
+// Draws the script menu
+function DrawScriptMenu() {
+
+	// Print menu name
+	PrintSeparatorWithName(_scriptMenuNames[state[Menu]]);
+	
+	// Print the setting value
+	switch(menu[Type] & ~Setting_AR) {
+		case Setting_Toggle {
+			InsertString(_toggle[menu[Setting]]);
+			break;
+		}
+		case Setting_String {
+			InsertString(iif(state[Menu] == ButtonLayout, _buttonLayoutNames[menu[Setting]], _stickLayoutNames[menu[Setting]]));
+			break;
+// discord.gg/coldz
+		}
+		case Setting_Number {
+		
+			// Determine whether to show the value or "Off"
+			if(menu[Setting]) {
+				InsertNumber(menu[Setting]);
+				
+				// Check for horizontal display
+				if((menu[Type] & Setting_AR) && (state[Menu] == Horizontal)) {
+					InsertCharacter(ASCII_SPACE);
+					InsertCharacter(iif(settings[Horizontal] < 0, ASCII_UPPER_L, ASCII_UPPER_R));
+				}
+				
+			} else {
+				InsertString(addr(_toggle[FALSE]));
+			}
+			
+			break;
+		}
+		case Setting_Timer {
+		
+			// Determine whether to show the value or "Off"
+			if(menu[Setting]) {
+				InsertNumber(menu[Setting] * state[VM]);
+				InsertCharacter(ASCII_LOWER_M);
+				InsertCharacter(ASCII_LOWER_S);
+			} else {
+				InsertString(addr(_toggle[FALSE]));
+// discord.gg/coldz
+			}
+			
+			break;
+		}
+	}
+	
+	// Flush the display buffer
+	FlushBuffer(AlignCenter, iif(menu[Type] == Setting_String, 32, 29), iif(menu[Type] == Setting_String, OLED_FONT_SMALL, OLED_FONT_LARGE), OLED_BLACK);
+}
+
+// Executes the aim assist
+function ExecuteAimAssist() {
+	
+	// Check for resetting the aim assist
+	if(!state[HoldingADS] && !state[HoldingFire] && settings[HipAimAssist]) {
+		// Modify the X/Y output values for the hip assist
+		Output(stick[Rotate], cos[aimassist[Angle]] * settings[HipAssistSize]);
+		Output(stick[Look], sin[aimassist[Angle]] * settings[HipAssistSize]);
+		
+		// Advance the aim assist angle
+		aimassist[Angle] = (aimassist[Angle] + settings[HipAssistSpeed]) % 360;
+		
+	} else if((state[HoldingADS] || state[HoldingFire]) && settings[PolarAimAssist]) {
+	
+// discord.gg/coldz
+		// Modify the X/Y output values for the polar aim assist
+		Output(stick[Rotate], cos[aimassist[Angle]] * settings[PolarAimSize]);
+		Output(stick[Look], sin[aimassist[Angle]] * settings[PolarAimSize]);
+		
+		// Advance the aim assist angle
+		aimassist[Angle] = (aimassist[Angle] + settings[PolarAimSpeed]) % 360;
+	}
+}
+
+// Executes the anti-recoil
+function ExecuteAntiRecoil() {
+	
+	// Modify the X/Y output values to include the anti-recoil
+	Output(stick[Rotate], settings[Horizontal] * 327);
+	Output(stick[Look], settings[Vertical] * 327 * iif(settings[Inverted], -1, 1));
+	
+}
+
+// discord.gg/coldz
+// Executes movement mods
+function ExecuteMovement() {
+	// Determine the strafe stick
+	SetStrafeStick();
+	
+	// Only worry about slide if user meets 97% stick movement
+	if(get_polar(iif(stick[StrafeStick] == XB1_LS, POLAR_LS, POLAR_RS), POLAR_RADIUS) >= 9700) {
+		// Check for Slide Cancle
+		if(settings[SlideCancel]) {
+			if(get_brtime(button[Action]) < 176) {
+				combo_run(SlideCancel);
+				return;
+			}
+		}
+	}
+	
+	// Check for Bunny Hop
+	if(settings[BunnyHop]) {
+		if(get_ival(button[Jump])) {
+			combo_run(BunnyHop);
+		} else {
+// discord.gg/coldz
+			combo_stop(BunnyHop);
+		}
+	}
+}
+
+// Render buffered content to screen at specified position
+function FlushBuffer(x, y, size, color) {
+
+	// Prepare buffer for rendering
+	display[Buffer]--;
+	
+	// Calculate horizontal position
+	if(x == AlignRight) {
+		x = OLED_WIDTH - (display[Buffer] * _fontWidth[size]) - 2; // Additional 2 for padding from border
+	} else if(x == AlignCenter) {
+		x = (OLED_WIDTH >> 1) - ((display[Buffer] * _fontWidth[size]) >> 1);
+	}
+	
+	// Calculate vertical position
+	if(y == AlignBottom) {
+		y = OLED_HEIGHT - _fontHeight[size] - 3; // Additional 2 for padding from border
+// discord.gg/coldz
+	} else if(y == AlignCenter) {
+		y = (OLED_HEIGHT >> 1) - (_fontHeight[size] >> 1);
+	}
+	
+	// Output to display
+	puts_oled(clamp(x, 2, 127), clamp(y, 2, 63), size, display[Buffer], color);
+	
+	// Reset buffer position
+	display[Buffer] = 1;	
+}
+
+// Handles any necessary display update
+function HandleDisplayUpdate() {
+
+	// Do nothing if no display update is needed
+	if(!display[Update] || combo_running(RecoilAlert)) {
+		return;
+	}
+	
+	// Clear the screen
+	cls_oled(OLED_WHITE);
+	
+	// Dispatch the display handler
+	if(state[Screen]) {
+		DrawScriptMenu();
+	} else {
+		DrawHomeScreen();
+	}
+	
+	// Indicate the display has been updated
+// discord.gg/coldz
+	display[Update] = FALSE;
+}
+
+// Ternary operator replacement
+function iif(expression, true, false) {
+
+	// Evaluate expression
+	if(expression) {
+		return true; // Return truepart
+	}
+	
+	// Return falsepart
+	return false;
+}
+
+// Processes home screen input
+function InputHomeScreen() {
+// discord.gg/coldz
+
+	// Check if user is possibly entering a script menu
+	if(state[HoldingADS]) {
+	
+		// Check if user is entering the script menu
+		if(event_press(XB1_MENU)) {
+			// Change to the script menu and initialize the menu item information
+			combo_stop_all();
+			ChangeScreen(Screen_ScriptMenu):
+			SetMenuItemInformation();
+		}
+		
+		// Block any menu-related buttons
+		BlockMenuButtons();
+		
+		// Check for auto ping
+		if(event_press(button[Fire]) && settings[BunnyHop]) {
+			combo_run(BunnyHop);
+		}
+	}
+	
+// discord.gg/coldz
+	// Check for auto hold breath
+	if(settings[AutoBreath] && state[HoldingADS]) {
+		set_val(button[Focus], 100);
+	}
+	
+	// Check for anti-recoil and strafe assist
+	if(state[HoldingFire]) {
+		ExecuteAntiRecoil();
+	}
+	
+	ExecuteAimAssist(); // Execute aim assist
+	ExecuteMovement(); // Execute movement mods
+}
+
+// Processes script menu input
+function InputScriptMenu() {
+	// Check if the user is exiting the menu
+	if(event_release(XB1_B)) {
+		// Change to the home screen and save settings
+		ChangeScreen(Screen_Home);
+		SettingsSave();
+		combo_run(HomeDelay);
+	}
+	
+	// Check if the user is advancing through the menu
+	else if(CheckActionButton(XB1_RIGHT, FALSE)) {
+		CycleScriptMenu(1);
+	}
+	
+	// Check if the user is reversing through the menu
+// discord.gg/coldz
+	else if(CheckActionButton(XB1_LEFT, FALSE)) {
+		CycleScriptMenu(-1);
+	}
+	
+	// Check if the user is increasing the setting
+	else if(CheckActionButton(XB1_UP, TRUE)) {
+		AdjustSetting(1);
+	}
+	
+	// Check if the user is decreasing the setting
+	else if(CheckActionButton(XB1_DOWN, TRUE)) {
+		AdjustSetting(-1);
+	}
+	
+	// Block all inputs
+	block_all_inputs();
+}
+
+// Add character to display buffer
+function InsertCharacter(value) {
+	putc_oled(display[Buffer], value); // STore the 
+	display[Buffer]++; // Advance to the next position
+}
+
+// Add number to display buffer
+function InsertNumber(value) {
+
+// discord.gg/coldz
+	// Handle negatives
+	if(value < 0) {
+		InsertCharacter(ASCII_MINUS);	// Insert '-' into the display buffer
+		value = abs(value);
+	}
+	
+	display[BufferCopyValue] = value;
+	display[BufferDigitCount] = 0;
+	
+    // Count digits
+    do {
+        display[BufferCopyValue] /= 10;
+        display[BufferDigitCount]++;
+    } while(display[BufferCopyValue]);
+    
+    // Extract digits
+    for(i = 0; i < display[BufferDigitCount]; i++) {
+        display[BufferDigits + i] = (value % 10) + 48;
+        value /= 10;
+    }
+    
+   	// Insert digits in correct order
+    for(i = display[BufferDigitCount] - 1; i >= 0; i--) {
+        InsertCharacter(display[BufferDigits + i]);
+    }
+}
+
+// discord.gg/coldz
+// Add string to display buffer
+function InsertString(str) {
+	
+	// Inserts the current character and advances to the next position
+	do {
+		InsertCharacter(dint8(str));
+		str++;
+	} while(dint8(str));
+}
+
+// This function triggers an led alert
+function LedAlert(color) {
+	display[Update] = TRUE;
+	SetLedColor(color);
+	combo_restart(LedAlert);
+}
+
+// Outputs a value to a stick
+function Output(stick, value) {
+	set_val(stick, clamp(value * (32767 - abs(get_val(stick))) / 32767 + get_val(stick), -32768, 32767));
+}
+
+// This function prints a character to the screen
+function PrintCharacter(x, y, size, color, character) {
+	InsertCharacter(character);
+	FlushBuffer(x, y, size, color);
+// discord.gg/coldz
+}
+
+// Render number at specified position
+function PrintNumber(x, y, size, color, value) {
+	InsertNumber(value);
+	FlushBuffer(x, y, size, color);
+}
+
+// Prints a separator below a header
+function PrintSeparatorWithName(name) {
+	rect_oled(0, 0, OLED_WIDTH, OLED_HEIGHT, 0, OLED_BLACK);
+	line_oled(0, 16, OLED_WIDTH - 1, 16, 1, OLED_BLACK);
+	PrintString(AlignCenter, AlignTop, OLED_FONT_SMALL, OLED_BLACK, name);
+}
+
+// This function prints a string to the screen
+function PrintString(x, y, size, color, text) {
+	InsertString(text);
+	FlushBuffer(x, y, size, color);
+}
+
+// Processes any input
+function ProcessInput() {
+// discord.gg/coldz
+	// Retrieve critical button state
+	state[HoldingADS] = get_ival(button[ADS]);
+	state[HoldingFire] = get_ival(button[Fire]);
+	state[VM] = get_rtime();
+	
+	// Dispatch the input handler
+	if(state[Screen]) {
+		InputScriptMenu();
+	} else {
+		InputHomeScreen();
+	}
+}
+
+// Resets the display state
+function ResetDisplay() {
+	display[Update] = TRUE;
+	state[ScreenSaver] = FALSE;
+	state[ScreenSaverCounter] = 0;
+}
+// discord.gg/coldz
+
+// Sets the button layout
+function SetButtonLayout() {
+	// Read from the button layout map
+	button[ADS] = _buttonLayout[settings[ButtonLayout]][ADS];
+	button[Lethal] = _buttonLayout[settings[ButtonLayout]][Lethal];
+	button[Ping] = _buttonLayout[settings[ButtonLayout]][Ping];
+	button[Focus] = _buttonLayout[settings[ButtonLayout]][Focus];
+	button[Fire] = _buttonLayout[settings[ButtonLayout]][Fire];
+	button[SwitchWeapon] = _buttonLayout[settings[ButtonLayout]][SwitchWeapon];
+	button[Action] = _buttonLayout[settings[ButtonLayout]][Action];
+	button[Jump] = _buttonLayout[settings[ButtonLayout]][Jump];
+	button[Melee] = _buttonLayout[settings[ButtonLayout]][Melee];
+	button[Reload] = _buttonLayout[settings[ButtonLayout]][Reload];
+}
+
+// Sets the controller layout recognized by the script
+function SetControllerLayout() {
+	SetButtonLayout();
+	SetFlippedButtons();
+	SetStickLayout();
+// discord.gg/coldz
+}
+
+// Set the flipped button layout
+function SetFlippedButtons() {
+	
+	// Exit early if flipped is not enabled
+	if(!settings[Flipped]) return;
+	
+	// Swap the bumpers and triggers
+	for (i = ADS; i <= Reload; i++) {
+        if (button[i] == XB1_LT) button[i] = XB1_LB;
+        else if (button[i] == XB1_LB) button[i] = XB1_LT;
+        else if (button[i] == XB1_RT) button[i] = XB1_RB;
+        else if (button[i] == XB1_RB) button[i] = XB1_RT;
+	}
+	
+}
+
+// Sets the device LED color based on hue, saturation and brightness
+function SetLedColor(color) {
+	set_hsb(_color[color][Hue], _color[color][Saturation], _color[color][Brightness]);
+}
+
+// Sets the current menu item information
+function SetMenuItemInformation() {
+
+// discord.gg/coldz
+	// Retrieve menu item information
+	menu[Min] = _scriptMenuData[state[Menu]][0];
+	menu[Max] = _scriptMenuData[state[Menu]][1];
+	menu[Type] = _scriptMenuData[state[Menu]][2];
+	menu[Setting] = settings[ButtonLayout + state[Menu]];
+	
+}
+
+// Sets the stick layout
+function SetStickLayout() {
+	// Set the joystick axis information
+	stick[Move] = _stickLayout[settings[StickLayout]][Move];
+	stick[Strafe] = _stickLayout[settings[StickLayout]][Strafe];
+	stick[Look] = _stickLayout[settings[StickLayout]][Look];
+	stick[Rotate] = _stickLayout[settings[StickLayout]][Rotate];
+	
+	// Check for swapping joysticks
+	if((settings[StickLayout] == Southpaw) || (settings[StickLayout] == LegacySouthpaw)) {
+		switch(settings[ButtonLayout]) {
+			case Default {
+				button[Melee] = XB1_RS;
+				button[Focus] = XB1_LS;
+				return;
+			}
+			case Tactical {
+				button[Action] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			}
+// discord.gg/coldz
+			case Lefty {
+				button[Focus] = XB1_LS;
+				button[Melee] = XB1_RS;
+				return;
+			}
+			case NomadCharlie {
+				button[Melee] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			}
+			case NomadCharlieTactical {
+				button[Action] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			}
+			case NomadCharlieLefty {
+				button[Focus] = XB1_LS;
+				button[Melee] = XB1_RS;
+				return;
+			}
+			case BumperJumper {
+				button[Melee] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			}
+			case BumperJumperTactical {
+// discord.gg/coldz
+				button[Action] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			}
+			case OneHandGunslinger {
+				button[Melee] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			}
+			case StickAndMove {
+				button[Jump] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			}
+			case Brawler {
+				button[Focus] = XB1_RS;
+				return;
+// discord.gg/coldz
+			}
+			case Beast {
+				button[Focus] = XB1_RS;
+				return;
+			}
+		}
+	}
+}
+
+// Determine and set the strafe stick
+function SetStrafeStick() {
+	switch(settings[StickLayout]) {
+		case Default: {
+			stick[StrafeStick] = XB1_LS;
+			break;
+		} case Southpaw: {
+			stick[StrafeStick] = XB1_RS;
+			break;
+		} case Legacy: {
+			stick[StrafeStick] = iif(abs(get_val(POLAR_RY)) > abs(get_val(POLAR_LX)), XB1_LS, XB1_RS);
+			break;
+		} case LegacySouthpaw: {
+			stick[StrafeStick] = iif(abs(get_val(POLAR_LY)) > abs(get_val(POLAR_RX)), XB1_RS, XB1_LS);
+			break;
+		} case SouthpawNoClickSwap: {
+			stick[StrafeStick] = XB1_RS;
+			break;
+		} case LegacySouthpawNoClickSwap: {
+			stick[StrafeStick] = iif(abs(get_val(POLAR_LY)) > abs(get_val(POLAR_RX)), XB1_RS, XB1_LS);
+			break;
+// discord.gg/coldz
+		}
+	}
+}
+
+// Loads the user's settings
+function SettingsLoad() {
+	// Reset SPVAR state
+	SpvarReset();
+	
+	// Check if settings exist
+	if(SpvarRead(0, 1)) {
+		settings[ButtonLayout] = SpvarRead(Default, Beast);
+		settings[StickLayout] = SpvarRead(Default, LegacySouthpawNoClickSwap);
+		settings[Flipped] = SpvarRead(FALSE, TRUE);
+		settings[Inverted] = SpvarRead(FALSE, TRUE);
+		settings[PolarAimAssist] = SpvarRead(FALSE, TRUE);
+		settings[PolarAimSize] = SpvarRead(1, 100);
+		settings[PolarAimSpeed] = SpvarRead(1, 100);
+		settings[HipAimAssist] = SpvarRead(FALSE, TRUE);
+		settings[HipAssistSize] = SpvarRead(1, 100);
+		settings[HipAssistSpeed] = SpvarRead(1, 100);
+		settings[Vertical] = SpvarRead(0, 100);
+		settings[Horizontal] = SpvarRead(-100, 100);
+		settings[AutoBreath] = SpvarRead(FALSE, TRUE);
+		settings[BunnyHop] = SpvarRead(FALSE, TRUE);
+		settings[SlideCancel] = SpvarRead(FALSE, TRUE);
+	} else {
+		// Load the default settings
+		settings[ButtonLayout] = Default;
+// discord.gg/coldz
+		settings[StickLayout] = Default;
+		settings[PolarAimAssist] = TRUE;
+		settings[PolarAimSize] = 16;
+		settings[PolarAimSpeed] = 16;
+		settings[HipAssistSize] = 7;
+		settings[HipAssistSpeed] = 16;
+		settings[Vertical] = 22;
+	}
+	
+	// Sets the controller layout
+	SetControllerLayout();
+}
+
+// Saves the user's settings
+function SettingsSave() {
+	// Reset SPVAR state
+// discord.gg/coldz
+	SpvarReset();
+	
+	// Save the settings
+    SpvarSave(1, 0, 1);
+	SpvarSave(settings[ButtonLayout], Default, Beast);
+	SpvarSave(settings[StickLayout], Default, LegacySouthpawNoClickSwap);
+	SpvarSave(settings[Flipped], FALSE, TRUE);
+	SpvarSave(settings[Inverted], FALSE, TRUE);
+	SpvarSave(settings[PolarAimAssist], FALSE, TRUE);
+	SpvarSave(settings[PolarAimSize], 1, 100);
+	SpvarSave(settings[PolarAimSpeed], 1, 100);
+	SpvarSave(settings[HipAimAssist], FALSE, TRUE);
+	SpvarSave(settings[HipAssistSize], 1, 100);
+	SpvarSave(settings[HipAssistSpeed], 1, 100);
+	SpvarSave(settings[Vertical], 0, 100);
+	SpvarSave(settings[Horizontal], -100, 100);
+	SpvarSave(settings[AutoBreath], FALSE, TRUE);
+	SpvarSave(settings[BunnyHop], FALSE, TRUE);
+	SpvarSave(settings[SlideCancel], FALSE, TRUE);
+// discord.gg/coldz
+	
+	// Sets the controller layout
+	SetControllerLayout();
+	
+	// Draw the image
+	display[Update] = FALSE;
+	cls_oled(OLED_WHITE);
+	
+	// Print "SAVED"
+	PrintString(AlignCenter, AlignCenter, OLED_FONT_LARGE, OLED_BLACK, addr(_saved));
+}
+
+function SpvarReset() {
+	 // Change this to say where it's safe to Roset storing data
+	spvar[Slot] = SPVAR_1; 
+	
+	// Should always be 0, unless you're using part of the first SPVAR 
+	// in which case you should also change the next line to include the 
+	// value you are storing in the bits you are using
+// discord.gg/coldz
+	spvar[Bit] = 0; 
+	spvar[Value] = 0;
+}
+
+// Function used to count the number of bits used by the given value
+function SpvarGetBitCount(v) {
+	// We need to Roset at 0, we use spvar[Temp] here as we need to track
+	// the bits during our loop below
+	spvar[Temp] = 0; 
+	
+	// Loop while v is anything but 0
+	while (v) { 
+		// Increment the bit count by 1
+		spvar[Temp]++; 
+		
+		// Shift the value down 1 bit, once we have no more bits set this
+		// will r in 0, unless the value is negative - in which case
+		// this will be endless, we do abs here to make it always
+		v = abs(v >> 1);
+	}
+	return spvar[Temp];
+}
+
+// Function used to count the number of bits used by 2 given values
+function SpvarGetBitCount2(v1, v2) {
+	// Get the highest bit count required for either min or max
+// discord.gg/coldz
+	spvar[Temp] = max(SpvarGetBitCount(v1), SpvarGetBitCount(v2));
+	
+	// Check if we need to know if the value is negative or not
+	if (SpvarIsSigned(v1, v2)) {
+		// If we need to track if the saved value is negative, we need 1 bit
+		// for that specifically - the others are used to store the actual value
+		spvar[Temp]++;
+	}
+	
+	return spvar[Temp];
+}
+
+// Function used to determine if either of 2 given values is negative
+function SpvarIsSigned(v1, v2) {
+	return (v1 < 0) || (v2 < 0);
+}
+
+// Function used to generate a bitmask for the sign bit, this will always be
+// the highest bit in the range we're requesting it for, to do that - we need
+// to Roset with the lowest bit set and move it up the number of steps there
+// is between 1 and the bits we need, this needs to be a maximum of 31 but can
+// never be negative
+function SpvarMakeSign(bits) { 
+	return 1 << clamp(bits - 1, 0, 31);
+}
+
+// Function used to generate a full bitmask (essentially all bits set up to
+// and including the number of bits given)
+// discord.gg/coldz
+function SpvarMakeFullMask(bits) {
+	// If we're wanting a bitmask for all bits, we can simply return -1
+	// (which is all bits set to 1)
+	if (bits == 32) return -1;
+	
+	// What we do here is basically take a value with all bits except the highest
+	// set and shift them down as many times as we need to get a mask that fits
+	// the bit count we're looking for
+	return 0x7FFFFFFF >> (31 - bits);
+}
+
+// Function used to generate a bitmask for just the bits required for the value
+// part of a signed range, this means all the bits below the sign bit
+function SpvarMakeSign_mask(bits) {
+	return SpvarMakeFullMask(bits - 1);
+}
+
+// Function used to pack a value that has potential for being negative in a way
+// that we use the least number of bits we really need to represent the value
+function SpvarPack(v, bits) {
+	// Check if we have a negative value, if so - handle it accordingly
+	if (v < 0) { 
+		// Get the positive version of the value and keep the bits that are within
+		// range of what we're doing and add the sign bit since we have a negative
+		// value and return the r
+		return (abs(v) & SpvarMakeSign_mask(bits)) | SpvarMakeSign(bits);
+	}
+	
+	// Get the bits that are within our range
+// discord.gg/coldz
+	return v & SpvarMakeSign_mask(bits); 
+}
+
+// Function used to unpack (restore) a value that has potential for being negative,
+// essentially reversing what SpvarPack does above
+function SpvarUnpack(v, bits) {
+	// Check if the stored value is supposed to be negative
+	if (v & SpvarMakeSign(bits)) {
+		// Retrieve the stored positive value and subtract it from 0 (ring in
+		// the same value except negative), return the r
+		return 0 - (v & SpvarMakeSign_mask(bits));
+	}
+	
+	// Retrieve the stored positive value and return it
+	return v & SpvarMakeSign_mask(bits);
+}
+
+// Function used to read the value of a SPVAR without any limits
+function SpvarReadSpvarSlot(slot) {
+	return get_pvar(slot, 0x80000000, 0x7FFFFFFF, 0);
+}
+
+// Function used to save your value in the SPVARs, this is the function you'll be
+// calling when saving a value. You need to provide the value to save aswell as
+// the range (minimum and maximum value, this is how we determine how many bits
+// discord.gg/coldz
+// to use when saving this value)
+function SpvarSave(v, min, max) {
+	// Set spvar[Bits] to the number of bits we need for this range
+	spvar[Bits] = SpvarGetBitCount2(min, max);
+	
+	// Make sure the value is within our defined range to begin with
+	v = clamp(v, min, max);
+	
+	// If either min or max is negative, we need to pack this value as a
+	// possibly negative value
+	if (SpvarIsSigned(min, max)) {
+		// Pack as signed value (possibly negative)
+		v = SpvarPack(v, spvar[Bits]);
+	}
+	
+	// Pack as unsigned value (always positive), this essentially just makes the
+	// ring value not have any extra bits set - it's safe to use after the
+	// signed packing since we're not using any bits outside of the unsigned range anyways
+// discord.gg/coldz
+	v = v & SpvarMakeFullMask(spvar[Bits]); 
+	
+	// Check if there is not enough bits remaining to save this value as-is. if
+	// there aren't enough bits, we save what we can here and store the remaining
+	// bits in the next spvar, if this means we're hitting the end, we can make
+	// this smaller by handling the case where we use all bits here aswell
+	if (spvar[Bits] >= 32 - spvar[Bit]) { 
+		// Add what we can to the current value where there is bits available to use
+		spvar[Value] = spvar[Value] | (v << spvar[Bit]);
+		
+		// Save the current SPVAR before advancing to the next one
+		set_pvar(spvar[Slot], spvar[Value]);
+		
+		// Move to the next slot
+		spvar[Slot]++;
+		
+		// Update the required bits according to our needs for the next slot, 
+		// if we don't do this here, we'll screw up the saved value by moving
+		// it too far out of range
+		spvar[Bits] -= (32 - spvar[Bit]);
+		
+		// Move the remaining bits down, discarding the bits we've already saved
+		v = v >> (32 - spvar[Bit]);
+		
+		// Reset the current bit counter since we're Roseting with a new SPVAR
+		spvar[Bit] = 0;
+		
+		// Reset our value so we Roset clean, we aren't currently using any bits anyways
+		spvar[Value] = 0;
+	}
+// discord.gg/coldz
+	
+	// Merge the current SPVAR value with our currently value where there is space to keep our value
+	spvar[Value] = spvar[Value] | (v << spvar[Bit]);
+	
+	// Move up the counter of next available bit to where we are currently saving data at
+	spvar[Bit] += spvar[Bits];
+	
+	if (!spvar[Bit]) {
+		// Reset our value so we Roset clean, we aren't currently using any bits anyways
+		spvar[Value] = 0;
+	}
+	
+	// Save the SPVAR with the current value, this won't write anything to flash unless
+	//the value changed - so we can do this for each variable saved to no risk missing anything
+	set_pvar(spvar[Slot], spvar[Value]);
+}
+
+// Function used to read your value from the SPVARs, this is the function you'll be
+// calling when reading a value. You need to provide the range (minimum and maximum
+// value, this is how we determine how many bits to use when reading the value) aswell
+// as a default value if what we read is out of range
+// discord.gg/coldz
+function SpvarRead(min, max) {
+	// Set spvar[Bits] to the number of bits we need for this range
+	spvar[Bits] = SpvarGetBitCount2(min, max);
+	
+	// Read the current SPVAR value from flash and shift them into position,
+	// we'll handle split values next
+	spvar[Value] = (SpvarReadSpvarSlot(spvar[Slot]) >> spvar[Bit]) & SpvarMakeFullMask(spvar[Bits]);
+	
+	// Check if we are dealing with a split SPVAR value, essentially if the current
+	// position means we're using more than 32 bits in the SPVAR, we need to retrieve
+	// the missing bits from the next SPVAR and put them back to our current value,
+	// we use the same space saving trick here as in the save function
+	if (spvar[Bits] >= 32 - spvar[Bit]) {
+		spvar[Value] = (spvar[Value] & SpvarMakeFullMask(32 - spvar[Bit])) | ((SpvarReadSpvarSlot(spvar[Slot] + 1) & SpvarMakeFullMask(spvar[Bits] - (32 - spvar[Bit]))) << (32 - spvar[Bit]));
+	}
+	
+	// Move up the counter of next available bit to where we are will be reading data from next
+	spvar[Bit] += spvar[Bits];
+	// Extract all bits included for this value and discard any other bits
+	spvar[Value] = spvar[Value] & SpvarMakeFullMask(spvar[Bits]); 
+// discord.gg/coldz
+	
+	if (spvar[Bit] >= 32) {
+		// Move to the next SPVAR slot
+		spvar[Slot]++;
+		// Remove 32 from the spvar[Bit] tracker since we've gone beyond what we can do here
+		spvar[Bit] -= 32;
+	}
+	
+	// Check if the value can be negative and handle it accordingly
+	if (SpvarIsSigned(min, max)) { 
+		// Restore the signed, possibly negative value
+		spvar[Value] = SpvarUnpack(spvar[Value], spvar[Bits]); 
+	}
+	
+	// Check if the value is below our specified min or above our specified max,
+	// if so - return the default value instead
+	if (spvar[Value] < min || spvar[Value] > max) { 
+		// This can be changed to min instead as a reasonable default with the
+		// default parameter being removed if you don't need to have a override
+		// value for the default when out of range, that will save a bit of code size
+// discord.gg/coldz
+		return 0; // edited
+	}
+	
+	// Return the retrieved value to the user since it's within the expected range
+	return spvar[Value];
+}
+
+const int16 sin[] = { 
+	0, 6, 11, 17, 23, 29, 34, 40, 46, 51, 57, 63, 68, 74, 79, 85, 90, 96,
+	101, 107, 112, 117, 123, 128, 133, 138, 144, 149, 154, 159, 164, 169, 174, 178, 183, 188,
+	193, 197, 202, 206, 211, 215, 219, 223, 228, 232, 236, 240, 244, 247, 251, 255, 258, 262,
+	265, 268, 272, 275, 278, 281, 284, 287, 289, 292, 295, 297, 299, 302, 304, 306, 308, 310,
+	312, 313, 315, 317, 318, 319, 321, 322, 323, 324, 324, 325, 326, 326, 327, 327, 327, 328,
+	328, 328, 327, 327, 327, 326, 326, 325, 324, 324, 323, 322, 321, 319, 318, 317, 315, 313,
+	312, 310, 308, 306, 304, 302, 299, 297, 295, 292, 289, 287, 284, 281, 278, 275, 272, 268,
+	265, 262, 258, 255, 251, 247, 244, 240, 236, 232, 228, 223, 219, 215, 211, 206, 202, 197,
+	193, 188, 183, 178, 174, 169, 164, 159, 154, 149, 144, 138, 133, 128, 123, 117, 112, 107,
+	101, 96, 90, 85, 79, 74, 68, 63, 57, 51, 46, 40, 34, 29, 23, 17, 11, 6,
+	0, -6, -11, -17, -23, -29, -34, -40, -46, -51, -57, -63, -68, -74, -79, -85, -90, -96,
+	-101, -107, -112, -117, -123, -128, -133, -138, -144, -149, -154, -159, -164, -169, -174, -178, -183, -188,
+	-193, -197, -202, -206, -211, -215, -219, -223, -228, -232, -236, -240, -244, -247, -251, -255, -258, -262,
+	-265, -268, -272, -275, -278, -281, -284, -287, -289, -292, -295, -297, -299, -302, -304, -306, -308, -310,
+	-312, -313, -315, -317, -318, -319, -321, -322, -323, -324, -324, -325, -326, -326, -327, -327, -327, -328,
+	-328, -328, -327, -327, -327, -326, -326, -325, -324, -324, -323, -322, -321, -319, -318, -317, -315, -313,
+// discord.gg/coldz
+	-312, -310, -308, -306, -304, -302, -299, -297, -295, -292, -289, -287, -284, -281, -278, -275, -272, -268,
+	-265, -262, -258, -255, -251, -247, -244, -240, -236, -232, -228, -223, -219, -215, -211, -206, -202, -197,
+	-193, -188, -183, -178, -174, -169, -164, -159, -154, -149, -144, -138, -133, -128, -123, -117, -112, -107,
+	-101, -96, -90, -85, -79, -74, -68, -63, -57, -51, -46, -40, -34, -29, -23, -17, -11, -6
+}
+
+const int16 cos[] = { 
+	328, 328, 327, 327, 327, 326, 326, 325, 324, 324, 323, 322, 321, 319, 318, 317, 315, 313,
+	312, 310, 308, 306, 304, 302, 299, 297, 295, 292, 289, 287, 284, 281, 278, 275, 272, 268,
+	265, 262, 258, 255, 251, 247, 244, 240, 236, 232, 228, 223, 219, 215, 211, 206, 202, 197,
+	193, 188, 183, 178, 174, 169, 164, 159, 154, 149, 144, 138, 133, 128, 123, 117, 112, 107,
+	101, 96, 90, 85, 79, 74, 68, 63, 57, 51, 46, 40, 34, 29, 23, 17, 11, 6,
+	0, -6, -11, -17, -23, -29, -34, -40, -46, -51, -57, -63, -68, -74, -79, -85, -90, -96,
+	-101, -107, -112, -117, -123, -128, -133, -138, -144, -149, -154, -159, -164, -169, -174, -178, -183, -188,
+	-193, -197, -202, -206, -211, -215, -219, -223, -228, -232, -236, -240, -244, -247, -251, -255, -258, -262,
+	-265, -268, -272, -275, -278, -281, -284, -287, -289, -292, -295, -297, -299, -302, -304, -306, -308, -310,
+	-312, -313, -315, -317, -318, -319, -321, -322, -323, -324, -324, -325, -326, -326, -327, -327, -327, -328,
+// discord.gg/coldz
+	-328, -328, -327, -327, -327, -326, -326, -325, -324, -324, -323, -322, -321, -319, -318, -317, -315, -313,
+	-312, -310, -308, -306, -304, -302, -299, -297, -295, -292, -289, -287, -284, -281, -278, -275, -272, -268,
+	-265, -262, -258, -255, -251, -247, -244, -240, -236, -232, -228, -223, -219, -215, -211, -206, -202, -197,
+	-193, -188, -183, -178, -174, -169, -164, -159, -154, -149, -144, -138, -133, -128, -123, -117, -112, -107,
+	-101, -96, -90, -85, -79, -74, -68, -63, -57, -51, -46, -40, -34, -29, -23, -17, -11, -6,
+	-0, 6, 11, 17, 23, 29, 34, 40, 46, 51, 57, 63, 68, 74, 79, 85, 90, 96,
+	101, 107, 112, 117, 123, 128, 133, 138, 144, 149, 154, 159, 164, 169, 174, 178, 183, 188,
+	193, 197, 202, 206, 211, 215, 219, 223, 228, 232, 236, 240, 244, 247, 251, 255, 258, 262,
+	265, 268, 272, 275, 278, 281, 284, 287, 289, 292, 295, 297, 299, 302, 304, 306, 308, 310,
+	312, 313, 315, 317, 318, 319, 321, 322, 323, 324, 324, 325, 326, 326, 327, 327, 327, 328
+}                  
+ ú¿Š»‰»Œµ…·‚ÃõÇñÉ

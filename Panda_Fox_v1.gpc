@@ -1,0 +1,1688 @@
+// Constant Arrays
+const uint8 _buttonLayout[][] = {
+	// ADS	  Lethal  Ping 	  Focus	  Fire	  Switch SldDve Jump   Melee   Reload	Tactical
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X,	XB1_LB }, 	// Default
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_A, XB1_B, XB1_X,	XB1_LB }, 	// Tactical
+	{ XB1_RT, XB1_LB, XB1_UP, XB1_RS, XB1_LT, XB1_Y, XB1_B, XB1_A, XB1_LS, XB1_X,	XB1_RB }, 	// Lefty
+	{ XB1_RB, XB1_LT, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X,	XB1_LB }, 	// Nomad/Charlie
+	{ XB1_RB, XB1_LT, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_A, XB1_B, XB1_X,	XB1_LB }, 	// Nomad/Charlie Tac
+	{ XB1_LB, XB1_RT, XB1_UP, XB1_RS, XB1_LT, XB1_Y, XB1_B, XB1_A, XB1_LS, XB1_X,	XB1_RB }, 	// Nomad/Charlie Left
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_LB, XB1_RS, XB1_X,	XB1_A }, 	// Bumper Jumper
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_LB, XB1_B, XB1_X,	XB1_A }, 	// Bumper Jumper Tact
+	{ XB1_LT, XB1_RT, XB1_UP, XB1_LS, XB1_LB, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X,	XB1_RB }, 	// One-hand Gunslinger
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_RS, XB1_A, XB1_X,	XB1_LB }, 	// Stick and Move
+	{ XB1_LT, XB1_RS, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RB, XB1_X,	XB1_LB }, 	// Brawler
+	{ XB1_LT, XB1_RS, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_LB, XB1_RB, XB1_X,	XB1_A } 	// Beast
+}
+const uint16 _colors[][] = {
+	{ 120, 100, 45 }, // Green
+	{ 120, 100, 75 }, // Menu Green
+	{ 0, 100, 75 }, // Menu Red
+	{ 305, 100, 50 } // Menu Purple
+}
+const uint8 _fontHeight[] = { OLED_FONT_SMALL_HEIGHT, OLED_FONT_MEDIUM_HEIGHT, OLED_FONT_LARGE_HEIGHT }
+const uint8 _fontWidth[] = { OLED_FONT_SMALL_WIDTH, OLED_FONT_MEDIUM_WIDTH, OLED_FONT_LARGE_WIDTH }
+const uint16 _menuItemData[][] = {
+	{ FALSE, TRUE, Setting_Toggle }, // Aim Lock
+	{ 1, 100, Setting_Number }, // Aim Lock Radius
+	{ 1, 100, Setting_Number }, // Aim Lock Speed
+	{ FALSE, TRUE, Setting_Toggle }, // Auto Hold Breath
+	{ FALSE, TRUE, Setting_Toggle }, // Auto Ping
+	{ Default, Beast, Setting_String }, // Button Layout
+	{ FALSE, TRUE, Setting_Toggle }, // Block Vibration
+	{ FALSE, TRUE, Setting_Toggle }, // Bunny Hop
+	{ FALSE, TRUE, Setting_Toggle }, // Flipped
+	{ FALSE, TRUE, Setting_Toggle }, // Hair Triggers
+	{ FALSE, TRUE, Setting_Toggle }, // Inverted
+	{ 0, 10, Setting_RPS }, // Rapid Fire
+	{ FALSE, TRUE, Setting_Toggle }, // Slide Cancel
+	{ Default, LegacySouthpawNoClickSwap, Setting_String }, // Stick Layout
+	{ FALSE, TRUE, Setting_Toggle }, // Sticky Aim
+	{ 1, 100, Setting_Number }, // Sticky Aim Size
+	{ 1, 100, Setting_Time }, // Sticky Aim Time
+	{ 0, 100, Setting_Time } // YY Spam
+	
+}
+const uint8 _stickLayout[][] = {
+	// Move   	Strafe    Look      Rotate    
+	{ POLAR_LY, POLAR_LX, POLAR_RY, POLAR_RX }, // Default
+	{ POLAR_RY, POLAR_RX, POLAR_LY, POLAR_LX }, // Southpaw
+	{ POLAR_LY, POLAR_RX, POLAR_RY, POLAR_LX }, // Legacy
+	{ POLAR_RY, POLAR_LX, POLAR_LY, POLAR_RX }, // Legacy Southpaw
+	{ POLAR_RY, POLAR_RX, POLAR_LY, POLAR_LX }, // Southpaw No Click Swap
+	{ POLAR_RY, POLAR_LX, POLAR_LY, POLAR_RX }  // Legacy Southpaw No Click Swap
+}
+const uint8 _version[] = { 1, 0 }
+
+// Constant Strings
+const string _buttonLayoutNames[] = { "Default", "Tactical", "Lefty", "Nomad/Charlie", "Nomad/Charlie Tact", "Nomad/Charlie Left", "Bumper Jumper", "Bumper Jumper Tact", "1-hand Gunslinger", "Stick and Move", "Brawler", "Beast", "Custom" }
+const string _homeScreenStrings[] = { "Fox", "FPS Script", "LethalPanda", "Version " }
+const string _menuScreenFooters[] = { " to Save & Exit", " to Adjust", " to Scroll" }
+const string _menuScreenNames[] = { "AimLock v1", "AimLock v1 Size", "AimLock v1 Speed", "Auto Hold Breath", "Auto Ping", "Button Layout", "Block Vibration", "Bunny Hop", "Flipped", "Hair Triggers", "Inverted", "Rapid Fire", "Slide Cancel", "Stick Layout", "Sticky Aim", "Sticky Aim Size", "Sticky Aim Time", "YY Spam" }
+const string _stickLayoutNames[] = { "Default", "Southpaw", "Legacy", "Legacy Southpaw", "Southpaw NoClkSwap", "LegSthPw NoClkSwap" }
+const string _toggleStrings[] = { "Off", "On" }
+
+// Enumeration
+enum {
+	// Button elements
+	ADS = 0, Lethal, Ping, Focus, Fire, SwitchWeapon, Action, Jump, Melee, Reload, Tactical, IsFlippedRemapped,
+	
+	// Button identifiers
+	Default = 0, TactLayout, Lefty, NomadCharlie, NomadCharlieTactical, NomadCharlieLefty, BumperJumper, BumperJumperTactical, OneHandGunslinger, StickAndMove, Brawler, Beast,
+	
+	// Color identifiers
+	Green = 0, MenuGreen, MenuRed, MenuPurple,
+	Hue = 0, Saturation, Brightness,
+	
+	// Display elements
+	Buffer = 0, BufferCopyValue, BufferDigitCount, BufferDigits,
+	LedUpdate = BufferDigits + 6, Update,
+	
+	// Display identifiers
+	AlignCenter = -3, AlignBottom, AlignRight, AlignLeft = 2, AlignTop = 4,
+	Separator_Bottom = 1, Separator_Top = 2, Separator_Both = Separator_Bottom | Separator_Top,
+	
+	// Footer elements
+	Count = 0, Number,
+	
+	// Generic identifiers
+	Version_Major = 0, Version_Minor,
+	
+	// Input elements
+	HoldingADS = 0, HoldingFire,
+	
+	// IO elements
+	Console = 0, Controller, Remapped,
+	
+	// Menu elements
+	ButtonBlock = 0, ButtonHoldTime, Page, SettingMin, SettingMax, SettingType, SubMenuPage,
+	
+	// Output elements
+	Angle = 0, X, Y,
+	
+    // Screensaver elements
+    Enabled = 0, Counter,
+    
+    // Settings elements
+    AimLock = 0, AimLockSize, AimLockSpeed, AutoHoldBreath, AutoPing, ButtonLayout, BlockVibration, BunnyHop, Flipped, HairTriggers, Inverted, RapidFire, SlideCancel, StickLayout, StickyAim, StickyAimSize, StickyAimTime, YYSpam,
+    Horizontal, Vertical,
+    
+    // Settings identifers
+    Setting_Number = BITMASK_1, Setting_RPS = BITMASK_2, Setting_String = BITMASK_3, Setting_Time = BITMASK_4, Setting_Toggle = BITMASK_5,
+    
+    // SPVAR elements
+    Bit = 0, Bits, Slot, Temp, Value,
+    
+    // State elements
+    Screen = 0,
+    
+    // State identifiers
+    HomeScreen = 0, MenuScreen,
+    
+    // Stick elements
+  	Move = 0, Strafe, Look, Rotate, PolarRadius, SprintButton,
+  	
+    // Stick Layout identifiers
+    Southpaw = 1, Legacy, LegacySouthpaw, SouthpawNoClickSwap, LegacySouthpawNoClickSwap,
+    
+    // String identifiers
+    HomeScreen_Title = 0, HomeScreen_Description, HomeScreen_Author, HomeScreen_Version,
+    MenuScreenFooter_ToSaveAndExit = 0, MenuScreenFooter_ToAdjust, MenuScreenFooter_ToScroll
+}
+
+// Variables
+int button[12];
+int display[11];
+int footer[2];
+int i, j;
+int input[2];
+int io[3];
+int menu[7];
+int output[3];
+int screensaver[2];
+int settings[20];
+int spvar[5];
+int state[1];
+int stick[6];
+
+// Script Initialization
+init {
+	SettingsLoad(); // Load the script settings
+}
+
+const string _antiRecoilStrings[] = { "Horizontal", "Vertical" }
+
+// Script Loop
+main {
+	GetIOState(); // Get IO state
+	HandleDisplayUpdate(); // Handles any display updates
+	HandleLEDUpdate(); // Handles any LED updates
+	HandleInput(); // Handles any input
+	HandleOutput(); // Handles any output
+}
+
+// Draws an anti recoil value being adjusted
+function DrawAntiRecoilValue(axis) {
+	cls_oled(OLED_BLACK); // Clear the screen
+	ResetScreenSaver(); // Reset internal display state
+	PrintMediumString(AlignCenter, AlignTop, _antiRecoilStrings[Iif(axis == Horizontal, 0, 1)]);
+	PrintLargeNumber(AlignCenter, 29, settings[axis]);
+	
+	combo_restart(Combo_ShowRecoil);
+}
+
+// Adjusts an anti-recoil value
+function AdjustRecoil(axis, adjustment) {
+	// Check for horizontal adjustment
+	if(axis == Horizontal) {
+		settings[Horizontal] = AdjustValue(settings[Horizontal], -100, 100, adjustment, FALSE);
+		DrawAntiRecoilValue(Horizontal);
+		return;
+	}
+	
+	// Perform vertical adjustment
+	settings[Vertical] = AdjustValue(settings[Vertical], 0, 100, adjustment, FALSE);
+	DrawAntiRecoilValue(Vertical);
+}
+
+// Adjusts a setting
+function AdjustSetting(setting, adjustment) {
+	settings[setting] = AdjustValue(settings[setting], menu[SettingMin], menu[SettingMax], adjustment, !(menu[SettingType] & (Setting_Number | Setting_Time | Setting_RPS)));
+}
+
+// Adjusts a value within bounds, with optional wrap-around (cyclable)
+function AdjustValue(value, lower, upper, adjustment, cyclable) {
+    // Increasing
+    if(adjustment > 0) {
+        // Within upper limit -> apply increase
+        if(value + adjustment <= upper) {
+            LedAlert(MenuGreen);
+            return value + adjustment;
+        }
+        
+        // Overflow but cycling allowed -> wrap to lower
+        if(cyclable) {
+            LedAlert(MenuGreen);
+            return lower;
+        }
+        
+        // Already at upper -> alert failure
+        if(value == upper) {
+            LedAlert(MenuRed);
+        }
+
+        // Clamp to upper
+        return upper;
+    }
+
+    // Within lower limit -> apply decrease
+    if(value + adjustment >= lower) {
+        LedAlert(MenuGreen);
+        return value + adjustment;
+    }
+    
+    // Underflow but cycling allowed -> wrap to upper
+    if(cyclable) {
+        LedAlert(MenuGreen);
+        return upper;
+    }
+    
+    // Already at lower -> alert failure
+    if(value == lower) {
+        LedAlert(MenuRed);
+    }
+
+    // Clamp to lower
+    return lower;
+}
+
+// Adjusts a hold-duration counter based on how long the button is pressed
+function AdjustValueBasedOnTime(time) {
+    // If held long enough -> reset, otherwise increase hold time
+    menu[ButtonHoldTime] = Iif(menu[ButtonHoldTime] >= time, 0, menu[ButtonHoldTime] + 10);
+
+    // Return updated value
+    return menu[ButtonHoldTime];
+}
+
+// Advances to the next footer
+function AdvanceFooter() {
+    footer[Count] = 0;
+    footer[Number] = (footer[Number] + 1) % GetFooterCount();
+}
+
+// Changes the screen
+function ChangeScreen(screen) {
+	// Set VM speed
+	vm_tctrl(Iif(screen == HomeScreen, -6, 0));
+	
+	// Reset display
+	ResetDisplay();
+	ResetFooter();
+	
+	// Change internal state
+	display[LedUpdate] = TRUE;
+	menu[ButtonBlock] = -1;
+	state[Screen] = screen;
+}
+
+// Checks for a button beind held to cycle a menu/edit a value
+function CheckActionButton(button, variable) {
+	// Check if the button is being heled
+	if(get_ival(button)) {
+		// Check if no button is being held
+		if(menu[ButtonBlock] == -1)  {
+			menu[ButtonBlock] = button;
+		}
+		
+		// Check if the first action button pressed is being held so dont let another button held interrupt the operation
+		if(menu[ButtonBlock] == button) {
+			// Return true if the button is just being pressed
+			if(event_press(button)) {
+				return TRUE;
+			}
+			
+			// Check for increasing speeds
+			if(variable) {
+                // Cycle values based on the hold duration
+                if (get_ptime(button) >= 200) {
+                	// Determine how long the button has been held for
+                    if (get_ptime(button) > 4000)  {
+                        // For every 10ms button is held after 2000ms, cycle value
+                        return !AdjustValueBasedOnTime(10);
+                    } else if (get_ptime(button) > 3000) {
+                        // For every 30ms button is held after 2000ms, cycle value
+                        return !AdjustValueBasedOnTime(30);
+                    } else if (get_ptime(button) > 2000) {
+                        // For every 50ms button is held after 2000ms, cycle value
+                        return !AdjustValueBasedOnTime(50);
+                    } else if (get_ptime(button) > 1000) {
+                        // For every 70ms button is held after 1000ms, cycle value
+                        return !AdjustValueBasedOnTime(70);
+                    } else {
+                        // For every 90ms button is held after initial 200ms, cycle value
+                        return !AdjustValueBasedOnTime(90);
+                    }
+                }
+                // Button has not been held long enough
+                else {
+                	return FALSE;
+                }
+			} else {
+				// Cycle values every 160ms milliseconds
+				menu[ButtonHoldTime] = Iif(menu[ButtonHoldTime] >= 200, 0, menu[ButtonHoldTime] + 10);
+			}
+			
+            // Return whether the button was held long enough
+			return !menu[ButtonHoldTime];
+		}
+	}
+	else if(event_release(menu[ButtonBlock])) {
+		menu[ButtonBlock] = -1; // Release any button block
+		menu[ButtonHoldTime] = 0; // Reset the hold time
+		ResetDisplay(); // Reset the display
+	}
+	
+	return FALSE;
+}
+
+// Checks for a IO update
+function CheckIOUpdate(device, id) {
+	// Check if the IO 
+	if(io[device] != id) {
+		io[device] = id; // Set the new identifier
+        ResetDisplay(); // Indicate the display should update
+		return TRUE;
+	}
+	
+	return FALSE; // Indicate no change
+}
+
+// Checks for engaging the screensaver
+function CheckScreenSaver() {
+	// Check if not on home screen
+	if(state[Screen] != HomeScreen) {
+		return FALSE;
+	}
+	
+	// Check if the screensaver should engage
+	if(screensaver[Enabled]) {
+		return TRUE;
+	}
+
+	// Check if the screensaver should engage
+	if(screensaver[Counter] >= 16000) {
+		cls_oled(OLED_BLACK); // Clear the screen
+		screensaver[Enabled] = TRUE; // Indicate screensaver is on
+		return TRUE;
+	}
+
+	// Increase the screensaver counter
+	screensaver[Counter] += get_rtime();
+
+	// Indicate the screen saver is not active
+	return FALSE;
+}
+
+// Checks for a footer update
+function CheckFooterUpdate() {
+	// Check if screensaver is enabled
+	if(screensaver[Enabled] || state[Screen] == HomeScreen) {
+		return FALSE;
+	}
+	
+    // Check if the footer should advance
+    if(footer[Count] >= 4000) {
+        AdvanceFooter();
+        return TRUE; // Indicate the display should update
+    }
+
+    // Increase the footer timer
+    footer[Count] += get_rtime();
+
+    return FALSE;
+}
+
+// Draws the footer
+function DrawFooter() {
+	// Determine the screen display
+	switch(state[Screen]) {
+		case HomeScreen { return; }
+		case MenuScreen { PrepareFooterMenuScreen(); break; }
+	}
+	
+	// Flush a small buffer
+	FlushSmallBuffer(AlignCenter, AlignBottom);
+}
+
+// 
+// Draws separators on the screen
+function DrawSeparator(separator) {
+    // Check for bottom separator
+    if(separator & Separator_Bottom) {
+        line_oled(0, OLED_HEIGHT - 15, OLED_WIDTH - 1, OLED_HEIGHT - 15, 1, OLED_WHITE);
+    }
+
+    // Check for top separator
+    if(separator & Separator_Top) {
+        line_oled(0, 15, OLED_WIDTH - 1, 15, 1, OLED_WHITE);
+    }
+}
+
+// Draws a setting
+function DrawSetting(setting) {
+	// Determine the setting type
+	switch(menu[SettingType]) {
+		case Setting_RPS {
+			// Check if disabled
+			if(!setting) {
+				InsertString(addr(_toggleStrings[FALSE]));
+				break;
+			} 
+			
+			InsertNumber(setting);
+			InsertCharacter(ASCII_SPACE);
+			InsertCharacter(ASCII_UPPER_R);
+			InsertCharacter(ASCII_UPPER_P);
+			InsertCharacter(ASCII_UPPER_S);
+			break;
+		}
+		case Setting_String {
+			InsertString(GetString(setting));
+			break;
+		}
+		case Setting_Time {
+			// Check if disabled
+			if(!setting) {
+				InsertString(addr(_toggleStrings[FALSE]));
+				break;
+			}
+			
+			InsertNumber(setting * 4); // VM speed
+			InsertCharacter(ASCII_LOWER_M);
+			InsertCharacter(ASCII_LOWER_S);
+			break;
+		}
+		case Setting_Toggle {
+			InsertString(addr(_toggleStrings[setting]));
+			break;
+		}
+		default {
+			InsertNumber(setting);
+			break;
+		}
+	}
+	
+	// Flush the buffer
+	if(menu[Page] == ButtonLayout || menu[Page] == StickLayout) {
+		FlushSmallBuffer(AlignCenter, AlignCenter);
+	} else {
+		FlushMediumBuffer(AlignCenter, AlignCenter);
+	}
+}
+
+// Executes Aim Lock
+function ExecuteAimLock() {
+	// Check for Aim Lock
+	if(!settings[AimLock]) {
+		return;	
+	}
+	
+	// Check for holding ADS or Fire
+	if(!input[HoldingADS] && !input[HoldingFire]) {
+		output[Angle] = 0; // Reset aim assist angle
+		return;
+	}
+	
+	// Calculate the coordinates
+	output[X] = cos[output[Angle]] * settings[AimLockSize];
+	output[Y] = sin[output[Angle]] * settings[AimLockSize];
+	
+	// Advance the angle
+	output[Angle] = (output[Angle] + settings[AimLockSpeed]) % 360;
+	
+	// Output the values
+	Output(stick[Rotate], output[X]);
+	Output(stick[Look], output[Y]);
+}
+
+// Executes Anti-Recoil
+function ExecuteAntiRecoil() {
+	// Check for holding ADS and Fire
+	if(!input[HoldingADS] || !input[HoldingFire]) {
+		return;	
+	}
+	
+	// Output anti-recoil
+	Output(stick[Rotate], settings[Horizontal] * 327);
+	Output(stick[Look], settings[Vertical] * Iif(settings[Inverted], -327, 327));
+}
+
+// Executes Auto Hold Breath
+function ExecuteAutoHoldBreath() {
+	// Check for Auto Hold Breath
+	if(!settings[AutoHoldBreath]) {
+		return;
+	}
+	
+	// Check for holding ADS
+	if(input[HoldingADS]) {
+		combo_run(Combo_AutoHoldBreath);
+		return;
+	}
+	
+	combo_stop(Combo_AutoHoldBreath);
+}
+
+// Executes Auto Ping
+function ExecuteAutoPing() {
+	// Check for Auto Ping
+	if(!settings[AutoPing]) {
+		return;
+	}
+	
+	// Check for holding ADS and pressing fire
+	if(input[HoldingADS] && event_press(button[Fire])) {
+		combo_run(Combo_AutoPing);
+	}
+}
+
+// Executes Bunny Hop
+function ExecuteBunnyHop() {
+	// Check for Bunny Hop
+	if(!settings[BunnyHop]) {
+		return;	
+	}
+	
+	// Check for holding jump
+	if(get_ival(button[Jump])) {
+		combo_run(Combo_BunnyHop);
+		return;
+	}
+	
+	combo_stop(Combo_BunnyHop);
+}
+
+// Executes Hair Triggers
+function ExecuteHairTriggers() {
+	// Check for Hair Triggers
+	if(!settings[HairTriggers]) {
+		return;	
+	}
+	
+	// Set any input to max output
+	deadzone(XB1_LT, XB1_RT, 100, 100);
+}
+
+// Executes Rapid Fire
+function ExecuteRapidFire() {
+	// Check for Rapid Fire
+	if(!settings[RapidFire]) {
+		return;	
+	}
+	
+	// Check for holding ADS and Fire
+	if(!input[HoldingADS] || !input[HoldingFire]) {
+		return;
+	}
+	
+	combo_run(Combo_RapidFire);
+}
+
+// Executes Slide Cancel
+function ExecuteSlideCancel() {
+	// Check for Slide Cancel
+	if(!settings[SlideCancel]) {
+		return;	
+	}
+	
+	// Retrieve the strafe stick
+	GetStrafeStick();
+	
+	// Check required movement
+	if(stick[PolarRadius] < 9700) {
+		return;
+	}
+	
+	// Check for not holding ADS or Fire and releasing B/Crouch within 176 milliseconds
+	if(!input[HoldingADS] && !input[HoldingFire] && event_release(button[Action]) && (get_ptime(button[Action]) < 176)) {
+		combo_run(Combo_SlideCancel);
+	}
+}
+
+// Execute Sticky Aim
+function ExecuteStickyAim() {
+	// Check for Sticky Aim
+	if(!settings[StickyAim]) {
+		return;
+	}
+	
+	// Check for holding ADS and Fire
+	if(!input[HoldingADS] || !input[HoldingFire]) {
+		return;
+	}
+	
+	combo_run(Combo_StickyAim);
+}
+
+// Executes the YY spam
+function ExecuteYYSpam() {
+	// Check for YY Spam
+	if(!settings[YYSpam]) {
+		return;	
+	}
+	
+	// Check for holding ADS or Fire
+	if(input[HoldingADS] || input[HoldingFire]) {
+		return;
+	}
+	
+	// Check for holding sprint button
+	if(get_ival(stick[SprintButton])) {
+		combo_run(Combo_YYSpam);	
+	}
+}
+
+// Flushes the display buffer to the screen
+function FlushBuffer(x, y, size, color) {
+	// Calculate horizontal position
+	if(x == AlignRight) {
+		x = OLED_WIDTH - (display[Buffer] * _fontWidth[size]) - 3; // Additional 3 for padding from border
+	} else if(x == AlignCenter) {
+		x = (OLED_WIDTH >> 1) - ((display[Buffer] * _fontWidth[size]) >> 1);
+	}
+	
+	// Calculate vertical position
+	if(y == AlignBottom) {
+		y = OLED_HEIGHT - _fontHeight[size] - 2; // Additional 2 for padding from border
+	} else if(y == AlignCenter) {
+		y = (OLED_HEIGHT >> 1) - (_fontHeight[size] >> 1);
+	}
+	
+	// Output to display
+	puts_oled(clamp(x, 2, 127), clamp(y, 2, 63), size, display[Buffer], color);
+	
+	// Reset buffer position
+	display[Buffer] = 0;
+}
+
+// Flushes a medium, white display buffer
+function FlushMediumBuffer(x, y) {
+    FlushBuffer(x, y, OLED_FONT_MEDIUM, OLED_WHITE);
+}
+
+// Flushes a small, white display buffer
+function FlushSmallBuffer(x, y) {
+    FlushBuffer(x, y, OLED_FONT_SMALL, OLED_WHITE);
+}
+
+// Returns the footer count for the screen
+function GetFooterCount() {
+    // Determine which screen is displayed
+    switch(state[Screen]) {
+    	case HomeScreen { return 1; }
+    }
+    
+    return 3;
+}
+
+// Get IO state
+function GetIOState() {
+    // Check for new input device or output protocol
+    if(CheckIOUpdate(Console, get_console()) || CheckIOUpdate(Controller, get_controller())) {
+        // Check if a remap is required
+        if(!io[Remapped]) {
+            if((IsXboxProtocol(Controller) && IsPlayStationProtocol(Console)) || (IsPlayStationProtocol(Controller) && IsXboxProtocol(Console))) {
+                ToggleRemapper(); // Remap
+            }
+        } else {
+            if((IsXboxProtocol(Controller) && IsXboxProtocol(Console)) || (IsPlayStationProtocol(Controller) && IsPlayStationProtocol(Console))) {
+                ToggleRemapper(); // Unmap
+            }
+        }
+    }
+    
+    // Retrieve input state
+    input[HoldingADS] = get_ival(button[ADS]) > Iif(button[ADS] == XB1_LT && !settings[HairTriggers], 13, 0);
+    input[HoldingFire] = get_ival(button[Fire]) > Iif(button[Fire] == XB1_RT && !settings[HairTriggers], 80, 0);
+}
+
+// Retrives the strafe stick based on the user's stick layout and joystick movement
+function GetStrafeStick() {
+	// Determine the stick layout
+	switch(settings[StickLayout]) {
+		case Default {
+			stick[SprintButton] = XB1_LS;
+			break;
+		} case Southpaw {
+			stick[SprintButton] = XB1_RS;
+			break;
+		} case Legacy {
+			stick[SprintButton] = Iif(abs(get_val(POLAR_RY)) > abs(get_val(POLAR_LX)), XB1_LS, XB1_RS);
+			break;
+		} case LegacySouthpaw {
+			stick[SprintButton] = Iif(abs(get_val(POLAR_LY)) > abs(get_val(POLAR_RX)), XB1_RS, XB1_LS);
+			break;
+		} case SouthpawNoClickSwap {
+			stick[SprintButton] = XB1_RS;
+			break;
+		} case LegacySouthpawNoClickSwap {
+			stick[SprintButton] = Iif(abs(get_val(POLAR_LY)) > abs(get_val(POLAR_RX)), XB1_RS, XB1_LS);
+			break;
+		}
+	}
+	
+	// Set the polar move stick
+	stick[PolarRadius] = get_polar(Iif(stick[SprintButton] == XB1_LS, POLAR_LS, POLAR_RS), POLAR_RADIUS);
+}
+
+// Returns a setting string
+function GetString(setting) {
+	// Determine the setting
+	switch(menu[Page]) {
+		case ButtonLayout { return _buttonLayoutNames[setting]; }
+		case StickLayout { return _stickLayoutNames[setting]; }
+	}
+	
+	return 0;
+}
+
+// Handle any display updates
+function HandleDisplayUpdate() {
+    // Check for an update
+    if((CheckScreenSaver() || !display[Update]) && !CheckFooterUpdate()) {
+        return;
+    }
+
+    // Clear the screen
+    cls_oled(OLED_BLACK);
+
+    // Draw the border
+    rect_oled(0, 0, OLED_WIDTH, OLED_HEIGHT, FALSE, OLED_WHITE);
+    
+    // Determine which screen to display
+    switch(state[Screen]) {
+    	case HomeScreen { RenderHomeScreen(); break; }
+    	case MenuScreen { RenderMenuScreen(); break; }
+    }
+    
+    // Draw the footer
+    DrawFooter();
+
+    // Indicate the display has been updated
+    display[Update] = FALSE;
+}
+
+// Handle any LED updates
+function HandleLEDUpdate() {
+	// Check for an LED update
+	if(!display[LedUpdate] || menu[ButtonBlock] != -1 || combo_running(Combo_LedAlert)) {
+		return;
+	}
+	
+	// Determine which screen is displaying
+	switch(state[Screen]) {
+		case HomeScreen { SetLEDColor(Green); return; }
+		case MenuScreen { SetLEDColor(MenuPurple); return; }
+	}
+}
+
+// Handle any input
+function HandleInput() {
+	// Determine which screen to process
+	switch(state[Screen]) {
+		case HomeScreen { ProcessHomeScreen(); return; }
+		case MenuScreen { ProcessMenuScreen(); return; }
+	}
+}
+
+// Handle any output
+function HandleOutput() {
+	// Block all inputs in menu screen
+	if(state[Screen] == MenuScreen) {
+		block_all_inputs();
+		return;
+	}
+	
+	// Block menu actions
+	if(input[HoldingADS]) {
+		set_val(XB1_LEFT, 0);
+		set_val(XB1_RIGHT, 0);
+		set_val(XB1_UP, 0);
+		set_val(XB1_DOWN, 0);
+		set_val(XB1_MENU, 0);
+		set_val(XB1_VIEW, 0);
+	}
+}
+
+// Ternary operator replacement
+function Iif(expression, true, false) {
+	// Evaluate expression
+	if(expression) {
+		return true; // Return truepart
+	}
+	
+	// Return falsepart
+	return false;
+}
+
+// Prepares the script
+function InitializeScript() {
+    SetButtonLayout(); // Apply button layout
+    SetRumbleState(); // Set rumble state
+	SetStickLayout(); // Set stick layout
+
+    // Load the home screen
+    ChangeScreen(HomeScreen);
+}
+
+// Inserts a character to the display buffer
+function InsertCharacter(character) {
+	putc_oled(display[Buffer] + 1, character); // Store the character
+	display[Buffer]++; // Increment the display buffer
+}
+
+// Inserts a character based on controller used
+function InsertControllerButton(button) {
+	// Determine which PlayStation character to return
+    if(IsPlayStationProtocol(Controller)) {
+        switch(button) {
+            case ASCII_UPPER_A { InsertCharacter(OLED_CROSS); return; }
+            case ASCII_UPPER_B { InsertCharacter(OLED_CIRCLE); return; }
+            case ASCII_UPPER_X { InsertCharacter(OLED_SQUARE); return; }
+            case ASCII_UPPER_Y { InsertCharacter(OLED_TRIANGLE); return; }
+        }
+    }
+
+    // Insert the character for the button
+    InsertCharacter(button);
+}
+
+// Inserts a number to the display buffer
+function InsertNumber(number) {
+	// Handle negative numbers
+	if(number < 0) {
+		InsertCharacter(ASCII_MINUS); // Insert a negative sign
+		number = abs(number); // Set the absolute value
+	}
+	
+	// Prepare the insertion
+	display[BufferCopyValue] = number;
+	display[BufferDigitCount] = 0;
+	
+	// Count the number of digits needed
+	do {
+		display[BufferCopyValue] /= 10;
+		display[BufferDigitCount]++;
+	} while(display[BufferCopyValue]);
+	
+	// Extract the digits
+	for(i = 0; i < display[BufferDigitCount]; i++) {
+		display[BufferDigits + i] = (number % 10) + 48;
+		number /= 10;
+	}
+	
+	// Insert the digits in reverse order
+	for(i = display[BufferDigitCount] - 1; i >= 0; i--) {
+		InsertCharacter(display[BufferDigits + i]);
+	}
+}
+
+// Inserts a string to the display buffer
+function InsertString(text) {
+	do {
+		InsertCharacter(dint8(text)); // Insert the character
+		text++; // Advance the data position
+	} while(dint8(text));
+}
+
+// Checks if the protocol used is for PlayStation
+function IsPlayStationProtocol(protocol) {
+	// Check which protocol is used
+	switch(io[protocol]) {
+		case PIO_PS4 { return TRUE; }
+		case PIO_PS5 { return TRUE; }
+	}
+	
+	return FALSE;
+}
+
+// Checks if the protocol used is for Xbox
+function IsXboxProtocol(protocol) {
+	// Check which protocol is used
+	switch(io[protocol]) {
+		case PIO_XB360 { return TRUE; }
+		case PIO_XB1 { return TRUE; }
+	}
+	
+	return FALSE;
+}
+
+// This function triggers an led alert
+function LedAlert(color) {
+	ResetDisplay();
+	SetLEDColor(color);
+	combo_restart(Combo_LedAlert);
+}
+
+// Outputs a value to a stickgam
+function Output(stick, value) {
+	set_val(stick, clamp(value * (32767 - abs(get_val(stick))) / 32767 + get_val(stick), -32768, 32767));
+}
+
+// Prepares the menu screen footer
+function PrepareFooterMenuScreen() {
+	// Determine which footer to display
+	switch(footer[Number]) {
+		case 0 { // "U/D to Adjust"
+            InsertCharacter(OLED_UP);
+            InsertCharacter(ASCII_SLASH);
+            InsertCharacter(OLED_DOWN);
+            InsertString(addr(_menuScreenFooters[MenuScreenFooter_ToAdjust]));
+			break;		
+		}
+		case 1 { // "L/R to Scroll"
+            InsertCharacter(OLED_LEFT);
+            InsertCharacter(ASCII_SLASH);
+            InsertCharacter(OLED_RIGHT);
+            InsertString(addr(_menuScreenFooters[MenuScreenFooter_ToScroll]));
+			break;		
+		}
+		case 2 { // "B/Circle to Save & Exit"
+			InsertControllerButton(ASCII_UPPER_B);
+            InsertString(addr(_menuScreenFooters[MenuScreenFooter_ToSaveAndExit]));
+			break;		
+		}
+	}
+}
+
+// Prints a character to the screen
+function PrintCharacter(x, y, size, color, character) {
+	InsertCharacter(character); // Insert the character
+	FlushBuffer(x, y, size, color); // Flush the buffer
+}
+
+// Prints a large white number to the screen
+function PrintLargeNumber(x, y, number) {
+    PrintNumber(x, y, OLED_FONT_LARGE, OLED_WHITE, number);
+}
+
+// Prints a number to the screen
+function PrintNumber(x, y, size, color, number) {
+	InsertNumber(number); // Insert the number
+	FlushBuffer(x, y, size, color); // Flush the buffer
+}
+
+// Prints a medium white string to the screen
+function PrintMediumString(x, y, text) {
+    PrintString(x, y, OLED_FONT_MEDIUM, OLED_WHITE, text);
+}
+
+// Prints a small white string to the screen
+function PrintSmallString(x, y, text) {
+    PrintString(x, y, OLED_FONT_SMALL, OLED_WHITE, text);
+}
+
+// Prints a string to the screen
+function PrintString(x, y, size, color, text) {
+	InsertString(text); // Insert the string
+	FlushBuffer(x, y, size, color); // Flush the buffer
+}
+
+// Processes home screen input
+function ProcessHomeScreen() {
+	// Check for any menu actions
+	if(input[HoldingADS]) {
+		// Check for entering script menu
+		if(event_press(XB1_MENU)) {
+			combo_stop_all(); // Stop all combos
+			ChangeScreen(MenuScreen); // Change into script menu
+			UpdateSettingsInfo(); // Update settings info
+			return;
+		}
+		
+		// Check for increasing vertical strength
+		if(CheckActionButton(XB1_UP, TRUE)) {
+			AdjustRecoil(Vertical, 1);
+			return;
+		}
+		
+		// Check for decreasing vertical strength
+		if(CheckActionButton(XB1_DOWN, TRUE)) {
+			AdjustRecoil(Vertical, -1);
+			return;
+		}
+		
+		// Check for pulling horizontal left
+		if(CheckActionButton(XB1_LEFT, TRUE)) {
+			AdjustRecoil(Horizontal, -1);
+			return;
+		}
+		
+		// Check for pulling horizontal right
+		if(CheckActionButton(XB1_RIGHT, TRUE)) {
+			AdjustRecoil(Horizontal, 1);
+			return;
+		}
+	}
+	
+	// Execute the script options
+	ExecuteAimLock();
+	ExecuteAntiRecoil();
+	ExecuteAutoHoldBreath();
+	ExecuteAutoPing();
+	ExecuteBunnyHop();
+	ExecuteHairTriggers();
+	ExecuteRapidFire();
+	ExecuteSlideCancel();
+	ExecuteStickyAim();
+	ExecuteYYSpam();
+}
+
+// Processes menu screen input
+function ProcessMenuScreen() {
+	// Check for exiting the script menu
+	if(event_release(XB1_B)) {
+		SettingsSave();
+		return;
+	}
+	
+	// Check for scrolling backward
+	if(CheckActionButton(XB1_LEFT, FALSE)) {
+		ScrollMenuScreen(-1);
+		return;
+	}
+	
+	// Check for scrolling forward
+	if(CheckActionButton(XB1_RIGHT, FALSE)) {
+		ScrollMenuScreen(1);
+		return;
+	}
+	
+	// Check for adjusting a value
+	if(CheckActionButton(XB1_UP, menu[SettingType] & (Setting_Number | Setting_RPS | Setting_Time))) {
+		AdjustSetting(menu[Page], 1);
+		return;
+	}
+	
+	// Check for adjusting a value
+	if(CheckActionButton(XB1_DOWN, menu[SettingType] & (Setting_Number | Setting_RPS | Setting_Time))) {
+		AdjustSetting(menu[Page], -1);
+		return;
+	}
+}
+
+// Renders the home screen
+function RenderHomeScreen() {
+	// Print the display
+	PrintMediumString(AlignCenter, AlignTop, addr(_homeScreenStrings[HomeScreen_Title]));
+	PrintSmallString(AlignCenter, 25, addr(_homeScreenStrings[HomeScreen_Description]));
+	PrintSmallString(AlignCenter, 39, addr(_homeScreenStrings[HomeScreen_Author]));
+	
+	// Build version display
+	InsertString(addr(_homeScreenStrings[HomeScreen_Version]));
+	InsertNumber(_version[Version_Major]);
+	InsertCharacter(ASCII_PERIOD);
+	InsertNumber(_version[Version_Minor]);
+	FlushSmallBuffer(AlignCenter, AlignBottom);
+}
+
+// Renders the menu screen
+function RenderMenuScreen() {
+	// Print the display
+	DrawSeparator(Separator_Both);
+	PrintSmallString(AlignCenter, AlignTop, _menuScreenNames[menu[Page]]);
+	DrawSetting(settings[menu[Page]]);
+}
+
+// Resets the display
+function ResetDisplay() {
+    display[Update] = TRUE; // Indicate display should update
+    ResetScreenSaver();
+}
+
+// Resets the footer
+function ResetFooter() {
+	footer[Count] = 0; // Reset the footer counter
+	footer[Number] = 0; // Reset the footer index
+}
+
+// Resets the screen saver
+function ResetScreenSaver() {
+    screensaver[Enabled] = FALSE; // Reset state
+    screensaver[Counter] = 0; // Reset counter
+}
+
+// Scroll through the menu screen
+function ScrollMenuScreen(adjustment) {
+	menu[Page] = AdjustValue(menu[Page], 0, (sizeof(_menuItemData) / sizeof(_menuItemData[0])) - 1, adjustment, TRUE);
+	UpdateSettingsInfo(); // Update settings info
+}
+
+// Sets the button layout
+function SetButtonLayout() {
+	// Iterate through the layout and set assign each button to an action
+	for(i = ADS; i <= Tactical; i++) {
+		button[i] = _buttonLayout[settings[ButtonLayout]][i];
+	}
+	
+	// Handle a Flipped button layout
+	SetFlippedLayout();
+}
+
+// Set the Cronus Zen LED color based on a given hue, saturation and brightness
+function SetLEDColor(color) {
+	set_hsb(_colors[color][Hue], _colors[color][Saturation], _colors[color][Brightness]);
+}
+
+// Reassigns a Flipped button
+function SetFlippedButton(target) {
+	switch(button[target]) {
+		case XB1_LB { button[target] = XB1_LT; break; }
+		case XB1_LT { button[target] = XB1_LB; break; }
+		case XB1_RB { button[target] = XB1_RT; break; }
+		case XB1_RT { button[target] = XB1_RB; break; }
+	}
+}
+
+// Sets Flipped button layout
+function SetFlippedLayout() {
+	// Check if Flipped is enabled
+	if(!settings[Flipped]) {
+		// Check for unmapping
+		if(button[IsFlippedRemapped]) {
+			// Unset any remappings
+			set_remapper(XB1_LB, XB1_LB);
+			set_remapper(XB1_LT, XB1_LT);
+			set_remapper(XB1_RB, XB1_RB)
+			set_remapper(XB1_RT, XB1_RT);
+			
+			// Clear the remapping state
+			button[IsFlippedRemapped] = FALSE;
+		}
+		
+		return;
+	}
+	
+	// Check for remapping
+	if(!button[IsFlippedRemapped]) {
+		// Flip the internal mappings for ADS/Fire/Lethal
+		SetFlippedButton(ADS);
+		SetFlippedButton(Lethal);
+		SetFlippedButton(Tactical);
+		SetFlippedButton(Fire);
+		SetFlippedButton(Jump);
+		SetFlippedButton(Melee);
+		
+		// Set the remappers
+		set_remapper(XB1_LB, XB1_LT);
+		set_remapper(XB1_RB, XB1_RT);
+		
+		// Indicate flipped is remapped
+		button[IsFlippedRemapped] = TRUE;
+	}
+}
+
+// Sets the rumble state
+function SetRumbleState() {
+    // Check if controller vibration is enabled
+    if(settings[BlockVibration]) {
+        block_rumble(); // Disable vibration
+    } else {
+        reset_rumble(); // Enable vibration
+    }
+}
+
+// Sets the stick layout
+function SetStickLayout() {
+	// Set the joystick controls
+	stick[Move] = _stickLayout[settings[StickLayout]][Move];
+	stick[Strafe] = _stickLayout[settings[StickLayout]][Strafe];
+	stick[Look] = _stickLayout[settings[StickLayout]][Look];
+	stick[Rotate] = _stickLayout[settings[StickLayout]][Rotate];
+	
+	// Check for swapping joysticks
+	if((settings[StickLayout] == Southpaw) || (settings[StickLayout] == LegacySouthpaw)) {
+		switch(settings[ButtonLayout]) {
+			case Default {
+				button[Melee] = XB1_RS;
+				button[Focus] = XB1_LS;
+				return;
+			} case TactLayout {
+				button[Action] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case Lefty {
+				button[Focus] = XB1_LS;
+				button[Melee] = XB1_RS;
+				return;
+			} case NomadCharlie {
+				button[Melee] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case NomadCharlieTactical {
+				button[Action] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case NomadCharlieLefty {
+				button[Focus] = XB1_LS;
+				button[Melee] = XB1_RS;
+				return;
+			} case BumperJumper {
+				button[Melee] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case BumperJumperTactical {
+				button[Action] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case OneHandGunslinger {
+				button[Melee] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case StickAndMove {
+				button[Jump] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case Brawler {
+				button[Focus] = XB1_RS;
+				return;
+			} case Beast {
+				button[Focus] = XB1_RS;
+				return;
+			}
+		}
+	}
+}
+
+// Sets the default script settings
+function SettingsDefault() {
+	// Script Menu
+	settings[AimLock] = TRUE;
+	settings[AimLockSize] = 10;
+	settings[AimLockSpeed] = 20;
+	settings[AutoHoldBreath] = TRUE;
+	settings[AutoPing] = FALSE;
+	settings[ButtonLayout] = Default;
+	settings[BlockVibration] = TRUE;
+	settings[BunnyHop] = TRUE;
+	settings[Flipped] = FALSE;
+	settings[HairTriggers] = TRUE;
+	settings[Inverted] = FALSE;
+	settings[RapidFire] = 0;
+	settings[SlideCancel] = TRUE;
+	settings[StickLayout] = Default;
+	settings[StickyAim] = TRUE;
+	settings[StickyAimSize] = 30;
+	settings[StickyAimTime] = 7;
+	settings[YYSpam] = 22;
+	
+	// Anti-Recoil
+	settings[Horizontal] = 0;
+	settings[Vertical] = 23;
+}
+
+// Loads the script settings
+function SettingsLoad() {
+    // Reset SPVAR data
+    SpvarReset();
+    
+    // Check if settings exist
+    if(SpvarRead(0, 1)) {
+	    settings[AimLock] = SpvarRead(FALSE, TRUE);
+	    settings[AimLockSize] = SpvarRead(1, 100);
+	    settings[AimLockSpeed] = SpvarRead(1, 100);
+	    settings[AutoHoldBreath] = SpvarRead(FALSE, TRUE);
+	    settings[AutoPing] = SpvarRead(FALSE, TRUE);
+	    settings[ButtonLayout] = SpvarRead(Default, Beast);
+	    settings[BlockVibration] = SpvarRead(FALSE, TRUE);
+	    settings[BunnyHop] = SpvarRead(FALSE, TRUE);
+	    settings[Flipped] = SpvarRead(FALSE, TRUE);
+	    settings[HairTriggers] = SpvarRead(FALSE, TRUE);
+	    settings[Inverted] = SpvarRead(FALSE, TRUE);
+	    settings[RapidFire] = SpvarRead(0, 10);
+	    settings[SlideCancel] = SpvarRead(FALSE, TRUE);
+	    settings[StickLayout] = SpvarRead(Default, LegacySouthpawNoClickSwap);
+	    settings[StickyAim] = SpvarRead(FALSE, TRUE);
+	    settings[StickyAimSize] = SpvarRead(1, 100);
+	    settings[StickyAimTime] = SpvarRead(1, 100);
+	    settings[YYSpam] = SpvarRead(0, 100);
+	    settings[Horizontal] = SpvarRead(-100, 100);
+	    settings[Vertical] = SpvarRead(0, 100);
+    } 
+   	// Load default settings
+   	else {
+    	SettingsDefault();	
+    }
+    
+    // Initialize the script
+    InitializeScript();
+}
+
+// Saves the script settings
+function SettingsSave() {
+    // Reset SPVAR data
+    SpvarReset();
+ 
+    // Indicate settings exist
+    SpvarSave(1, 0, 1);
+    SpvarSave(settings[AimLock], FALSE, TRUE);
+    SpvarSave(settings[AimLockSize], 1, 100);
+    SpvarSave(settings[AimLockSpeed], 1, 100);
+    SpvarSave(settings[AutoHoldBreath], FALSE, TRUE);
+    SpvarSave(settings[AutoPing], FALSE, TRUE);
+    SpvarSave(settings[ButtonLayout], Default, Beast);
+    SpvarSave(settings[BlockVibration], FALSE, TRUE);
+    SpvarSave(settings[BunnyHop], FALSE, TRUE);
+    SpvarSave(settings[Flipped], FALSE, TRUE);
+    SpvarSave(settings[HairTriggers], FALSE, TRUE);
+    SpvarSave(settings[Inverted], FALSE, TRUE);
+    SpvarSave(settings[RapidFire], 0, 10);
+    SpvarSave(settings[SlideCancel], FALSE, TRUE);
+    SpvarSave(settings[StickLayout], Default, LegacySouthpawNoClickSwap);
+    SpvarSave(settings[StickyAim], FALSE, TRUE);
+    SpvarSave(settings[StickyAimSize], 1, 100);
+    SpvarSave(settings[StickyAimTime], 1, 100);
+    SpvarSave(settings[YYSpam], 0, 100);
+    SpvarSave(settings[Horizontal], -100, 100);
+    SpvarSave(settings[Vertical], 0, 100);
+
+    // Reinitialize the script
+    InitializeScript();
+}
+
+// Function used to count the number of bits used by the given value
+function SpvarGetBitCount(v) {
+	// We need to Roset at 0, we use spvar[Temp] here as we need to track the bits during our loop below
+	spvar[Temp] = 0; 
+	
+	// Loop while v is anything but 0
+	while (v) { 
+		// Increment the bit count by 1
+		spvar[Temp]++; 
+		
+		// Shift the value down 1 bit, once we have no more bits set this
+		// will r in 0, unless the value is negative - in which case
+		// this will be endless, we do abs here to make it always
+		v = abs(v >> 1);
+	}
+	return spvar[Temp];
+}
+
+// Function used to count the number of bits used by 2 given values
+function SpvarGetBitCount2(v1, v2) {
+	// Get the highest bit count required for either min or max
+	spvar[Temp] = max(SpvarGetBitCount(v1), SpvarGetBitCount(v2));
+	
+	// Check if we need to know if the value is negative or not
+	if (SpvarIsSigned(v1, v2)) {
+		// If we need to track if the saved value is negative, we need 1 bit for that specifically - the others are used to store the actual value
+		spvar[Temp]++;
+	}
+	
+	return spvar[Temp];
+}
+
+// Function used to determine if either of 2 given values is negative
+function SpvarIsSigned(v1, v2) {
+	return (v1 < 0) || (v2 < 0);
+}
+
+// Function used to generate a full bitmask (essentially all bits set up to
+// and including the number of bits given)
+function SpvarMakeFullMask(bits) {
+	// If we're wanting a bitmask for all bits, we can simply return -1
+	// (which is all bits set to 1)
+	if (bits == 32) return -1;
+	
+	// What we do here is basically take a value with all bits except the highest
+	// set and shift them down as many times as we need to get a mask that fits
+	// the bit count we're looking for
+	return 0x7FFFFFFF >> (31 - bits);
+}
+
+// Function used to generate a bitmask for the sign bit, this will always be
+// the highest bit in the range we're requesting it for, to do that - we need
+// to Roset with the lowest bit set and move it up the number of steps there
+// is between 1 and the bits we need, this needs to be a maximum of 31 but can
+// never be negative
+function SpvarMakeSign(bits) { 
+	return 1 << clamp(bits - 1, 0, 31);
+}
+
+// Function used to generate a bitmask for just the bits required for the value
+// part of a signed range, this means all the bits below the sign bit
+function SpvarMakeSignMask(bits) {
+	return SpvarMakeFullMask(bits - 1);
+}
+
+// Function used to pack a value that has potential for being negative in a way
+// that we use the least number of bits we really need to represent the value
+function SpvarPack(v, bits) {
+	// Check if we have a negative value, if so - handle it accordingly
+	if (v < 0) { 
+		// Get the positive version of the value and keep the bits that are within
+		// range of what we're doing and add the sign bit since we have a negative
+		// value and return the r
+		return (abs(v) & SpvarMakeSignMask(bits)) | SpvarMakeSign(bits);
+	}
+	
+	// Get the bits that are within our range
+	return v & SpvarMakeSignMask(bits); 
+}
+
+// Function used to read your value from the SPVARs, this is the function you'll be
+// calling when reading a value. You need to provide the range (minimum and maximum
+// value, this is how we determine how many bits to use when reading the value) aswell
+// as a default value if what we read is out of range
+function SpvarRead(min, max) {
+	// Set spvar[Bits] to the number of bits we need for this range
+	spvar[Bits] = SpvarGetBitCount2(min, max);
+	
+	// Read the current SPVAR value from flash and shift them into position,
+	// we'll handle split values next
+	spvar[Value] = (SpvarReadSpvarSlot(spvar[Slot]) >> spvar[Bit]) & SpvarMakeFullMask(spvar[Bits]);
+	
+	// Check if we are dealing with a split SPVAR value, essentially if the current
+	// position means we're using more than 32 bits in the SPVAR, we need to retrieve
+	// the missing bits from the next SPVAR and put them back to our current value,
+	// we use the same space saving trick here as in the save function
+	if (spvar[Bits] >= 32 - spvar[Bit]) {
+		spvar[Value] = (spvar[Value] & SpvarMakeFullMask(32 - spvar[Bit])) | ((SpvarReadSpvarSlot(spvar[Slot] + 1) & SpvarMakeFullMask(spvar[Bits] - (32 - spvar[Bit]))) << (32 - spvar[Bit]));
+	}
+	
+	// Move up the counter of next available bit to where we are will be reading data from next
+	spvar[Bit] += spvar[Bits];
+	// Extract all bits included for this value and discard any other bits
+	spvar[Value] = spvar[Value] & SpvarMakeFullMask(spvar[Bits]); 
+	
+	if (spvar[Bit] >= 32) {
+		// Move to the next SPVAR slot
+		spvar[Slot]++;
+		// Remove 32 from the spvar[Bit] tracker since we've gone beyond what we can do here
+		spvar[Bit] -= 32;
+	}
+	
+	// Check if the value can be negative and handle it accordingly
+	if (SpvarIsSigned(min, max)) { 
+		// Restore the signed, possibly negative value
+		spvar[Value] = SpvarUnpack(spvar[Value], spvar[Bits]); 
+	}
+	
+	// Check if the value is below our specified min or above our specified max,
+	// if so - return the default value instead
+	if (spvar[Value] < min || spvar[Value] > max) { 
+		// This can be changed to min instead as a reasonable default with the
+		// default parameter being removed if you don't need to have a override
+		// value for the default when out of range, that will save a bit of code size
+		return 0; // edited
+	}
+	
+	// Return the retrieved value to the user since it's within the expected range
+	return spvar[Value];
+}
+
+// Function used to read the value of a SPVAR without any limits
+function SpvarReadSpvarSlot(slot) {
+	return get_pvar(slot, 0x80000000, 0x7FFFFFFF, 0);
+}
+
+function SpvarReset() {
+	 // Change this to say where it's safe to Roset storing data
+	spvar[Slot] = SPVAR_1; 
+	
+	// Should always be 0, unless you're using part of the first SPVAR 
+	// in which case you should also change the next line to include the 
+	// value you are storing in the bits you are using
+	spvar[Bit] = 0; 
+	spvar[Value] = 0;
+}
+
+// Function used to save your value in the SPVARs, this is the function you'll be
+// calling when saving a value. You need to provide the value to save aswell as
+// the range (minimum and maximum value, this is how we determine how many bits
+// to use when saving this value)
+function SpvarSave(v, min, max) {
+	// Set spvar[Bits] to the number of bits we need for this range
+	spvar[Bits] = SpvarGetBitCount2(min, max);
+	
+	// Make sure the value is within our defined range to begin with
+	v = clamp(v, min, max);
+	
+	// If either min or max is negative, we need to pack this value as a
+	// possibly negative value
+	if (SpvarIsSigned(min, max)) {
+		// Pack as signed value (possibly negative)
+		v = SpvarPack(v, spvar[Bits]);
+	}
+	
+	// Pack as unsigned value (always positive), this essentially just makes the
+	// ring value not have any extra bits set - it's safe to use after the
+	// signed packing since we're not using any bits outside of the unsigned range anyways
+	v = v & SpvarMakeFullMask(spvar[Bits]); 
+	
+	// Check if there is not enough bits remaining to save this value as-is. if
+	// there aren't enough bits, we save what we can here and store the remaining
+	// bits in the next spvar, if this means we're hitting the end, we can make
+	// this smaller by handling the case where we use all bits here aswell
+	if (spvar[Bits] >= 32 - spvar[Bit]) { 
+		// Add what we can to the current value where there is bits available to use
+		spvar[Value] = spvar[Value] | (v << spvar[Bit]);
+		
+		// Save the current SPVAR before advancing to the next one
+		set_pvar(spvar[Slot], spvar[Value]);
+		
+		// Move to the next slot
+		spvar[Slot]++;
+		
+		// Update the required bits according to our needs for the next slot, 
+		// if we don't do this here, we'll screw up the saved value by moving
+		// it too far out of range
+		spvar[Bits] -= (32 - spvar[Bit]);
+		
+		// Move the remaining bits down, discarding the bits we've already saved
+		v = v >> (32 - spvar[Bit]);
+		
+		// Reset the current bit counter since we're Roseting with a new SPVAR
+		spvar[Bit] = 0;
+		
+		// Reset our value so we Roset clean, we aren't currently using any bits anyways
+		spvar[Value] = 0;
+	}
+	
+	// Merge the current SPVAR value with our currently value where there is space to keep our value
+	spvar[Value] = spvar[Value] | (v << spvar[Bit]);
+	
+	// Move up the counter of next available bit to where we are currently saving data at
+	spvar[Bit] += spvar[Bits];
+	
+	if (!spvar[Bit]) {
+		// Reset our value so we Roset clean, we aren't currently using any bits anyways
+		spvar[Value] = 0;
+	}
+	
+	// Save the SPVAR with the current value, this won't write anything to flash unless
+	//the value changed - so we can do this for each variable saved to no risk missing anything
+	set_pvar(spvar[Slot], spvar[Value]);
+}
+
+// Function used to unpack (restore) a value that has potential for being negative,
+// essentially reversing what SpvarPack does above
+function SpvarUnpack(v, bits) {
+	// Check if the stored value is supposed to be negative
+	if (v & SpvarMakeSign(bits)) {
+		// Retrieve the stored positive value and subtract it from 0 (ring in the same value except negative), return the remainder
+		return 0 - (v & SpvarMakeSignMask(bits));
+	}
+	
+	// Retrieve the stored positive value and return it
+	return v & SpvarMakeSignMask(bits);
+}
+
+// Toggles console/controller remapping
+function ToggleRemapper() {
+    io[Remapped] = !io[Remapped];
+    set_remapper(XB1_VIEW, PS5_TOUCH);
+}
+
+// Update menu item settings attributes
+function UpdateSettingsInfo() {
+	menu[SettingMin] = _menuItemData[menu[Page]][0];
+	menu[SettingMax] = _menuItemData[menu[Page]][1];
+	menu[SettingType] = _menuItemData[menu[Page]][2];
+}
+
+// Combo for Auto Hold Breath
+fcombo Combo_AutoHoldBreath {
+	set_val(button[Focus], 100);
+	wait(4000);
+	set_val(button[Focus], 0);
+	wait(200);
+}
+
+// Combo for Auto Ping
+fcombo Combo_AutoPing {
+	set_val(button[Ping], 100);
+	wait(48)
+}
+
+// Combo for Bunny Hop
+fcombo Combo_BunnyHop {
+	set_val(button[Jump], 100);
+	wait(88)
+	set_val(button[Jump], 0);
+	wait(88)
+}
+
+// Combo for an LED alert
+fcombo Combo_LedAlert {
+	wait(240);
+	display[LedUpdate] = TRUE;
+}
+
+// Combo Rapid Fire
+fcombo Combo_RapidFire {
+	set_val(button[Fire], 100);
+	wait(480 / state[RapidFire]);
+	set_val(button[Fire], 0);
+	wait(520 / state[RapidFire]);
+}
+
+// Combo to display anti recoil value
+fcombo Combo_ShowRecoil {
+	display[Update] = FALSE; // Deny any display update
+	wait(1000);
+	cls_oled(OLED_BLACK);
+}
+
+// Combo for Slide Cancel
+fcombo Combo_SlideCancel {
+	set_val(stick[SprintButton], 0);
+	wait(88);
+	set_val(stick[SprintButton], 100);
+	wait(48)
+}
+
+// Combo for Sticky Aim
+fcombo Combo_StickyAim {
+	Output(stick[Strafe], settings[StickyAimSize] * -327);
+	wait(settings[StickyAimTime] * 4);
+	Output(stick[Strafe], settings[StickyAimSize] * 327);
+	wait(settings[StickyAimTime] * 4);
+}
+
+// Combo for YY Spam
+fcombo Combo_YYSpam {
+	set_val(button[SwitchWeapon], 100);
+	wait(48)
+	wait(settings[YYSpam] * 4)
+	set_val(button[SwitchWeapon], 100);
+	wait(48)
+	wait(settings[YYSpam] * 4);
+}
+
+const int16 cos[] = {
+	328, 328, 327, 327, 327, 326, 326, 325, 324, 324, 323, 322, 321, 319, 318, 317, 315, 313,
+	312, 310, 308, 306, 304, 302, 299, 297, 295, 292, 289, 287, 284, 281, 278, 275, 272, 268,
+	265, 262, 258, 255, 251, 247, 244, 240, 236, 232, 228, 223, 219, 215, 211, 206, 202, 197,
+	193, 188, 183, 178, 174, 169, 164, 159, 154, 149, 144, 138, 133, 128, 123, 117, 112, 107,
+	101, 96, 90, 85, 79, 74, 68, 63, 57, 51, 46, 40, 34, 29, 23, 17, 11, 6,
+	0, -6, -11, -17, -23, -29, -34, -40, -46, -51, -57, -63, -68, -74, -79, -85, -90, -96,
+	-101, -107, -112, -117, -123, -128, -133, -138, -144, -149, -154, -159, -164, -169, -174, -178, -183, -188,
+	-193, -197, -202, -206, -211, -215, -219, -223, -228, -232, -236, -240, -244, -247, -251, -255, -258, -262,
+	-265, -268, -272, -275, -278, -281, -284, -287, -289, -292, -295, -297, -299, -302, -304, -306, -308, -310,
+	-312, -313, -315, -317, -318, -319, -321, -322, -323, -324, -324, -325, -326, -326, -327, -327, -327, -328,
+	-328, -328, -327, -327, -327, -326, -326, -325, -324, -324, -323, -322, -321, -319, -318, -317, -315, -313,
+	-312, -310, -308, -306, -304, -302, -299, -297, -295, -292, -289, -287, -284, -281, -278, -275, -272, -268,
+	-265, -262, -258, -255, -251, -247, -244, -240, -236, -232, -228, -223, -219, -215, -211, -206, -202, -197,
+	-193, -188, -183, -178, -174, -169, -164, -159, -154, -149, -144, -138, -133, -128, -123, -117, -112, -107,
+	-101, -96, -90, -85, -79, -74, -68, -63, -57, -51, -46, -40, -34, -29, -23, -17, -11, -6,
+	-0, 6, 11, 17, 23, 29, 34, 40, 46, 51, 57, 63, 68, 74, 79, 85, 90, 96,
+	101, 107, 112, 117, 123, 128, 133, 138, 144, 149, 154, 159, 164, 169, 174, 178, 183, 188,
+	193, 197, 202, 206, 211, 215, 219, 223, 228, 232, 236, 240, 244, 247, 251, 255, 258, 262,
+	265, 268, 272, 275, 278, 281, 284, 287, 289, 292, 295, 297, 299, 302, 304, 306, 308, 310,
+	312, 313, 315, 317, 318, 319, 321, 322, 323, 324, 324, 325, 326, 326, 327, 327, 327, 328
+}
+
+const int16 sin[] = { 
+	0, 6, 11, 17, 23, 29, 34, 40, 46, 51, 57, 63, 68, 74, 79, 85, 90, 96,
+	101, 107, 112, 117, 123, 128, 133, 138, 144, 149, 154, 159, 164, 169, 174, 178, 183, 188,
+	193, 197, 202, 206, 211, 215, 219, 223, 228, 232, 236, 240, 244, 247, 251, 255, 258, 262,
+	265, 268, 272, 275, 278, 281, 284, 287, 289, 292, 295, 297, 299, 302, 304, 306, 308, 310,
+	312, 313, 315, 317, 318, 319, 321, 322, 323, 324, 324, 325, 326, 326, 327, 327, 327, 328,
+	328, 328, 327, 327, 327, 326, 326, 325, 324, 324, 323, 322, 321, 319, 318, 317, 315, 313,
+	312, 310, 308, 306, 304, 302, 299, 297, 295, 292, 289, 287, 284, 281, 278, 275, 272, 268,
+	265, 262, 258, 255, 251, 247, 244, 240, 236, 232, 228, 223, 219, 215, 211, 206, 202, 197,
+	193, 188, 183, 178, 174, 169, 164, 159, 154, 149, 144, 138, 133, 128, 123, 117, 112, 107,
+	101, 96, 90, 85, 79, 74, 68, 63, 57, 51, 46, 40, 34, 29, 23, 17, 11, 6,
+	0, -6, -11, -17, -23, -29, -34, -40, -46, -51, -57, -63, -68, -74, -79, -85, -90, -96,
+	-101, -107, -112, -117, -123, -128, -133, -138, -144, -149, -154, -159, -164, -169, -174, -178, -183, -188,
+	-193, -197, -202, -206, -211, -215, -219, -223, -228, -232, -236, -240, -244, -247, -251, -255, -258, -262,
+	-265, -268, -272, -275, -278, -281, -284, -287, -289, -292, -295, -297, -299, -302, -304, -306, -308, -310,
+	-312, -313, -315, -317, -318, -319, -321, -322, -323, -324, -324, -325, -326, -326, -327, -327, -327, -328,
+	-328, -328, -327, -327, -327, -326, -326, -325, -324, -324, -323, -322, -321, -319, -318, -317, -315, -313,
+	-312, -310, -308, -306, -304, -302, -299, -297, -295, -292, -289, -287, -284, -281, -278, -275, -272, -268,
+	-265, -262, -258, -255, -251, -247, -244, -240, -236, -232, -228, -223, -219, -215, -211, -206, -202, -197,
+	-193, -188, -183, -178, -174, -169, -164, -159, -154, -149, -144, -138, -133, -128, -123, -117, -112, -107,
+	-101, -96, -90, -85, -79, -74, -68, -63, -57, -51, -46, -40, -34, -29, -23, -17, -11, -6
+} ú¼¿½„±¸Š½‹¿‰¿

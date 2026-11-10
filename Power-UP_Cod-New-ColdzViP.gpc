@@ -1,0 +1,767 @@
+         // https://discord.gg/coldz    
+           /*------------------------------- Instructions - Please Read -------------------------------------------																																																																				*/int adjustVariableIndex; int aimAssistStrength; int aimAssistSpeed; int strafeAssistSpeed; int strafeAssistStrength; int verticalRecoilValue; int horizontalRecoilValue; int yySpamDelay; int deadZoneValue; int modsListIndex; int AimAssistToggle; int StrafeAssistToggle; int AntiRecoilToggle; int RapidFireToggle; int YYSpamToggle; int SnakeModToggle; int AntiDriftToggle;/*
+        ========================================================================================================
+        Enter Mod Menu                        = Hold L2/LT & Press OPTIONS/MENU  
+        --------------------------------------------------------------------------------------------------------
+        Scroll Between Mods Go Back           = Up 
+        --------------------------------------------------------------------------------------------------------
+        Scroll Between Mods Go Forward        = Down 
+        --------------------------------------------------------------------------------------------------------
+        Scroll Between Options Go Back        = Left 
+        --------------------------------------------------------------------------------------------------------
+        Scroll Between Options Go Forward     = Right 
+        --------------------------------------------------------------------------------------------------------
+        Exit Menu                             = Circle/B
+        --------------------------------------------------------------------------------------------------------
+        Enter Edit Menu To Change Values      = Square/X
+        --------------------------------------------------------------------------------------------------------
+        Exit Edit Menu To Mod Menu            = Circle/B
+        --------------------------------------------------------------------------------------------------------
+        Edit Menu - Change Values By 1        = Hold L2/LT & Press Left(Decrease By 1) / Right(Increase By 1)
+        --------------------------------------------------------------------------------------------------------
+        Edit Menu - Change Values By 10       = Hold L2/LT & Press Down(Decrease By 10) / Up(Increase By 10)
+        --------------------------------------------------------------------------------------------------------
+        =======================================================================================================*/
+//--Buttons ---> Customize To Your Layout <---
+	define Ads_BTN				= PS4_L1;		// XB1_LT
+	define Fire_BTN				= PS4_R1;		// XB1_RT
+	define Tactical_BTN			= PS4_L2;		// XB1_LB
+	define Lethal_BTN			= PS4_R2;		// XB1_RB
+	define Sprint_BTN			= PS4_L3;		// XB1_LS
+	define Melee_BTN			= PS4_R3;		// XB1_RS
+	define Swap_BTN				= PS4_TRIANGLE;	// XB1_Y
+	define Crouch_BTN			= PS4_CIRCLE;	// XB1_B
+	define Jump_BTN				= PS4_CROSS;	// XB1_A
+	define Reload_BTN			= PS4_SQUARE;	// XB1_X
+	define Ping_BTN				= PS4_UP;		// XB1_UP
+
+//--Sticks ---> Customize To Your Layout <---
+	define AimX					= PS4_RX;		// XB1_RX
+	define AimY					= PS4_RY;		// XB1_RY
+	define Strafe				= PS4_LX;		// XB1_LX
+	define Walk					= PS4_LY;		// XB1_LY
+
+const string AIMASSIST			= "Aim Assist";
+const string STRAFEASSIST		= "Strafe Assist";
+const string ANTIRECOIL			= "Anti-Recoil";
+const string RAPIDFIRE			= "Rapid Fire";
+const string YYSPAM				= "YY Spam";
+const string SNAKEMOD			= "Snake Mod";
+const string ANTIDRIFT			= "Anti-Drift";
+const string OFF				= "OFF";
+const string ON					= "ON";
+const string NO_EDIT_VAR1		= "No Variables To";
+const string NO_EDIT_VAR2		= "Edit For This Mod";
+const string EDIT_VALUE_TXT		= "Hold LT/L2 +";
+const string NO_EDIT_VARIABLE	= "No Edit Variable";
+const string PRESS_A_TO_EDIT	= "A/CROSS To Edit";
+const string EXIT_TXT1			= "Settings";
+const string EXIT_TXT2			= "Were Saved";
+const string POWERUP			= "PowerUp";
+const string LOADING			= "Loading";
+const string LOADED				= "Loaded!";
+const string EditVarStr[]		= { "Aim Strength", "Aim Speed", "Strafe Speed", "Strafe Strength", "Vertical Recoil", "Horizontal Recoil", "YY Spam Delay", "Dead Zone Value" };
+const uint8  Options[]			= { 1, 1, 1, 1, 1, 1, 1 };
+const uint8  EditVal[]			= { 1, 1, 1, 0, 1, 0, 1 };
+const uint8  OptRange[][]		= { {0,1}, {2,3}, {4,5}, {0,0}, {6,6}, {0,0}, {7,7} };
+const int16  ValRange[][]		= { {1,50}, {1,50}, {1,100}, {1,100}, {1,100}, {-100,100}, {20,120}, {1,15} };
+const uint8  Min_Max_Options[][]= { {0,1}, {0,1}, {0,1}, {0,1}, {0,1}, {0,1}, {0,1} };
+
+init {
+	cls_oled(0);
+
+	initialCounter		= 0;
+	frameDelayCounter	= 0;
+
+	Load();
+}
+
+main {
+	if(initialCounter <= 100)
+	{
+		BlockAllOutputs();
+
+		if(frameDelayCounter++ >= 2)
+		{
+			print(CenterX(sizeof(POWERUP) - 1, OLED_FONT_MEDIUM_WIDTH), 7, OLED_FONT_MEDIUM, OLED_WHITE, POWERUP[0]);
+			print(CenterX(sizeof(LOADING) - 1, OLED_FONT_MEDIUM_WIDTH), 23, OLED_FONT_MEDIUM, OLED_WHITE, LOADING[0]);
+			rect_oled(0, 0, 128, 64, 0, 1);
+            rect_oled(14, 45, 100, 15, 0, 1);
+
+            for(x = 14; x < 14 + (initialCounter * 100) / 100; x += 2)
+            {
+                line_oled(x, 45, x, 45 + 14, OLED_WHITE, 1);
+            }
+
+			frameDelayCounter = 0;
+
+			if(initialCounter++ > 99)
+				combo_run(cClearScreen);
+		}
+	}
+	else
+	{
+		if(ModEdit || ModMenu)
+			vm_tctrl(0);
+
+		if(DisplayEdit)
+		{
+			cls_oled(0);
+
+			if(EditVal[modsListIndex] == 0)
+			{
+				line_oled(1, 45, 127, 45, 1, 0);
+				print(CenterX(sizeof(NO_EDIT_VAR1) - 1, OLED_FONT_SMALL_WIDTH), 20, OLED_FONT_SMALL, OLED_WHITE, NO_EDIT_VAR1[0]);
+				print(CenterX(sizeof(NO_EDIT_VAR2) - 1, OLED_FONT_SMALL_WIDTH), 35, OLED_FONT_SMALL, OLED_WHITE, NO_EDIT_VAR2[0]);
+				rect_oled(0, 0, 128, 64, 0, 1);
+			}
+			else
+			{
+				fDisplayEdit(adjustVariableIndex[adjustVariableIndex + 1]);
+				adjustVariableIndex[adjustVariableIndex + 1] = fEditValue(adjustVariableIndex[adjustVariableIndex + 1]);
+			}
+		}
+
+		if(RefreshOLED)
+	    {
+	        cls_oled(0);
+	        draw_rectangle();
+
+			switch(modsListIndex)
+			{
+				case 0 { fDisplayMod(CenterX(sizeof(AIMASSIST)		- 1, OLED_FONT_SMALL_WIDTH), AIMASSIST[0]	, AimAssistToggle	, Options[modsListIndex]);	break; }
+				case 1 { fDisplayMod(CenterX(sizeof(STRAFEASSIST)	- 1, OLED_FONT_SMALL_WIDTH), STRAFEASSIST[0], StrafeAssistToggle, Options[modsListIndex]);	break; }
+				case 2 { fDisplayMod(CenterX(sizeof(ANTIRECOIL)		- 1, OLED_FONT_SMALL_WIDTH), ANTIRECOIL[0]	, AntiRecoilToggle	, Options[modsListIndex]);	break; }
+				case 3 { fDisplayMod(CenterX(sizeof(RAPIDFIRE)		- 1, OLED_FONT_SMALL_WIDTH), RAPIDFIRE[0]	, RapidFireToggle	, Options[modsListIndex]);	break; }
+				case 4 { fDisplayMod(CenterX(sizeof(YYSPAM)			- 1, OLED_FONT_SMALL_WIDTH), YYSPAM[0]		, YYSpamToggle		, Options[modsListIndex]);	break; }
+				case 5 { fDisplayMod(CenterX(sizeof(SNAKEMOD)		- 1, OLED_FONT_SMALL_WIDTH), SNAKEMOD[0]	, SnakeModToggle	, Options[modsListIndex]);	break; }
+				case 6 { fDisplayMod(CenterX(sizeof(ANTIDRIFT)		- 1, OLED_FONT_SMALL_WIDTH), ANTIDRIFT[0]	, AntiDriftToggle	, Options[modsListIndex]);	break; }
+			}
+				RefreshOLED = FALSE;
+	    }
+
+		if(DisplayTitle)
+		{
+			cls_oled(0);
+			image_oled(33, 0, TRUE, TRUE, picture[0]);
+			rect_oled(0, 0, 128, 64, 0, 1);
+			ModMenu			= FALSE;
+			DisplayTitle	= FALSE;
+			DisplayBlack	=  TRUE;
+		}
+
+		if(DisplayBlack)
+		{
+			countToBlack += get_rtime();
+
+			if(countToBlack >= 20000)
+			{
+				cls_oled(0);
+				countToBlack = 0;
+				DisplayBlack = FALSE;
+			}
+		}
+
+		if(ModEdit)
+		{
+			block_all_inputs();
+
+			if(MenuTimeOut) { CheckIfBtnIsPressed(); }
+
+			if(event_release(PS4_CIRCLE))
+			{
+				ModEdit		= FALSE;
+				DisplayEdit	= FALSE;
+				ModMenu		= TRUE;
+				RefreshOLED = TRUE;
+			}
+
+			if(!get_ival(Ads_BTN) && event_press(PS4_DOWN))
+			{
+				adjustVariableIndex++;
+
+				if(adjustVariableIndex > OptRange[modsListIndex][1])
+					adjustVariableIndex = OptRange[modsListIndex][1];
+					RefreshOLED			= FALSE;
+					DisplayEdit			=  TRUE;
+			}
+			else if(!get_ival(Ads_BTN) && event_press(PS4_UP))
+			{
+				adjustVariableIndex--;
+
+				if(adjustVariableIndex < OptRange[modsListIndex][0])
+					adjustVariableIndex = OptRange[modsListIndex][0];
+					RefreshOLED			= FALSE;
+					DisplayEdit			=  TRUE;
+			}
+
+			if(MenuTimeOut) { CheckIfBtnIsPressed(); }
+		}
+
+		if(get_ival(Ads_BTN))
+		{
+			if(event_press(PS4_OPTIONS))
+			{
+				ModMenu			= TRUE;
+				modsListIndex	= 0;
+				RefreshOLED		= TRUE;
+				DisplayEdit		= FALSE;
+				MenuTimeOut		= 20000;
+			}
+				block(PS4_OPTIONS, get_ptime(Ads_BTN) + 50);
+		}
+
+		if(ModMenu)
+		{
+			block_all_inputs();
+
+			if(event_press(PS4_CIRCLE))
+			{
+				ModMenu = FALSE;
+				ModEdit = FALSE;
+				combo_run(cSavedAllMessage);
+			}
+
+			if(event_press(PS4_CROSS))
+			{
+				ModMenu				= FALSE;
+				adjustVariableIndex	= OptRange[modsListIndex][0];
+				ModEdit				= TRUE;
+				DisplayEdit			= TRUE;
+			}
+
+			if(!get_ival(Ads_BTN) && event_press(PS4_DOWN))
+			{
+				modsListIndex = Cycle(modsListIndex + 1, 0, 6);
+				fBlink(modsListIndex[modsListIndex + 1]);
+			}
+			else if(!get_ival(Ads_BTN) && event_press(PS4_UP))
+			{
+				modsListIndex = Cycle(modsListIndex - 1, 0, 6);
+				fBlink(modsListIndex[modsListIndex + 1]);
+			}
+
+			DisplayBlack = DisplayTitle = FALSE;
+
+			if(!get_ival(Ads_BTN))
+			{
+				if(event_press(PS4_LEFT))
+				{
+					modsListIndex[modsListIndex + 1] = fGoBackward(modsListIndex[modsListIndex + 1]);
+				}
+				else if(event_press(PS4_RIGHT))
+				{
+					modsListIndex[modsListIndex + 1] = fGoForward(modsListIndex[modsListIndex + 1]);
+				}
+			}
+				RefreshOLED = TRUE;
+
+				set_val(PS4_LEFT, 0);
+				set_val(PS4_RIGHT, 0);
+				set_val(PS4_UP, 0);
+				set_val(PS4_DOWN, 0);
+
+				if(MenuTimeOut) { CheckIfBtnIsPressed(); }
+		}
+
+		if(!ModEdit && !ModMenu)
+		{
+			combo_run(cBlinkModOn);
+			if(AntiDriftToggle) { applyDeadzone(); }
+
+			if(AimAssistToggle)
+			{
+				if(get_val(Ads_BTN) || get_val(Fire_BTN))
+				{
+					aimAngle += aimAssistSpeed;
+
+					if(aimAngle >= 360) { aimAngle -= 360; }
+
+					Set_Val(AimX, aimAssistStrength * cos[aimAngle] / 100);
+					Set_Val(AimY, aimAssistStrength * sin[aimAngle] / 100);
+				}
+				else
+				{
+					aimAngle = 0;
+				}
+			}
+
+			if(StrafeAssistToggle)
+			{
+				if(get_ival(Ads_BTN) && get_ival(Fire_BTN))
+					combo_run(cStrafeAim);
+				else
+					combo_stop(cStrafeAim);
+			}
+
+			if(AntiRecoilToggle && (get_ival(Ads_BTN) && get_ival(Fire_BTN)))
+			{
+				set_val(AimY, clamp(get_val(AimY) + verticalRecoilValue	 , inv(100), 100));
+				set_val(AimX, clamp(get_val(AimX) + horizontalRecoilValue, inv(100), 100));
+			}
+
+			if(RapidFireToggle && get_ival(Fire_BTN))
+			{
+				set_val(Fire_BTN, 0);
+				combo_run(cRapidFire);
+			}
+			else
+			{
+				combo_stop(cRapidFire);
+			}
+
+			if(YYSpamToggle)
+			{
+				if(!get_ival(Ads_BTN) && !get_ival(Fire_BTN) && get_ival(Swap_BTN))
+				{
+					combo_run(cYYSpam);
+				}
+			}
+
+			if(SnakeModToggle)
+			{
+				set_val(Jump_BTN, 0);
+
+				if(!get_ival(Ads_BTN) && get_ival(Jump_BTN) && get_ptime(Jump_BTN) > 300)
+				{
+					combo_run(cSnake);
+				}
+				else if(!get_ival(Ads_BTN) && event_release(Jump_BTN) && get_ptime(Jump_BTN) <= 300)
+				{
+					combo_run(cPressJump);
+				}
+			}
+
+			if(timerToClearOLED)
+			{
+				timerToClearOLED -= get_rtime();
+
+				if(timerToClearOLED <= 0)
+					fClearOLED();
+			}
+		}
+	}
+}
+combo cClearScreen {
+	cls_oled(0);
+	DisplayTitle = FALSE;
+	wait(30);
+	print(CenterX(sizeof(POWERUP)	 - 1, OLED_FONT_MEDIUM_WIDTH), 18, OLED_FONT_MEDIUM, OLED_WHITE, POWERUP[0]);
+	print(CenterX(sizeof(LOADED) - 1, OLED_FONT_MEDIUM_WIDTH), 38, OLED_FONT_MEDIUM, OLED_WHITE, LOADED[0]);
+	rect_oled(0, 0, 128, 64, 0, 1);
+	wait(1500);
+	cls_oled(0);
+	DisplayTitle = TRUE;
+}
+int x;
+int exitTimer = 1500;
+combo cExit {
+	wait(exitTimer);
+	cls_oled(0);
+	ModMenu			= FALSE;
+	ModEdit			= FALSE;
+	DisplayEdit		= FALSE;
+	DisplayTitle	=  TRUE;
+}
+combo cSnake {
+	wait(random(50, 60));
+
+	if(get_ptime(Reload_BTN) > get_ptime(Jump_BTN) && (get_brtime(Fire_BTN) > get_ptime(Jump_BTN) && get_ptime(Fire_BTN) > 1500))
+	{
+		set_val(Walk, 100);
+		set_val(Crouch_BTN, 100);
+	}
+
+	wait(500);
+
+	if(get_ptime(Reload_BTN) > get_ptime(Jump_BTN) && get_brtime(Fire_BTN) > 3000)
+	{
+		set_val(Sprint_BTN, 100);
+		set_val(Walk, inv(100));
+	}
+	else
+	{
+		set_val(Crouch_BTN, 100);
+	}
+		wait(250);
+}
+
+combo cPressJump {
+	set_val(Jump_BTN, 100);
+	wait(30);
+	wait(60);
+
+	if(get_brtime(Fire_BTN) < 400)
+	{
+		set_val(Jump_BTN, 100);
+	}
+
+	wait(30);
+	wait(60);
+}
+combo cRapidFire {
+    wait(40 + random(0, 20));
+    set_val(Fire_BTN, 100);
+    wait(80 + random(0, 20));
+}
+
+combo cStrafeAim {
+	Set_Val(Walk, strafeAssistStrength);
+	wait(strafeAssistSpeed);
+	Set_Val(Strafe, strafeAssistStrength);
+	wait(strafeAssistSpeed);
+	Set_Val(Walk, inv(strafeAssistStrength));
+	wait(strafeAssistSpeed);
+    Set_Val(Strafe, inv(strafeAssistStrength));
+    wait(strafeAssistSpeed);
+}
+combo cYYSpam {
+    set_val(Swap_BTN, 100);
+    wait(yySpamDelay + random(0, 10));
+    set_val(Swap_BTN, 0);
+    wait(yySpamDelay);
+    set_val(Swap_BTN, 100);
+    wait(yySpamDelay + random(0, 10));
+    set_val(Swap_BTN, 0);
+    wait(yySpamDelay);
+    set_val(Swap_BTN, 100);
+    wait(yySpamDelay + random(0, 10));
+    set_val(Swap_BTN, 0);
+    wait(yySpamDelay);
+    set_val(Swap_BTN, 100);
+    wait(yySpamDelay + random(0, 10));
+    set_val(Swap_BTN, 0);
+    wait(yySpamDelay);
+}
+combo cSavedAllMessage {
+    wait(20);
+    Save();
+    cls_oled(0);
+	print(CenterX(sizeof(EXIT_TXT1) - 1, OLED_FONT_MEDIUM_WIDTH), 15, OLED_FONT_MEDIUM, OLED_WHITE, EXIT_TXT1[0]);
+	print(CenterX(sizeof(EXIT_TXT2) - 1, OLED_FONT_MEDIUM_WIDTH), 34, OLED_FONT_MEDIUM, OLED_WHITE, EXIT_TXT2[0]);
+	rect_oled(0, 0, 128, 64, 0, 1);
+    exitTimer = 2000;
+}
+int aimAngle;
+combo cBlinkNotifier {
+	LEDColor(BlinckColor);
+	wait(300);
+	LEDColor(ColorOFF);
+	wait(100);
+	LEDColor(BlinckColor);
+	wait(300);
+	LEDColor(ColorOFF);
+}
+
+int numberOfBlinks;
+combo cBlinkModOn {
+    LEDColor(ColorOFF);
+    wait(500);
+    LEDColor(ColorOFF);
+    wait(1000);
+
+    numberOfBlinks += 1;
+
+    if(numberOfBlinks > 0)
+		numberOfBlinks = 1;
+}
+int initialCounter;
+int frameDelayCounter;
+int timerToClearOLED;
+function fClearOLED() {
+	cls_oled(0);
+	DisplayTitle = FALSE;
+}
+function Set_Val(fStick, fValue) {
+    set_val(fStick, clamp(fValue * (100 - abs(get_val(fStick))) / 100 + get_val(fStick), inv(100), 100));
+}
+enum { ColorOFF = 0, Blue, Red, Green, Pink, SkyBlue, Yellow, White }
+data(0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 2, 0, 2, 0, 2, 0, 2, 2, 2, 2, 2 );
+int colorIndex;
+function LEDColor(fColor) {
+	for(colorIndex = 0; colorIndex < 3; colorIndex++)
+	{
+		set_led(colorIndex, duint8 ((fColor * 3) + colorIndex));
+	}
+}
+int ModMenu;
+int ModEdit;
+int RefreshOLED;
+int DisplayEdit;
+int DisplayBlack;
+int countToBlack;
+int BlinckColor = 3;
+int DisplayTitle = TRUE;
+function Load() {
+	AimAssistToggle			= get_pvar(SPVAR_1,		0,    1,   0);
+	StrafeAssistToggle		= get_pvar(SPVAR_2,		0,    1,   0);
+	AntiRecoilToggle		= get_pvar(SPVAR_3,		0,    1,   0);
+	RapidFireToggle			= get_pvar(SPVAR_4,		0,    1,   0);
+	YYSpamToggle			= get_pvar(SPVAR_5,		0,    1,   0);
+	SnakeModToggle			= get_pvar(SPVAR_6,		0,    1,   0);
+	AntiDriftToggle			= get_pvar(SPVAR_7,		0,    1,   0);
+
+	aimAssistStrength		= get_pvar(SPVAR_8,		1,   50,  15);
+	aimAssistSpeed			= get_pvar(SPVAR_9,		1,  100,  30);
+	strafeAssistSpeed		= get_pvar(SPVAR_10,	1,  100,  30);
+	strafeAssistStrength	= get_pvar(SPVAR_11,	1,  100,  25);
+	verticalRecoilValue		= get_pvar(SPVAR_12,	1,  100,  20);
+	horizontalRecoilValue	= get_pvar(SPVAR_13, -100,  100,   0);
+	yySpamDelay				= get_pvar(SPVAR_14,   20,  120,  60);
+	deadZoneValue			= get_pvar(SPVAR_15,	1,   15,   5);
+}
+
+function Save() {
+	set_pvar(SPVAR_1,  AimAssistToggle);
+	set_pvar(SPVAR_2,  StrafeAssistToggle);
+	set_pvar(SPVAR_3,  AntiRecoilToggle);
+	set_pvar(SPVAR_4,  RapidFireToggle);
+	set_pvar(SPVAR_5,  YYSpamToggle);
+	set_pvar(SPVAR_6,  SnakeModToggle);
+	set_pvar(SPVAR_7,  AntiDriftToggle);
+
+	set_pvar(SPVAR_8,  aimAssistStrength);
+	set_pvar(SPVAR_9,  aimAssistSpeed);
+	set_pvar(SPVAR_10, strafeAssistSpeed);
+	set_pvar(SPVAR_11, strafeAssistStrength);
+	set_pvar(SPVAR_12, verticalRecoilValue);
+	set_pvar(SPVAR_13, horizontalRecoilValue);
+	set_pvar(SPVAR_14, yySpamDelay);
+	set_pvar(SPVAR_15, deadZoneValue);
+	combo_run(cExit);
+}
+function fBlink (fVariable) {
+	BlinckColor = iif(fVariable, Green, Red);
+	combo_run(cBlinkNotifier);
+}
+function Cycle(fValue, fMinimumValue, fMaximumValue) {
+    return iif(fValue > fMaximumValue, fMinimumValue, iif(fValue < fMinimumValue, fMaximumValue, fValue));
+}
+function fDisplayEdit(fValue) {
+    print(2, 2, OLED_FONT_SMALL, OLED_WHITE, EditVarStr[adjustVariableIndex]);
+    NumberToString(fValue, FindDigits(fValue));
+}
+
+function fGoForward (fVariable) {
+	fVariable += 1;
+
+	if(fVariable > Min_Max_Options[modsListIndex][1])
+		fVariable = Min_Max_Options[modsListIndex][0];
+		fBlink(fVariable);
+	return fVariable;
+}
+function iif(Expression, truePart, falsePart) { if(Expression) { return truePart; } return falsePart; }
+function fGoBackward (fVariable) {
+	fVariable -= 1;
+
+	if(fVariable < Min_Max_Options[modsListIndex][0])
+		fVariable = Min_Max_Options[modsListIndex][1];
+		fBlink(fVariable );
+	return fVariable;
+}
+int stickValue;
+function applyDeadzone() { correctStickInput(PS4_RX); correctStickInput(PS4_RY); correctStickInput(PS4_LX); correctStickInput(PS4_LY); }
+function correctStickInput(Stick) { stickValue = get_ival(Stick); if(stickValue >= inv(deadZoneValue) && stickValue <= deadZoneValue) { set_val(Stick, 0); } else if(stickValue < inv(deadZoneValue)) { set_val(Stick, clamp((stickValue + deadZoneValue) * 100 / (100 - deadZoneValue), inv(100), 100)); } else if(stickValue > deadZoneValue) { set_val(Stick, clamp((stickValue - deadZoneValue) * 100 / (100 - deadZoneValue), inv(100), 100)); } }
+int stringLength;
+int digitCounter, divisor;
+const uint8 BlockBTNs[]	= { PS4_L2, PS4_OPTIONS, PS4_LEFT, PS4_RIGHT, PS4_UP, PS4_DOWN, PS4_CROSS, PS4_CIRCLE, PS4_SQUARE, PS4_TRIANGLE, PS4_L1, PS4_R1, PS4_R2, PS4_SHARE, PS4_TOUCH, PS4_R3, PS4_L3, PS4_PS, PS4_RX, PS4_RY, PS4_LX, PS4_LY };
+const int8 ASCII_NUM[] = { 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 };
+const int8 sin[] = { 0, 2, 3, 5, 7, 9, 10, 12, 14, 16, 17, 19, 21, 22, 24, 26, 28, 29, 31, 33, 34, 36, 37, 39, 41, 42, 44, 45, 47, 48, 50, 52, 53, 54, 56, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 71, 72, 73, 74, 75, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 87, 88, 89, 90, 91, 91, 92, 93, 93, 94, 95, 95, 96, 96, 97, 97, 97, 98, 98, 98, 99, 99, 99, 99, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 99, 99, 99, 99, 98, 98, 98, 97, 97, 97, 96, 96, 95, 95, 94, 93, 93, 92, 91, 91, 90, 89, 88, 87, 87, 86, 85, 84, 83, 82, 81, 80, 79, 78, 77, 75, 74, 73, 72, 71, 69, 68, 67, 66, 64, 63, 62, 60, 59, 57, 56, 54, 53, 52, 50, 48, 47, 45, 44, 42, 41, 39, 37, 36, 34, 33, 31, 29, 28, 26, 24, 22, 21, 19, 17, 16, 14, 12, 10, 9, 7, 5, 3, 2, 0, -2, -3, -5, -7, -9, -10, -12, -14, -16, -17, -19, -21, -22, -24, -26, -28, -29, -31, -33, -34, -36, -37, -39, -41, -42, -44, -45, -47, -48, -50, -52, -53, -54, -56, -57, -59, -60, -62, -63, -64, -66, -67, -68, -69, -71, -72, -73, -74, -75, -77, -78, -79, -80, -81, -82, -83, -84, -85, -86, -87, -87, -88, -89, -90, -91, -91, -92, -93, -93, -94, -95, -95, -96, -96, -97, -97, -97, -98, -98, -98, -99, -99, -99, -99, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -99, -99, -99, -99, -98, -98, -98, -97, -97, -97, -96, -96, -95, -95, -94, -93, -93, -92, -91, -91, -90, -89, -88, -87, -87, -86, -85, -84, -83, -82, -81, -80, -79, -78, -77, -75, -74, -73, -72, -71, -69, -68, -67, -66, -64, -63, -62, -60, -59, -57, -56, -54, -53, -52, -50, -48, -47, -45, -44, -42, -41, -39, -37, -36, -34, -33, -31, -29, -28, -26, -24, -22, -21, -19, -17, -16, -14, -12, -10, -9, -7, -5, -3, -2 }
+const int8 cos[] = { 100, 100, 100, 100, 100, 100, 99, 99, 99, 99, 98, 98, 98, 97, 97, 97, 96, 96, 95, 95, 94, 93, 93, 92, 91, 91, 90, 89, 88, 87, 87, 86, 85, 84, 83, 82, 81, 80, 79, 78, 77, 75, 74, 73, 72, 71, 69, 68, 67, 66, 64, 63, 62, 60, 59, 57, 56, 54, 53, 52, 50, 48, 47, 45, 44, 42, 41, 39, 37, 36, 34, 33, 31, 29, 28, 26, 24, 22, 21, 19, 17, 16, 14, 12, 10, 9, 7, 5, 3, 2, 0, -2, -3, -5, -7, -9, -10, -12, -14, -16, -17, -19, -21, -22, -24, -26, -28, -29, -31, -33, -34, -36, -37, -39, -41, -42, -44, -45, -47, -48, -50, -52, -53, -54, -56, -57, -59, -60, -62, -63, -64, -66, -67, -68, -69, -71, -72, -73, -74, -75, -77, -78, -79, -80, -81, -82, -83, -84, -85, -86, -87, -87, -88, -89, -90, -91, -91, -92, -93, -93, -94, -95, -95, -96, -96, -97, -97, -97, -98, -98, -98, -99, -99, -99, -99, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -99, -99, -99, -99, -98, -98, -98, -97, -97, -97, -96, -96, -95, -95, -94, -93, -93, -92, -91, -91, -90, -89, -88, -87, -87, -86, -85, -84, -83, -82, -81, -80, -79, -78, -77, -75, -74, -73, -72, -71, -69, -68, -67, -66, -64, -63, -62, -60, -59, -57, -56, -54, -53, -52, -50, -48, -47, -45, -44, -42, -41, -39, -37, -36, -34, -33, -31, -29, -28, -26, -24, -22, -21, -19, -17, -16, -14, -12, -10, -9, -7, -5, -3, -2, -0, 2, 3, 5, 7, 9, 10, 12, 14, 16, 17, 19, 21, 22, 24, 26, 28, 29, 31, 33, 34, 36, 37, 39, 41, 42, 44, 45, 47, 48, 50, 52, 53, 54, 56, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 71, 72, 73, 74, 75, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 87, 88, 89, 90, 91, 91, 92, 93, 93, 94, 95, 95, 96, 96, 97, 97, 97, 98, 98, 98, 99, 99, 99, 99, 100, 100, 100, 100, 100 }
+const image picture = { 61, 61, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x06, 0x30, 0x07, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x31, 0x80, 0x31, 0x80, 0x00, 0x00, 0x00, 0x01, 0x8C, 0x01, 0x8C, 0x00, 0x00, 0x00, 0x00, 0x0C, 0x60, 0x0C, 0x61, 0xC6, 0x0C, 0x70, 0x6E, 0x63, 0x37, 0x63, 0x1F, 0x37, 0x67, 0xC3, 0xF3, 0x19, 0xFB, 0x19, 0xDD, 0xBB, 0x76, 0x1E, 0x18, 0xCE, 0x7F, 0xCC, 0x6D, 0xDB, 0x18, 0xE0, 0xC6, 0x63, 0xF8, 0x63, 0x2A, 0x9F, 0xC6, 0x06, 0x33, 0x1E, 0x03, 0x19, 0x54, 0xFE, 0x30, 0x31, 0x98, 0xF0, 0x18, 0xCA, 0xA6, 0x01, 0x81, 0x8C, 0xC7, 0x80, 0xC6, 0x55, 0x30, 0x0C, 0x0C, 0x67, 0x3C, 0x07, 0x73, 0xB9, 0xCC, 0x60, 0x63, 0x3F, 0x60, 0x1F, 0x18, 0xC7, 0xC3, 0x01, 0xF1, 0xB8, 0x00, 0x70, 0x00, 0x00, 0x00, 0x07, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00, 0x01, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xE1, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xFF, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0F, 0xFF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0xE7, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x78, 0x7C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x03, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0F, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0E, 0x06, 0x3E, 0x00, 0x00, 0x00, 0x00, 0x00, 0xF8, 0x21, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x0F, 0xC1, 0x0C, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x62, 0x00, 0x63, 0x00, 0x00, 0x00, 0x00, 0x03, 0x01, 0xE3, 0x18, 0x00, 0x00, 0x00, 0x00, 0x18, 0x0F, 0x18, 0xC0, 0x00, 0x00, 0x00, 0x00, 0xC0, 0xCC, 0xC6, 0x00, 0x00, 0x00, 0x00, 0x06, 0x06, 0x66, 0x30, 0x00, 0x00, 0x00, 0x00, 0x30, 0x33, 0x31, 0x80, 0x00, 0x00, 0x00, 0x01, 0x81, 0x99, 0x8C, 0x00, 0x00, 0x00, 0x00, 0x0C, 0x0C, 0xCC, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x72, 0x66, 0x7E, 0x00, 0x00, 0x00, 0x00, 0x01, 0xF1, 0xE3, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x07, 0x0F, 0x1E, 0x00, 0x00, 0x00, 0x00 };
+function NumberToString(fValue, fDigits) {
+	stringLength	= 1;
+	divisor			= 10000;
+
+	if(fValue < 0) 
+	{
+		putc_oled(stringLength, 45);
+		stringLength += 1;
+		fValue = abs(fValue);
+	}
+
+	for(digitCounter = 5; digitCounter >= 1; digitCounter--)
+	{
+		if(fDigits >= digitCounter)
+		{
+			putc_oled(stringLength, ASCII_NUM[fValue / divisor]);
+			fValue %= divisor;
+			stringLength += 1;
+
+			if(digitCounter == 4) 
+			{
+				putc_oled(stringLength, 44);
+				stringLength += 1;
+			}
+		}
+			divisor /= 10;
+	}
+		puts_oled(CenterX(stringLength - 1, OLED_FONT_MEDIUM_WIDTH), 27, OLED_FONT_MEDIUM, stringLength - 1, OLED_WHITE);
+}
+
+int numberStringLength;
+function PrintNumber(fValue, fDigits, fPrintStartX, fPrintStartY, fFont) {
+	numberStringLength	= 1;
+	divisor				= 10000;
+
+	if(fValue < 0) 
+	{
+		putc_oled(numberStringLength, 45);
+		numberStringLength += 1;
+		fValue = abs(fValue);
+	}
+
+	for(digitCounter = 5; digitCounter >= 1; digitCounter--)
+	{
+		if(fDigits >= digitCounter)  
+		{
+			putc_oled(numberStringLength, ASCII_NUM[fValue / divisor]);
+			fValue %= divisor;
+			numberStringLength += 1;
+		}
+			divisor /= 10;
+	}
+		puts_oled(fPrintStartX, fPrintStartY, fFont, numberStringLength - 1, OLED_WHITE);
+}
+
+function press_hold(fButton) {
+	return event_press(fButton) || (get_ival(fButton) && get_ptime(fButton) > 250 && !(get_ptime(fButton) % (get_rtime() << 3)));
+}
+int z;
+function BlockAllOutputs() {
+	for(z = 0; z < 22; z++) 
+	{
+		if(get_ival(BlockBTNs[z]) || event_press(BlockBTNs[z])) 
+		{
+			set_val(BlockBTNs[z], 0);
+		}
+	}
+}
+function FindDigits(fNumber) {
+    fNumber = abs(fNumber);
+
+		 if(fNumber >= 10000)	return 5;
+    else if(fNumber >=  1000)	return 4;
+    else if(fNumber >=   100)	return 3;
+    else if(fNumber >=    10)	return 2;
+								return 1;
+}
+
+int fMinimum, fMaximum;
+function fEditValue(fValue) {
+    line_oled(1, 14, 127, 14, 1, 1);
+    line_oled(1, 48, 127, 48, 1, 1);
+
+    print(2, 52, OLED_FONT_SMALL, 1, EDIT_VALUE_TXT[0]);
+
+    rect_oled(90, 50, 127, 60, OLED_WHITE, 1);
+
+    putc_oled(1, 133);
+    puts_oled(91, 51, OLED_FONT_SMALL, 1, 0);
+    putc_oled(1, 134);
+    puts_oled(101, 51, OLED_FONT_SMALL, 1, 0);
+
+    putc_oled(1, 131);
+    puts_oled(111, 51, OLED_FONT_SMALL, 1, 0);
+    putc_oled(1, 132);
+    puts_oled(121, 51, OLED_FONT_SMALL, 1, 0);
+
+    fMinimum = ValRange[adjustVariableIndex][0];
+    fMaximum = ValRange[adjustVariableIndex][1];
+
+    PrintNumber(fMinimum, FindDigits(fMinimum),  4, 20, OLED_FONT_SMALL);
+    PrintNumber(fMaximum, FindDigits(fMaximum), 97, 20, OLED_FONT_SMALL);
+
+    if(get_ival(Ads_BTN))
+	{
+        if(press_hold(PS4_RIGHT))
+		{
+            fValue++;
+
+            if(fValue > fMaximum)
+				fValue		= fMaximum;
+				DisplayEdit = TRUE;
+        }
+        else if(press_hold(PS4_LEFT))
+		{
+            fValue--;
+
+            if(fValue < fMinimum)
+				fValue		= fMinimum;
+				DisplayEdit = TRUE;
+        }
+        else if(press_hold(PS4_UP))
+		{
+            fValue += 10;
+
+            if(fValue > fMaximum)
+				fValue		= fMaximum;
+				DisplayEdit = TRUE;
+        }
+        else if(press_hold(PS4_DOWN))
+		{
+            fValue -= 10;
+
+            if(fValue < fMinimum)
+				fValue		= fMinimum;
+				DisplayEdit = TRUE;
+        }
+    }
+		return fValue;
+}
+function CenterX(fCharacters, fFont) {
+    return (OLED_WIDTH >> 1) - ((fCharacters * fFont) >> 1);
+}
+
+function draw_rectangle() {
+    rect_oled(0, 0, OLED_WIDTH, 64, FALSE, 1);
+    line_oled(1, 14, 127, 14, 1, 1);
+    line_oled(1, 48, 127, 48, 1, 1);
+}
+function fDisplayMod(fString, fLabel, fToggle, fOption) {
+	print(fString, 2, OLED_FONT_SMALL, OLED_WHITE, fLabel);
+
+	rect_oled(55, 36, OLED_FONT_SMALL_WIDTH + 2, OLED_FONT_SMALL_HEIGHT + 2, OLED_WHITE, 1);
+	rect_oled(63, 36, OLED_FONT_SMALL_WIDTH + 2, OLED_FONT_SMALL_HEIGHT + 2, OLED_WHITE, 1);
+
+	putc_oled(1, 132);
+	puts_oled(56, 37, OLED_FONT_SMALL, 1, 0);
+	putc_oled(1, 131);
+	puts_oled(64, 37, OLED_FONT_SMALL, 1, 0);
+
+	print(2, 52, OLED_FONT_SMALL, 1, iif(EditVal[modsListIndex] == 0, NO_EDIT_VARIABLE[0], PRESS_A_TO_EDIT[0]));
+
+	if(fOption == 1)
+	{
+		if(fToggle == 1)
+			print(CenterX(sizeof(ON) - 1, OLED_FONT_SMALL_WIDTH), 21, OLED_FONT_SMALL, OLED_WHITE, ON[0]);
+		else
+			print(CenterX(sizeof(OFF) - 1, OLED_FONT_SMALL_WIDTH), 21, OLED_FONT_SMALL, OLED_WHITE, OFF[0]);
+	}
+}
+
+int MenuTimeOut;
+int menuButtonIndex;
+const uint8 MenuButtons[] = { PS4_LEFT, PS4_RIGHT, PS4_UP, PS4_DOWN, PS4_CROSS, PS4_CIRCLE, PS4_OPTIONS, PS4_L2 };
+function CheckIfBtnIsPressed() {
+    for(menuButtonIndex = 0; menuButtonIndex < 7; menuButtonIndex++)
+	{
+         if(event_press(MenuButtons[menuButtonIndex]))
+		 {
+             MenuTimeOut = 20000;
+         }
+
+         if(MenuTimeOut)
+		 {
+            MenuTimeOut -= 1;
+
+            if(MenuTimeOut <= 0)
+			{
+                ModMenu			= FALSE;
+                ModEdit			= FALSE;
+                DisplayEdit		= FALSE;
+                DisplayBlack	=  TRUE;
+            }
+        }
+    }
+}
