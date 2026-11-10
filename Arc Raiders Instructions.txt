@@ -1,0 +1,312 @@
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+Version 2.7
+ - updated profile swap system to double tap Y/Triangle
+  
+Pin code - 002025
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸
+
+Arrays with pre-stored values 
+	- arrays (for each Weapon Category)
+	- many weapons per category 
+	
+In the arrays for full auto weapons, only the AntiRecoil values are stored
+In the arrays for semi-auto weapons, the AntiRecoil and Rate of Fire values are stored
+
+
+If your weapon in-game and your weapon on the OLED screen are unsync, use profile quick toggle or double-tap Y/Triangle
+
+Each of the 2 profiles also has a temporary value, which is adjustable.
+This Temp Val will be added to or subtracted from the pre-stored value to allow you to make fine adjustments to your Antirecoil or Rate Of Fire
+As Temp Val is profile-dependent, if you change the weapon on a profile, remember to reset the Temp Val
+	- You can reset these temporary values from the ModWeapon by holding down CROSS/A 500ms
+	
+/!\ YOU ONLY RESET THE TEMP VALUES OF THE ACTIVE PROFILE /!\ 
+	
+You can write down your adjusted values on a piece of paper.
+You will then be able to modify the value in the corresponding arrays.
+This way, while in-game, when you change category or weapon, antirecoil will already be perfectly adjusted for you.
+
+
+Each profile has (private features)
+	- its own AntiRecoil Type with its own toggle and its own values
+	- its own RapidFire with its own toggle and its own rate of fire 
+	- its own BurstFire with its own toggle and a value that applies to all profiles
+	- its own Polar Aim Assist with its own toggle and values that apply to all profiles 
+	- its own StrafeShot with its own toggle and a value that applies to all profiles
+
+This applies to all profiles 
+	- Inverted Y (for vertical AntiRecoil) with global toggle
+	- Swap Trigger/Bumper with global toggle
+	- DynaSens (Dynamic Sensitivity) with global toggle and values 
+	- Reload (then switch weapon) with global toggle and value 
+	- AutoRun with global toggle
+	- AutoADS (Aims when you fire)
+	- Auto Ping (Pings when aiming)
+	- Auto Light (Shines light while aiming)
+	
+NOTE: ONCE YOU ADJUSTED YOUR WEAPON WRITE DOWN THE VALUES SO YOU CAN ADD THE VALUES TO ITS ARRAY LOCATED AT LINE 434 IN THIS SCRIPT!!!!
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸
+
+											FEATURES  -  FEATURES  -  FEATURES  -  FEATURES  -  FEATURES  -  FEATURES
+											FEATURES  -  FEATURES  -  FEATURES  -  FEATURES  -  FEATURES  -  FEATURES
+											FEATURES  -  FEATURES  -  FEATURES  -  FEATURES  -  FEATURES  -  FEATURES
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+	P R I V A T E   F E A T U R E S   W I T H   P R I V A T E   V A L U E S
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+	
+			Antirecoil (you can choose between 3 types of antirecoil) - (in game, rumble MUST BE ON, you can disable rumble with "Rumble" mod on OLED)
+			
+	- Progressive (advanced users)
+	   * this has 3 values that will need to be adjusted. (Start, End , Time) Start is the value the recoil starts at. End is the value it end on. Time is determined by
+	   how long it takes to empty a clip. This is for weapons that have strong recoil at first then weak recoil at end of clip or vice versa. or you can match the start
+	   and end value if weapon has only one recoil
+					
+	- Standard (easy to adjust)
+	   * the has a vertical and horizontal value that can be adjusted. vertical goes up or down and horizontal goes left or right. If weapon goes up then the vertical value 
+	   will need to be decreased until good. if it goes down then you need to increase the vertical value. if the wepaon goes right then horizontal value needs to be decreased
+	   until it is good. If it goes right then you need to increase the horizontal value until its good.
+					
+	- On Rumble (beginner)
+		* this works just like standard option and adjusts the same. only difference it works when the controller vibrates when firing weapon.
+					
+					
+			RapidFire 
+				If you have set up your script with a semi-automatic weapon on one of the profiles, when you are on that profile, RapidFire will be enabled by default, 
+				you will unlock the Speed Toggle of this mod (and lock BurstFire Speed Toggle),
+				and you will also have access to the RapidFire menu in the ModMenu to have the possibility to disable the mod or adjust Rate Of Fire (BurstFire menu is hidden)
+				
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+	P R I V A T E   F E A T U R E S   W I T H   G L O B A L   V A L U E S
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+			BurstFire
+				If you have set up your script with a full-automatic weapon on one of the profiles, when you are on that profile,
+				you will unlock the Speed Toggle of this mod (and lock RapidFire Speed Toggle),
+				and you will also have access to the BurstFire menu in the ModMenu to have the possibility to disable the mod or adjust Hold and Release time (RapidFire menu is 				hidden)
+			
+			
+			AIM Assist (Polar Assist with TaylorDrift Shapes and even More!) You can quickly change the Shape by holding the ADS button and double tapping RIGHT
+				There is 2 values
+					- Radius is the size of the micro-movements
+						the bigger the size, the more you will have a Screen Shake effect
+						Decrease the value until the shaking is almost over
+
+					- Steps is the frequency of micro movements
+						- With Batts Sticky:
+							the lower the value, the more likely you will experience a slowdown in the character's movements 
+						- With CARBINEs shapes:
+							the higher the value, the more likely you will experience a slowdown in the character's movements 
+						Decrease the value until your movements are normal
+						
+			
+			Strafe Mod 
+				- Strafe Shot:
+					Strafe Right and Left while fireing
+				- Cut Strafe (do not work with AutoADS)
+					Push the left stick forward (or backward for back strafe), hold R2 and move the left stick from left to right (front left / front right for cut strafe, or back 					left / back right for back strafe)
+				- Cut Strafe with camera movement (do not work with AutoADS)
+					Push the left stick forward (or backward for back strafe), hold R2 and move the left stick from left to right (front left / front right for cut strafe, or back 					left / back right for back strafe)
+				
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+	G L O B A L   F E A T U R E S   W I T H   G L O B A L   V A L U E S
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+	
+			DynaSens
+				Customize the sensitivity of your right stick
+				while aiming and also while aiming to deploy a skill
+				- more instructions below
+			
+			
+			Reload 
+				Double tap reload button to stop and change weapon in the middle of the reload animation
+				With the right Time value, the empty weapon you just holstered will be reloaded
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+	G L O B A L   F E A T U R E S   
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+	
+			Swap Trigger/bumper - (don't set alternate/inverted/flipped or I don't know what in game settings or in console settings)
+				- swap L1/LB with L2/LT and swap R1/RB with R2/RT
+						
+			Auto ADS
+				- holds ADS button for you when you hold Fire button
+				
+			AutoRun
+				- push the left stick 90% forward or to the sides to run  - hold to sprint must be enabled in the game settings
+					
+			Rumbles - (in-game, rumble must be ON)
+				- disable controller rumbles 
+			
+			Auto Reload
+				- When you have this enabled and you release the fire trigger, it will automatically reload the weapon. Helps a lot
+			
+			Auto Ping
+				- When you aim, it will also ping
+				
+			Auto Light
+				- When you aim it will turn on the flashlight, and when you release it will turn the light off.
+			
+			Double Pump
+				- When you fire it will do the double pump to make shotgun fire faster. Good time is 65
+				
+	
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+	A D D I T I O N N A L   F E A T U R E S
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+	
+			KillSwitch
+				In the inventory, if some mods start to run (because you move the stick, press/hold a button ...), this can mark objects as trash
+				On the map, this will have a negative effect
+				That's why the script is frequently deactivated
+				Get into the habit of spamming CIRCLE/B to get out of the menus or the map, this turns the script ON
+				- more instructions below
+
+
+			Hair Trigger
+				- makes your triggers ultra sensitive, perfect for reactivity
+					
+					
+			Resync Button 
+				Sometimes your weapon in-game is unsync with the weapon displayed on ZEN, profiles are mixed
+				- Hold L3/LS and tap TRIANGLE/Y to resync
+				
+				
+			Speed Toggle
+				- toggle on the fly one of the 4 most popular mods (without having to go into ModMenu)
+				- more instructions below
+				
+			
+			Speed Weapon Swap
+				- switch on the fly your weapon category and weapon name (without having to go into ModWeapon)
+				- more instructions below
+				
+				
+				
+◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+							INSTRUCTIONS - IMPORTANT, PLEASE READ CAREFULLY
+							INSTRUCTIONS - IMPORTANT, PLEASE READ CAREFULLY
+							INSTRUCTIONS - IMPORTANT, PLEASE READ CAREFULLY
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸◹◺◿◸												
+
+How to use the ModMenu:
+
+	Open ModMenu (L2/LT + OPTIONS/MENU or CAPSLOCK to open)
+	
+		Choose which profile you want to modify (Primary, Secondary) 
+			- Tap TRIANGLE/Y 
+			
+		Navigate between the different MODS with LEFT or RIGHT (D pad)
+			- tap UP or DOWN to turn ON or OFF
+			- For Antirecoil, tap UP or DOWN to switch between AntiRecoil Type: OFF, Progressive Antirecoil, Standard Antirecoil, Rumble Antirecoil
+			- For Polar AIM Assist, UP or DOWN to switch between every shape
+		
+		Activate the mods you want on each profile...
+		
+	If the mod displayed has one or more editable value(s): 
+		- Tap CROSS/A to close ModMenu and go to ModEdit
+	
+	Tap SQUARE/X to close ModMenu and go to ModWeapon
+			
+〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜	
+
+How to use the ModEdit: (while in ModMenu, tap CROSS/A to close ModMenu and go to ModEdit - if the mod displayed has one or more editable value(s))
+
+		Navigate between the different value name with LEFT or RIGHT
+		Change/edit the value:
+			- Hold CROSS/A and 
+				- tap UP or RIGHT to increase value 
+				- tap DOWN or LEFT to decrease value
+		
+		To exit ModEdit and go back to ModMenu, tap CIRCLE/B
+		
+		Double-Tap B/Circle or ESC to close every Menu and Save
+	
+〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜	
+
+How to use the ModWeapon: (while in ModMenu, tap SQUARE/X to close ModMenu and go to ModWeapon)
+	
+		Choose which profile you want to modify (primary, secondary ) 
+			- Tap TRIANGLE/Y 
+			
+		To switch between Weapon Category 
+			- Tap UP or DOWN
+			
+		To switch between Weapon Name 
+			- Tap LEFT or RIGHT
+		
+		
+		Tap CIRCLE/B to close ModWeapon and go to ModMenu
+				
+〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜	
+				           
+	Save every value and exit(only available if you are in ModMenu or ModEdit or ModWeapon)		
+		- D-Tap CIRCLE/B to save EVERY value, toggles, weapon category, and weapon name, independently for EACH profile 
+
+〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜	〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜	
+		
+	Speed toggles for the active profile (outside Mod Menu/Edit/Weapon)
+		- Hold the aiming button and hold 300ms UP, DOWN, RIGHT or LEFT
+			- UP for	RapidFire/BurstFire (if available with your current weapon category)
+			- DOWN for	Anti-Recoil 
+			- RIGHT for	Polar Aim Assist
+			- LEFT for	Double Pump
+			
+		- Hold the aiming button and
+			- DOUBLE TAP RIGHT to switch between Polar Assist Shapes or Strafe type
+
+〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜	〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜	
+	
+	Switch profiles
+		- In Game:
+			- Tap TRIANGLE/Y to switch profiles 1 and 2 (primary and secondary)
+
+	Slot 1 Speed Toggle 
+		- Hold DPAD DOWN and tap X/SQUARE or for keyboard KEY 1 
+		(GREEN ZEN LED)
+		
+	Slot 2 Speed Toggle
+		- Hold DPAD DOWN and tap B\CIRCLE or for keyboard KEY 2 
+		(NO ZEN LED)
+		
+〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜	〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜 〜	
+		
+		Kill Switch (disable everything)
+		- Turn ON to OFF or OFF to ON
+			- Hold the L2/LT button and tap XBOX/PS or LEFTCONTROL button 			 
+			
+		- Turn ON only (disable everything)
+			- Tap OPTIONS/MENU
+			- Tap Map button
+			
+		- Turn OFF only (enable everything)
+			- Double tap CIRCLE/B or ESC
+		
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+Dynamic Sensitivity (while aiming with weapons or skill): 
+
+	DYNASENS_INITIAL_SENS displayed on OLED screen "DS Ini Sens" is your initial X and Y sensitivity (value range 0 - 100)
+		While aiming, I want my sensitivity, which is set to 100% in my game, to be reduced by half as long as the stick input does not exceed DYNASENS_LIMIT
+		So "DS Ini Sens" = 50 on the OLED screen
+
+	DYNASENS_LIMIT displayed on OLED screen "DS Limit" is the stick input point from which the sensitivity increases (value range 0 - 100)
+		When the stick input exceeds 65 (my DYNASENS_LIMIT value), it gradually increases the sensitivity from 50 (my DYNASENS_INITIAL_SENS value) to 100 (my DYNASENS_MAX_SENS value)
+		The sensitivity increase rate is defined by DYNASENS_INCREASE_RATE
+
+	DYNASENS_RESTART displayed on OLED screen "DS Restart" stick input point where sensitivity will reset back to initial sens (value range 0 - 100)
+		When stick input goes down below 30 (my DYNASENS_RESTART value), stick sensitivity returns to 50 (my DYNASENS_INITIAL_SENS value)
+
+	DYNASENS_MAX_SENS displayed on OLED screen "DS Max Sens" is the maximum sensitivity value you want
+		100 means that your maximum "DynaSens" sensitivity will be the one you set in your game
+
+	DYNASENS_INCREASE_RATE displayed on OLED screen "DS Inc Rate" sensitivity increase rate
+		1 = 10ms delay between increases

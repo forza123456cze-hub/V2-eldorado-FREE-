@@ -1,0 +1,2162 @@
+// discord.gg/Coldz - The BEST Scripts
+// Button Layouts
+const string _buttonLayoutName[] = { "Default", "Tactical", "Lefty", "Nomad/Charlie", "Nomad/Charlie Tact", "Nomad/Charlie Left", "Bumper Jumper", "Bumper Jumper Tact", "1-hand Gunslinger", "Stick and Move", "Brawler", "Beast" };
+const uint8 _buttonLayout[][] = {
+	// ADS	  Lethal  Ping 	  Focus	  Fire	  Switch SldDve Jump   Melee   Reload
+	{ XB1_LT, XB1_RB, XB1_RB, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X }, 	// Default
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_A, XB1_B, XB1_X }, 	// Tactical
+	{ XB1_RT, XB1_LB, XB1_UP, XB1_RS, XB1_LT, XB1_Y, XB1_B, XB1_A, XB1_LS, XB1_X }, 	// Lefty
+	{ XB1_RB, XB1_LT, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X }, 	// Nomad/Charlie
+	{ XB1_RB, XB1_LT, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_A, XB1_B, XB1_X }, 	// Nomad/Charlie Tac
+	{ XB1_LB, XB1_RT, XB1_UP, XB1_RS, XB1_LT, XB1_Y, XB1_B, XB1_A, XB1_LS, XB1_X }, 	// Nomad/Charlie Left
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_LB, XB1_RS, XB1_X }, 	// Bumper Jumper
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_RS, XB1_LB, XB1_B, XB1_X }, 	// Bumper Jumper Tact
+	{ XB1_LT, XB1_RT, XB1_UP, XB1_LS, XB1_LB, XB1_Y, XB1_B, XB1_A, XB1_RS, XB1_X }, 	// One-hand Gunslinger
+	{ XB1_LT, XB1_RB, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_RS, XB1_A, XB1_X }, 	// Stick and Move
+	{ XB1_LT, XB1_RS, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_A, XB1_RB, XB1_X }, 	// Brawler
+	{ XB1_LT, XB1_RS, XB1_UP, XB1_LS, XB1_RT, XB1_Y, XB1_B, XB1_LB, XB1_RB, XB1_X } 	// Beast
+};
+// discord.gg/Coldz - The BEST Scripts
+// Color constants
+const uint16 _color[][] = {
+	{ 240, 100, 93 }, 		// Blue
+	{ 120, 100, 100 }, 		// Green
+	{ 35, 100, 100 }, 		// Yellow
+	{ 350, 100, 100 }, 		// Pink
+	{ 300, 100, 75 }, 		// Purple
+	{ 0, 100, 100 }, 		// Red
+	{ 0, 100, 75 }, 		// Menu Red
+	{ 120, 100, 75 }, 		// Menu Green
+	{ 305, 100, 50 },		// Menu Purple
+	{ 20, 50, 100 } 		// White
+}
+// discord.gg/Coldz - The BEST Scripts
+// Font dimensions for different sizes
+const uint8 _fontHeight[] = { OLED_FONT_SMALL_HEIGHT, OLED_FONT_MEDIUM_HEIGHT, OLED_FONT_LARGE_HEIGHT };
+const uint8 _fontWidth[] = { OLED_FONT_SMALL_WIDTH, OLED_FONT_MEDIUM_WIDTH, OLED_FONT_LARGE_WIDTH };
+
+// Stick Layouts
+const string _stickLayoutName[] = { "Default", "Southpaw", "Legacy", "Legacy Southpaw", "Southpaw NoClkSwap", "LegSthPw NoClkSwap" }
+const uint8 _stickLayout[][] = {
+	// Move   	Strafe    Look      Rotate    
+	{ POLAR_LY, POLAR_LX, POLAR_RY, POLAR_RX }, // Default
+	{ POLAR_RY, POLAR_RX, POLAR_LY, POLAR_LX }, // Southpaw
+	{ POLAR_LY, POLAR_RX, POLAR_RY, POLAR_LX }, // Legacy
+	{ POLAR_RY, POLAR_LX, POLAR_LY, POLAR_RX }, // Legacy Southpaw
+	{ POLAR_RY, POLAR_RX, POLAR_LY, POLAR_LX }, // Southpaw No Click Swap
+	{ POLAR_RY, POLAR_LX, POLAR_LY, POLAR_RX }  // Legacy Southpaw No Click Swap
+}
+
+const uint8 _stickLayoutLegacy[][] = {
+	// Move   	Strafe    Look      Rotate    
+	{ XB1_LY, XB1_LX, XB1_RY, XB1_RX }, // Default
+	{ XB1_RY, XB1_RX, XB1_LY, XB1_LX }, // Southpaw
+	{ XB1_LY, XB1_RX, XB1_RY, XB1_LX }, // Legacy
+	{ XB1_RY, XB1_LX, XB1_LY, XB1_RX }, // Legacy Southpaw
+	{ XB1_RY, XB1_RX, XB1_LY, XB1_LX }, // Southpaw No Click Swap
+	{ XB1_RY, XB1_LX, XB1_LY, XB1_RX }  // Legacy Southpaw No Click Swap
+}
+// discord.gg/Coldz - The BEST Scripts
+// Menu information
+const uint16 _menuItemAttributes[][] = {
+	// SubMenu 	Min			Max	  						ValueType							Idx	Max	Setting Index
+	{ FALSE, 	FALSE, 		TRUE, 						Setting_OffOn,						0,	0,	0 },			// Auto Ping
+	{ FALSE,	FALSE,		TRUE,						Setting_OffOn,						0,	0,	0 },			// Auto Run
+	{ TRUE,		FALSE, 		TRUE,						Setting_OffOn | Setting_Profile,	0,	1,	BurstHold },	// Burst Fire
+	{ FALSE, 	Default, 	Beast, 						Setting_ButtonLayout,				0,	0,	0 },			// Button Layout
+	{ FALSE, 	FALSE, 		TRUE, 						Setting_OffOn,						0,	0,	0 },			// Controller Rumbles
+	{ TRUE, 	FALSE, 		TRUE, 						Setting_OffOn,						2,	0,	DeadzoneSize },	// Deadzone
+	{ FALSE, 	FALSE, 		TRUE, 						Setting_OffOn,						0,	0,	0 },			// Flipped
+	{ FALSE, 	FALSE, 		TRUE, 						Setting_OffOn,						0,	0,	0 },			// Hair Triggers
+	{ FALSE, 	FALSE, 		TRUE, 						Setting_OffOn,						0,	0,	0 },			// Inverted
+	{ TRUE, 	FALSE, 		TRUE, 						Setting_OffOn | Setting_Profile,	3,	0,	RapidRps },		// Rapid Fire
+	{ TRUE, 	0, 			4, 							Setting_Assist,						4,	2,	ShakeType },	// Shake Assist
+	{ FALSE, 	0, 			3, 							Setting_ShotMod,					0,	0,	0 },			// Shot Mod
+	{ FALSE, 	Default, 	LegacySouthpawNoClickSwap, 	Setting_StickLayout,				0,	0,	0 },			// Stick Layout
+	{ TRUE, 	0,			4, 							Setting_Assist,						7,	1,	StrafeSize },	// Strafe Assist
+	{ FALSE, 	FALSE, 		TRUE, 						Setting_OffOn,						0,	0,	0 }				// YY Spam
+}
+
+// Assist Activators
+const string _assistType[] = { "Off", "ADS Only", "Fire Only", "ADS & Fire", "ADS or Fire" };
+
+// Shot Mod
+const string _shotMod[] = { "Off", "Crouch Shot", "Prone Shot", "Jump Shot" };
+// discord.gg/Coldz - The BEST Scripts
+// Menu titles
+const string _menuTitle[] = {
+	"Auto Ping",
+	"Auto Run",
+	"Burst Fire", 
+	"Button Layout",
+	"Controller Rumbles",
+	"Deadzone",
+	"Flipped",
+	"Hair Triggers",
+	"Inverted",
+	"Rapid Fire",
+	"Shake Assist",
+	"Shot Mod",
+	"Stick Layout",
+	"Strafe Assist",
+	"Roll Spam"
+}
+
+// Submenu items
+const string _subMenuTitle[] = {
+	"Burst Hold", "Burst Delay",
+	"Deadzone",
+	"Rounds Per Second",
+	"Shake Type", "Shake Size", "Shake Speed",
+	"Strafe Size", "Strafe Time"
+}
+// discord.gg/Coldz - The BEST Scripts
+// Submenu strings
+const string _subMenuStrings[] = {
+	"Version 1", "Version 2"
+}
+
+// Loadout strings
+const string _loadoutStrings[] = {
+	"Primary", "Secondary", "Ground Loot"
+}
+
+// Recoil strings
+const string _recoilStrings[] = {
+	"Vertical Start", "Vertical End", "Vertical Time",
+	"Horizontal Start", "Horizontal End", "Horizontal Time"
+}
+
+// Submenu ranges
+const uint16 _subMenuRanges[][] = {
+	{ 1, 300, Setting_Numeric | Setting_Time }, // Burst Hold
+	{ 1, 300, Setting_Numeric | Setting_Time }, // Burst Delay
+	{ 0, 50, Setting_Numeric },
+	{ 1, 10, Setting_Numeric | Setting_RPS },
+	{ 0, 1, Setting_Type },
+	{ 1, 100, Setting_Numeric },
+	{ 1, 120, Setting_Numeric },
+	{ 1, 100, Setting_Numeric },
+	{ 1, 125, Setting_Numeric | Setting_Time }
+}
+
+// Recoil ranges
+const int16 _recoilRanges[][] = {
+	{ 0, 100, Setting_Numeric },
+	{ 0, 100, Setting_Numeric },
+	{ 0, 1000, Setting_Numeric | Setting_Time },
+	{ -100, 100, Setting_Numeric },
+	{ -100, 100, Setting_Numeric },
+	{ 0, 1000, Setting_Numeric | Setting_Time }
+}
+
+// String constants
+const string _change = "Change";
+const string _edit = "Edit";
+const string _exit = "Exit";
+const string _hold = "Hold";
+const string _noEditVar = "No Edit Variables";
+const string _off = "Off";
+const string _on = "On";
+const string _press = "Press";
+const string _to = "to"
+const string _recoil = "Recoil"
+const string _scriptAuthor = "Raider";
+const string _scriptTitle = "Rampage";
+const string _scriptVersion = "Version";
+const string _select = "Select";
+const string _selectLoadout = "Select Loadout"
+const string _toAdjust = "to Adjust";
+const string _toChangeMenu = "to Change Menu";
+const string _vehicle = "Vehicle";
+
+define BITS_IN_INT = 32;			// Number of bits in a GPC int (32 bits)
+define MAX_BIT_POSITION = 31;		// Highest allowable bit to bet set not including a sign
+define SCREENSAVER_TIME = 10000;	// Set the default screen saver time to 10000ms (10 seconds)
+define VERSION_MAJOR = 1;			// Version major
+define VERSION_MINOR = 2;			// Version minor
+
+int assist[9];		// Assist variables
+int button[10];		// Button Layout
+int device[3];		// Input device properties
+int display[10];	// Display buffer and properties
+int i;				// General purpose iterator
+int menu[2];		// Menu management
+int settings[58];	// Script configuration
+int spvar[6];		// Slot persistent memory management
+int stick[9];		// Stick Layout
+int state[13];		// Script state
+int yy_tap_time;    // YY double-press timer
+int yy_toggle;      // YY on/off toggle
+
+
+enum {
+	// Aim Assist elements
+	Flags = 0, AssistAngle, AssistAimX, AssistAimY, AssistMoveX, AssistMoveY, AssistMoveLS, RandomX, RandomY,
+	
+	// Aim Assist identifiers
+	AssistOff = 0, AssistADSOnly, AssistFireOnly, AssistADSAndFire, AssistADSOrFire,
+	
+	// Button elements
+	ADS = 0, Lethal, Ping, Focus, Fire, SwitchWeapon, Action, Jump, Melee, Reload,
+	
+	// Button identifiers
+	Default = 0, Tactical, Lefty, NomadCharlie, NomadCharlieTact, NomadCharlieLefty, BumperJumper, BumperJumperTact, OneHandGunslinger, StickAndMove, Brawler, Beast,
+	
+	// Color identifiers
+	Hue = 0, Saturation, Brightness,
+	Blue = 0, Green, Yellow, Pink, Purple, Red,
+	MenuRed, MenuGreen, MenuPurple, White,
+	
+	// Device elements
+	Console = 0, Controller, Remapped,
+	
+    // Display elements
+    Update = 0, LedUpdate, Buffer, BufferCopyValue, BufferDigitCount, BufferDigits,
+    
+    // Display alignment options
+    AlignCenter = -3, AlignBottom = -2, AlignRight = -1, AlignLeft = 2, AlignTop = 5,
+    
+    // Menu elements
+   	ButtonBlock = 0, ButtonHoldTime,
+   	
+   	// Shake Assist identifiers
+   	ShakeVersion1 = 0, ShakeVersion2,
+   	
+    // Settings elements
+   	AutoPing = 0, AutoRun, BurstFire, ButtonLayout = BurstFire + 3, ControllerRumbles, Deadzone, Flipped, HairTriggers, Inverted, RapidFire, ShakeAssist = RapidFire + 3, ShotMod, StickLayout, StrafeAssist, YYSpam,
+   	BurstHold, BurstDelay = BurstHold + 3, DeadzoneSize = BurstDelay + 3, RapidRps, ShakeType = RapidRps + 3, ShakeSize, ShakeStep, StrafeSize, StrafeTime,
+   	VStart, VEnd = VStart + 3, VTime = VEnd + 3, HStart = VTime + 3, HEnd = HStart + 3, HTime = HEnd + 3,
+   	
+   	// Settings identifiers
+   	AutoPingEdit = 0, AutoRunEdit, BurstFireEdit, ButtonLayoutEdit, ControllerRumblesEdit, DeadzoneEdit, FlippedEdit, HairTriggersEdit, InvertedEdit, RapidFireEdit, ShakeAssistEdit, ShotModEdit, StickLayoutEdit, StrafeAssistEdit, YYSpamEdit,
+   	
+   	Setting_OffOn = 0,
+   	Setting_ButtonLayout = BITMASK_1,
+   	Setting_StickLayout = BITMASK_2,
+   	Setting_Assist = BITMASK_3,
+   	Setting_ShotMod = BITMASK_4,
+   	Setting_Numeric = BITMASK_5,
+   	Setting_Time = BITMASK_6,
+   	Setting_Type = BITMASK_7,
+   	Setting_RPS = BITMASK_8,
+   	Setting_Profile = BITMASK_9,
+   	
+   	// Shot Mod identifiers
+   	ShotMod_Off = 0, ShotMod_Crouch, ShotMod_Prone, ShotMod_Jump,
+   	
+   	// Stick elements
+  	Move = 0, Strafe, Look, Rotate, StrafeStick,
+  	AnalogMove, AnalogStrafe, AnalogLook, AnalogRotate,
+   	
+    // Stick identifiers
+    Southpaw = 1, Legacy, LegacySouthpaw, SouthpawNoClickSwap, LegacySouthpawNoClickSwap,
+    
+    // State elements
+    CurrentProfile = 0, MenuProfile, HoldingADS, HoldingFire, Page, Screen, ScreenSaver, SubMenuPage, SubMenuTimer, SubMenuDisplayIndex, LoadoutPage, VehicleMode, Sprinting,
+    
+    // State identifiers
+    HomeScreen = 0, ScriptMenu, SubMenu, LoadoutScreen, EditRecoilScreen,
+    Primary = 0, Secondary, GroundLoot,
+    
+  	// SPVAR elements
+	Bit = 0, Bits, Slot, Temp, Value, BitsRemaining
+}
+
+init {
+	display[Buffer] = 1; 		// Initialize display buffer
+	menu[ButtonBlock] = -1;	// Initialize menu button blocks
+	ChangeScreen(HomeScreen);	// Set the initial screen to display
+	SettingsLoad();				// Load script configuration
+	UpdateButtons();			// Update the button, stick and flipped layouts
+	state[CurrentProfile] = 2;	// Default to Ground Loot
+}
+
+main {
+	GetInputDeviceState();
+	HandleInputDevice();
+	HandleDisplay();
+	SetOutputBlocks();
+}
+
+// Adjusts a stick value
+function AdjustStick(stick, value) {
+	set_val(stick, clamp(value * (32767 - abs(get_val(stick))) / 32767 + get_val(stick), -32768, 32767));
+}
+
+// Adjusts a value within bounds
+function AdjustValue(value, lower, upper, adjustment, cyclable) {
+	// Check if the value is increasing
+	if(adjustment > 0) {
+		// Check if the adjustment is in range or the value can cycle
+		if(value + adjustment <= upper) {
+			LedAlert(MenuGreen);
+			return value + adjustment;
+		} else if(cyclable) {
+			LedAlert(MenuGreen);
+			return lower;
+		}
+	} else {
+		// Check if the adjustment is in range or the value can cycle
+		if(value + adjustment >= lower) {
+			LedAlert(MenuGreen);
+			return value + adjustment;
+		} else if(cyclable) {
+			LedAlert(MenuGreen);
+			return upper;
+		}
+	}
+
+	// Determine if a failure alert should be triggered
+	if(!iif(iif(adjustment > 0, value == upper, value == lower), FALSE, TRUE)) {
+		LedAlert(MenuRed);
+	}
+
+	return iif(adjustment > 0, upper, lower);
+}
+
+// This function adjust a value based on how long the button is held for
+function AdjustValueBasedOnTime(time) {
+	return iif(menu[ButtonHoldTime] >= time, 0, menu[ButtonHoldTime] + 10);
+}
+
+// This function checks for an action button that toggles a value
+function CheckActionButton(button, variable) {
+	// Check if the button is being heled
+	if(get_ival(button)) {
+		// Check if no button is being held
+		if(menu[ButtonBlock] == -1)  {
+			menu[ButtonBlock] = button;
+		}
+		
+		// Check if the first action button pressed is being held so dont let another button held interrupt the operation
+		if(menu[ButtonBlock] == button) {
+			// Return true if the button is just being pressed
+			if(event_press(button)) {
+				return TRUE;
+			}
+			
+			// Check for increasing speeds
+			if(variable) {
+                // Cycle values based on the hold duration
+                if (get_ptime(button) >= 200) {
+                	// Determine how long the button has been held for
+                    if (get_ptime(button) > 4000)  {
+                        // For every 10ms button is held after 2000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(10);
+                    } else if (get_ptime(button) > 3000) {
+                        // For every 30ms button is held after 2000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(30);
+                    } else if (get_ptime(button) > 2000) {
+                        // For every 50ms button is held after 2000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(50);
+                    } else if (get_ptime(button) > 1000) {
+                        // For every 70ms button is held after 1000ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(70);
+                    } else {
+                        // For every 90ms button is held after initial 200ms, cycle value
+                        menu[ButtonHoldTime] = AdjustValueBasedOnTime(90);
+                    }
+                    
+                } else {
+                	return FALSE;
+                }
+			} else {
+				// Cycle values every 160ms milliseconds
+				menu[ButtonHoldTime] = iif(menu[ButtonHoldTime] >= 200, 0, menu[ButtonHoldTime] + 10);
+			}
+			
+			return !menu[ButtonHoldTime];
+		}
+	}
+	else if(event_release(menu[ButtonBlock])) {
+		// Reset menu button information
+		menu[ButtonBlock] = -1;
+		menu[ButtonHoldTime] = 0;
+		
+		// Indicate the display should be updated
+		ResetDisplay();
+	}
+	
+	return FALSE;
+}
+
+// This function checks if an assist should be activated
+function CheckActivation(activation) {
+	// Check activation flags
+	if(activation) {
+		//	ADS Only / Fire Only / ADS & Fire	 ADS or Fire
+		return ((activation == assist[Flags]) || ((activation == AssistADSOrFire) && assist[Flags]));
+	}
+	
+	return FALSE;
+}
+
+// Checks for any LED update once the alerter combo is complete
+function CheckLedUpdate() {
+	// Only update the LED if signalled and the alert combo is off
+	if(display[LedUpdate] && !combo_running(Combo_LedAlert)) {
+		// Reset the LED to its proper color
+		SetLedColor(iif(state[VehicleMode], White, iif(state[Screen] == LoadoutScreen, state[MenuProfile], iif(state[Screen] == HomeScreen, state[CurrentProfile], MenuPurple))));
+		display[LedUpdate] = FALSE:			// Indicate the LED has been updated
+	}
+}
+
+// Switch active screen and request display update
+function ChangeScreen(screen) {
+	state[Screen] = screen;
+	LedAlert(MenuGreen);
+	
+	// Reset sub menu time
+	state[SubMenuTimer] = 0;
+	
+	// Check for resetting rumbles
+	if(screen == HomeScreen) {
+		// Check if rumbles are enabled or not
+		if(settings[ControllerRumbles]) {
+			reset_rumble();
+		} else {
+			block_rumble();
+		}
+	} else {
+		state[SubMenuDisplayIndex] = 0;
+		state[SubMenuPage] = 0;
+		display[LedUpdate] = TRUE;
+	}
+}
+
+// Check for the screen saver status
+function CheckScreenSaver() {
+	// Check for the footer string to display on a timer
+	if(state[Screen] == SubMenu || state[Screen] == LoadoutScreen || state[Screen] == EditRecoilScreen) {
+		// Advance the counter for the timer
+		state[SubMenuTimer] += get_rtime();
+		
+		// Check if 3 second has passed to change the footer
+		if(state[SubMenuTimer] >= 3000) {
+			state[SubMenuTimer] = 0;
+			
+			// Advance to the next footer display index
+			if(state[Screen] == SubMenu || state[Screen] == EditRecoilScreen) {
+				state[SubMenuDisplayIndex] = !state[SubMenuDisplayIndex];
+			} else {
+				state[SubMenuDisplayIndex] = (state[SubMenuDisplayIndex] + 1) % 4;
+			}
+			
+			ResetDisplay();
+		}
+	}
+	
+	// Only care about screen saver when on home screen
+	if(state[Screen] != HomeScreen) {
+		return FALSE;
+	}
+	
+	// Check if the screen saver is enabled
+	if(state[ScreenSaver] >= SCREENSAVER_TIME) {
+		return TRUE;
+	}
+	
+	// Increase the counter
+	state[ScreenSaver] += get_rtime();
+	
+	// Check if the screen saver is engaging
+	if(state[ScreenSaver] >= SCREENSAVER_TIME) {
+		cls_oled(OLED_BLACK);
+		return TRUE;
+	}
+	
+	return FALSE;
+}
+
+// Render buffered content to screen at specified position
+function FlushBuffer(x, y, size, color) {
+	// Prepare buffer for rendering
+	display[Buffer]--;
+	
+	// Calculate horizontal position
+	if(x == AlignRight) {
+		x = OLED_WIDTH - (display[Buffer] * _fontWidth[size]) - 2; // Additional 2 for padding from border
+	} else if(x == AlignCenter) {
+		x = (OLED_WIDTH >> 1) - ((display[Buffer] * _fontWidth[size]) >> 1);
+	}
+	
+	// Calculate vertical position
+	if(y == AlignBottom) {
+		y = OLED_HEIGHT - _fontHeight[size] - 2; // Additional 2 for padding from border
+	} else if(y == AlignCenter) {
+		y = (OLED_HEIGHT >> 1) - (_fontHeight[size] >> 1);
+	}
+	
+	// Output to display
+	puts_oled(clamp(x, 2, 127), clamp(y, 2, 63), size, display[Buffer], color);
+	
+	// Reset buffer position
+	display[Buffer] = 1;	
+}
+
+// Retrieves the status of the input device
+function GetInputDeviceState() {
+	// Check if the output protocol has changed
+	if(device[Console] != get_console()) {
+		device[Console] = get_console();				// Set the new output protocol
+		ResetDisplay(); 								// Signal a display update
+	}
+	
+	// Check if the input device has changed
+	if(device[Controller] != get_controller()) {
+		device[Controller] = get_controller();			// Set the new input device
+		ResetDisplay();									// Signal a display update
+		
+		// Check for remapping share with touchpad when a Xbox controller is used on PlayStation
+		if(device[Console] != PIO_XB1) {
+			if(device[Controller] == PIO_XB1) {
+				ToggleCrossoverRemap();					// Set the remap
+				device[Remapped] = TRUE;				// Indicate the input has been remapped
+				vm_tctrl(-2);							// Set VM speed to 8ms for Xbox controllers
+			} else {
+				// Check if the device needs to be unmapped
+				if(device[Remapped]) {
+					ToggleCrossoverRemap();				// Unset the remap
+					device[Remapped] = FALSE;			// Undo the input remapping
+				}
+				vm_tctrl(-6);							// Set VM speed to 4ms for PlayStation 4/5 controllers
+			}
+		} else {
+			vm_tctrl(-2);								// Set VM speed to 8ms for Xbox controllers
+		}
+	}
+	
+	// Retrieve input device state
+	state[HoldingADS] = get_ival(button[ADS]);
+	state[HoldingFire] = get_ival(button[Fire]);
+	
+	// Check if the script is on the home screen
+	if(state[Screen] == HomeScreen) {
+		// Manipulate input/outputs
+		ExecuteControllerManipulation();
+	}
+}
+
+// Return the tap button based on controller being used
+function GetPressButton() {
+	// Check if the controller is Xbox
+	if(device[Controller] == PIO_XB1) {
+		return ASCII_UPPER_A;
+	}
+	
+	return OLED_CROSS;
+}
+
+// Toggle the Xbox controller on PlayStation remap
+function ToggleCrossoverRemap() {
+	set_remapper(XB1_VIEW, PS5_TOUCH);
+}
+
+// This function routes input device processing
+function HandleInputDevice() {
+	switch(state[Screen]) {
+		case HomeScreen { ProcessHomeScreen(); return; }
+		case ScriptMenu { ProcessScriptMenu(); return; }
+		case SubMenu { ProcessSubMenu(); return; }
+		case LoadoutScreen { ProcessLoadoutScreen(); return; }
+		case EditRecoilScreen { ProcessEditRecoilScreen(); return; }
+	}
+}
+
+// This function handles and display render
+function HandleDisplay() {
+	// Check for an LED any update
+	CheckLedUpdate();
+	
+	// Only proceed if the display is signalled to update
+	if(CheckScreenSaver() || !display[Update]) {
+		return;
+	}
+	
+	// Clear the screen to prepare for the new rendering
+	cls_oled(OLED_BLACK);
+	rect_oled(0, 0, OLED_WIDTH, OLED_HEIGHT, 0, OLED_WHITE);
+	
+	// Dispatch to the appropriate rendering function
+	switch(state[Screen]) {
+		case HomeScreen { RenderHomeScreen(); break; }
+		case ScriptMenu { RenderScriptMenu(); break; }
+		case SubMenu { RenderSubMenu(); break; }
+		case LoadoutScreen { RenderLoadoutScreen(); break; }
+		case EditRecoilScreen { RenderEditRecoilScreen(); break; }
+	}
+	
+	// Indicate the display has been updated
+	display[Update] = FALSE;
+}
+
+// Ternary operator replacement
+function iif(expression, true, false) {
+	// Evaluate expression
+	if(expression) {
+		return true; // Return truepart
+	}
+	
+	// Return falsepart
+	return false;
+}
+
+// Add character to display buffer
+function InsertCharacter(value) {
+	putc_oled(display[Buffer], value); // STore the 
+	display[Buffer]++; // Advance to the next position
+}
+
+// Add number to display buffer
+function InsertNumber(value) {
+	// Handle negatives
+	if(value < 0) {
+		InsertCharacter(ASCII_MINUS);	// Insert '-' into the display buffer
+		value = abs(value);
+	}
+	
+	display[BufferCopyValue] = value;
+	display[BufferDigitCount] = 0;
+	
+    // Count digits
+    do {
+        display[BufferCopyValue] /= 10;
+        display[BufferDigitCount]++;
+    } while(display[BufferCopyValue]);
+    
+    // Extract digits
+    for(i = 0; i < display[BufferDigitCount]; i++) {
+        display[BufferDigits + i] = (value % 10) + 48;
+        value /= 10;
+    }
+    
+   // Insert digits in correct order
+    for(i = display[BufferDigitCount] - 1; i >= 0; i--) {
+        InsertCharacter(display[BufferDigits + i]);
+    }
+}
+
+// Add string to display buffer
+function InsertString(str) {
+	do {
+		InsertCharacter(dint8(str)); 	// Insert the current character
+		str++; 							// Advance to the next character in the string
+	} while(dint8(str));
+}
+
+// This function triggers an led alert
+function LedAlert(color) {
+	ResetDisplay();
+	SetLedColor(color);
+	combo_restart(Combo_LedAlert);
+}
+
+// This function prints a character to the screen
+function PrintCharacter(x, y, size, color, character) {
+	InsertCharacter(character);
+	FlushBuffer(x, y, size, color);
+}
+
+// Render number at specified position
+function PrintNumber(x, y, size, color, value) {
+	InsertNumber(value);
+	FlushBuffer(x, y, size, color);
+}
+
+
+// This function prints a string to the screen
+function PrintString(x, y, size, color, text) {
+	InsertString(text);
+	FlushBuffer(x, y, size, color);
+}
+
+// Process edit recoil input
+function ProcessEditRecoilScreen() {
+	if(event_release(XB1_B)) {
+		SettingsSave();					// Save settings
+		ChangeScreen(LoadoutScreen);	// Switch back to previous screen
+	} else if(event_press(XB1_UP)) {
+		state[SubMenuPage] = AdjustValue(state[SubMenuPage], 0, (sizeof(_recoilRanges) / sizeof(_recoilRanges[0])) - 1, -1, FALSE);
+	} else if(event_press(XB1_DOWN)) {
+		state[SubMenuPage] = AdjustValue(state[SubMenuPage], 0, (sizeof(_recoilRanges) / sizeof(_recoilRanges[0])) - 1, 1, FALSE);
+	} else if(CheckActionButton(XB1_LEFT, TRUE)) {
+		// Decrease the value
+		settings[VStart + (state[SubMenuPage] * 3) + state[MenuProfile]] = AdjustValue(
+			settings[VStart + (state[SubMenuPage] * 3) + state[MenuProfile]],
+			_recoilRanges[state[SubMenuPage]][0],
+			_recoilRanges[state[SubMenuPage]][1],
+			-1,
+			FALSE
+		);
+	} else if(CheckActionButton(XB1_RIGHT, TRUE)) {
+		// Increase the value
+		settings[VStart + (state[SubMenuPage] * 3) + state[MenuProfile]] = AdjustValue(
+			settings[VStart + (state[SubMenuPage] * 3) + state[MenuProfile]],
+			_recoilRanges[state[SubMenuPage]][0],
+			_recoilRanges[state[SubMenuPage]][1],
+			1,
+			FALSE
+		);
+	}
+	
+	set_val(TRACE_1, VStart + (state[SubMenuPage] * 3) + state[MenuProfile]);
+}
+
+int LowValue, HighValue, StickValue;
+function CorrectStickInput(deadzone, stick) {
+
+	// Calculate the boundaries
+	LowValue = inv(deadzone * 327);
+	HighValue = (deadzone * 327);
+	StickValue = get_ival(stick); // Get stick value
+	
+	// In the drift zone, so set stick to no movement
+	if((StickValue >= LowValue) && (StickValue <= HighValue)) {
+		set_val(stick, 0);
+		
+	// If user has moved stick under the lower boundary (left/up)
+	} else if(StickValue < LowValue) {
+		set_val(stick, clamp((StickValue - LowValue) - ((StickValue / 327) * LowValue) / 100, -32768, 32767));
+		
+	// If user has moved stick over the upper boundary (right/down)
+	} else if(StickValue > HighValue) {
+		set_val(stick, clamp((StickValue - HighValue) + ((StickValue / 327) * HighValue) / 100, -32768, 32767));
+		
+	// Just incase stick_value isn't in driftzone and doesn't meet other conditions
+	// (i.e. calculations equate to low/high value)
+	// At that point we still do not want to make any adjustment because we're not outside of the drift+deadzone
+	} else {
+		set_val(stick, 0);
+	}
+}
+
+// Process home screen input
+function ProcessHomeScreen() {
+	// Handle deadzone
+	if(settings[Deadzone]) {
+		CorrectStickInput(settings[DeadzoneSize], POLAR_RY);
+		CorrectStickInput(settings[DeadzoneSize], POLAR_RX);
+	}
+		// Check YY L3 double-tap combo (available even while ADS)
+	CheckYYDiveCombo();
+	
+
+	// Handle any actions that require holding the ADS button
+	if(state[HoldingADS]) {
+		// Check if the user is entering any menus
+		if(event_press(XB1_MENU)) {
+			state[MenuProfile] = state[CurrentProfile];
+			ChangeScreen(ScriptMenu);
+			combo_stop_all(); // Stop all combos
+			return;
+		}
+	}
+	
+	if(!state[VehicleMode]) {
+		// Check if ADS is not being held
+		if(!state[HoldingADS]) {
+			// Execute any mods that cannot engage while aiming
+			ExecuteMovementMods();	
+		} else if(event_release(XB1_VIEW)) {
+			if(get_ptime(XB1_VIEW) < 500) {
+				// Check if user is entering loadout menu
+				state[MenuProfile] = state[CurrentProfile];
+				ChangeScreen(LoadoutScreen);
+				combo_stop_all(); // Stop all combos
+			} else  {
+				menu[ButtonBlock] = -1;
+			}
+			return;
+		} else if(get_ival(XB1_VIEW) && (get_ptime(XB1_VIEW) >= 500) && (menu[ButtonBlock] == -1)) {
+			// Check which profile the user is toggling to/from
+			if(state[CurrentProfile] == GroundLoot) {
+				state[CurrentProfile] = Primary;
+			} else {
+				state[CurrentProfile] = GroundLoot;
+			}
+			
+			menu[ButtonBlock] = XB1_VIEW;// Indicate thew view button should be ignored
+			display[LedUpdate] = TRUE;	// Indicate the LED needs to be updated
+			DisplayCurrentProfile(); 	// Display the current profile to the screen
+			return;
+		} else {
+			ExecuteAimingMods();	// Execute any aim mods
+			state[Sprinting] = FALSE;
+		}
+		
+		// Check for switch profiles
+		if(event_release(button[SwitchWeapon]) && (get_ptime(button[SwitchWeapon]) < 240)) {
+			// Cycle profiles
+			if(state[CurrentProfile] != GroundLoot) {
+				state[CurrentProfile] = !state[CurrentProfile];
+				display[LedUpdate] = TRUE;
+				DisplayCurrentProfile(); 	// Display the current profile to the screen
+			}
+		} else {
+			ExecuteAntiRecoil();	// Execute anti recoil
+			ExecuteAssists();		// Execute any aim assists
+		}
+	}
+	
+	// Check for Vehicle Mode
+	if(state[HoldingFire] && event_press(XB1_RIGHT) && (get_brtime(XB1_RIGHT) <= 250)) {
+		state[VehicleMode] = !state[VehicleMode];
+		display[LedUpdate] = TRUE;
+		DisplayCurrentProfile(); 	// Display the current profile to the screen
+	} else if(state[VehicleMode] && (event_press(XB1_A) || event_press(XB1_B))) {
+		state[VehicleMode] = FALSE;
+		display[LedUpdate] = TRUE;
+		DisplayCurrentProfile(); 	// Display the current profile to the screen
+	}
+}
+
+// Display the current profile
+function DisplayCurrentProfile() {
+	cls_oled(OLED_BLACK);	// Clear the screen
+	PrintString(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_WHITE, iif(state[VehicleMode], addr(_vehicle), _loadoutStrings[state[CurrentProfile]]));
+	combo_restart(Combo_DisplayTimeout);
+}
+
+// Execute saiming omds
+function ExecuteAimingMods() {
+	// Check for Auto Ping
+	if(settings[AutoPing]) {
+		if(event_press(button[Fire])) {
+			combo_run(Combo_AutoPing);	
+		}
+	}
+	
+	// Check for Burst Fire
+	if(settings[BurstFire + state[CurrentProfile]]) {
+		if(state[HoldingFire]) {
+			combo_run(Combo_BurstFire);	
+		} else {
+			combo_stop(Combo_BurstFire);			
+		}
+	}
+	
+	// Check for Rapid Fire
+	set_val(TRACE_1, settings[RapidFire + state[CurrentProfile]]);
+	set_val(TRACE_2, state[CurrentProfile]);
+	
+	if(settings[RapidFire + state[CurrentProfile]]) {
+		if(state[HoldingFire]) {
+			combo_run(Combo_RapidFire);
+		} else {
+			combo_stop(Combo_RapidFire);
+		}
+	}
+	
+	// Check for Shot Mod
+	if(get_ival(button[Lethal])) {
+		if(settings[ShotMod]) {
+			// Determine which mod is running
+			switch(settings[ShotMod]) {
+				case ShotMod_Crouch {
+					// Check if the user is first engaging the shot mod
+					if(event_press(button[Lethal])) {
+						combo_run(Combo_Crouch);
+					}
+					break;	
+				}
+				case ShotMod_Prone {
+					// Check if the user is first engaging the mod
+					if(event_press(button[Lethal])) {
+						combo_run(Combo_Prone);
+					}
+					break;
+				}
+				case ShotMod_Jump {
+					// Execute the jump combo
+					combo_run(Combo_Jump);
+					break;
+				}
+			}
+			
+			// Apply the fire button
+			set_val(button[Fire], 100);
+		}
+	} else {
+		// Stop any shot mod combos
+		combo_stop(Combo_Crouch);
+		combo_stop(Combo_Prone);
+		combo_stop(Combo_Jump);
+	}
+}
+
+int antirecoil[4];
+
+enum {
+	CurrentX, CurrentY,
+	StepChangeX, StepChangeY
+}
+
+// Executes anti recoil
+function ExecuteAntiRecoil() {
+	if(state[HoldingADS] && state[HoldingFire]) {
+		if(get_ptime(button[Fire]) < (settings[VTime + state[CurrentProfile]] * get_rtime())) {
+			antirecoil[CurrentY] = settings[VStart + state[CurrentProfile]] * 328;
+		} else {
+			antirecoil[CurrentY] = settings[VEnd + state[CurrentProfile]] * 328;
+		}
+		
+		if(get_ptime(button[Fire]) < (settings[HTime + state[CurrentProfile]] * get_rtime())) {
+			antirecoil[CurrentX] = settings[HStart + state[CurrentProfile]] * 328;
+		} else {
+			antirecoil[CurrentX] = settings[HEnd + state[CurrentProfile]] * 328;
+		}
+		
+		/*
+		if(event_press(button[Fire])) {
+			antirecoil[CurrentX] = settings[HStart + state[CurrentProfile]] * 328;
+			antirecoil[StepChangeX] = ((settings[HEnd + state[CurrentProfile]] - settings[HStart + state[CurrentProfile]]) * 328) / settings[HTime + state[CurrentProfile]];
+		} else if(get_ptime(button[Fire]) < (settings[HTime + state[CurrentProfile]] * get_rtime())) {
+			antirecoil[CurrentX] += antirecoil[StepChangeX];
+		}
+		*/
+		
+		// Output the anti recoil
+		AdjustStick(stick[Rotate], antirecoil[CurrentX]);
+		AdjustStick(stick[Look], antirecoil[CurrentY] * iif(settings[Inverted], -1, 1));
+	}
+
+/*
+	// Check if fire is just pressed to reset
+	if(event_press(button[Fire])) {
+		// Retrieve initial starting values
+		antirecoil[CurrentX] = settings[HStart + state[CurrentProfile]] * 328;
+		antirecoil[CurrentY] = settings[VStart + state[CurrentProfile]] * 328;
+		
+		// Retrieve step change amounts
+		antirecoil[StepChangeX] = ((settings[HEnd + state[CurrentProfile]] - settings[HStart + state[CurrentProfile]]) * 328) / settings[HTime + state[CurrentProfile]];
+		antirecoil[StepChangeY] = ((settings[VEnd + state[CurrentProfile]] - settings[VStart + state[CurrentProfile]]) * 328) / settings[VTime + state[CurrentProfile]];
+		
+	} else if(state[HoldingADS] && state[HoldingFire]) {
+		// Check if the value should still be progressing
+		if(get_ptime(button[Fire]) < (settings[HTime + state[CurrentProfile]] * get_rtime())) {
+			antirecoil[CurrentX] += antirecoil[StepChangeX];
+		}
+		if(get_ptime(button[Fire]) < (settings[VTime + state[CurrentProfile]] * get_rtime())) {
+			antirecoil[CurrentY] += antirecoil[StepChangeY];
+		}
+		
+		// Output the anti recoil
+		AdjustStick(stick[Rotate], antirecoil[CurrentX]);
+		AdjustStick(stick[Look], antirecoil[CurrentY] * iif(settings[Inverted], -1, 1));
+	}
+	*/
+}
+
+// Executes any assists
+function ExecuteAssists() {
+	// Set assist flags
+	assist[Flags] = (state[HoldingADS] > 0) | ((state[HoldingFire] > 0) << 1);
+	
+	// Check for Shake Assist
+	if(CheckActivation(settings[ShakeAssist])) {
+		// Check for which version of Shake Assist
+		if(settings[ShakeType] == ShakeVersion1) {
+			// Retrieve right stick movement
+			assist[AssistMoveLS] = get_ival(stick[AnalogRotate]);
+			assist[AssistAimX] = get_ival(stick[AnalogRotate]);
+			assist[AssistAimY] = get_ival(stick[AnalogLook]);
+			assist[AssistMoveX] = get_ival(stick[AnalogStrafe]);
+			assist[AssistMoveY] = get_ival(stick[AnalogMove]);
+			assist[RandomX] = random(-3, 3);
+			assist[RandomY] = random(-3, 3);
+		
+			// Execute the version 1 shake assist
+			combo_run(Combo_ShakeAssistLeft);
+			combo_run(Combo_ShakeAssistRight);
+		} else {
+			// Output to the joysticks
+			AdjustStick(stick[Rotate], settings[ShakeSize] * cos[assist[AssistAngle]]);
+			AdjustStick(stick[Look], settings[ShakeSize] * sin[assist[AssistAngle]]);
+			
+			// Advance the angle
+			assist[AssistAngle] = (assist[AssistAngle] + settings[ShakeStep]) % 360;
+		}
+	} else {
+		// Stop any version 1 shake assist
+		combo_stop(Combo_ShakeAssistLeft);
+		combo_stop(Combo_ShakeAssistRight);
+		
+		// Reset angle
+		assist[AssistAngle] = 0;
+	}
+	
+	// Check for Strafe Assist
+	if(CheckActivation(settings[StrafeAssist])) {
+		combo_run(Combo_StrafeAssist);
+	} else {
+		combo_stop(Combo_StrafeAssist);
+	}	
+}
+
+// Executes hair triggers, flipped, etc
+function ExecuteControllerManipulation() {
+	// Check for Hair Triggers
+	if(settings[HairTriggers]) {
+		set_val(button[ADS], iif(state[HoldingADS], 100, state[HoldingADS]));
+		set_val(button[Fire], iif(state[HoldingFire], 100, state[HoldingFire]));
+	}
+}
+
+// Executes movement mods (i.e. slide cancel)
+function ExecuteMovementMods() {
+	// Determine the strafe stick
+	SetStrafeStick();
+	
+	// Check for Auto Run
+	if(settings[AutoRun]) {
+		if(get_ipolar(POLAR_LS, POLAR_RADIUS) < 7000) {
+			state[Sprinting] = FALSE;
+			return;
+		}
+		
+		if(!state[Sprinting]) {
+			combo_run(Combo_AutoRun);
+			state[Sprinting] = TRUE;
+		}
+	}
+}
+
+// Check YY L3 double-tap dive combo (works even while ADS)
+function CheckYYDiveCombo() {
+	if(!settings[YYSpam]) {
+		yy_tap_time = 0;
+		return;
+	}
+	// Countdown for double-press window
+	if(yy_tap_time > 0) {
+		yy_tap_time -= get_rtime();
+		if(yy_tap_time < 0) yy_tap_time = 0;
+	}
+	// Detect double-press on Focus button (usually L3)
+	if(event_press(button[Focus])) {
+		if(yy_tap_time > 0) {
+			// Double-tap detected -> run combo once
+			yy_tap_time = 0;
+			combo_run(Combo_YYSpam);
+		} else {
+			// First tap -> start window (approx 300ms)
+			yy_tap_time = 300;
+		}
+	}
+}
+
+function GetProfileAdjustment() {
+	switch(state[Page]) {
+		case BurstFireEdit {
+			return iif(state[SubMenuPage] == 1, 2, 0) + state[MenuProfile];
+		}
+		case RapidFireEdit {
+			return iif(state[Screen] == SubMenu, 4 + state[MenuProfile], 2 + state[MenuProfile]);
+		}
+		case ShakeAssistEdit { return 4; }
+		case ShotModEdit { return 4; }
+		case StickLayoutEdit { return 4; }
+		case StrafeAssistEdit { return 4; }
+		case YYSpamEdit { return 4; }
+	}
+
+	return 0;
+}
+
+// Process script menu input
+function ProcessScriptMenu() {
+	// Check if the user wants to exit to the home screen
+	if(event_release(XB1_B)) {
+		SettingsSave();					// Save settings and update button layout
+		ChangeScreen(HomeScreen);		// Revert back to the home screen
+	} else if(event_press(XB1_UP)) {
+		state[Page] = AdjustValue(state[Page], 0, (sizeof(_menuItemAttributes) / (sizeof(uint16) * 7)) - 1, -1, TRUE);
+	} else if(event_press(XB1_DOWN)) {
+		state[Page] = AdjustValue(state[Page], 0, (sizeof(_menuItemAttributes) / (sizeof(uint16) * 7)) - 1, 1, TRUE);
+	} else if(event_press(XB1_RIGHT)) {
+		settings[state[Page] + GetProfileAdjustment()] = AdjustValue(settings[state[Page] + GetProfileAdjustment()], _menuItemAttributes[state[Page]][1], _menuItemAttributes[state[Page]][2], 1, TRUE);
+	} else if(event_press(XB1_LEFT)) {
+		settings[state[Page] + GetProfileAdjustment()] = AdjustValue(settings[state[Page] + GetProfileAdjustment()], _menuItemAttributes[state[Page]][1], _menuItemAttributes[state[Page]][2], -1, TRUE);
+	} else if(event_press(XB1_A) && _menuItemAttributes[state[Page]][0]) {
+		state[SubMenuPage] = 0; 	// Reset submenu index
+		ChangeScreen(SubMenu); 		// Change to the submenu
+	} else if(event_press(XB1_Y)) {
+		if(_menuItemAttributes[state[Page]][3] & Setting_Profile) {
+			state[MenuProfile] = (state[MenuProfile] + 1) % 3;
+			display[Update] = TRUE;
+		}
+	}
+}
+
+// Process loadout screen input
+function ProcessLoadoutScreen() {
+	if(event_release(XB1_A)) {
+		display[LedUpdate] = TRUE;					// Indicate the LED needs to be updated
+		state[CurrentProfile] = state[MenuProfile]; // Update the current profile
+		state[Screen] = HomeScreen;					// Exit the loadout menu
+		DisplayCurrentProfile(); 					// Display the current profile to the screen
+	} else if(event_release(XB1_B)) {
+		ChangeScreen(HomeScreen);					// Exit the loadout menu
+	} else if(event_press(XB1_X)) {
+		ChangeScreen(EditRecoilScreen);	// Enter the edit recoil screen
+	} else if(event_press(XB1_LEFT)) {
+		state[MenuProfile] = AdjustValue(state[MenuProfile], 0, 2, -1, FALSE);
+	} else if(event_press(XB1_RIGHT)) {
+		state[MenuProfile] = AdjustValue(state[MenuProfile], 0, 2, 1, FALSE);
+	}
+}
+
+// Process sub menu input
+function ProcessSubMenu() {
+	if(event_release(XB1_B)) {
+		ChangeScreen(ScriptMenu);
+	} else if(event_press(XB1_UP)) {
+		state[SubMenuPage] = AdjustValue(state[SubMenuPage], 0, _menuItemAttributes[state[Page]][5], -1, FALSE);
+	} else if(event_press(XB1_DOWN)) {
+		state[SubMenuPage] = AdjustValue(state[SubMenuPage], 0, _menuItemAttributes[state[Page]][5], 1, FALSE);
+	} else if(CheckActionButton(XB1_RIGHT, TRUE)) {
+		settings[BurstHold + _menuItemAttributes[state[Page]][4] + state[SubMenuPage] + GetProfileAdjustment()] = AdjustValue(
+			settings[BurstHold + _menuItemAttributes[state[Page]][4] + state[SubMenuPage] + GetProfileAdjustment()],	// Setting
+			_subMenuRanges[_menuItemAttributes[state[Page]][4] + state[SubMenuPage]][0],	// Min value
+			_subMenuRanges[_menuItemAttributes[state[Page]][4] + state[SubMenuPage]][1], 	// Max value
+			1,																				// Adjustment
+			FALSE																			// Cycle (false)
+			);
+	} else if(CheckActionButton(XB1_LEFT, TRUE)) {
+		settings[BurstHold + _menuItemAttributes[state[Page]][4] + state[SubMenuPage] + GetProfileAdjustment()] = AdjustValue(
+			settings[BurstHold + _menuItemAttributes[state[Page]][4] + state[SubMenuPage] + GetProfileAdjustment()],	// Setting
+			_subMenuRanges[_menuItemAttributes[state[Page]][4] + state[SubMenuPage]][0],	// Min value
+			_subMenuRanges[_menuItemAttributes[state[Page]][4] + state[SubMenuPage]][1], 	// Max value
+			-1,																				// Adjustment
+			FALSE																			// Cycle (false)
+			);
+	}
+}
+
+// Render the loadout screen
+function RenderLoadoutScreen() {
+	// Print the mod name
+	PrintString(AlignCenter, AlignTop, OLED_FONT_SMALL, OLED_WHITE, addr(_selectLoadout));
+	
+	// Draw a separator for formatting
+	line_oled(0, 16, OLED_WIDTH - 1, 16, 1, OLED_WHITE);
+	line_oled(0, OLED_HEIGHT - 16, OLED_WIDTH - 1, OLED_HEIGHT - 16, 1, OLED_WHITE);
+	
+	// Print the loadout name
+	PrintString(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_WHITE, _loadoutStrings[state[MenuProfile]]);
+	
+	// Draw a footer with instructions
+	switch(state[SubMenuDisplayIndex]) {
+		case 0 {
+			InsertCharacter(ASCII_SPACE);
+			InsertCharacter(OLED_LEFT);
+			InsertCharacter(ASCII_SLASH);
+			InsertCharacter(OLED_RIGHT);
+			InsertCharacter(ASCII_SPACE);
+			InsertString(addr(_to));
+			InsertCharacter(ASCII_SPACE);
+			InsertString(addr(_change));
+			break;
+		}
+		case 1 {
+			InsertCharacter(iif(device[Controller] == PIO_XB1, ASCII_UPPER_X, OLED_SQUARE));
+			InsertCharacter(ASCII_SPACE);
+			InsertString(addr(_to));
+			InsertCharacter(ASCII_SPACE);
+			InsertString(addr(_edit));
+			InsertCharacter(ASCII_SPACE);
+			InsertString(addr(_recoil));
+			break;
+		}
+		case 2 {
+			InsertCharacter(iif(device[Controller] == PIO_XB1, ASCII_UPPER_A, OLED_CROSS));
+			InsertCharacter(ASCII_SPACE);
+			InsertString(addr(_to));
+			InsertCharacter(ASCII_SPACE);
+			InsertString(addr(_select));
+			break;
+		}
+		case 3 {
+			InsertCharacter(iif(device[Controller] == PIO_XB1, ASCII_UPPER_B, OLED_CIRCLE));
+			InsertCharacter(ASCII_SPACE);
+			InsertString(addr(_to));
+			InsertCharacter(ASCII_SPACE);
+			InsertString(addr(_exit));
+			break;
+		}
+	}
+
+	// Flush the display buffer
+	FlushBuffer(AlignCenter, AlignBottom, OLED_FONT_SMALL, OLED_WHITE);	
+}
+
+// Render the edit recoil screen
+function RenderEditRecoilScreen() {
+	// Print the header
+	PrintString(AlignCenter, AlignTop, OLED_FONT_SMALL, OLED_WHITE, _recoilStrings[state[SubMenuPage]]);
+	
+	// Draw a separator for formatting
+	line_oled(0, 16, OLED_WIDTH - 1, 16, 1, OLED_WHITE);
+	line_oled(0, OLED_HEIGHT - 16, OLED_WIDTH - 1, OLED_HEIGHT - 16, 1, OLED_WHITE);
+	
+	// Check for appending "ms" for a timer
+	if(_recoilRanges[state[SubMenuPage]][2] & Setting_Time) {
+		if(settings[VStart + (state[SubMenuPage] * 3) + state[MenuProfile]]) {
+			InsertNumber(settings[VStart + (state[SubMenuPage] * 3) + state[MenuProfile]] * get_rtime());
+			InsertCharacter(ASCII_LOWER_M);
+			InsertCharacter(ASCII_LOWER_S);
+		} else {
+			InsertString(addr(_off));
+		}
+	} else if(_recoilRanges[state[SubMenuPage]][2] & Setting_Numeric) {
+		// Insert the value
+		InsertNumber(settings[VStart + (state[SubMenuPage] * 3) + state[MenuProfile]]);
+	}
+	
+	// Flush the display buffer
+	FlushBuffer(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_WHITE);
+	
+	// Draw a footer with instructions
+	if(state[SubMenuDisplayIndex]) {
+		InsertCharacter(OLED_UP);
+		InsertCharacter(ASCII_SLASH);
+		InsertCharacter(OLED_DOWN);
+		InsertCharacter(ASCII_SPACE);
+		InsertString(addr(_toChangeMenu));
+	} else {
+		InsertString(addr(_hold));
+		InsertCharacter(ASCII_SPACE);
+		InsertCharacter(OLED_LEFT);
+		InsertCharacter(ASCII_SLASH);
+		InsertCharacter(OLED_RIGHT);
+		InsertCharacter(ASCII_SPACE);
+		InsertString(addr(_toAdjust));
+	}
+	
+	FlushBuffer(AlignCenter, AlignBottom, OLED_FONT_SMALL, OLED_WHITE);
+}
+
+// Render the home screen
+function RenderHomeScreen() {
+	// Print the script title and author
+	PrintString(AlignCenter, AlignTop, OLED_FONT_LARGE, OLED_WHITE, addr(_scriptTitle));
+	PrintString(AlignCenter, (OLED_HEIGHT >> 1) - 1, OLED_FONT_MEDIUM, OLED_WHITE, addr(_scriptAuthor));
+	
+	// Format the version string (major.minor)
+	InsertString(addr(_scriptVersion));
+	InsertCharacter(ASCII_SPACE);
+	InsertNumber(VERSION_MAJOR);
+	InsertCharacter(ASCII_PERIOD);
+	
+	// Format the version minor to two digits
+	if(VERSION_MINOR < 10) { 
+		InsertNumber(0);
+	}
+	
+	// Finalize the version string and flush the buffer
+	InsertNumber(VERSION_MINOR);
+	FlushBuffer(AlignCenter, AlignBottom, OLED_FONT_SMALL, OLED_WHITE);
+}
+
+// Render the script menu
+function RenderScriptMenu() {
+	// Print the mod name
+	PrintString(AlignCenter, AlignTop, OLED_FONT_SMALL, OLED_WHITE, _menuTitle[state[Page]]);
+	
+	// Draw a separator for formatting
+	line_oled(0, 16, OLED_WIDTH - 1, 16, 1, OLED_WHITE);
+	line_oled(0, OLED_HEIGHT - 16, OLED_WIDTH - 1, OLED_HEIGHT - 16, 1, OLED_WHITE);
+	
+	// Draw a message indicating this option has a sub menu
+	if(_menuItemAttributes[state[Page]][0]) {
+		InsertString(addr(_press));
+		InsertCharacter(ASCII_SPACE);
+		InsertCharacter(GetPressButton());
+		InsertCharacter(ASCII_SPACE);
+		InsertString(addr(_to));
+		InsertCharacter(ASCII_SPACE);
+		InsertString(addr(_edit));
+		FlushBuffer(AlignCenter, AlignBottom, OLED_FONT_SMALL, OLED_WHITE);
+	} else {
+		PrintString(AlignCenter, AlignBottom, OLED_FONT_SMALL, OLED_WHITE, addr(_noEditVar));
+	}
+	
+	// Determine the type of value to display
+	switch(_menuItemAttributes[state[Page]][3] & ~Setting_Profile) {
+		case Setting_OffOn {
+			PrintString(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_WHITE, iif(settings[state[Page] + GetProfileAdjustment()], addr(_on), addr(_off)));
+			break;	
+		}
+		case Setting_ButtonLayout {
+			PrintString(AlignCenter, AlignCenter, OLED_FONT_SMALL, OLED_WHITE, _buttonLayoutName[settings[state[Page] + GetProfileAdjustment()]]);
+			break;
+		}
+		case Setting_StickLayout {
+			PrintString(AlignCenter, AlignCenter, OLED_FONT_SMALL, OLED_WHITE, _stickLayoutName[settings[state[Page] + GetProfileAdjustment()]]);
+			break;
+		}
+		case Setting_Assist {
+			PrintString(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_WHITE, _assistType[settings[state[Page] + GetProfileAdjustment()]]);
+			break;
+		}
+		case Setting_ShotMod {
+			PrintString(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_WHITE, _shotMod[settings[state[Page] + GetProfileAdjustment()]]);
+			break;
+		}
+	}
+	
+	// Check for a profile
+	if(_menuItemAttributes[state[Page]][3] & Setting_Profile) {
+		PrintNumber(AlignRight, AlignTop, OLED_FONT_SMALL, OLED_WHITE, state[MenuProfile] + 1);
+	}
+	
+	return;
+}
+
+// Render the sub menu
+function RenderSubMenu() {
+	// Print the mod name
+	PrintString(AlignCenter, AlignTop, OLED_FONT_SMALL, OLED_WHITE, _subMenuTitle[_menuItemAttributes[state[Page]][4] + state[SubMenuPage]]);
+	
+	// Draw a separator for formatting
+	line_oled(0, 16, OLED_WIDTH - 1, 16, 1, OLED_WHITE);
+	line_oled(0, OLED_HEIGHT - 16, OLED_WIDTH - 1, OLED_HEIGHT - 16, 1, OLED_WHITE);
+	
+	// Determine how the setting should be displayed
+	if(_subMenuRanges[_menuItemAttributes[state[Page]][4] + state[SubMenuPage]][2] & Setting_Numeric) {
+	
+		set_val(TRACE_1, BurstHold + _menuItemAttributes[state[Page]][4] + state[SubMenuPage] + GetProfileAdjustment());
+		set_val(TRACE_2, RapidRps);
+		if(_subMenuRanges[_menuItemAttributes[state[Page]][4] + state[SubMenuPage]][2] & Setting_Time) {
+			InsertNumber(settings[BurstHold + _menuItemAttributes[state[Page]][4] + state[SubMenuPage] + GetProfileAdjustment()] * get_rtime());
+			InsertCharacter(ASCII_LOWER_M);
+			InsertCharacter(ASCII_LOWER_S);
+		} else {
+			// Insert the value to the display buffer
+			InsertNumber(settings[BurstHold + _menuItemAttributes[state[Page]][4] + state[SubMenuPage] + GetProfileAdjustment()]);
+			
+			// Check for Rounds Per Second display
+			if(_subMenuRanges[_menuItemAttributes[state[Page]][4] + state[SubMenuPage]][2] & Setting_RPS) {
+				InsertCharacter(ASCII_SPACE);
+				InsertCharacter(ASCII_UPPER_R);
+				InsertCharacter(ASCII_UPPER_P);
+				InsertCharacter(ASCII_UPPER_S);
+			}
+		}
+		
+		// Print the display buffer
+		FlushBuffer(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_WHITE);
+	} else if(_subMenuRanges[_menuItemAttributes[state[Page]][4] + state[SubMenuPage]][2] & Setting_Type) {
+		PrintString(AlignCenter, AlignCenter, OLED_FONT_MEDIUM, OLED_WHITE, _subMenuStrings[settings[BurstHold + _menuItemAttributes[state[Page]][4] + state[SubMenuPage] + GetProfileAdjustment()]]);
+	}
+	
+	// Draw a footer with instructions
+	if(state[SubMenuDisplayIndex] && _menuItemAttributes[state[Page]][5]) {
+		InsertCharacter(OLED_UP);
+		InsertCharacter(ASCII_SLASH);
+		InsertCharacter(OLED_DOWN);
+		InsertCharacter(ASCII_SPACE);
+		InsertString(addr(_toChangeMenu));
+	} else {
+		InsertString(addr(_hold));
+		InsertCharacter(ASCII_SPACE);
+		InsertCharacter(OLED_LEFT);
+		InsertCharacter(ASCII_SLASH);
+		InsertCharacter(OLED_RIGHT);
+		InsertCharacter(ASCII_SPACE);
+		InsertString(addr(_toAdjust));
+	}
+	
+	FlushBuffer(AlignCenter, AlignBottom, OLED_FONT_SMALL, OLED_WHITE);
+}
+
+// Indicate a display update and reset the screen saver
+function ResetDisplay() {
+	display[Update] = TRUE;
+	state[ScreenSaver] = 0;
+}
+
+// Sets the button layout for the script
+function SetButtonLayout() {
+	button[ADS] = _buttonLayout[settings[ButtonLayout]][ADS];
+	button[Lethal] = _buttonLayout[settings[ButtonLayout]][Lethal];
+	button[Ping] = _buttonLayout[settings[ButtonLayout]][Ping];
+	button[Focus] = _buttonLayout[settings[ButtonLayout]][Focus];
+	button[Fire] = _buttonLayout[settings[ButtonLayout]][Fire];
+	button[SwitchWeapon] = _buttonLayout[settings[ButtonLayout]][SwitchWeapon];
+	button[Action] = _buttonLayout[settings[ButtonLayout]][Action];
+	button[Jump] = _buttonLayout[settings[ButtonLayout]][Jump];
+	button[Melee] = _buttonLayout[settings[ButtonLayout]][Melee];
+	button[Reload] = _buttonLayout[settings[ButtonLayout]][Reload];
+}
+
+// Sets button blocks based on control buttons or in a menu
+function SetOutputBlocks() {
+	// Block all inputs when not in home screen
+	if(state[Screen] != HomeScreen) {
+		block_all_inputs();
+		return;
+	} else if(state[HoldingADS]) {
+		set_val(XB1_VIEW, 0);				// Block loadout selection
+		set_val(XB1_MENU, 0);				// Block entering menu
+		set_val(button[SwitchWeapon], 0);	// Block resyncing profile
+	}
+}
+
+// Sets the flipped layout
+function SetFlippedLayout() {
+	// Immediately terminate the function is flipped is not enabled
+	if(!settings[Flipped]) {
+		return;	
+	}
+	
+	// Handle each button layout when flipped is enabled
+	switch(settings[ButtonLayout]) {
+		case Default: {
+			button[Lethal] = XB1_RT;
+			button[ADS] = XB1_LB;
+			button[Fire] = XB1_RB;
+			break;
+		} case Tactical: {
+			button[Lethal] = XB1_RT;
+			button[ADS] = XB1_LB;
+			button[Fire] = XB1_RB;
+			break;
+		} case Lefty: {
+			button[Fire] = XB1_RB;
+			button[Lethal] = XB1_RT;
+			button[ADS] = XB1_LB;
+			break;
+		} case NomadCharlie: {
+			button[Lethal] = XB1_RT;
+			button[ADS] = XB1_LB;
+			button[Fire] = XB1_RB;
+			break;
+		} case NomadCharlieTact: {
+			button[Lethal] = XB1_RT;
+			button[ADS] = XB1_LB;
+			button[Fire] = XB1_RB;
+			break;
+		} case NomadCharlieLefty: {
+			button[ADS] = XB1_LB;
+			button[Fire] = XB1_RB;
+			button[Lethal] = XB1_RT;
+			break;
+		} case BumperJumper: {
+			button[Jump] = XB1_LT;
+			button[ADS] = XB1_LB;
+			button[Fire] = XB1_RB;
+			button[Lethal] = XB1_RT;
+			break;
+		} case BumperJumperTact: {
+			button[Jump] = XB1_LT;
+			button[ADS] = XB1_LB;
+			button[Fire] = XB1_RB;
+			button[Lethal] = XB1_RT;
+			break;
+		} case OneHandGunslinger: {
+			button[Fire] = XB1_LT;
+			button[ADS] = XB1_LB;
+			button[Lethal] = XB1_RB;
+			break;
+		} case StickAndMove: {
+			button[Lethal] = XB1_RT;
+			button[ADS] = XB1_LB;
+			button[Fire] = XB1_RB;
+			break;
+		} case Brawler: {
+			button[Lethal] = XB1_RS;
+			button[ADS] = XB1_LB;
+			button[Melee] = XB1_RT;
+			button[Fire] = XB1_RB;
+			break;
+		} case Beast: {
+			button[Jump] = XB1_LT;
+			button[ADS] = XB1_LB;
+			button[Melee] = XB1_RT;
+			button[Fire] = XB1_RB;
+			button[Lethal] = XB1_RS;
+			break;
+		}
+	}
+}
+
+// Sets hair triggers
+function SetHairTriggers() {
+	set_val(button[ADS], iif(state[HoldingADS], 100, 0));
+	set_val(button[Fire], iif(state[HoldingFire], 100, 0));
+}
+
+// This fucntion sets the Cronus LED color based on a given hue, saturation and brightness
+function SetLedColor(color) {
+	set_hsb(_color[color][Hue], _color[color][Saturation], _color[color][Brightness]);
+}
+
+// Sets the stick layout for the script
+function SetStickLayout() {
+	// Set the joystick axis information
+	stick[Move] = _stickLayout[settings[StickLayout]][Move];
+	stick[Strafe] = _stickLayout[settings[StickLayout]][Strafe];
+	stick[Look] = _stickLayout[settings[StickLayout]][Look];
+	stick[Rotate] = _stickLayout[settings[StickLayout]][Rotate];
+	
+	// Get non=polar axises
+	stick[AnalogMove] = _stickLayoutLegacy[settings[StickLayout]][Move];
+	stick[AnalogStrafe] = _stickLayoutLegacy[settings[StickLayout]][Strafe];
+	stick[AnalogLook] = _stickLayoutLegacy[settings[StickLayout]][Look];
+	stick[AnalogRotate] = _stickLayoutLegacy[settings[StickLayout]][Rotate];
+	
+	// Check for swapping joysticks
+	if((settings[StickLayout] == Southpaw) || (settings[StickLayout] == LegacySouthpaw)) {
+		switch(settings[ButtonLayout]) {
+			case Default: {
+				button[Melee] = XB1_RS;
+				button[Focus] = XB1_LS;
+				return;
+			} case Tactical: {
+				button[Action] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case Lefty: {
+				button[Focus] = XB1_LS;
+				button[Melee] = XB1_RS;
+				return;
+			} case NomadCharlie: {
+				button[Melee] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case NomadCharlieTact: {
+				button[Action] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case NomadCharlieLefty: {
+				button[Focus] = XB1_LS;
+				button[Melee] = XB1_RS;
+				return;
+			} case BumperJumper: {
+				button[Melee] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case BumperJumperTact: {
+				button[Action] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case OneHandGunslinger: {
+				button[Melee] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case StickAndMove: {
+				button[Jump] = XB1_LS;
+				button[Focus] = XB1_RS;
+				return;
+			} case Brawler: {
+				button[Focus] = XB1_RS;
+				return;
+			} case Beast: {
+				button[Focus] = XB1_RS;
+				return;
+			}
+		}
+	}
+}
+
+// Determine and set the strafe stick
+function SetStrafeStick() {
+	switch(settings[StickLayout]) {
+		case Default: {
+			stick[StrafeStick] = XB1_LS;
+			break;
+		} case Southpaw: {
+			stick[StrafeStick] = XB1_RS;
+			break;
+		} case Legacy: {
+			stick[StrafeStick] = iif(abs(get_val(POLAR_RY)) > abs(get_val(POLAR_LX)), XB1_LS, XB1_RS);
+			break;
+		} case LegacySouthpaw: {
+			stick[StrafeStick] = iif(abs(get_val(POLAR_LY)) > abs(get_val(POLAR_RX)), XB1_RS, XB1_LS);
+			break;
+		} case SouthpawNoClickSwap: {
+			stick[StrafeStick] = XB1_RS;
+			break;
+		} case LegacySouthpawNoClickSwap: {
+			stick[StrafeStick] = iif(abs(get_val(POLAR_LY)) > abs(get_val(POLAR_RX)), XB1_RS, XB1_LS);
+			break;
+		}
+	}
+}
+
+// Load the script settings
+function SettingsLoad() {
+	// Reset SPVAR data to prepare for reading
+	reset_spvar();
+	
+	// Check if the first bit is set to indicate saved settings
+	if(read_spvar(0, 1) == 1) {
+		// Read script menu settings
+		settings[AutoPing] = read_spvar(FALSE, TRUE);
+		settings[AutoRun] = read_spvar(FALSE, TRUE);
+		settings[BurstFire] = read_spvar(FALSE, TRUE);
+		settings[BurstFire + 1] = read_spvar(FALSE, TRUE);
+		settings[BurstFire + 2] = read_spvar(FALSE, TRUE);
+		settings[ButtonLayout] = read_spvar(Default, Beast);
+		settings[ControllerRumbles] = read_spvar(FALSE, TRUE);
+		settings[Deadzone] = read_spvar(FALSE, TRUE);
+		settings[Flipped] = read_spvar(FALSE, TRUE);
+		settings[HairTriggers] = read_spvar(FALSE, TRUE);
+		settings[Inverted] = read_spvar(FALSE, TRUE);
+		settings[RapidFire] = read_spvar(FALSE, TRUE);
+		settings[RapidFire + 1] = read_spvar(FALSE, TRUE);
+		settings[RapidFire + 2] = read_spvar(FALSE, TRUE);
+		settings[ShakeAssist] = read_spvar(AssistOff, AssistADSOrFire);
+		settings[ShotMod] = read_spvar(ShotMod_Off, ShotMod_Jump);
+		settings[StickLayout] = read_spvar(Default, LegacySouthpawNoClickSwap);
+		settings[StrafeAssist] = read_spvar(AssistOff, AssistADSOrFire);
+		settings[YYSpam] = read_spvar(FALSE, TRUE);
+		
+		// Read submenu settings
+		for(i = 0; i < 3; i++) {
+			settings[BurstHold + i] = read_spvar(1, 300);
+			settings[BurstDelay + i] = read_spvar(1, 300);
+			settings[RapidRps + i] = read_spvar(1, 10);
+		}
+		
+		settings[DeadzoneSize] = read_spvar(0, 50);
+		settings[ShakeType] = read_spvar(0, 1);
+		settings[ShakeSize] = read_spvar(1, 100);
+		settings[ShakeStep] = read_spvar(1, 120);
+		settings[StrafeSize] = read_spvar(1, 100);
+		settings[StrafeTime] = read_spvar(1, 125);
+		
+		// Read anti recoil settings
+		settings[VStart] = read_spvar(0, 100);
+		settings[VStart + 1] = read_spvar(0, 100);
+		settings[VStart + 2] = read_spvar(0, 100);
+		settings[VEnd] = read_spvar(0, 100);
+		settings[VEnd + 1] = read_spvar(0, 100);
+		settings[VEnd + 2] = read_spvar(0, 100);
+		settings[VTime] = read_spvar(0, 1000);
+		settings[VTime + 1] = read_spvar(0, 1000);
+		settings[VTime + 2] = read_spvar(0, 1000);
+		settings[HStart] = read_spvar(-100, 100);
+		settings[HStart + 1] = read_spvar(-100, 100);
+		settings[HStart + 2] = read_spvar(-100, 100);
+		settings[HEnd] = read_spvar(-100, 100);
+		settings[HEnd + 1] = read_spvar(-100, 100);
+		settings[HEnd + 2] = read_spvar(-100, 100);
+		settings[HTime] = read_spvar(0, 1000);
+		settings[HTime + 1] = read_spvar(0, 1000);
+		settings[HTime + 2] = read_spvar(0, 1000);
+		
+	} else {
+		// Configure default settings
+		settings[ButtonLayout] = Default;
+		settings[StickLayout] = Default;
+		
+		settings[AutoRun] = TRUE;
+		
+		// Default edit variables
+		settings[DeadzoneSize] = 5;
+		settings[BurstHold] = 50;
+		settings[BurstHold + 1] = 50;
+		settings[BurstHold + 2] = 50;
+		settings[BurstDelay] = 40;
+		settings[BurstDelay + 1] = 40;
+		settings[BurstDelay + 2] = 40;
+		settings[RapidRps] = 7;
+		settings[RapidRps + 1] = 7;
+		settings[RapidRps + 2] = 7;
+		settings[ShakeSize] = 12;
+		settings[ShakeStep] = 18;
+		settings[StrafeSize] = 25;
+		settings[StrafeTime] = 8;
+		
+		// Default recoil settings
+		settings[VStart] = 24;
+		settings[VStart + 1] = 24;
+		settings[VStart + 2] = 24;
+		settings[VEnd] = 20;
+		settings[VEnd + 1] = 20;
+		settings[VEnd + 2] = 20;
+		settings[VTime] = 125;
+		settings[VTime + 1] = 125;
+		settings[VTime + 2] = 125;
+	}
+}
+
+// Save the script settings
+function SettingsSave() {
+	// Reset SPVAR data to prepare for writing
+	reset_spvar();
+	
+	// Indicate the spvars are written
+	save_spvar(1, 0, 1);
+	
+	// Script menu settings
+	save_spvar(settings[AutoPing], FALSE, TRUE);
+	save_spvar(settings[AutoRun], FALSE, TRUE);
+	save_spvar(settings[BurstFire], FALSE, TRUE);
+	save_spvar(settings[BurstFire + 1], FALSE, TRUE);
+	save_spvar(settings[BurstFire + 2], FALSE, TRUE);
+	save_spvar(settings[ButtonLayout], Default, Beast);
+	save_spvar(settings[ControllerRumbles], FALSE, TRUE);
+	save_spvar(settings[Deadzone], FALSE, TRUE);
+	save_spvar(settings[Flipped], FALSE, TRUE);
+	save_spvar(settings[HairTriggers], FALSE, TRUE);
+	save_spvar(settings[Inverted], FALSE, TRUE);
+	save_spvar(settings[RapidFire], FALSE, TRUE);
+	save_spvar(settings[RapidFire + 1], FALSE, TRUE);
+	save_spvar(settings[RapidFire + 2], FALSE, TRUE);
+	save_spvar(settings[ShakeAssist], AssistOff, AssistADSOrFire);
+	save_spvar(settings[ShotMod], ShotMod_Off, ShotMod_Jump);
+	save_spvar(settings[StickLayout], Default, LegacySouthpawNoClickSwap);
+	save_spvar(settings[StrafeAssist], AssistOff, AssistADSOrFire);
+	save_spvar(settings[YYSpam], FALSE, TRUE);
+	
+	// Submenu settings
+	for(i = 0; i < 3; i++) {
+		save_spvar(settings[BurstHold + i], 1, 300);
+		save_spvar(settings[BurstDelay + i], 1, 300);
+		save_spvar(settings[RapidRps + i], 1, 1);
+		
+	}
+	save_spvar(settings[DeadzoneSize], 0, 50);
+	save_spvar(settings[ShakeType], 0, 1);
+	save_spvar(settings[ShakeSize], 1, 100);
+	save_spvar(settings[ShakeStep], 1, 120);
+	save_spvar(settings[StrafeSize], 1, 100);
+	save_spvar(settings[StrafeTime], 1, 125);
+	
+	// Anti-recoil settings
+	save_spvar(settings[VStart], 0, 100);
+	save_spvar(settings[VStart + 1], 0, 100);
+	save_spvar(settings[VStart + 2], 0, 100);
+	save_spvar(settings[VEnd], 0, 100);
+	save_spvar(settings[VEnd + 1], 0, 100);
+	save_spvar(settings[VEnd + 2], 0, 100);
+	save_spvar(settings[VTime], 0, 1000);
+	save_spvar(settings[VTime + 1], 0, 1000);
+	save_spvar(settings[VTime + 2], 0, 1000);
+	save_spvar(settings[HStart], -100, 100);
+	save_spvar(settings[HStart + 1], -100, 100);
+	save_spvar(settings[HStart + 2], -100, 100);
+	save_spvar(settings[HEnd], -100, 100);
+	save_spvar(settings[HEnd + 1], -100, 100);
+	save_spvar(settings[HEnd + 2], -100, 100);
+	save_spvar(settings[HTime], 0, 1000);
+	save_spvar(settings[HTime + 1], 0, 1000);
+	save_spvar(settings[HTime + 2], 0, 1000);
+	
+	// Update the button layout
+	UpdateButtons();
+	
+	set_val(TRACE_5, settings[HStart]);
+}
+
+// This function updates all button mappings
+function UpdateButtons() {
+	SetButtonLayout();
+	SetFlippedLayout();
+	SetStickLayout();
+}
+
+function reset_spvar() {
+
+	 // Change this to say where it's safe to Roset storing data
+	spvar[Slot] = SPVAR_1; 
+	
+	// Should always be 0, unless you're using part of the first SPVAR 
+	// in which case you should also change the next line to include the 
+	// value you are storing in the bits you are using
+	
+	spvar[Bit] = 0; 
+	spvar[Value] = 0;
+}
+
+// Function used to count the number of bits used by the given value
+function get_bit_count(v) {
+	
+	// We need to Roset at 0, we use spvar[Temp] here as we need to track
+	// the bits during our loop below
+	spvar[Temp] = 0; 
+	
+	// Loop while v is anything but 0
+	while (v) { 
+		// Increment the bit count by 1
+		spvar[Temp]++; 
+		
+		// Shift the value down 1 bit, once we have no more bits set this
+		// will r in 0, unless the value is negative - in which case
+		// this will be endless, we do abs here to make it always
+		v = abs(v >> 1);
+	}
+	return spvar[Temp];
+}
+
+// Function used to count the number of bits used by 2 given values
+function get_bit_count2(v1, v2) {
+
+	// Get the highest bit count required for either min or max
+	spvar[Temp] = max(get_bit_count(v1), get_bit_count(v2));
+	
+	// Check if we need to know if the value is negative or not
+	if (is_signed2(v1, v2)) {
+		// If we need to track if the saved value is negative, we need 1 bit
+		// for that specifically - the others are used to store the actual value
+		spvar[Temp]++;
+	}
+	return spvar[Temp];
+}
+
+// Function used to determine if either of 2 given values is negative
+function is_signed2(v1, v2) {
+	return (v1 < 0) || (v2 < 0);
+}
+
+// Function used to generate a bitmask for the sign bit, this will always be
+// the highest bit in the range we're requesting it for, to do that - we need
+// to Roset with the lowest bit set and move it up the number of steps there
+// is between 1 and the bits we need, this needs to be a maximum of 31 but can
+// never be negative
+function make_sign(bits) { 
+	return 1 << clamp(bits - 1, 0, 31);
+}
+
+// Function used to generate a full bitmask (essentially all bits set up to
+// and including the number of bits given)
+function make_full_mask(bits) {	
+
+	// If we're wanting a bitmask for all bits, we can simply return -1
+	// (which is all bits set to 1)
+	if (bits == 32) { 
+		return -1;
+	}
+	
+	// What we do here is basically take a value with all bits except the highest
+	// set and shift them down as many times as we need to get a mask that fits
+	// the bit count we're looking for
+	return 0x7FFFFFFF >> (31 - bits);
+}
+
+// Function used to generate a bitmask for just the bits required for the value
+// part of a signed range, this means all the bits below the sign bit
+function make_sign_mask(bits) {
+	return make_full_mask(bits - 1);
+}
+
+// Function used to pack a value that has potential for being negative in a way
+// that we use the least number of bits we really need to represent the value
+function pack_i(v, bits) {
+
+	// Check if we have a negative value, if so - handle it accordingly
+	if (v < 0) { 
+		// Get the positive version of the value and keep the bits that are within
+		// range of what we're doing and add the sign bit since we have a negative
+		// value and return the r
+		return (abs(v) & make_sign_mask(bits)) | make_sign(bits);
+	}
+	
+	// Get the bits that are within our range
+	return v & make_sign_mask(bits); 
+}
+
+// Function used to unpack (restore) a value that has potential for being negative,
+// essentially reversing what pack_i does above
+function unpack_i(v, bits) {
+
+	// Check if the stored value is supposed to be negative
+	if (v & make_sign(bits)) {
+		// Retrieve the stored positive value and subtract it from 0 (ring in
+		// the same value except negative), return the r
+		return 0 - (v & make_sign_mask(bits));
+	}
+	
+	// Retrieve the stored positive value and return it
+	return v & make_sign_mask(bits);
+}
+
+// Function used to read the value of a SPVAR without any limits
+function read_spvar_slot(slot) {
+	return get_pvar(slot, 0x80000000, 0x7FFFFFFF, 0);
+}
+
+// Function used to save your value in the SPVARs, this is the function you'll be
+// calling when saving a value. You need to provide the value to save aswell as
+// the range (minimum and maximum value, this is how we determine how many bits
+// to use when saving this value)
+function save_spvar(v, min, max) {
+
+	// Set spvar[Bits] to the number of bits we need for this range
+	spvar[Bits] = get_bit_count2(min, max); 
+	
+	// Make sure the value is within our defined range to begin with
+	v = clamp(v, min, max); 
+	
+	// If either min or max is negative, we need to pack this value as a
+	// possibly negative value
+	if (is_signed2(min, max)) { 
+		// Pack as signed value (possibly negative)
+		v = pack_i(v, spvar[Bits]);
+	}
+	
+	// Pack as unsigned value (always positive), this essentially just makes the
+	// ring value not have any extra bits set - it's safe to use after the
+	// signed packing since we're not using any bits outside of the unsigned range anyways
+	v = v & make_full_mask(spvar[Bits]); 
+	
+	// Check if there is not enough bits remaining to save this value as-is. if
+	// there aren't enough bits, we save what we can here and store the remaining
+	// bits in the next spvar, if this means we're hitting the end, we can make
+	// this smaller by handling the case where we use all bits here aswell
+	if (spvar[Bits] >= 32 - spvar[Bit]) { 
+		// Add what we can to the current value where there is bits available to use
+		spvar[Value] = spvar[Value] | (v << spvar[Bit]); 
+		// Save the current SPVAR before advancing to the next one
+		set_pvar(spvar[Slot], spvar[Value]); 
+		// Move to the next slot
+		spvar[Slot]++; 
+		// Update the required bits according to our needs for the next slot, 
+		// if we don't do this here, we'll screw up the saved value by moving
+		// it too far out of range
+		spvar[Bits] -= (32 - spvar[Bit]);
+		// Move the remaining bits down, discarding the bits we've already saved
+		v = v >> (32 - spvar[Bit]); 
+		// Reset the current bit counter since we're Roseting with a new SPVAR
+		spvar[Bit] = 0; 
+		// Reset our value so we Roset clean, we aren't currently using any bits anyways
+		spvar[Value] = 0; 
+	}
+	
+	// Merge the current SPVAR value with our currently value where there is space to keep our value
+	spvar[Value] = spvar[Value] | (v << spvar[Bit]); 
+	// Move up the counter of next available bit to where we are currently saving data at
+	spvar[Bit] += spvar[Bits]; 
+	
+	if (!spvar[Bit]) {
+		// Reset our value so we Roset clean, we aren't currently using any bits anyways
+		spvar[Value] = 0; 
+	}
+	
+	// Save the SPVAR with the current value, this won't write anything to flash unless
+	//the value changed - so we can do this for each variable saved to no risk missing anything
+	set_pvar(spvar[Slot], spvar[Value]); 
+}
+
+// Function used to read your value from the SPVARs, this is the function you'll be
+// calling when reading a value. You need to provide the range (minimum and maximum
+// value, this is how we determine how many bits to use when reading the value) aswell
+// as a default value if what we read is out of range
+function read_spvar(min, max) {
+
+	// Set spvar[Bits] to the number of bits we need for this range
+	spvar[Bits] = get_bit_count2(min, max); 
+	
+	// Read the current SPVAR value from flash and shift them into position,
+	// we'll handle split values next
+	spvar[Value] = (read_spvar_slot(spvar[Slot]) >> spvar[Bit]) & make_full_mask(spvar[Bits]);
+	
+	// Check if we are dealing with a split SPVAR value, essentially if the current
+	// position means we're using more than 32 bits in the SPVAR, we need to retrieve
+	// the missing bits from the next SPVAR and put them back to our current value,
+	// we use the same space saving trick here as in the save function
+	if (spvar[Bits] >= 32 - spvar[Bit]) {
+		spvar[Value] = (spvar[Value] & make_full_mask(32 - spvar[Bit])) | ((read_spvar_slot(spvar[Slot] + 1) & make_full_mask(spvar[Bits] - (32 - spvar[Bit]))) << (32 - spvar[Bit]));
+		//Below is a breakdown of the line above, with each step done one at a time instead of all at once - this however increases codesize - the below code is to explain how it all works tho
+		//spvar[Temp] = read_spvar_slot(spvar[Slot] + 1); // Read the SPVAR slot coming after the initial one we used to spvar[Temp] from flash, we need to maintain the data we've read thus far, but also add on what we have in flash for the next SPVAR
+		//spvar[Temp] = spvar[Temp] & make_full_mask(spvar[Bits] - (32 - spvar[Bit])); // Extract the bits we need need (the ones that didn't fit in the previous SPVAR)
+		//spvar[Temp] = spvar[Temp] << (32 - spvar[Bit]); // Move the bits into their original position, they were stored at the beginning of the new SPVAR but belong at the top of the currently read value
+		//spvar[Value] = (spvar[Value] & make_full_mask(32 - spvar[Bit])) | spvar[Temp]; // put all bits together again with the part read from the first SPVAR cleaned up to only include the bits from this variable/value and not all bits set in the upper range like they normally are
+	}
+	
+	// Move up the counter of next available bit to where we are will be reading data from next
+	spvar[Bit] += spvar[Bits];
+	// Extract all bits included for this value and discard any other bits
+	spvar[Value] = spvar[Value] & make_full_mask(spvar[Bits]); 
+	
+	if (spvar[Bit] >= 32) {
+		// Move to the next SPVAR slot
+		spvar[Slot]++;
+		// Remove 32 from the spvar[Bit] tracker since we've gone beyond what we can do here
+		spvar[Bit] -= 32;
+	}
+	
+	// Check if the value can be negative and handle it accordingly
+	if (is_signed2(min, max)) { 
+		// Restore the signed, possibly negative value
+		spvar[Value] = unpack_i(spvar[Value], spvar[Bits]); 
+	}
+	
+	// Check if the value is below our specified min or above our specified max,
+	// if so - return the default value instead
+	if (spvar[Value] < min || spvar[Value] > max) { 
+		// This can be changed to min instead as a reasonable default with the
+		// default parameter being removed if you don't need to have a override
+		// value for the default when out of range, that will save a bit of code size
+		return 0; // edited
+	}
+	
+	// Return the retrieved value to the user since it's within the expected range
+	return spvar[Value];
+}
+
+fcombo Combo_AutoPing {
+	set_val(button[Ping], 100);
+	wait(120);
+}
+
+combo Combo_AutoRun {
+	set_val(XB1_LS, 100);
+	wait(80);
+}
+
+fcombo Combo_BurstFire {
+	set_val(XB1_RT, 100);
+	wait(settings[BurstHold + state[CurrentProfile]] * get_rtime());
+	set_val(XB1_RT, 0);
+	wait(settings[BurstDelay + state[CurrentProfile]] * get_rtime());
+}
+
+fcombo Combo_Crouch {
+	set_val(button[Action], 100);
+	wait(32);
+}
+
+fcombo Combo_DisplayTimeout {
+	wait(1000);
+	ResetDisplay();
+}
+
+fcombo Combo_Jump {
+	set_val(button[Jump], 100);
+	wait(88);
+	set_val(button[Jump], 0);
+	wait(88);
+}
+
+fcombo Combo_LedAlert {
+	wait(240);
+	display[LedUpdate] = TRUE;
+}
+
+fcombo Combo_Prone {
+	set_val(button[Action], 100);
+	wait(720);
+}
+
+fcombo Combo_RapidFire {
+	// Low value (LCM of possible VM speeds) for immediate fire
+	wait((500 / settings[RapidRps + state[CurrentProfile]]));
+	set_val(button[Fire], 0);
+	wait((500 / settings[RapidRps + state[CurrentProfile]]));
+}
+
+fcombo Combo_ShakeAssistRight {
+	set_val(stick[AnalogRotate], assist[AssistAimX] + settings[ShakeSize] + assist[RandomX]);
+	wait(101 - settings[ShakeStep]);
+	set_val(stick[AnalogRotate], assist[AssistAimX] + settings[ShakeSize] - (settings[ShakeSize] / 3) + assist[RandomX]);
+	set_val(stick[AnalogLook], assist[AssistAimY] + settings[ShakeSize] - (settings[ShakeSize] / 3) + assist[RandomY]);
+	wait(101 - settings[ShakeStep]);
+	set_val(stick[AnalogLook], assist[AssistAimY] + settings[ShakeSize] + assist[RandomY]);
+	wait(101 - settings[ShakeStep]);
+	set_val(stick[AnalogRotate], assist[AssistAimX] - settings[ShakeSize]  + (settings[ShakeSize] / 3) + assist[RandomX]);
+	set_val(stick[AnalogLook], assist[AssistAimY] + settings[ShakeSize]  - (settings[ShakeSize] / 3) + assist[RandomY]);
+	wait(101 - settings[ShakeStep]);
+	set_val(stick[AnalogRotate], assist[AssistAimX] - settings[ShakeSize] + assist[RandomX]);
+	wait(101 - settings[ShakeStep]);
+	set_val(stick[AnalogRotate], assist[AssistAimX] - settings[ShakeSize]  + (settings[ShakeSize] / 3) + assist[RandomX]);
+	set_val(stick[AnalogLook], assist[AssistAimY] - settings[ShakeSize]  + (settings[ShakeSize] / 3) + assist[RandomY]);
+	wait(101 - settings[ShakeStep]);
+	set_val(stick[AnalogLook], assist[AssistAimY] - settings[ShakeSize] + assist[RandomY]);
+	wait(101 - settings[ShakeStep]);
+	set_val(stick[AnalogRotate], assist[AssistAimX] + settings[ShakeSize]  - (settings[ShakeSize] / 3) + assist[RandomX]);
+	set_val(stick[AnalogLook], assist[AssistAimY] - settings[ShakeSize]  + (settings[ShakeSize] / 3) + assist[RandomY]);
+	wait(101 - settings[ShakeStep]);
+	set_val(stick[AnalogRotate], assist[AssistAimX] + settings[ShakeSize] + assist[RandomX]);
+}
+
+fcombo Combo_ShakeAssistLeft {
+	set_val(stick[AnalogStrafe], assist[AssistMoveX] + 12 + assist[AssistMoveLS]);
+	set_val(stick[AnalogMove], assist[AssistMoveY] + 20);
+	wait(8);
+	set_val(stick[AnalogStrafe], assist[AssistMoveX] - 12 + assist[AssistMoveLS]);
+	set_val(stick[AnalogMove], assist[AssistMoveY] - 20);
+	wait(8);
+	set_val(stick[AnalogStrafe], assist[AssistMoveX] + 12 + assist[AssistMoveLS]);
+	set_val(stick[AnalogMove], assist[AssistMoveY] - 20);
+	wait(8);
+	set_val(stick[AnalogStrafe], assist[AssistMoveX] - 12 + assist[AssistMoveLS]);
+	set_val(stick[AnalogMove], assist[AssistMoveY] + 20);
+	wait(8);
+}
+
+fcombo Combo_StrafeAssist{
+	AdjustStick(stick[Strafe], settings[StrafeSize] * 328);
+	wait(settings[StrafeTime] * get_rtime());
+	AdjustStick(stick[Strafe], inv(settings[StrafeSize]) * 328);
+	wait(settings[StrafeTime] * get_rtime());
+}
+
+fcombo Combo_YYSpam {
+	// Hold L3 (Focus) for the whole dive action
+	set_val(button[Focus], 100);
+	wait(40);
+	// First tap Circle/B (Action)
+	set_val(button[Action], 100);
+	wait(40);
+	set_val(button[Action], 0);
+	wait(40);
+	// Second tap Circle/B (Action)
+	set_val(button[Action], 100);
+	wait(40);
+	set_val(button[Action], 0);
+	wait(40);
+	// Release L3 (Focus)
+	set_val(button[Focus], 0);
+}
+
+const int16 sin[] = { 
+	0, 6, 11, 17, 23, 29, 34, 40, 46, 51, 57, 63, 68, 74, 79, 85, 90, 96,
+	101, 107, 112, 117, 123, 128, 133, 138, 144, 149, 154, 159, 164, 169, 174, 178, 183, 188,
+	193, 197, 202, 206, 211, 215, 219, 223, 228, 232, 236, 240, 244, 247, 251, 255, 258, 262,
+	265, 268, 272, 275, 278, 281, 284, 287, 289, 292, 295, 297, 299, 302, 304, 306, 308, 310,
+	312, 313, 315, 317, 318, 319, 321, 322, 323, 324, 324, 325, 326, 326, 327, 327, 327, 328,
+	328, 328, 327, 327, 327, 326, 326, 325, 324, 324, 323, 322, 321, 319, 318, 317, 315, 313,
+	312, 310, 308, 306, 304, 302, 299, 297, 295, 292, 289, 287, 284, 281, 278, 275, 272, 268,
+	265, 262, 258, 255, 251, 247, 244, 240, 236, 232, 228, 223, 219, 215, 211, 206, 202, 197,
+	193, 188, 183, 178, 174, 169, 164, 159, 154, 149, 144, 138, 133, 128, 123, 117, 112, 107,
+	101, 96, 90, 85, 79, 74, 68, 63, 57, 51, 46, 40, 34, 29, 23, 17, 11, 6,
+	0, -6, -11, -17, -23, -29, -34, -40, -46, -51, -57, -63, -68, -74, -79, -85, -90, -96,
+	-101, -107, -112, -117, -123, -128, -133, -138, -144, -149, -154, -159, -164, -169, -174, -178, -183, -188,
+	-193, -197, -202, -206, -211, -215, -219, -223, -228, -232, -236, -240, -244, -247, -251, -255, -258, -262,
+	-265, -268, -272, -275, -278, -281, -284, -287, -289, -292, -295, -297, -299, -302, -304, -306, -308, -310,
+	-312, -313, -315, -317, -318, -319, -321, -322, -323, -324, -324, -325, -326, -326, -327, -327, -327, -328,
+	-328, -328, -327, -327, -327, -326, -326, -325, -324, -324, -323, -322, -321, -319, -318, -317, -315, -313,
+	-312, -310, -308, -306, -304, -302, -299, -297, -295, -292, -289, -287, -284, -281, -278, -275, -272, -268,
+	-265, -262, -258, -255, -251, -247, -244, -240, -236, -232, -228, -223, -219, -215, -211, -206, -202, -197,
+	-193, -188, -183, -178, -174, -169, -164, -159, -154, -149, -144, -138, -133, -128, -123, -117, -112, -107,
+	-101, -96, -90, -85, -79, -74, -68, -63, -57, -51, -46, -40, -34, -29, -23, -17, -11, -6
+}
+
+const int16 cos[] = { 
+	328, 328, 327, 327, 327, 326, 326, 325, 324, 324, 323, 322, 321, 319, 318, 317, 315, 313,
+	312, 310, 308, 306, 304, 302, 299, 297, 295, 292, 289, 287, 284, 281, 278, 275, 272, 268,
+	265, 262, 258, 255, 251, 247, 244, 240, 236, 232, 228, 223, 219, 215, 211, 206, 202, 197,
+	193, 188, 183, 178, 174, 169, 164, 159, 154, 149, 144, 138, 133, 128, 123, 117, 112, 107,
+	101, 96, 90, 85, 79, 74, 68, 63, 57, 51, 46, 40, 34, 29, 23, 17, 11, 6,
+	0, -6, -11, -17, -23, -29, -34, -40, -46, -51, -57, -63, -68, -74, -79, -85, -90, -96,
+	-101, -107, -112, -117, -123, -128, -133, -138, -144, -149, -154, -159, -164, -169, -174, -178, -183, -188,
+	-193, -197, -202, -206, -211, -215, -219, -223, -228, -232, -236, -240, -244, -247, -251, -255, -258, -262,
+	-265, -268, -272, -275, -278, -281, -284, -287, -289, -292, -295, -297, -299, -302, -304, -306, -308, -310,
+	-312, -313, -315, -317, -318, -319, -321, -322, -323, -324, -324, -325, -326, -326, -327, -327, -327, -328,
+	-328, -328, -327, -327, -327, -326, -326, -325, -324, -324, -323, -322, -321, -319, -318, -317, -315, -313,
+	-312, -310, -308, -306, -304, -302, -299, -297, -295, -292, -289, -287, -284, -281, -278, -275, -272, -268,
+	-265, -262, -258, -255, -251, -247, -244, -240, -236, -232, -228, -223, -219, -215, -211, -206, -202, -197,
+	-193, -188, -183, -178, -174, -169, -164, -159, -154, -149, -144, -138, -133, -128, -123, -117, -112, -107,
+	-101, -96, -90, -85, -79, -74, -68, -63, -57, -51, -46, -40, -34, -29, -23, -17, -11, -6,
+	-0, 6, 11, 17, 23, 29, 34, 40, 46, 51, 57, 63, 68, 74, 79, 85, 90, 96,
+	101, 107, 112, 117, 123, 128, 133, 138, 144, 149, 154, 159, 164, 169, 174, 178, 183, 188,
+	193, 197, 202, 206, 211, 215, 219, 223, 228, 232, 236, 240, 244, 247, 251, 255, 258, 262,
+	265, 268, 272, 275, 278, 281, 284, 287, 289, 292, 295, 297, 299, 302, 304, 306, 308, 310,
+	312, 313, 315, 317, 318, 319, 321, 322, 323, 324, 324, 325, 326, 326, 327, 327, 327, 328
+}
+// discord.gg/Coldz - The BEST Scripts ˙ªè∂Ç≥ÑµÖ±Ç≥Ñ±Ä≈
